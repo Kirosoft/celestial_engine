@@ -7,9 +7,11 @@ let loaded = false;
 
 async function loadAll(){
   const files = await FileRepo.list('schemas/nodes/*.schema.json');
+  console.log('[schemaLoader] Attempting to load schemas from:', await FileRepo.list('schemas/nodes/*.schema.json'));
   cache = {};
   for(const f of files){
     try {
+      console.log('[schemaLoader] Loading schema file:', f);
       const schema = await readJson<any>(f);
       const type = schema.title || schema.type || f.replace(/.*\/(.*?)\.schema\.json$/, '$1');
       cache[type] = schema;
@@ -23,7 +25,10 @@ async function loadAll(){
 export async function getNodeTypeSchema(type: string){
   if(!loaded) await loadAll();
   const s = cache[type];
-  if(!s) throw new NotFoundError('schema', type);
+  if(!s) {
+    console.error('[schemaLoader] schema not found:', type, '\nCurrent cache keys:', Object.keys(cache));
+    throw new NotFoundError('schema', type);
+  }
   return s;
 }
 

@@ -1,16 +1,42 @@
 import { promises as fs } from 'fs';
-import { join, resolve } from 'path';
+import { join, resolve, relative, isAbsolute } from 'path';
 import fg from 'fast-glob';
 import { PathEscapeError } from './errors';
 
+async function debugLog(msg: string) {
+  // Compute repo root here without calling repoRoot() to avoid recursion
+  const envRoot = (process.env.REPO_ROOT || '').trim();
+  const root = envRoot ? resolve(envRoot) : resolve(process.cwd());
+  const debugFile = join(root, 'debug-paths.txt');
+  try {
+    await fs.appendFile(debugFile, msg + '\n');
+  } catch (err) {
+    // If the directory doesn't exist, create it
+    await fs.mkdir(root, { recursive: true });
+    await fs.appendFile(debugFile, msg + '\n');
+  }
+}
+
 function repoRoot(){
-  return process.env.REPO_ROOT ? resolve(process.env.REPO_ROOT) : resolve(process.cwd());
+  const envRoot = (process.env.REPO_ROOT || '').trim();
+  const resolved = envRoot ? resolve(envRoot) : resolve(process.cwd());
+  debugLog(`[FileRepo] repoRoot() env: ${envRoot} resolved: ${resolved}`);
+  return resolved;
 }
 
 function safeJoin(p: string){
   const root = repoRoot();
-  const target = resolve(root, p);
-  if(!target.startsWith(root)) throw new PathEscapeError(p);
+  // If p is absolute, use it directly; otherwise resolve against root
+  const target = isAbsolute(p) ? resolve(p) : resolve(root, p);
+  debugLog(`[FileRepo] safeJoin() root: ${root} p: ${p} target: ${target}`);
+  const rel = relative(root, target);
+  // If the relative path starts with '..' then target is outside root
+  if (rel === '' || (rel && !rel.split(/\\|\//).includes('..')) === false) {
+    // fallthrough to check below
+  }
+  if (rel.startsWith('..') || rel === '..' || rel.split(/\\|\//)[0] === '..') {
+    throw new PathEscapeError(p);
+  }
   return target;
 }
 
@@ -35,7 +61,11 @@ export async function del(path: string){
 }
 
 export async function list(glob: string){
-  return fg(glob, { cwd: repoRoot(), dot: false });
+  const cwd = repoRoot();
+  await debugLog(`[FileRepo] list() cwd: ${cwd} glob: ${glob}`);
+  const result = await fg(glob, { cwd, dot: false });
+  await debugLog(`[FileRepo] list() result: ${JSON.stringify(result)}`);
+  return result;
 }
 
 export async function readJson<T=any>(path: string): Promise<T>{

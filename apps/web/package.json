@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "dev:e2e": "set REPO_ROOT=.e2e-root && next dev"
   },
   "dependencies": {
     "ajv": "8.17.1",

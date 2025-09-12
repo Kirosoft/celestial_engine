@@ -14,7 +14,9 @@ export default defineConfig({
     trace: 'on-first-retry'
   },
   webServer: {
-    command: 'REPO_ROOT=.e2e-root npm run dev',
+    command: process.platform === 'win32'
+      ? 'npm run dev:e2e'
+      : 'REPO_ROOT=.e2e-root npm run dev',
     url: 'http://localhost:3000/api/nodes',
     reuseExistingServer: !process.env.CI,
     cwd: process.cwd()

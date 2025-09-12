@@ -21,26 +21,25 @@ export async function resetRepoRoot(){
   await removeDirContents(nodesDir);
   await removeDirContents(indexDir);
   // Copy schemas into ephemeral root so schemaLoader (which uses REPO_ROOT) can find them
+  const repoRoot = resolve(__dirname, '..', '..', '..');
   const candidateSchemaDirs = [
-    resolve(process.cwd(), 'schemas', 'nodes'),            // apps/web/schemas/nodes
-    resolve(process.cwd(), '..', '..', 'schemas', 'nodes') // repo root schemas/nodes
+    join(process.cwd(), 'schemas', 'nodes'),            // apps/web/schemas/nodes
+    join(repoRoot, 'schemas', 'nodes')                 // repo root schemas/nodes
   ];
-  // Only copy schemas if not already copied
+  // Always copy schemas from both candidate dirs, overwriting if needed
   const dest = join(root, 'schemas', 'nodes');
-  const already = await fs.stat(dest).catch(()=>null);
+  await fs.mkdir(dest, { recursive: true });
   for(const dir of candidateSchemaDirs){
     try {
       const stat = await fs.stat(dir).catch(()=>null);
       if(!stat || !stat.isDirectory()) continue;
-      if(!already) await fs.mkdir(dest, { recursive: true });
       const entries = await fs.readdir(dir);
       for(const e of entries){
         if(!e.endsWith('.schema.json')) continue;
         const srcFile = join(dir, e);
         const destFile = join(dest, e);
-        // If duplicate names appear, prefer first copied (skip overwrite)
-        const exists = await fs.stat(destFile).catch(()=>null);
-        if(!exists) await fs.copyFile(srcFile, destFile);
+        // Always overwrite to ensure latest schema is present
+        await fs.copyFile(srcFile, destFile);
       }
     } catch(err){
       console.warn('[resetRepoRoot] schema copy failed for', dir, err);
