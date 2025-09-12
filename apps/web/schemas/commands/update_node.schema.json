@@ -1,0 +1,14 @@
+{
+  "$id": "awb://commands/update_node",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "update_node",
+  "type": "object",
+  "required": ["type", "id"],
+  "properties": {
+    "type": { "const": "update_node" },
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "props": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": false
+}

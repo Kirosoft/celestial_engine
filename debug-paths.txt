@@ -1,0 +1,759 @@
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\schemas\nodes\LLM.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: schemas/nodes/Plan.schema.json target: C:\Users\mark\source\repos\celestial_engine\schemas\nodes\Plan.schema.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\schemas\nodes\Task.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() result: ["nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\schemas\nodes\LLM.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: schemas/nodes/Plan.schema.json target: C:\Users\mark\source\repos\celestial_engine\schemas\nodes\Plan.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\schemas\nodes\Task.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\schemas\nodes\LLM.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: schemas/nodes/Plan.schema.json target: C:\Users\mark\source\repos\celestial_engine\schemas\nodes\Plan.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\schemas\nodes\Task.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.corrupt-1757712202840.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.corrupt-1757712202840.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Task-EDq7hE.json","nodes/Task-eMTucj.json","nodes/Task-OMX_KU.json","nodes/Task-slmKT2.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-EDq7hE.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-EDq7hE.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-eMTucj.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-eMTucj.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-OMX_KU.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-OMX_KU.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine resolved: C:\Users\mark\source\repos\celestial_engine
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine p: nodes/Task-slmKT2.json target: C:\Users\mark\source\repos\celestial_engine\nodes\Task-slmKT2.json

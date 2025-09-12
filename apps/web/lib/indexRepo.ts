@@ -13,7 +13,36 @@ async function loadIndex(): Promise<GraphIndex> {
     await FileRepo.writeJson(INDEX_PATH, fresh);
     return fresh;
   }
-  return FileRepo.readJson<GraphIndex>(INDEX_PATH);
+  try {
+    return await FileRepo.readJson<GraphIndex>(INDEX_PATH);
+  } catch(err){
+    console.error('[IndexRepo] Failed to parse index.json – attempting repair', err);
+    // Backup corrupt file
+    try {
+      const raw = await FileRepo.read(INDEX_PATH);
+      await FileRepo.write(`.awb/index.corrupt-${Date.now()}.json`, raw);
+    } catch(e){ console.warn('[IndexRepo] Could not backup corrupt index', e); }
+    // Rebuild from existing node files
+    try {
+      const nodeFiles = await FileRepo.list('nodes/*.json');
+      const nodes: IndexNodeEntry[] = [];
+      for(const f of nodeFiles){
+        try {
+          const nf = await FileRepo.readJson<NodeFile>(f);
+          nodes.push({ id: nf.id, type: nf.type, name: nf.name, propsHash: hashProps(nf.props), mtime: new Date().toISOString() });
+        } catch(e){ console.warn('[IndexRepo] Skipping node during rebuild', f, e); }
+      }
+      const rebuilt: GraphIndex = { version: nodes.length, generatedAt: new Date().toISOString(), nodes };
+      await FileRepo.writeJson(INDEX_PATH, rebuilt);
+      console.log('[IndexRepo] Rebuilt index.json with', nodes.length, 'nodes');
+      return rebuilt;
+    } catch(e){
+      console.error('[IndexRepo] Rebuild failed, writing empty index', e);
+      const empty: GraphIndex = { version: 0, generatedAt: new Date().toISOString(), nodes: [] };
+      await FileRepo.writeJson(INDEX_PATH, empty);
+      return empty;
+    }
+  }
 }
 
 function hashProps(props: any): string {

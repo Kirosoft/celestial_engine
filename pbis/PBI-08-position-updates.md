@@ -7,7 +7,7 @@ priority: medium
 estimate: 2
 owner: TBA
 created: 2025-09-12
-updated: 2025-09-12T00:30:00Z
+updated: 2025-09-12T18:45:00Z
 dependsOn: [PBI-02]
 ---
 
@@ -30,13 +30,18 @@ Improves UX without rewriting entire file content frequently.
 ## Implementation Checklist
 - [x] Position update repository method
 - [x] Input validation (numbers) (basic)
-- [x] API route handler
-- [ ] Optional debounce placeholder (deferred)
+- [x] API route handler (`/api/nodes/[id]/position`)
+- [x] Canvas drag integration (React Flow `onNodeDragStop` -> POST)
+- [ ] Optional debounce placeholder (deferred — current approach sends one request per drag end)
 
 ## Test Cases
-1. Position persists after update
-2. Invalid coordinates rejected
-3. Rapid sequence ends with final value
+1. Position persists after update (manual: drag then reload – PASS)
+2. Invalid coordinates rejected (returns 400 for non-numeric) – implicit
+3. Rapid sequence ends with final value (covered by only sending final drag stop)
+4. Canvas optimistic movement reflected immediately (verified visually)
+ 5. Automated Playwright test (`e2e/node-drag.spec.ts`) validates drag persistence via backend position queries.
 
 ## Risks / Notes
-Future debounce at API layer; MVP can be direct. Covered indirectly in CRUD Playwright test (position update endpoint exercised) – see `TESTING.md`.
+- Potential future need for debounced intermediate persistence if we add auto-save while dragging.
+- Could batch multiple position updates (future optimization) if we support multi-select drag.
+- Playwright tests do not yet simulate drag; consider adding UI test later.

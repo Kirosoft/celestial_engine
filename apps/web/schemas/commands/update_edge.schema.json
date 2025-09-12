@@ -1,0 +1,15 @@
+{
+  "$id": "awb://commands/update_edge",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "update_edge",
+  "type": "object",
+  "required": ["type", "sourceId", "edgeId"],
+  "properties": {
+    "type": { "const": "update_edge" },
+    "sourceId": { "type": "string" },
+    "edgeId": { "type": "string" },
+    "targetId": { "type": "string" },
+    "kind": { "type": "string", "enum": ["flow", "data"] }
+  },
+  "additionalProperties": false
+}

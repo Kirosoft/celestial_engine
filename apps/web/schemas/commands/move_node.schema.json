@@ -1,0 +1,14 @@
+{
+  "$id": "awb://commands/move_node",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "move_node",
+  "type": "object",
+  "required": ["type", "id", "x", "y"],
+  "properties": {
+    "type": { "const": "move_node" },
+    "id": { "type": "string" },
+    "x": { "type": "number" },
+    "y": { "type": "number" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,15 @@
+{
+  "$id": "awb://commands/add_node",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "add_node",
+  "type": "object",
+  "required": ["type", "nodeType"],
+  "properties": {
+    "type": { "const": "add_node" },
+    "nodeType": { "type": "string", "minLength": 1 },
+    "name": { "type": "string" },
+    "props": { "type": "object", "additionalProperties": true },
+    "position": { "type": "object", "properties": { "x": { "type": "number" }, "y": { "type": "number" } }, "required": ["x", "y"], "additionalProperties": false }
+  },
+  "additionalProperties": false
+}

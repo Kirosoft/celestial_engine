@@ -1,0 +1,15 @@
+{
+  "id": "Task-slmKT2",
+  "type": "Task",
+  "name": "Task 2",
+  "props": {
+    "title": "First Task"
+  },
+  "position": {
+    "x": 93.5,
+    "y": 77
+  },
+  "edges": {
+    "out": []
+  }
+}

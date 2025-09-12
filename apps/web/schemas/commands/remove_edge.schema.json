@@ -1,0 +1,13 @@
+{
+  "$id": "awb://commands/remove_edge",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "remove_edge",
+  "type": "object",
+  "required": ["type", "sourceId", "edgeId"],
+  "properties": {
+    "type": { "const": "remove_edge" },
+    "sourceId": { "type": "string" },
+    "edgeId": { "type": "string" }
+  },
+  "additionalProperties": false
+}
