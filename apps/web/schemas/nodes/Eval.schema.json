@@ -1,0 +1,21 @@
+{
+  "title": "Eval",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "Eval" },
+    "name": { "type": "string" },
+    "props": {
+      "type": "object",
+      "properties": {
+        "metric": { "type": "string" },
+        "threshold": { "type": "number" }
+      },
+      "required": ["metric"],
+      "additionalProperties": false
+    },
+    "position": { "type": "object" },
+    "edges": { "type": "object" }
+  },
+  "required": ["id", "type", "name", "props"]
+}

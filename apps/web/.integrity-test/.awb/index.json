@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "generatedAt": "2025-09-12T16:05:11.398Z",
+  "nodes": [
+    {
+      "id": "Task-p-CNsB",
+      "type": "Task",
+      "name": "Solo",
+      "propsHash": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
+      "mtime": "2025-09-12T16:05:11.398Z"
+    }
+  ]
+}

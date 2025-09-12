@@ -1,0 +1,30 @@
+{
+  "name": "awb-web",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "ajv": "8.17.1",
+    "ajv-formats": "^3.0.1",
+    "fast-glob": "3.3.2",
+    "nanoid": "5.0.7",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.46.1",
+    "@types/node": "20.11.30",
+    "@types/react": "19.1.12",
+    "typescript": "5.4.5",
+    "vitest": "1.6.0"
+  }
+}

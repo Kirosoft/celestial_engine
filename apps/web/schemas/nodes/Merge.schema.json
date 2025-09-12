@@ -1,0 +1,20 @@
+{
+  "title": "Merge",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "Merge" },
+    "name": { "type": "string" },
+    "props": {
+      "type": "object",
+      "properties": {
+        "mode": { "type": "string", "enum": ["concat", "latest", "accumulate"] }
+      },
+      "required": ["mode"],
+      "additionalProperties": false
+    },
+    "position": { "type": "object" },
+    "edges": { "type": "object" }
+  },
+  "required": ["id", "type", "name", "props"]
+}

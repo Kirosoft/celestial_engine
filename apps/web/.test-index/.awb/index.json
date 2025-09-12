@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "generatedAt": "2025-09-12T16:05:11.266Z",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Task",
+      "name": "n1",
+      "propsHash": "11f8c690db086f8e63f72739582e69ab57e6a9ca",
+      "mtime": "2025-09-12T16:05:11.266Z"
+    },
+    {
+      "id": "n2",
+      "type": "Task",
+      "name": "n2",
+      "propsHash": "b896c01e83f3d4a0197698df9a1c13efe7aa7ab7",
+      "mtime": "2025-09-12T16:05:11.266Z"
+    }
+  ]
+}
