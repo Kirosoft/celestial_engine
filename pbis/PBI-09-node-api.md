@@ -2,7 +2,7 @@
 id: PBI-09
 title: Node API Endpoints
 phase: 1
-status: planned
+status: completed
 priority: high
 estimate: 5
 owner: TBA
@@ -29,11 +29,11 @@ Enables UI integration & external automation.
 - Integration tests (happy/error)
 
 ## Implementation Checklist
-- [ ] Route definitions
-- [ ] Input parsing & validation
-- [ ] Error mapping (404/400)
-- [ ] Rename handler integration with index
-- [ ] Position update route
+- [x] Route definitions
+- [x] Input parsing & validation
+- [x] Error mapping (404/400)
+- [x] Rename handler integration with index
+- [x] Position update route
 - [ ] OpenAPI stub (optional later)
 
 ## Test Cases
@@ -43,4 +43,4 @@ Enables UI integration & external automation.
 4. Rename persists file move
 
 ## Risks / Notes
-Security/auth postponed until later.
+Security/auth postponed until later. Behavior verified by API integration & Playwright tests (see `TESTING.md`).

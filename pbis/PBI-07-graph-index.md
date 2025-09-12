@@ -42,4 +42,4 @@ Accelerates listings and forms basis for caching & invalidation.
 4. Props change updates hash
 
 ## Risks / Notes
-Large graphs later may need lazy rebuild; MVP is synchronous.
+Large graphs later may need lazy rebuild; MVP is synchronous. Current functionality covered by integration & e2e tests (CRUD and rename). Corruption detection test pending (see `TESTING.md` future work).

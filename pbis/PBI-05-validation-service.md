@@ -42,4 +42,4 @@ Guarantees structural integrity and consistent failure messaging.
 4. Performance test under threshold
 
 ## Risks / Notes
-Command validation added in later phase.
+Command validation added in later phase. Validator exercised in unit, integration, and e2e tests (see `TESTING.md`).

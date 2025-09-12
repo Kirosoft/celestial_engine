@@ -37,8 +37,9 @@ Prevents data corruption and security issues; foundational for all subsequent fe
 - [x] JSON read/write wrappers
 - [x] Glob listing via fast-glob
 - [x] Error class definitions (`PathEscapeError`)
-- [ ] Unit test: path traversal rejection (deferred)
-- [ ] Unit test: atomic write durability (simulate crash) (deferred)
+- [x] Unit test: path traversal rejection
+- [x] Unit test: atomic write basic durability
+- [ ] Extended durability simulation (crash mid-write) (deferred)
 
 ## Test Cases
 1. Reject `../escape` path
@@ -48,3 +49,5 @@ Prevents data corruption and security issues; foundational for all subsequent fe
 
 ## Risks / Notes
 None blocking. Simplicity favored; no watch feature yet.
+
+Testing: Covered by unit tests (see `TESTING.md`). Extended crash simulation deferred.

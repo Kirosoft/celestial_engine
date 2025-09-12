@@ -2,7 +2,7 @@
 id: PBI-13
 title: Developer Documentation (Phase 1)
 phase: 1
-status: planned
+status: in-progress
 priority: medium
 estimate: 3
 owner: TBA
@@ -29,6 +29,7 @@ Onboarding efficiency and consistent contributor guidance.
 - Internal review sign-off
 
 ## Implementation Checklist
+- [x] Initial testing guide (`TESTING.md`)
 - [ ] Draft architecture document
 - [ ] Include file layout diagram
 - [ ] Include example node JSON
@@ -42,4 +43,4 @@ Onboarding efficiency and consistent contributor guidance.
 3. No TODO placeholders remain
 
 ## Risks / Notes
-May evolve into a docs site later.
+May evolve into a docs site later. Testing documentation underway (see `TESTING.md`).

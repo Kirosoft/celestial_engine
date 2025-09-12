@@ -49,4 +49,4 @@ Unlocks creation of typed nodes and ensures future runtime compatibility.
 3. Additional property stripped if configured
 
 ## Risks / Notes
-ToolCall schema generation may move to dynamic later; start static skeleton.
+ToolCall schema generation may move to dynamic later; start static skeleton. Schema validation covered by unit tests (see `TESTING.md`).

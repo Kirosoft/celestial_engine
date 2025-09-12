@@ -42,4 +42,4 @@ Enables schema-driven props validation in API/UI.
 3. Reload after adding file finds new schema
 
 ## Risks / Notes
-Generated tool schemas may grow; indexing added later.
+Generated tool schemas may grow; indexing added later. Loader behavior validated by schema unit tests (see `TESTING.md`).

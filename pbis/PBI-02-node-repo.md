@@ -47,4 +47,4 @@ Enables graph authoring at file level.
 4. Invalid update (non-object props) rejected
 
 ## Risks / Notes
-Edge propagation handled in later PBIs; keep rename minimal here.
+Edge propagation originally deferred; now implemented via rename logic that updates inbound edges (see Playwright rename propagation test). Testing layers: unit + integration + e2e (`TESTING.md`).

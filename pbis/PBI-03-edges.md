@@ -45,4 +45,4 @@ Enables meaningful graph structure for execution/design.
 4. Remove edge actually deletes entry
 
 ## Risks / Notes
-Cycle detection naive is fine at MVP scale (<1k edges).
+Cycle detection naive is fine at MVP scale (<1k edges). Covered by unit tests and e2e cycle rejection scenario (see `TESTING.md`).

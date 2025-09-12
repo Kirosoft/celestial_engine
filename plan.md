@@ -262,3 +262,5 @@ Future Enhancements:
 5. Parallel worker strategy using per-worker dynamic port + isolated server spawn (remove workers:1 bottleneck).
 
 Result: Provides confidence that repository + API stack behave correctly end-to-end across core graph operations, integrity repair, and validation pathways.
+
+2025-09-12 Enhancement: Added rename propagation test ensuring that when a node with inbound edges is renamed, all source nodes' outgoing edge targetIds are updated to the new id (no stale references). Strengthens correctness guarantees around node identity changes.

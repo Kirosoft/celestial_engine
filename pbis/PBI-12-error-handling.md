@@ -2,7 +2,7 @@
 id: PBI-12
 title: Standard Error & Result Types
 phase: 1
-status: planned
+status: in-progress
 priority: medium
 estimate: 3
 owner: TBA
@@ -28,10 +28,11 @@ Predictable client behavior and simpler telemetry.
 - Tests assert response shape across representative endpoints
 
 ## Implementation Checklist
-- [ ] Error classes (ValidationError, NotFoundError, ConflictError)
-- [ ] HTTP mapping layer
-- [ ] Consistent error serializer
-- [ ] Update existing routes to use
+- [x] Error classes (ValidationError, NotFoundError, ConflictError, CycleError)
+- [x] HTTP mapping layer (apiErrors.ts)
+- [x] Consistent error serializer (sendError)
+- [ ] Standard success envelope adoption across routes (deferred)
+- [ ] Ensure all routes uniformly include error codes (audit pass pending)
 
 ## Test Cases
 1. Validation error includes errors[] array
@@ -40,4 +41,4 @@ Predictable client behavior and simpler telemetry.
 4. Unexpected error returns 500 with sanitized message
 
 ## Risks / Notes
-Future enrichment with correlation IDs.
+Future enrichment with correlation IDs. Current error handling exercised in integration & e2e tests (see `TESTING.md`). Remaining work: unify success response shape.

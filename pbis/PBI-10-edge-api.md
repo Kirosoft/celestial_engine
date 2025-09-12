@@ -2,7 +2,7 @@
 id: PBI-10
 title: Edge API Endpoints
 phase: 1
-status: planned
+status: completed
 priority: high
 estimate: 3
 owner: TBA
@@ -29,11 +29,11 @@ Full client-side graph editing capability.
 - Integration tests (add/remove/update/cycle)
 
 ## Implementation Checklist
-- [ ] POST /api/edges route
-- [ ] DELETE /api/edges/:sourceId/:edgeId
-- [ ] PUT /api/edges/:sourceId/:edgeId
-- [ ] Validation: target exists, no cycle
-- [ ] Error mapping (400/404/409)
+- [x] POST /api/edges route
+- [x] DELETE /api/edges/:sourceId/:edgeId
+- [x] PUT /api/edges/:sourceId/:edgeId
+- [x] Validation: target exists, no cycle
+- [x] Error mapping (400/404/409)
 
 ## Test Cases
 1. Add edge success returns 201
@@ -42,4 +42,4 @@ Full client-side graph editing capability.
 4. Delete non-existent returns 404
 
 ## Risks / Notes
-Edge kind modifications minimal; extended metadata later.
+Edge kind modifications minimal; extended metadata later. Covered via API & e2e edge lifecycle tests (see `TESTING.md`).

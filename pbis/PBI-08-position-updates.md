@@ -2,7 +2,7 @@
 id: PBI-08
 title: Position Update Support
 phase: 1
-status: in-progress
+status: completed
 priority: medium
 estimate: 2
 owner: TBA
@@ -29,9 +29,9 @@ Improves UX without rewriting entire file content frequently.
 
 ## Implementation Checklist
 - [x] Position update repository method
-- [ ] Input validation (numbers)
-- [ ] API route handler
-- [ ] Optional debounce placeholder
+- [x] Input validation (numbers) (basic)
+- [x] API route handler
+- [ ] Optional debounce placeholder (deferred)
 
 ## Test Cases
 1. Position persists after update
@@ -39,4 +39,4 @@ Improves UX without rewriting entire file content frequently.
 3. Rapid sequence ends with final value
 
 ## Risks / Notes
-Future debounce at API layer; MVP can be direct.
+Future debounce at API layer; MVP can be direct. Covered indirectly in CRUD Playwright test (position update endpoint exercised) – see `TESTING.md`.

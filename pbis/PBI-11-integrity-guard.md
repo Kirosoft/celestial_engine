@@ -39,4 +39,4 @@ Prevents UI crashes and builds trust in file state.
 3. No-op when graph clean
 
 ## Risks / Notes
-Later improvement: separate repair report file.
+Later improvement: separate repair report file. Integrity behavior validated by e2e dangling edge repair test (see `TESTING.md`).
