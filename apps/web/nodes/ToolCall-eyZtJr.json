@@ -1,0 +1,15 @@
+{
+  "id": "ToolCall-eyZtJr",
+  "type": "ToolCall",
+  "name": "ToolCall",
+  "props": {
+    "toolName": ""
+  },
+  "position": {
+    "x": -81,
+    "y": 152.5
+  },
+  "edges": {
+    "out": []
+  }
+}

@@ -1,8 +1,10 @@
 {
-  "id": "Task-p-CNsB",
+  "id": "Task-HOw6_-",
   "type": "Task",
-  "name": "Solo",
-  "props": {},
+  "name": "Task",
+  "props": {
+    "title": "Task Title"
+  },
   "position": {
     "x": 120,
     "y": 120

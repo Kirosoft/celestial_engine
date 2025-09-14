@@ -1,0 +1,86 @@
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\LLM.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Plan.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Plan.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Task.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root glob: ../schemas/nodes/*.schema.json
+[FileRepo] list() result: ["../schemas/nodes/Code.schema.json","../schemas/nodes/Eval.schema.json","../schemas/nodes/GitHubInput.schema.json","../schemas/nodes/GitHubOutput.schema.json","../schemas/nodes/Merge.schema.json","../schemas/nodes/Router.schema.json","../schemas/nodes/ToolCall.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root glob: ../schemas/nodes/*.schema.json
+[FileRepo] list() result: ["../schemas/nodes/Code.schema.json","../schemas/nodes/Eval.schema.json","../schemas/nodes/GitHubInput.schema.json","../schemas/nodes/GitHubOutput.schema.json","../schemas/nodes/Merge.schema.json","../schemas/nodes/Router.schema.json","../schemas/nodes/ToolCall.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\LLM.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\LLM.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Plan.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Plan.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Plan.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Plan.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Task.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Task.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: ../schemas/nodes/Code.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Code.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: ../schemas/nodes/Eval.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Eval.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: ../schemas/nodes/GitHubInput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubInput.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: ../schemas/nodes/GitHubOutput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubOutput.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: ../schemas/nodes/Merge.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Merge.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: ../schemas/nodes/Router.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Router.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: ../schemas/nodes/ToolCall.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\ToolCall.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: nodes/Task-HOw6_-.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\nodes\Task-HOw6_-.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\LLM.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Plan.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Plan.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Task.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: nodes/Plan-qX6SYV.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\nodes\Plan-qX6SYV.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\LLM.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Plan.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Plan.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Task.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: nodes/LLM-7YdysO.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\nodes\LLM-7YdysO.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json

@@ -1,0 +1,49 @@
+{
+  "$id": "nodes/Plan.schema.json",
+  "title": "Plan",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "Plan"
+    },
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "props": {
+      "type": "object",
+      "properties": {
+        "plannerModel": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "plannerModel"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "props"
+  ],
+  "additionalProperties": true
+}

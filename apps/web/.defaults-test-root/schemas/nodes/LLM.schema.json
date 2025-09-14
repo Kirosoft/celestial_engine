@@ -1,0 +1,49 @@
+{
+  "$id": "nodes/LLM.schema.json",
+  "title": "LLM",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "LLM"
+    },
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "props": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "model"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "props"
+  ],
+  "additionalProperties": true
+}

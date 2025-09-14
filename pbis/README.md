@@ -79,6 +79,7 @@ Progress Notes (Phase 3)
 ------------------------
 - Canvas scaffold (React Flow) added: initial nodes/edges rendering with reload button.
 - Node drag + persisted position implemented (PBI-08 now exercised via UI): `onNodeDragStop` posts to position endpoint; positions survive reload.
+- Toolbox (PBI-22 partial): `/api/node-types` endpoint + basic click-to-create node working; refresh auto-dispatch.
 - Supporting hook: `useGraphData` for nodes/edges fetch and optimistic position updates.
 - Next steps: selection state store, toolbox integration (PBI-22), inspector (PBI-24), edge interactions (PBI-23).
 # Phase 1 Product Backlog Items

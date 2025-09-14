@@ -36,6 +36,12 @@ export function useGraphData(){
   }, [transform]);
 
   useEffect(()=>{ load(); }, [load]);
+  // Listen for external refresh requests (e.g., toolbox create)
+  useEffect(()=>{
+    const h = () => load();
+    window.addEventListener('graph:refresh-request', h);
+    return () => window.removeEventListener('graph:refresh-request', h);
+  }, [load]);
 
   const onNodesChange = useCallback((changes: NodeChange[]) => {
     setNodes(nds => applyNodeChanges(changes, nds));

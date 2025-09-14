@@ -1,7 +1,5 @@
 import { test, expect } from '@playwright/test';
 import { resetRepoRoot, readJson } from './helpers';
-import { join } from 'path';
-import { promises as fs } from 'fs';
 
 async function createTask(request: any, name: string){
   const res = await request.post('/api/nodes', { data: { type: 'Task', name, props: { title: name+' title' } } });
@@ -30,8 +28,9 @@ test('edge add/update/delete and cycle rejection with integrity repair', async (
   // Recreate edge then remove node b to test integrity repair removing new dangling edge
   const addAB2 = await request.post('/api/edges', { data: { sourceId: a.id, targetId: b.id, kind: 'flow' }});
   expect(addAB2.status()).toBe(201);
-  const root = process.env.REPO_ROOT!;
-  await fs.unlink(join(root, 'nodes', `${b.id}.json`));
+  // Simulate dangling edge by raw-deleting node b via admin endpoint (no edge repair yet)
+  const rawDel = await request.post('/api/admin/raw-delete-node', { data: { id: b.id }});
+  expect(rawDel.status()).toBe(200);
   const list = await request.get('/api/nodes');
   const listJson = await list.json();
   expect(listJson.integrity.totalRemoved).toBeGreaterThan(0);

@@ -1,0 +1,16 @@
+{
+  "id": "GitHubOutput-G66WnH",
+  "type": "GitHubOutput",
+  "name": "GitHubOutput",
+  "props": {
+    "repo": "",
+    "commitMessage": ""
+  },
+  "position": {
+    "x": -145.5,
+    "y": -7
+  },
+  "edges": {
+    "out": []
+  }
+}

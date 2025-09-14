@@ -19,7 +19,17 @@ async function debugLog(msg: string) {
 
 function repoRoot(){
   const envRoot = (process.env.REPO_ROOT || '').trim();
+  const isE2E = !!process.env.PW_TEST || process.env.NODE_ENV === 'test' || process.env.E2E === '1';
+  if(!envRoot && isE2E){
+    // Hard fail in E2E context to surface isolation issues early
+    const msg = '[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.';
+    debugLog(msg);
+    throw new Error(msg);
+  }
   const resolved = envRoot ? resolve(envRoot) : resolve(process.cwd());
+  if(!envRoot){
+    debugLog('[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.');
+  }
   debugLog(`[FileRepo] repoRoot() env: ${envRoot} resolved: ${resolved}`);
   return resolved;
 }

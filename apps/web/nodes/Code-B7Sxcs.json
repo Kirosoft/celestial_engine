@@ -1,0 +1,16 @@
+{
+  "id": "Code-B7Sxcs",
+  "type": "Code",
+  "name": "Code",
+  "props": {
+    "language": "typescript",
+    "source": "// TODO: implement"
+  },
+  "position": {
+    "x": 85,
+    "y": 95.5
+  },
+  "edges": {
+    "out": []
+  }
+}

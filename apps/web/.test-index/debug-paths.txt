@@ -1,0 +1,6 @@
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index\.awb\index.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.test-index\.awb\index.json
