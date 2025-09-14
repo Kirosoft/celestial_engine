@@ -11,7 +11,7 @@ export function useGraphData(){
   const [error, setError] = useState<Error|undefined>();
 
   const transform = useCallback((api: ApiNodeList)=>{
-    const rfNodes: RFNode[] = api.nodes.map(n=>({ id: n.id, position: n.position || { x: 0, y: 0 }, data: { label: n.name || n.id, type: n.type } }));
+  const rfNodes: RFNode[] = api.nodes.map(n=>({ id: n.id, type: 'basicNode', position: n.position || { x: 0, y: 0 }, data: { label: n.name || n.id, type: n.type } }));
     const rfEdges: RFEdge[] = [];
     for(const n of api.nodes){
       if(n.edges?.out){
@@ -58,5 +58,20 @@ export function useGraphData(){
     }
   }, []);
 
-  return { nodes, edges, loading, error, refresh: load, onNodesChange, persistPosition };
+  const addEdgeLocal = useCallback(async (sourceId: string, targetId: string, kind: 'flow'|'data'='flow') => {
+    try {
+      const res = await fetch('/api/edges', { method: 'POST', headers: { 'Content-Type':'application/json' }, body: JSON.stringify({ sourceId, targetId, kind }) });
+      if(!res.ok){
+        return false;
+      }
+      const json = await res.json() as { edge: { id: string; kind: string } };
+      setEdges(edgs => [...edgs, { id: `${sourceId}:${json.edge.id}`, source: sourceId, target: targetId, data: { kind: json.edge.kind }, type: 'default' }]);
+      return true;
+    } catch(e){
+      console.warn('[addEdgeLocal] error', e);
+      return false;
+    }
+  }, []);
+
+  return { nodes, edges, loading, error, refresh: load, onNodesChange, persistPosition, addEdgeLocal };
 }

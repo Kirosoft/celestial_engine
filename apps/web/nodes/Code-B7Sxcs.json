@@ -7,10 +7,16 @@
     "source": "// TODO: implement"
   },
   "position": {
-    "x": 85,
-    "y": 95.5
+    "x": 56.5,
+    "y": 69.5
   },
   "edges": {
-    "out": []
+    "out": [
+      {
+        "id": "e_yo9X-F",
+        "targetId": "ToolCall-eyZtJr",
+        "kind": "flow"
+      }
+    ]
   }
 }
