@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { NodeRepo, createNode, getNode, updateNode, renameNode, deleteNode, addEdge, removeEdge, updateEdge, listNodes } from '../lib/nodeRepo';
-import { ensureTempSchema } from './helpers/schemaHelper';
+import { seedBaseSchemasIfNeeded } from './helpers/seedBaseSchemas';
 import { FileRepo } from '../lib/fileRepo';
 import { promises as fs } from 'fs';
 import { resolve } from 'path';
@@ -13,7 +13,7 @@ async function reset(){
   await fs.rm(tmpRoot, { recursive: true, force: true });
   await fs.mkdir(tmpRoot, { recursive: true });
   // seed minimal schema to satisfy validator for generic type
-  await ensureTempSchema({ typeName: 'Task' });
+  await seedBaseSchemasIfNeeded();
 }
 
 describe('NodeRepo CRUD & Edges', () => {

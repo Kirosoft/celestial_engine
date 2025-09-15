@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { resolve } from 'path';
 import { promises as fs } from 'fs';
 import { FileRepo } from '../lib/fileRepo';
-import { ensureTempSchema } from './helpers/schemaHelper';
+import { seedBaseSchemasIfNeeded } from './helpers/seedBaseSchemas';
 import groupsHandler from '../pages/api/groups/index';
 import createInGroupHandler from '../pages/api/groups/[id]/nodes';
 import subgraphHandler from '../pages/api/groups/[id]/subgraph';
@@ -20,8 +20,7 @@ describe('Group internal node creation API', () => {
     await fs.mkdir(tmpRoot, { recursive:true });
     process.env.REPO_ROOT = tmpRoot;
     // Seed minimal schemas for Group and Task so validation passes
-    await ensureTempSchema({ typeName: 'Task' });
-    await ensureTempSchema({ typeName: 'Group', extraProps: { properties: { ports: { type: 'object', properties: { inputs: { type:'array', items:{ type:'string' } }, outputs: { type:'array', items:{ type:'string' } } }, required:['inputs','outputs'] } }, required: ['id','type','name','ports'] } });
+  await seedBaseSchemasIfNeeded();
   });
 
   it('creates a node inside group subgraph and lists it', async () => {

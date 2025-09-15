@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { promises as fs } from 'fs';
 import { resolve } from 'path';
-import { ensureTempSchema } from './helpers/schemaHelper';
+import { seedBaseSchemasIfNeeded } from './helpers/seedBaseSchemas';
 import { createNode, addEdge } from '../lib/nodeRepo';
 import { scanAndRepairDanglingEdges } from '../lib/integrityGuard';
 import { FileRepo } from '../lib/fileRepo';
@@ -12,7 +12,7 @@ async function reset(){
   process.env.REPO_ROOT = tmpRoot;
   await fs.rm(tmpRoot, { recursive: true, force: true });
   await fs.mkdir(tmpRoot, { recursive: true });
-  await ensureTempSchema({ typeName: 'Task' });
+  await seedBaseSchemasIfNeeded();
 }
 
 describe('Integrity Guard', () => {

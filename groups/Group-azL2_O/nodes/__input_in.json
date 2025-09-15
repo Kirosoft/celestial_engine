@@ -3,8 +3,8 @@
   "type": "GroupInputProxy",
   "name": "in",
   "position": {
-    "x": 102.5,
-    "y": -40
+    "x": 2,
+    "y": -121.5
   },
   "props": {
     "port": "in",

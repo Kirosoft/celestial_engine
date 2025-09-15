@@ -1,22 +1,27 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, beforeAll, afterAll } from 'vitest';
 import { promises as fs } from 'fs';
 import { resolve } from 'path';
 import nodesHandler from '../pages/api/nodes/index';
 import edgesCreateHandler from '../pages/api/edges/index';
 import edgeMutateHandler from '../pages/api/edges/[sourceId]/[edgeId]';
 import { invoke } from './helpers/apiHelper';
-import { ensureTempSchema } from './helpers/schemaHelper';
-
-const tmpRoot = resolve(process.cwd(), '.api-test-edges');
-
+import { createSeededTempRepo } from './helpers/tempRepo';
+let repoHandle: Awaited<ReturnType<typeof createSeededTempRepo>>;
 async function reset(){
-  process.env.REPO_ROOT = tmpRoot;
-  await fs.rm(tmpRoot, { recursive: true, force: true });
-  await fs.mkdir(tmpRoot, { recursive: true });
-  await ensureTempSchema({ typeName: 'Task' });
+  // Just recreate internal folders by re-seeding (helper ensures idempotent) after wiping
+  await fs.rm(process.env.REPO_ROOT!, { recursive: true, force: true });
+  await fs.mkdir(process.env.REPO_ROOT!, { recursive: true });
+  // Recreate schemas by calling createSeededTempRepo logic would require new dir; instead regenerate via seeding helper pattern
+  // For simplicity here we recreate a new seeded temp repo each test; cheaper for small test size
+  if(repoHandle){
+    await repoHandle.cleanup();
+  }
+  repoHandle = await createSeededTempRepo('api-edges-');
 }
 
 describe('Edges API', () => {
+  beforeAll(async ()=>{ repoHandle = await createSeededTempRepo('api-edges-'); });
+  afterAll(async ()=>{ await repoHandle.cleanup(); });
   beforeEach(reset);
 
   async function makeTwo(){

@@ -4,7 +4,7 @@ import { resolve } from 'path';
 import groupsHandler from '../pages/api/groups/index';
 import subgraphHandler from '../pages/api/groups/[id]/subgraph';
 import { invoke } from './helpers/apiHelper';
-import { ensureTempSchema } from './helpers/schemaHelper';
+import { seedBaseSchemasIfNeeded } from './helpers/seedBaseSchemas';
 
 const tmpRoot = resolve(process.cwd(), '.api-test-groups-subgraph');
 
@@ -12,8 +12,7 @@ async function reset(){
   process.env.REPO_ROOT = tmpRoot;
   await fs.rm(tmpRoot, { recursive: true, force: true });
   await fs.mkdir(tmpRoot, { recursive: true });
-  await ensureTempSchema({ typeName: 'Task' });
-  await ensureTempSchema({ typeName: 'Group', extraProps: { properties: { ports: { type: 'object', properties: { inputs: { type: 'array', items: { type: 'string' } }, outputs: { type: 'array', items: { type: 'string' } } }, required: ['inputs','outputs'] } }, required: ['id','type','name','ports'] } });
+  await seedBaseSchemasIfNeeded();
 }
 
 describe('Group Subgraph API', () => {

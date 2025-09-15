@@ -6,7 +6,7 @@ import createInGroupHandler from '../pages/api/groups/[id]/nodes';
 import subgraphHandler from '../pages/api/groups/[id]/subgraph';
 import groupEdgesHandler from '../pages/api/groups/[id]/edges/index';
 import groupEdgeHandler from '../pages/api/groups/[id]/edges/[edgeId]';
-import { ensureTempSchema } from './helpers/schemaHelper';
+import { seedBaseSchemasIfNeeded } from './helpers/seedBaseSchemas';
 
 async function invoke(handler: any, { method='GET', body, query }: any){
   const req: any = { method, body, query };
@@ -22,8 +22,7 @@ describe('Group edges API', () => {
     await fs.rm(tmpRoot, { recursive:true, force:true });
     await fs.mkdir(tmpRoot, { recursive:true });
     process.env.REPO_ROOT = tmpRoot;
-    await ensureTempSchema({ typeName: 'Task' });
-    await ensureTempSchema({ typeName: 'Group', extraProps: { properties: { ports: { type: 'object', properties: { inputs: { type:'array', items:{ type:'string' } }, outputs: { type:'array', items:{ type:'string' } } }, required:['inputs','outputs'] } }, required: ['id','type','name','ports'] } });
+  await seedBaseSchemasIfNeeded();
   });
 
   it('creates and lists an edge inside a group', async () => {

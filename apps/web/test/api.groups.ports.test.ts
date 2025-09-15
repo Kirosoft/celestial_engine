@@ -5,7 +5,7 @@ import groupsHandler from '../pages/api/groups/index';
 import portsHandler from '../pages/api/groups/[id]/ports';
 import subgraphHandler from '../pages/api/groups/[id]/subgraph';
 import { invoke } from './helpers/apiHelper';
-import { ensureTempSchema } from './helpers/schemaHelper';
+import { seedBaseSchemasIfNeeded } from './helpers/seedBaseSchemas';
 
 const tmpRoot = resolve(process.cwd(), '.api-test-groups-ports');
 
@@ -17,8 +17,7 @@ async function reset(){
     catch(e:any){ if(e?.code !== 'ENOTEMPTY' || attempt===2) throw e; await new Promise(r=>setTimeout(r,50)); }
   }
   await fs.mkdir(tmpRoot, { recursive: true });
-  await ensureTempSchema({ typeName: 'Task' });
-  await ensureTempSchema({ typeName: 'Group', extraProps: { properties: { ports: { type: 'object', properties: { inputs: { type: 'array', items: { type: 'string' } }, outputs: { type: 'array', items: { type: 'string' } } }, required: ['inputs','outputs'] } }, required: ['id','type','name','ports'] } });
+  await seedBaseSchemasIfNeeded();
 }
 
 describe('Group Ports API', () => {

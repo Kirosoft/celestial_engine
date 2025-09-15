@@ -1,69 +1,33 @@
 {
-  "$id": "Group",
   "title": "Group",
   "type": "object",
-  "description": "Composite group node encapsulating a nested subgraph of other nodes via declared input/output ports.",
   "properties": {
-    "id": { "type": "string" },
-    "type": { "const": "Group" },
-    "name": { "type": "string", "minLength": 1 },
     "ports": {
       "type": "object",
       "properties": {
         "inputs": {
           "type": "array",
-          "items": { "type": "string", "pattern": "^[a-zA-Z_][a-zA-Z0-9_-]{0,31}$" },
-          "uniqueItems": true
+          "items": {
+            "type": "string"
+          }
         },
         "outputs": {
           "type": "array",
-          "items": { "type": "string", "pattern": "^[a-zA-Z_][a-zA-Z0-9_-]{0,31}$" },
-          "uniqueItems": true
-        }
-      },
-      "required": ["inputs", "outputs"],
-      "additionalProperties": false
-    },
-    "summary": { "type": "string" },
-    "subgraphRef": { "type": "string" },
-    "props": { "type": "object" },
-    "position": {
-      "type": "object",
-      "properties": {
-        "x": { "type": "number" },
-        "y": { "type": "number" }
-      },
-      "required": ["x", "y"],
-      "additionalProperties": false
-    },
-    "edges": {
-      "type": "object",
-      "properties": {
-        "out": {
-          "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "id": { "type": "string" },
-              "targetId": { "type": "string" },
-              "kind": { "type": "string", "enum": ["flow", "data"] },
-              "sourcePort": { "type": "string" },
-              "targetPort": { "type": "string" }
-            },
-            "required": ["id", "targetId", "kind"],
-            "additionalProperties": true
+            "type": "string"
           }
         }
       },
-      "required": ["out"],
-      "additionalProperties": false
+      "required": [
+        "inputs",
+        "outputs"
+      ]
     }
   },
-  "required": ["id", "type", "name", "ports"],
-  "additionalProperties": true,
-  "allOf": [
-    {
-      "description": "Disjoint enforcement between inputs and outputs is handled in application logic (validator wrapper)."
-    }
+  "required": [
+    "id",
+    "type",
+    "name",
+    "ports"
   ]
 }

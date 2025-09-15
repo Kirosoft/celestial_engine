@@ -1,0 +1,17 @@
+{
+  "id": "__output_outC",
+  "type": "GroupOutputProxy",
+  "name": "outC",
+  "position": {
+    "x": 400,
+    "y": 60
+  },
+  "props": {
+    "port": "outC",
+    "groupId": "Group-NDvdx-",
+    "kind": "output"
+  },
+  "edges": {
+    "out": []
+  }
+}

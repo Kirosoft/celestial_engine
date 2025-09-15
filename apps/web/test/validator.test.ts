@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { promises as fs } from 'fs';
 import { resolve } from 'path';
 import { validateNode, assertValidNode } from '../lib/validator';
-import { ensureTempSchema } from './helpers/schemaHelper';
+import { seedBaseSchemasIfNeeded } from './helpers/seedBaseSchemas';
 
 const tmpRoot = resolve(process.cwd(), '.test-validate');
 
@@ -10,7 +10,7 @@ async function reset(){
   process.env.REPO_ROOT = tmpRoot;
   await fs.rm(tmpRoot, { recursive: true, force: true });
   await fs.mkdir(tmpRoot, { recursive: true });
-  await ensureTempSchema({ typeName: 'Task' });
+  await seedBaseSchemasIfNeeded();
 }
 
 describe('Validator', () => {

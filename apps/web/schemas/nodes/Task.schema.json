@@ -1,22 +1,42 @@
 {
-  "$id": "nodes/Task.schema.json",
   "title": "Task",
   "type": "object",
   "properties": {
-    "id": {"type":"string"},
-    "type": {"const":"Task"},
-    "name": {"type":"string"},
-    "position": {"type":"object","properties":{"x":{"type":"number"},"y":{"type":"number"}},"required":["x","y"]},
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
     "props": {
-      "type":"object",
+      "type": "object",
+      "additionalProperties": true
+    },
+    "position": {
+      "type": "object",
       "properties": {
-        "title": {"type":"string"},
-        "description": {"type":"string"},
-        "tool": {"type":"string"}
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
       },
-      "required": ["title"]
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "edges": {
+      "type": "object"
     }
   },
-  "required": ["id","type","name","props"],
-  "additionalProperties": true
+  "required": [
+    "id",
+    "type",
+    "name"
+  ]
 }

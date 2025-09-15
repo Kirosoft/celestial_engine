@@ -1,5 +1,5 @@
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-index resolved: /home/ubuntu/celestial_engine/apps/web/.test-index
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-index p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-index/.awb/index.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-index resolved: /home/ubuntu/celestial_engine/apps/web/.test-index
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-index resolved: /home/ubuntu/celestial_engine/apps/web/.test-index
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-index p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-index/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-index resolved: /home/ubuntu/celestial_engine/apps/web/.test-index
