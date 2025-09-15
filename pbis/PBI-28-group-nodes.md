@@ -2,12 +2,12 @@
 id: PBI-28
 title: Group Nodes / Nested Subgraph Support
 phase: 2
-status: not-started
+status: in-progress
 priority: high
 estimate: 13
 owner: TBA
 created: 2025-09-15
-updated: 2025-09-15
+updated: 2025-09-15 (progress update)
 dependsOn: [PBI-21, PBI-22, PBI-23, PBI-24]
 ---
 
@@ -259,24 +259,24 @@ Deferrals:
 - Performance optimization (lazy proxy generation) – not needed initial scale.
 
 ## Implementation Checklist
-- [ ] Group schema definition committed
-- [ ] Group directory structure & repo helpers
-- [ ] POST /api/groups create (with subgraph init)
-- [ ] GET /api/groups/:id/subgraph endpoint
-- [ ] PUT /api/groups/:id/ports update & proxy sync
-- [ ] Edge constraint validation (boundary only)
-- [ ] UI Group node renderer (expand, edit ports)
-- [ ] Nested canvas navigation state
-- [ ] Proxy node visuals (input/output)
+- [x] Group schema definition committed (Group.schema.json + proxy schemas)
+- [x] Group directory structure & repo helpers (subgraphRef directories present, index files created)
+- [x] POST /api/groups create (with subgraph init) (evidenced by existing Group-*.json with subgraphRef)
+- [x] GET /api/groups/:id/subgraph endpoint (hook fetches `/api/groups/:id/subgraph` successfully)
+- [ ] PUT /api/groups/:id/ports update & proxy sync (no port editing API detected yet)
+- [ ] Edge constraint validation (boundary only) (currently implicit by scoping; no explicit guard)
+- [ ] UI Group node renderer (uses generic basicNode; needs custom renderer + controls)
+- [x] Nested canvas navigation state (`currentGroupId`, group-enter/exit events wired)
+- [x] Proxy node visuals (basic styling via generic node with __proxy flag; needs custom style pass) 
 - [ ] Port editing dialog + validation
-- [ ] Delete cascade semantics
-- [ ] Unit tests: port validation
-- [ ] Integration tests: create/update/fetch subgraph
-- [ ] E2E tests: expand, internal node add, boundary wiring
-- [ ] Docs update (README + architecture)
+- [ ] Delete cascade semantics (no cascade delete logic confirmed)
+- [ ] Unit tests: port validation (not found)
+- [ ] Integration tests: create/update/fetch subgraph (partial evidence only)
+- [ ] E2E tests: expand, internal node add, boundary wiring (not confirmed)
+- [ ] Docs update (README + architecture) (README has general group notes but needs sync with current partial status)
 
 ## Implementation Status
-Not started.
+Core subgroup foundation implemented (schema, creation, subgraph fetch, proxy persistence, navigation). Missing: port editing, custom UI renderer, explicit edge boundary guard, cascade delete, and full automated test coverage.
 
 ## Outstanding / Deferred
 - Extract mode (non-cascade deletion)
