@@ -1,4 +1,17 @@
-## PBI-25: Command Console Panel
+---
+id: PBI-25
+title: Command Console Panel
+phase: 2
+status: not-started
+priority: medium
+estimate: 5
+owner: TBA
+created: 2025-09-12
+updated: 2025-09-15
+dependsOn: [PBI-16]
+---
+
+## Goal
 
 Goal
 ----
@@ -27,10 +40,21 @@ Out of Scope
 ------------
 - Multi-tab consoles, diff viewers.
 
+## Implementation Checklist
+- [ ] Console panel shell (toggleable)
+- [ ] JSON editor (textarea MVP)
+- [ ] Client-side JSON validation & error highlight
+- [ ] Submit to /api/commands
+- [ ] Render response (status, version, events)
+- [ ] History (20 entries) with re-run
+- [ ] Copy & pretty-print actions
+- [ ] Error path highlight (schema validation)
+- [ ] Playwright: successful command add_node
+- [ ] Playwright: invalid envelope shows error
+
 ## Implementation Status
-Not started. No command console UI; dispatcher endpoint also not implemented (blocked by PBIs 15–18).
+Not started (dispatcher pending).
 
 ## Outstanding / Deferred
-- Build console panel with JSON editor (monospaced textarea first pass)
-- Wire submit to `/api/commands` once dispatcher exists
-- Implement history list & re-run action
+- Advanced editor (monaco)
+- Multi-tab / saved scripts

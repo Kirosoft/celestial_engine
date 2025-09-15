@@ -1,4 +1,17 @@
-## PBI-19: Undo / Redo Ring Buffer
+---
+id: PBI-19
+title: Undo / Redo Ring Buffer
+phase: 2
+status: not-started
+priority: medium
+estimate: 5
+owner: TBA
+created: 2025-09-12
+updated: 2025-09-15
+dependsOn: [PBI-18]
+---
+
+## Goal
 
 Goal
 ----
@@ -35,10 +48,22 @@ Risks / Mitigations
 -------------------
 - Drift if reducers become side-effectful → enforce purity & state snapshotting for inverse computation.
 
+## Implementation Checklist
+- [ ] Define inverse mapping per action
+- [ ] Ring buffer data structure (configurable capacity)
+- [ ] Store pre/post version metadata
+- [ ] Undo endpoint (/api/undo)
+- [ ] Redo endpoint (/api/redo)
+- [ ] History endpoint (/api/history)
+- [ ] External change detection (version mismatch handling)
+- [ ] Tests: linear undo/redo chain
+- [ ] Tests: capacity eviction
+- [ ] Tests: invalid undo after external mutation
+- [ ] Docs update (usage & limits)
+
 ## Implementation Status
-Not started. No undo/redo endpoints or ring buffer structures implemented.
+Not started; no history structures or endpoints.
 
 ## Outstanding / Deferred
-- Define inverse action generation rules
-- Implement history ring + capacity eviction tests
-- Add endpoints /api/undo, /api/redo, /api/history
+- Persistence across restarts
+- Grouped multi-command undo (future)

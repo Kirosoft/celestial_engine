@@ -1,4 +1,17 @@
-## PBI-17: Event Derivation & Append Log
+---
+id: PBI-17
+title: Event Derivation & Append Log
+phase: 2
+status: not-started
+priority: medium
+estimate: 5
+owner: TBA
+created: 2025-09-12
+updated: 2025-09-15
+dependsOn: [PBI-16, PBI-18, PBI-20]
+---
+
+## Goal
 
 Goal
 ----
@@ -35,10 +48,21 @@ Risks / Mitigations
 - File corruption: use atomic append (fs.open + appendFile) and optional checksum field per line.
 - Large log size: rotation + future compaction (snapshot). 
 
+## Implementation Checklist
+- [ ] Define event types (TS enums / string unions)
+- [ ] Action→event mapping table
+- [ ] Append writer with rotation threshold
+- [ ] Atomic append implementation (no partial lines)
+- [ ] Event serialization (JSON lines) with optional checksum field
+- [ ] Replay utility (rebuild graph from events)
+- [ ] Replay verification test (hash compare vs live)
+- [ ] Rotation test (forced small threshold)
+- [ ] Documentation: event types & rotation strategy
+
 ## Implementation Status
-Not started. No events log file or generation logic present. Current system performs direct CRUD without event derivation.
+Not started. No `.awb/events.log` or derivation logic.
 
 ## Outstanding / Deferred
-- Define event mapping per action (aligned with dispatcher reducers)
-- Implement append-only writer with rotation threshold config
-- Add replay tool + verification test (reconstruct graph)
+- Checksums / integrity markers
+- SSE / streaming API
+- Compaction via periodic snapshot (ties into PBI-20)

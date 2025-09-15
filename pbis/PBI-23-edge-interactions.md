@@ -1,4 +1,17 @@
-## PBI-23: Edge Interaction & Creation
+---
+id: PBI-23
+title: Edge Interaction & Creation
+phase: 2
+status: in-progress
+priority: high
+estimate: 5
+owner: TBA
+created: 2025-09-12
+updated: 2025-09-15
+dependsOn: [PBI-10, PBI-11, PBI-21]
+---
+
+## Goal
 
 Goal
 ----
@@ -28,19 +41,21 @@ Out of Scope
 ------------
 - Multi-port / typed sockets.
 
+## Implementation Checklist
+- [x] Source/target handles on nodes
+- [x] Drag-to-create edge interaction
+- [x] POST edge creation & optimistic update
+- [x] Cycle/self-loop prevention surfaced
+- [ ] Delete via Delete key when edge selected
+- [ ] Improved error toasts (cycle vs generic)
+- [ ] Stabilize drag in Playwright (remove fallback)
+- [ ] Visual selection styling refinement
+- [ ] Accessibility: keyboard edge deletion
+
 ## Implementation Status
-Edge creation via drag implemented with optimistic POST. Selection visual (basic) present; explicit delete via Delete key not yet implemented. Cycle/self-loop prevention surfaced via backend errors but UI feedback minimal (simple temporary message). UI drag reliability in tests supplemented by fallback API edge creation.
-
-### Verified By
-- Playwright: edge-drag test (with fallback) & edge CRUD API tests
-- Manual: interactive edge creation between nodes
-
-### Current Gaps / Tech Debt
-- Delete-on-Delete-key not implemented
-- Error feedback lacks detail (no toast differentiation for cycle vs generic failure)
-- Drag reliability under automation intermittent (fallback hides issue)
+Core edge creation working; deletion & robust feedback pending.
 
 ## Outstanding / Deferred
-- Implement edge deletion via selection + Delete key
-- Improve error messaging (toast with specific cycle/self-loop messages)
-- Investigate and resolve intermittent drag recognition to remove test fallback
+- Delete key edge removal
+- Rich error messaging
+- Drag reliability improvements

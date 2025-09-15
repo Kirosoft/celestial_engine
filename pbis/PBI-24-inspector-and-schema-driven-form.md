@@ -1,4 +1,17 @@
-## PBI-24: Inspector & Schema-Driven Form (Nodes & Edges)
+---
+id: PBI-24
+title: Inspector & Schema-Driven Form (Nodes & Edges)
+phase: 2
+status: in-progress
+priority: high
+estimate: 8
+owner: TBA
+created: 2025-09-12
+updated: 2025-09-15
+dependsOn: [PBI-15, PBI-21, PBI-22, PBI-23]
+---
+
+## Goal
 
 Goal
 ----
@@ -66,31 +79,28 @@ Out of Scope
 - Live subscription for position (poll acceptable for MVP).
 - Edge property editing beyond scaffolding for initial release.
 
+## Implementation Checklist
+- [x] Node inspector basic form (name + props)
+- [x] Dirty tracking & save/reset
+- [x] Read-only position display
+- [ ] Edge inspector mode scaffold
+- [ ] Delete (node) via inspector
+- [ ] Delete (edge) via inspector
+- [ ] Field-level validation error mapping
+- [ ] Unsaved changes guard on selection switch
+- [ ] Keyboard Delete integration (node/edge)
+- [ ] Resizable width persistence (min/max constraints)
+- [ ] Hide/show toggle persistence
+- [ ] Playwright tests (node edit, delete, dirty guard)
+- [ ] Playwright tests (edge delete)
+
 ## Implementation Status
-Current Node-only inspector exists (name + props editing, dirty indicator, save). No edge inspector yet. Validation error mapping generic. No deletion from inspector (node deletion occurs via other UI or not implemented). Position read-only already displayed.
-
-Planned Enhancements (this PBI revision):
-- Add Delete buttons (node & edge).
-- Introduce Edge inspector mode (read-only properties for now, with delete).
-- Implement field-level error mapping logic.
-- Add unsaved change guard and reset action.
-- Add keyboard Delete integration (coordinate with PBI-23 completion).
-
-### Verified By
-Initial (pre-revision): Manual node edits.
-Post-revision (target): Expanded Playwright specs listed above + updated API integration tests for delete.
-
-### Current Gaps / Tech Debt
-- Field-level validation mapping absent
-- No edge inspector implementation
-- Missing deletion + confirm flows
-- No optimistic updates for prop edits
-- No unsaved change guard
+Node-only inspector operational; edge support, deletion workflow, validation mapping pending.
 
 ## Outstanding / Deferred
-- Autosave or debounce save
-- Advanced conditional rendering (oneOf/anyOf)
-- Edge property schema integration once defined
-- Position editing (manual numeric entry)
-- Optimistic update w/ rollback on failure (currently full wait)
-- Keyboard accessible resize (arrow keys adjusting width) (deferred)
+- Autosave / debounce
+- Advanced conditional schema (oneOf/anyOf)
+- Edge property schema integration (future)
+- Position manual editing
+- Optimistic update with rollback
+- Keyboard-accessible resize controls

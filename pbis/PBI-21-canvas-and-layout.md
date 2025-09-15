@@ -1,4 +1,17 @@
-## PBI-21: Canvas & Layout Infrastructure
+---
+id: PBI-21
+title: Canvas & Layout Infrastructure
+phase: 2
+status: in-progress
+priority: high
+estimate: 5
+owner: TBA
+created: 2025-09-12
+updated: 2025-09-15
+dependsOn: [PBI-09, PBI-10]
+---
+
+## Goal
 
 Goal
 ----
@@ -34,19 +47,23 @@ Risks / Mitigations
 -------------------
 - Performance with large graphs: lazy mount & simple memoization.
 
+## Implementation Checklist
+- [x] React Flow integration wrapper component
+- [x] Initial load nodes & edges from API
+- [x] Persist & restore node positions
+- [x] Basic selection state provider & highlight
+- [x] Edge creation handles (partial early delivery from PBI-23)
+- [ ] Distinct edge styling by kind (flow/data)
+- [ ] Empty state call-to-action (create first node)
+- [ ] Performance smoke (200 nodes) doc baseline
+- [ ] Zoom/pan constraint tuning (min/max zoom)
+- [ ] Accessibility pass (tab focus for nodes)
+
 ## Implementation Status
-Canvas implemented using React Flow. Nodes/edges load from API, positions persist on drag stop. Selection highlights and selection badge implemented. Basic error/loading overlays present. Edge handles & creation integrated (part of PBI-23 scope delivered early).
-
-### Verified By
-- Playwright: canvas interaction tests (edge creation, node drag with fallback)
-- Manual inspection: nodes render with labels & positions
-
-### Current Gaps / Tech Debt
-- No distinct edge styling differences by kind yet (single style)
-- Pan/zoom supported by React Flow defaults (no custom constraints)
-- No empty-state call-to-action (just static message)
+Core canvas operational; most baseline behaviors delivered. Remaining visual & perf polish pending.
 
 ## Outstanding / Deferred
-- Add edge styling variants by `kind`
-- Improve empty state with create node quick action
-- Performance test with >200 nodes (baseline FPS / interaction latency)
+- Edge styling variants by kind
+- Empty state improvements
+- Performance baseline >200 nodes
+- Accessibility / keyboard navigation

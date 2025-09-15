@@ -1,3 +1,16 @@
+---
+id: PBI-28
+title: Group Nodes / Nested Subgraph Support
+phase: 2
+status: not-started
+priority: high
+estimate: 13
+owner: TBA
+created: 2025-09-15
+updated: 2025-09-15
+dependsOn: [PBI-21, PBI-22, PBI-23, PBI-24]
+---
+
 # PBI-28: Group Nodes / Nested Subgraph Support
 
 ## Goal
@@ -244,3 +257,28 @@ Deferrals:
 - Extract mode on delete.
 - Nested groups deeper than 1 level (though design compatible) – add test after basic stability.
 - Performance optimization (lazy proxy generation) – not needed initial scale.
+
+## Implementation Checklist
+- [ ] Group schema definition committed
+- [ ] Group directory structure & repo helpers
+- [ ] POST /api/groups create (with subgraph init)
+- [ ] GET /api/groups/:id/subgraph endpoint
+- [ ] PUT /api/groups/:id/ports update & proxy sync
+- [ ] Edge constraint validation (boundary only)
+- [ ] UI Group node renderer (expand, edit ports)
+- [ ] Nested canvas navigation state
+- [ ] Proxy node visuals (input/output)
+- [ ] Port editing dialog + validation
+- [ ] Delete cascade semantics
+- [ ] Unit tests: port validation
+- [ ] Integration tests: create/update/fetch subgraph
+- [ ] E2E tests: expand, internal node add, boundary wiring
+- [ ] Docs update (README + architecture)
+
+## Implementation Status
+Not started.
+
+## Outstanding / Deferred
+- Extract mode (non-cascade deletion)
+- Port type annotations
+- Deep nesting stress tests

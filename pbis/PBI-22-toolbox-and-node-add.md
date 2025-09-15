@@ -1,4 +1,17 @@
-## PBI-22: Toolbox & Node Creation UX
+---
+id: PBI-22
+title: Toolbox & Node Creation UX
+phase: 2
+status: in-progress
+priority: high
+estimate: 5
+owner: TBA
+created: 2025-09-12
+updated: 2025-09-15
+dependsOn: [PBI-15, PBI-21]
+---
+
+## Goal
 
 Goal
 ----
@@ -54,19 +67,22 @@ Out of Scope
 ------------
 - Node category grouping (future enhancement).
 
+## Implementation Checklist
+- [x] Endpoint exposing node schemas list
+- [x] Toolbox component renders schema list
+- [x] Click-to-create node at viewport center
+- [x] Persistence: position + collapsed state (localStorage)
+- [ ] Drag-to-add coordinate placement
+- [ ] Display schema descriptions
+- [ ] Error feedback (toast) on creation failure
+- [ ] Prevent off-screen drag (24px visible constraint)
+- [ ] Accessibility: focus & keyboard activation
+- [ ] Playwright tests for position persistence & collapse
+
 ## Implementation Status
-Toolbox component implemented with list + click-to-create node. Node types fetched from `/api/node-types`. Default props populated. Drag-to-add not implemented. Basic error display present; no toast/in-app notifications for failures beyond console warning.
-
-### Verified By
-- Manual: creating nodes refreshes canvas
-- Playwright: node creation via toolbox click (implicit through CRUD tests) (add explicit test later)
-
-### Current Gaps / Tech Debt
-- Missing drag-and-drop placement (always spawns at default/center logic)
-- No inline description rendering (title only)
-- No visual feedback on creation failure aside from console
+Core toolbox operational with click create & persistence; drag-to-add & UX polish pending.
 
 ## Outstanding / Deferred
-- Implement drag-to-add coordinate placement
-- Display schema descriptions & required prop hints
-- Add user-visible error toast on creation failure
+- Drag-to-add coordinate placement
+- Schema descriptions rendering
+- Error toast / user-visible feedback

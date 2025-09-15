@@ -1,4 +1,17 @@
-## PBI-18: Apply Functions & Transaction Semantics
+---
+id: PBI-18
+title: Apply Functions & Transaction Semantics
+phase: 2
+status: not-started
+priority: high
+estimate: 5
+owner: TBA
+created: 2025-09-12
+updated: 2025-09-15
+dependsOn: [PBI-16]
+---
+
+## Goal
 
 Goal
 ----
@@ -40,10 +53,23 @@ Risks / Mitigations
 - Crash mid-rename: atomic rename semantics keep either old or new fully.
 - Temp file leakage: cleanup pass on startup.
 
+## Implementation Checklist
+- [ ] Define plan operation type (write/delete with metadata)
+- [ ] Temp staging implementation
+- [ ] Path safety validation reuse
+- [ ] Delete-after-stage ordering logic
+- [ ] Atomic rename commit sequence
+- [ ] Version increment & index update integration
+- [ ] Failure injection test (rollback)
+- [ ] Multi-file mutation atomicity test
+- [ ] Concurrency version race test
+- [ ] Startup temp cleanup sweep
+- [ ] Docs update (transaction lifecycle)
+
 ## Implementation Status
-Not started. Current REST endpoints perform direct writes via repos (implicitly atomic per file) but lack multi-operation transactional batching and rollback semantics.
+Not started; current writes are per-file, lacking grouping & rollback.
 
 ## Outstanding / Deferred
-- Implement staging + commit executor accepting reducer plans
-- Add rollback test injecting failure mid-commit
-- Integrate version increment & index update atomicity
+- Metrics around transaction duration
+- Optional fsync strategy evaluation
+- Future: partial plan diff for snapshot optimization

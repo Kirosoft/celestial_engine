@@ -1,4 +1,17 @@
-## PBI-26: Logs & Events Panel
+---
+id: PBI-26
+title: Logs & Events Panel
+phase: 2
+status: not-started
+priority: medium
+estimate: 3
+owner: TBA
+created: 2025-09-12
+updated: 2025-09-15
+dependsOn: [PBI-17, PBI-25]
+---
+
+## Goal
 
 Goal
 ----
@@ -27,10 +40,19 @@ Out of Scope
 ------------
 - Live streaming (SSE/websocket) (future).
 
+## Implementation Checklist
+- [ ] /api/events?limit=50 endpoint
+- [ ] Panel UI w/ scroll & virtualization (if needed)
+- [ ] Polling logic w/ backoff
+- [ ] Filter by type UI
+- [ ] Event type color coding
+- [ ] Empty state display
+- [ ] Playwright: command triggers visible event
+- [ ] Playwright: filter hides non-matching
+
 ## Implementation Status
-Not started. Event log infrastructure absent (depends on PBI-17), so panel not begun.
+Not started.
 
 ## Outstanding / Deferred
-- Implement `/api/events` tail endpoint
-- Build polling panel with filter UI
-- Add event type color coding for readability
+- SSE / streaming updates
+- Advanced filtering (nodeId search)

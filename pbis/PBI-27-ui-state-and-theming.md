@@ -1,4 +1,17 @@
-## PBI-27: UI State Management & Theming
+---
+id: PBI-27
+title: UI State Management & Theming
+phase: 2
+status: in-progress
+priority: medium
+estimate: 3
+owner: TBA
+created: 2025-09-12
+updated: 2025-09-15
+dependsOn: [PBI-21, PBI-22, PBI-24, PBI-25]
+---
+
+## Goal
 
 Goal
 ----
@@ -28,18 +41,19 @@ Out of Scope
 ------------
 - Internationalization; advanced accessibility theming.
 
+## Implementation Checklist
+- [x] Selection state shared (nodes/edges)
+- [x] Panel visibility state (toolbox, inspector)
+- [ ] Theme toggle (light/dark) + persistence
+- [ ] Console history slice
+- [ ] Migrate / refactor to Zustand (optional sizing spike)
+- [ ] Tests: selection propagation unit
+- [ ] Playwright: theme persists after reload
+
 ## Implementation Status
-Partial. A lightweight UI state hook (`useUIState`) manages selection, panel visibility (toolbox, inspector). Theming (light/dark) toggle & persistence not implemented. Console history state pending (console feature not started).
-
-### Verified By
-- Code review: `uiState.tsx` provides selection & panel toggles used by Canvas, Toolbox, Inspector
-
-### Current Gaps / Tech Debt
-- No theming system or persisted theme preference
-- No global store for command console history yet
-- Potential future migration to Zustand for scalability
+Selection + panel visibility implemented in `uiState.tsx`; theming & console history pending.
 
 ## Outstanding / Deferred
-- Implement theme toggle + persisted preference
-- Introduce unified store (Zustand) if complexity increases
-- Add ephemeral history storage for future console & logs panel integration
+- Theming system
+- Zustand migration (if complexity increases)
+- Console history persistence

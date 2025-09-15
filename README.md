@@ -180,15 +180,41 @@ Testing:
 * E2E coverage for nested groups can be added once more interaction patterns (edges, deletion) are implemented.
 
 ## 9. Error Handling & Validation
-* API returns JSON `{ error: { message, fields? } }`. `fields` is an array of `{ path, message }` enabling precise form error mapping.
-* Inspector maps `props.*` paths to individual inputs; `name` errors surface under Name field.
+Standardized error envelope (PBI-12) for failed requests:
+```json
+{
+	"error": {
+		"code": "validation_failed",
+		"message": "One or more fields are invalid",
+		"fields": [
+			{ "path": "props.title", "message": "Required" }
+		]
+	}
+}
+```
+Notes:
+* `code` enumerates domain or validation errors (e.g., `validation_failed`, `not_found`, `cycle_detected`).
+* `fields` (optional) maps schema/semantic issues to form inputs (paths align with JSON pointer-ish dotted style used in UI: `props.foo`).
+* Success responses currently return domain payloads directly (success envelope deferred per PBI-12 Outstanding list).
+* Inspector maps `props.*` paths & `name` to appropriate inputs; unmatched errors surface in a general alert.
 
 ## 10. Roadmap (Excerpt from PBIs)
 | PBI | Focus | Status |
 |-----|-------|--------|
-| PBI-22 | Movable toolbox & add node UX | Implemented |
-| PBI-24 | Inspector schema-driven form & resize | Implemented (resize test skip) |
-| Future | Undo/Redo, Snapshots, Command Console, Logs Panel | Planned |
+| PBI-15 | Command Schemas (JSON schema for actions) | Planned |
+| PBI-16 | Command Dispatcher | Planned |
+| PBI-17 | Event Log | Planned |
+| PBI-18 | Apply Transaction (atomic commit) | Planned |
+| PBI-19 | Undo / Redo Ring Buffer | Planned |
+| PBI-20 | Snapshots | Planned |
+| PBI-21 | Canvas & Layout Infra | In Progress |
+| PBI-22 | Toolbox & Node Creation UX | In Progress |
+| PBI-23 | Edge Interactions (create/delete UX) | In Progress |
+| PBI-24 | Inspector (Node & Edge forms) | In Progress |
+| PBI-25 | Command Console Panel | Planned |
+| PBI-26 | Logs & Events Panel | Planned |
+| PBI-27 | UI State & Theming | In Progress |
+| PBI-28 | Group / Nested Subgraphs | Planned |
 | Future | Parallel E2E + CI integration | Planned |
 
 ## 11. Troubleshooting Quick Table
@@ -229,4 +255,4 @@ SCHEMA_PATHS='schemas/nodes/*.schema.json,plugins/*/nodes/*.schema.json' DEBUG_S
 TBD (add LICENSE file before external distribution).
 
 ---
-_Last updated: 2025-09-15 (subgraph edges & inspector editing)_
+_Last updated: 2025-09-15 (roadmap & standardized error model refresh)_

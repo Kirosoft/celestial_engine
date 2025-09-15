@@ -1,4 +1,17 @@
-## PBI-16: Command Dispatcher & Validation
+---
+id: PBI-16
+title: Command Dispatcher & Validation
+phase: 2
+status: not-started
+priority: high
+estimate: 8
+owner: TBA
+created: 2025-09-12
+updated: 2025-09-15
+dependsOn: [PBI-07, PBI-15, PBI-12]
+---
+
+## Goal
 
 Goal
 ----
@@ -42,11 +55,24 @@ Risks / Mitigations
 - Race conditions: Use file lock or version re-read just before commit.
 - Idempotency store growth: ring buffer + periodic compaction.
 
+## Implementation Checklist
+- [ ] Define reducer action interfaces (TypeScript types)
+- [ ] Implement idempotency ring (in-memory)
+- [ ] Persist idempotency ring to `.awb/idempotency.json`
+- [ ] Envelope + action schema validation integration
+- [ ] Version precondition check logic
+- [ ] Action to plan translation (no IO side-effects)
+- [ ] Batch atomicity guard (rollback on any failure)
+- [ ] Logging & basic metrics (counts, durations)
+- [ ] `/api/commands` endpoint handler
+- [ ] Integration tests: idempotency, version conflict, invalid batch abort
+- [ ] Performance baseline test (e.g., 50 command batch timing)
+- [ ] Docs README update referencing dispatcher
+
 ## Implementation Status
-Not started. Dispatcher endpoint `/api/commands` absent; current mutations performed through individual REST endpoints. Idempotency, batch handling, version preconditions, and action reducers pending.
+Not started. REST endpoints perform direct mutations; dispatcher abstraction absent.
 
 ## Outstanding / Deferred
-- Design reducer action set & file mutation plan format
-- Implement idempotency ring persistence structure
-- Add version conflict handling tests
-- Integrate with forthcoming transaction executor (PBI-18)
+- File lock / optimistic concurrency strategy refinement
+- Metrics aggregation backend (future)
+- Retry semantics for transient IO errors

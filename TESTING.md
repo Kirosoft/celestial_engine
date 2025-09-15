@@ -33,6 +33,7 @@ Playwright configuration auto-starts the Next.js dev server using a temporary re
 - Integrity guard repairing dangling edges after manual node file deletion
 - Validation error (missing type) returns structured 400
 - Rename propagation: inbound edges update their `targetId` when target node is renamed
+* Structured error mapping: validation failures return `{ error: { code, message, fields[] } }` enabling field-level assertions.
 
 ## Repository Root Isolation
 The E2E suite uses a shared directory `.e2e-root` and cleans node/index artifacts between tests via `resetRepoRoot()`. Parallel workers are disabled (workers=1) to avoid shared global state collisions (Ajv schema registry + `process.env.REPO_ROOT`). Future enhancement: inject repo root context per test worker to enable parallelization.
@@ -74,6 +75,8 @@ Planned enhancements:
 - CI pipeline integration (GitHub Actions) uploading Playwright traces on failure
 - README Testing section referencing this guide
 - Performance smoke test: create 200 nodes / 400 edges under time threshold
+- Undo/Redo functional tests (PBI-19) once ring buffer implemented (linear chain, capacity eviction)
+- Snapshot create/list/restore dry-run tests (PBI-20)
 
 ## Performance Targets (Initial)
 - E2E suite total < 15s (currently ~3–4s)
