@@ -4,7 +4,11 @@ export default defineConfig({
   test: {
     include: ['test/**/*.test.ts', 'test/**/*.test.tsx'],
     exclude: ['e2e/**', 'node_modules/**', 'dist/**'],
+    // Default to node for fast pure unit tests, elevate TSX (React) tests to jsdom automatically
     environment: 'node',
+    environmentMatchGlobs: [
+      ['test/**/*.test.tsx', 'jsdom']
+    ],
     setupFiles: ['./vitest.setup.ts']
   }
 });
