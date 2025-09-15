@@ -17,11 +17,16 @@ function groupIndexPath(id: string){
   return `${groupRoot(id)}/.awb/index.json`; // parallel to root index
 }
 
-async function ensureDir(path: string){
-  // Use FileRepo.write with empty file trick to ensure parent, then delete
-  // Simpler: writeJson on a temp stub and delete; or rely on mkdir via writeJson below.
-  await FileRepo.write(path + '/.keep', '');
+async function existsGroup(id: string){
+  // A group is considered existing if its root node file exists OR its internal index exists
+  const nodeExists = await FileRepo.exists(`nodes/${id}.json`);
+  if(nodeExists) return true;
+  const idxExists = await FileRepo.exists(groupIndexPath(id));
+  return idxExists;
 }
+
+// ensureDir previously wrote a .keep file; removed to avoid ENOTEMPTY cleanup issues in tests.
+async function ensureDir(_path: string){ /* no-op now */ }
 
 export interface GroupProxyNode {
   id: string; type: string; name: string; position?: { x: number; y: number }; props?: any; edges?: { out: any[] };
@@ -84,4 +89,4 @@ export async function listGroupNodes(groupId: string){
   return nodes;
 }
 
-export const GroupRepo = { initGroup, listGroupNodes, groupRoot, groupNodesDir, groupIndexPath, createProxyNode, deleteProxyNode };
+export const GroupRepo = { initGroup, listGroupNodes, groupRoot, groupNodesDir, groupIndexPath, createProxyNode, deleteProxyNode, existsGroup };

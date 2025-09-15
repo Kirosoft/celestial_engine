@@ -29,11 +29,11 @@ export function Canvas(){
     (async()=>{
       const ok = await addEdgeLocal(connection.source!, connection.target!);
       if(!ok){
-        setEdgeError(currentGroupId ? 'Edges inside groups not yet supported' : 'Edge creation failed');
+        setEdgeError('Edge creation failed');
         setTimeout(()=> setEdgeError(undefined), 3000);
       }
     })();
-  }, [addEdgeLocal, currentGroupId]);
+  }, [addEdgeLocal]);
 
   // Delete / Escape key handling
   useEffect(()=>{
@@ -71,7 +71,9 @@ export function Canvas(){
             const edgeId = parts[1];
             (async()=>{
               try {
-                const res = await fetch(`/api/edges/${sourceId}/${edgeId}`, { method: 'DELETE' });
+                // For subgroup edges, we don't know the source id in API path; edge id alone is enough with group endpoint
+                const url = currentGroupId ? `/api/groups/${currentGroupId}/edges/${edgeId}` : `/api/edges/${sourceId}/${edgeId}`;
+                const res = await fetch(url, { method: 'DELETE' });
                 if(res.ok){
                   refresh();
                   setSelectedEdge(undefined);

@@ -11,7 +11,11 @@ const tmpRoot = resolve(process.cwd(), '.api-test-groups-ports');
 
 async function reset(){
   process.env.REPO_ROOT = tmpRoot;
-  await fs.rm(tmpRoot, { recursive: true, force: true });
+  // Retry deletion up to 3 times if ENOTEMPTY (async file writes finishing)
+  for(let attempt=0; attempt<3; attempt++){
+    try { await fs.rm(tmpRoot, { recursive: true, force: true }); break; }
+    catch(e:any){ if(e?.code !== 'ENOTEMPTY' || attempt===2) throw e; await new Promise(r=>setTimeout(r,50)); }
+  }
   await fs.mkdir(tmpRoot, { recursive: true });
   await ensureTempSchema({ typeName: 'Task' });
   await ensureTempSchema({ typeName: 'Group', extraProps: { properties: { ports: { type: 'object', properties: { inputs: { type: 'array', items: { type: 'string' } }, outputs: { type: 'array', items: { type: 'string' } } }, required: ['inputs','outputs'] } }, required: ['id','type','name','ports'] } });
@@ -48,7 +52,9 @@ describe('Group Ports API', () => {
 
   it('rejects invalid names', async () => {
     const create = await invoke(groupsHandler as any, { method: 'POST', body: { name: 'GP3', inputs: [], outputs: [] } });
-    const groupId = create.json?.group.id;
+    expect(create.status).toBe(201);
+    expect(create.json?.group?.id).toBeDefined();
+    const groupId = create.json!.group.id;
     const patch = await invoke(portsHandler as any, { method: 'PATCH', query: { id: groupId }, body: { inputs: ['1bad'], outputs: [] } });
     expect(patch.status).toBe(400);
     expect(patch.json?.error?.code).toBe('invalid_port_name');

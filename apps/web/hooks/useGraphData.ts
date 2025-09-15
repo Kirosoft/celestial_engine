@@ -42,8 +42,8 @@ export function useGraphData(){
       if(currentGroupId){
         const sg = json as { nodes: any[]; edges: any[] };
         // Map proxy node types differently for style hints via data.type
-  const rfNodes: RFNode[] = sg.nodes.map(n=>({ id: n.id, type: 'basicNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, __proxy: n.type?.startsWith('GroupInputProxy') || n.type?.startsWith('GroupOutputProxy') } }));
-        const rfEdges: RFEdge[] = []; // edges not yet implemented in subgraph
+        const rfNodes: RFNode[] = sg.nodes.map(n=>({ id: n.id, type: 'basicNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, __proxy: n.type?.startsWith('GroupInputProxy') || n.type?.startsWith('GroupOutputProxy') } }));
+        const rfEdges: RFEdge[] = (sg.edges||[]).map(e=>({ id: `${e.sourceId}:${e.id}`, source: e.sourceId, target: e.targetId, data:{ kind: e.kind }, type:'default' }));
         setNodes(rfNodes); setEdges(rfEdges);
       } else {
         transform(json as ApiNodeList);
@@ -103,12 +103,9 @@ export function useGraphData(){
   }, [currentGroupId]);
 
   const addEdgeLocal = useCallback(async (sourceId: string, targetId: string, kind: 'flow'|'data'='flow') => {
-    if(currentGroupId){
-      console.warn('[addEdgeLocal] edges not supported inside group yet');
-      return false;
-    }
     try {
-      const res = await fetch('/api/edges', { method: 'POST', headers: { 'Content-Type':'application/json' }, body: JSON.stringify({ sourceId, targetId, kind }) });
+      const url = currentGroupId ? `/api/groups/${currentGroupId}/edges` : '/api/edges';
+      const res = await fetch(url, { method: 'POST', headers: { 'Content-Type':'application/json' }, body: JSON.stringify({ sourceId, targetId, kind }) });
       if(!res.ok){
         return false;
       }
@@ -120,6 +117,19 @@ export function useGraphData(){
       return false;
     }
   }, [currentGroupId]);
+
+  // Allow tests (and potential future UI components) to create edges without drag interaction.
+  useEffect(()=>{
+    function onCreateEdge(ev: any){
+      const detail = ev?.detail || {};
+      const { source, target, kind } = detail;
+      if(source && target){
+        addEdgeLocal(source, target, kind || 'flow');
+      }
+    }
+    window.addEventListener('graph:create-edge', onCreateEdge as any);
+    return ()=> window.removeEventListener('graph:create-edge', onCreateEdge as any);
+  }, [addEdgeLocal]);
 
   return { nodes, edges, loading, error, refresh: load, onNodesChange, persistPosition, addEdgeLocal };
 }

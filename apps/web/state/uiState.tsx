@@ -166,6 +166,13 @@ export function UIStateProvider({ children }: { children: ReactNode }) {
   };
   if(typeof window !== 'undefined'){
     (window as any).__selectNode = (id: string) => setSelected([id]);
+    (window as any).__enterGroup = (id: string) => enterGroup(id);
+    (window as any).__selectEdge = (sourceId: string, edgeId: string) => {
+      // Clear node selection then set edge selection using existing setter
+      setSelectedNodeIds([]);
+      setSelectedEdgeId(`${sourceId}:${edgeId}`);
+      setSelectionAction(a=>a+1);
+    };
   }
   return <UIStateContext.Provider value={value}>{children}</UIStateContext.Provider>;
 }

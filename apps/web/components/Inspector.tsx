@@ -27,6 +27,8 @@ export function Inspector(){
   const [error, setError] = useState<string|undefined>();
   const [node, setNode] = useState<NodeData|undefined>();
   const [edge, setEdge] = useState<EdgeView|undefined>();
+  const [edgeKindDraft, setEdgeKindDraft] = useState<string>('flow');
+  const [edgeDirty, setEdgeDirty] = useState(false);
   const [schema, setSchema] = useState<NodeTypeSchema|undefined>();
   const [draftName, setDraftName] = useState('');
   const [draftProps, setDraftProps] = useState<Record<string, any>>({});
@@ -71,7 +73,7 @@ export function Inspector(){
 
   // Edge load: derive minimal edge info from id pattern (source:edgeId), fetch source node to extract edge metadata
   useEffect(()=>{
-    if(!selectedEdgeId){ setEdge(undefined); return; }
+    if(!selectedEdgeId){ setEdge(undefined); setEdgeDirty(false); return; }
     const parts = selectedEdgeId.split(':');
     if(parts.length !== 2){ setEdge(undefined); return; }
     const [sourceId, edgeId] = parts;
@@ -79,19 +81,36 @@ export function Inspector(){
     (async ()=>{
       setLoading(true); setError(undefined);
       try {
-        const sourceResp = await fetchJson<{ node: NodeData }>(`/api/nodes/${sourceId}`);
-        if(cancelled) return;
-        const edgeObj = (sourceResp.node as any)?.edges?.out?.find((e: any)=> e.id === edgeId);
-        if(edgeObj){
-          setEdge({ id: edgeObj.id, sourceId, targetId: edgeObj.targetId, kind: edgeObj.kind || 'flow' });
+        if(currentGroupId){
+          // Load subgroup edges from subgraph endpoint
+            const sg = await fetchJson<{ nodes: any[]; edges: any[] }>(`/api/groups/${currentGroupId}/subgraph`);
+            if(cancelled) return;
+            const e = sg.edges.find(e=> e.id === edgeId && e.sourceId === sourceId);
+            if(e){
+              setEdge({ id: e.id, sourceId: e.sourceId, targetId: e.targetId, kind: e.kind || 'flow' });
+              setEdgeKindDraft(e.kind || 'flow');
+              setEdgeDirty(false);
+            } else {
+              setEdge(undefined);
+            }
         } else {
-          setEdge(undefined);
+          // Root graph edge: derive from source node file
+          const sourceResp = await fetchJson<{ node: NodeData }>(`/api/nodes/${sourceId}`);
+          if(cancelled) return;
+          const edgeObj = (sourceResp.node as any)?.edges?.out?.find((e: any)=> e.id === edgeId);
+          if(edgeObj){
+            setEdge({ id: edgeObj.id, sourceId, targetId: edgeObj.targetId, kind: edgeObj.kind || 'flow' });
+            setEdgeKindDraft(edgeObj.kind || 'flow');
+            setEdgeDirty(false);
+          } else {
+            setEdge(undefined);
+          }
         }
       } catch(e:any){ if(!cancelled) setError(e.message||String(e)); }
       finally { if(!cancelled) setLoading(false); }
     })();
     return ()=>{ cancelled = true; };
-  }, [selectedEdgeId]);
+  }, [selectedEdgeId, currentGroupId]);
 
   const onPropChange = useCallback((key: string, value: any)=>{
     setDraftProps(p=>({ ...p, [key]: value }));
@@ -171,7 +190,8 @@ export function Inspector(){
     if(!edge) return;
     if(!confirm(`Delete edge ${edge.id}?`)) return;
     try {
-      const res = await fetch(`/api/edges/${edge.sourceId}/${edge.id}`, { method:'DELETE' });
+      const url = currentGroupId ? `/api/groups/${currentGroupId}/edges/${edge.id}` : `/api/edges/${edge.sourceId}/${edge.id}`;
+      const res = await fetch(url, { method:'DELETE' });
       if(res.ok){
         setEdge(undefined);
         setSelectedEdge(undefined);
@@ -180,7 +200,27 @@ export function Inspector(){
         setError('Failed to delete edge');
       }
     } catch(e:any){ setError(e.message||'Delete edge failed'); }
-  }, [edge, setSelectedEdge]);
+  }, [edge, setSelectedEdge, currentGroupId]);
+
+  const onSaveEdge = useCallback(async ()=>{
+    if(!edge || !edgeDirty) return;
+    try {
+      const url = currentGroupId ? `/api/groups/${currentGroupId}/edges/${edge.id}` : `/api/edges/${edge.sourceId}/${edge.id}`;
+      const res = await fetch(url, { method:'PUT', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify({ kind: edgeKindDraft }) });
+      if(!res.ok){
+        const body = await res.json().catch(()=>undefined);
+        setError(body?.error?.message || 'Failed to update edge');
+        return;
+      }
+      setEdge(e => e ? { ...e, kind: edgeKindDraft } : e);
+      setEdgeDirty(false);
+      window.dispatchEvent(new Event('graph:refresh-request'));
+    } catch(e:any){ setError(e.message||'Update edge failed'); }
+  }, [edge, edgeKindDraft, edgeDirty, currentGroupId]);
+
+  const onResetEdge = useCallback(()=>{
+    if(edge){ setEdgeKindDraft(edge.kind); setEdgeDirty(false); setError(undefined); }
+  }, [edge]);
 
   // Resize logic
   const resizeRef = useRef<{ startX:number; baseWidth:number; active:boolean }>({ startX:0, baseWidth:0, active:false });
@@ -262,13 +302,22 @@ export function Inspector(){
             <div style={{ padding:12, display:'flex', flexDirection:'column', gap:12 }}>
               <div style={{ fontSize:13, fontWeight:600 }}>Edge</div>
               <div style={{ fontSize:11, opacity:0.7 }}>ID: {edge.id}</div>
-              <div style={{ fontSize:11 }}>Kind: {edge.kind}</div>
+              <div style={{ fontSize:11, display:'flex', gap:6, alignItems:'center' }}>
+                <span>Kind:</span>
+                <select value={edgeKindDraft} onChange={e=>{ setEdgeKindDraft(e.target.value); setEdgeDirty(e.target.value !== edge.kind); }} style={{ fontSize:11 }}>
+                  <option value="flow">flow</option>
+                  <option value="data">data</option>
+                </select>
+                {edgeDirty && <span style={{ color:'#fb0' }}>modified</span>}
+              </div>
               <div style={{ fontSize:11 }}>Source: <a href="#" onClick={(e)=>{ e.preventDefault(); setSelectedEdge(undefined); setSelectedNodeIds([edge.sourceId]); }}>{edge.sourceId}</a></div>
               <div style={{ fontSize:11 }}>Target: <a href="#" onClick={(e)=>{ e.preventDefault(); setSelectedEdge(undefined); setSelectedNodeIds([edge.targetId]); }}>{edge.targetId}</a></div>
-              <div style={{ fontSize:11, opacity:0.6, fontStyle:'italic' }}>No editable edge properties.</div>
-              <div style={{ display:'flex', gap:8, alignItems:'center' }}>
+              <div style={{ display:'flex', gap:8, alignItems:'center', marginTop:4 }}>
+                <button type="button" disabled={!edgeDirty} onClick={onSaveEdge} style={{ padding:'6px 10px' }}>Save</button>
+                <button type="button" disabled={!edgeDirty} onClick={onResetEdge} style={{ padding:'6px 10px' }}>Reset</button>
                 <button type="button" onClick={onDeleteEdge} style={{ padding:'6px 10px', background:'#612', color:'#fff', border:'1px solid #a44', marginLeft:'auto' }}>Delete Edge</button>
               </div>
+              {currentGroupId && <div style={{ fontSize:10, opacity:0.6 }}>Subgraph edge (local to group {currentGroupId})</div>}
             </div>
           )}
         </div>

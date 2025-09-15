@@ -4,11 +4,17 @@
   "name": "GroupA",
   "props": {},
   "position": {
-    "x": 3.7498055090134557,
-    "y": -19.131667662555273
+    "x": -10.250194490986544,
+    "y": -124.63166766255527
   },
   "edges": {
-    "out": []
+    "out": [
+      {
+        "id": "e_Wk9PHa",
+        "targetId": "Group--nUnpi",
+        "kind": "flow"
+      }
+    ]
   },
   "ports": {
     "inputs": [

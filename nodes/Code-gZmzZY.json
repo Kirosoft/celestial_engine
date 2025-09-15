@@ -1,0 +1,22 @@
+{
+  "id": "Code-gZmzZY",
+  "type": "Code",
+  "name": "Code",
+  "props": {
+    "language": "typescript",
+    "source": "// TODO: implement"
+  },
+  "position": {
+    "x": 50.5,
+    "y": 21.5
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_Jnpeix",
+        "targetId": "Group--nUnpi",
+        "kind": "flow"
+      }
+    ]
+  }
+}

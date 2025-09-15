@@ -6,7 +6,7 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: nodes/Task--_Xnlk.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/nodes/Task--_Xnlk.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: nodes/Task-EQDcgv.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/nodes/Task-EQDcgv.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
@@ -15,6 +15,6 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.integrity-test glob: nodes/*.json
-[FileRepo] list() result: ["nodes/Task--_Xnlk.json"]
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: nodes/Task--_Xnlk.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/nodes/Task--_Xnlk.json
+[FileRepo] list() result: ["nodes/Task-EQDcgv.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: nodes/Task-EQDcgv.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/nodes/Task-EQDcgv.json

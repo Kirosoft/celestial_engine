@@ -10,6 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     if(req.method === 'POST'){
       let { name, inputs = [], outputs = [] } = req.body || {};
+      // Defensive: ensure arrays
       if(!Array.isArray(inputs) || !Array.isArray(outputs)){
         inputs = []; outputs = [];
       }
@@ -42,6 +43,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     return methodNotAllowed(res);
   } catch(e){
+    // Provide richer diagnostics in test failures
+    console.warn('[groups.create] error', e);
     return sendError(res, e);
   }
 }

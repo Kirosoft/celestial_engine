@@ -150,6 +150,31 @@ Limitations / Current Behavior:
 * Deleting a group does not recursively delete nested subgraphs yet—avoid manual nested deletion until lifecycle rules are finalized.
 * No UI yet for editing an existing group's port lists (would require proxy reconciliation).
 
+### 8.3 Subgraph Edges
+Each group owns an `edges.json` file under its subgraph directory. The API provides CRUD for edges local to that group:
+
+| Operation | Route | Notes |
+|-----------|-------|-------|
+| Create | `POST /api/groups/:id/edges` | Body: `{ sourceId, targetId, kind? }` (kind defaults to `flow`) |
+| Update | `PUT /api/groups/:id/edges/:edgeId` | Body subset (currently supports `{ kind }`) |
+| Delete | `DELETE /api/groups/:id/edges/:edgeId` | Removes edge from `edges.json` |
+| List (implicit) | `GET /api/groups/:id/subgraph` | Returns `{ nodes, edges }` |
+
+Validation & Constraints:
+* Self-loops rejected with `409 { error.code: "cycle" }`.
+* Cycles within the subgraph (A→B, B→C, C→A) are rejected (DFS check before write).
+* Edges are confined to nodes inside the same group; proxies may participate (policy TBD if future restrictions desired).
+
+Inspector Integration:
+* Selecting a subgraph edge shows Kind (editable between `flow` / `data`) and delete controls.
+* Saving Kind triggers a refresh event; changes persist to `edges.json`.
+* Edge selection clears node selection and vice versa (consistent with root graph behavior).
+
+Known / Future Work:
+* Cross-boundary edge semantics (proxy connection mapping) not yet defined.
+* Batch operations, edge labels, or data mapping not implemented.
+* Potential future validation to disallow proxy→proxy edges if deemed semantically meaningless.
+
 Testing:
 * A unit/integration style test (`nestedGroupCreateExpand.test.tsx`) verifies nested creation + proxy seeding without relying on filesystem persistence.
 * E2E coverage for nested groups can be added once more interaction patterns (edges, deletion) are implemented.
@@ -204,4 +229,4 @@ SCHEMA_PATHS='schemas/nodes/*.schema.json,plugins/*/nodes/*.schema.json' DEBUG_S
 TBD (add LICENSE file before external distribution).
 
 ---
-_Last updated: 2025-09-15_
+_Last updated: 2025-09-15 (subgraph edges & inspector editing)_
