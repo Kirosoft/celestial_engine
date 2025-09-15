@@ -1,9 +1,9 @@
 {
-  "id": "Plan-B-SBc0",
-  "type": "Plan",
-  "name": "Plan",
+  "id": "LLM-eTeAXt",
+  "type": "LLM",
+  "name": "LLM",
   "props": {
-    "plannerModel": "gpt-4"
+    "model": "gpt-4"
   },
   "position": {
     "x": 120,

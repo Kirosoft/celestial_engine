@@ -1,9 +1,9 @@
 {
-  "id": "Task-hy6Xou",
-  "type": "Task",
-  "name": "Task",
+  "id": "Plan-63leJB",
+  "type": "Plan",
+  "name": "Plan",
   "props": {
-    "title": "Task Title"
+    "plannerModel": "gpt-4"
   },
   "position": {
     "x": 120,

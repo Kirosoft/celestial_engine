@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, FormEvent } from 'react';
+import React, { useEffect, useState, useCallback, FormEvent, useRef } from 'react';
 import { useUIState } from '../state/uiState';
 
 interface NodeData { id: string; type: string; name: string; position?: { x:number; y:number }; props?: any }
@@ -22,7 +22,7 @@ async function fetchJson<T>(url: string, opts?: RequestInit): Promise<T>{
 interface EdgeView { id: string; sourceId: string; targetId: string; kind: string }
 
 export function Inspector(){
-  const { selectedNodeId, selectedEdgeId, selectionAction, showInspector, toggleInspector, setSelectedNodeIds, setSelectedEdge } = useUIState() as any;
+  const { selectedNodeId, selectedEdgeId, selectionAction, showInspector, toggleInspector, setSelectedNodeIds, setSelectedEdge, inspectorWidth, setInspectorWidth } = useUIState() as any;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string|undefined>();
   const [node, setNode] = useState<NodeData|undefined>();
@@ -165,10 +165,40 @@ export function Inspector(){
     } catch(e:any){ setError(e.message||'Delete edge failed'); }
   }, [edge, setSelectedEdge]);
 
+  // Resize logic
+  const resizeRef = useRef<{ startX:number; baseWidth:number; active:boolean }>({ startX:0, baseWidth:0, active:false });
+  const onResizeDown = useCallback((e: React.MouseEvent)=>{
+    resizeRef.current = { startX: e.clientX, baseWidth: inspectorWidth, active:true };
+    window.addEventListener('mousemove', onResizeMove);
+    window.addEventListener('mouseup', onResizeUp);
+    e.preventDefault();
+  }, [inspectorWidth]);
+  const onResizeMove = useCallback((e: MouseEvent)=>{
+    if(!resizeRef.current.active) return;
+    const dx = resizeRef.current.startX - e.clientX; // dragging left handle left increases width
+    setInspectorWidth(resizeRef.current.baseWidth + dx);
+  }, [setInspectorWidth]);
+  const onResizeUp = useCallback(()=>{
+    if(resizeRef.current.active){
+      resizeRef.current.active = false;
+      window.removeEventListener('mousemove', onResizeMove);
+      window.removeEventListener('mouseup', onResizeUp);
+    }
+  }, [onResizeMove]);
+  useEffect(()=>()=>{ onResizeUp(); }, [onResizeUp]);
+  const onDoubleClickHandle = useCallback(()=>{ setInspectorWidth(320); }, [setInspectorWidth]);
+
   if(!showInspector) return null;
   return (
-    <div style={{ position:'absolute', top:0, right:0, width:320, height:'100%', background:'#141a21', color:'#eee', borderLeft:'1px solid #233', display:'flex', flexDirection:'column', fontSize:12 }}>
-      <div style={{ padding:'8px 10px', borderBottom:'1px solid #233', display:'flex', alignItems:'center', gap:8 }}>
+    <div style={{ position:'absolute', top:0, right:0, width:inspectorWidth, height:'100%', background:'#141a21', color:'#eee', borderLeft:'1px solid #233', display:'flex', flexDirection:'column', fontSize:12 }}>
+      <div
+        data-testid="inspector-resize-handle"
+        onMouseDown={onResizeDown}
+        onDoubleClick={onDoubleClickHandle}
+        style={{ position:'absolute', left:0, top:0, bottom:0, width:6, cursor:'col-resize', transform:'translateX(-6px)', background: resizeRef.current.active? 'rgba(255,255,255,0.15)':'transparent' }}
+        title="Drag to resize (double-click to reset)"
+      />
+      <div style={{ padding:'8px 10px', borderBottom:'1px solid #233', display:'flex', alignItems:'center', gap:8, marginLeft:0 }}>
         <strong style={{ fontSize:13 }}>Inspector</strong>
         <button onClick={()=>toggleInspector(false)} style={{ marginLeft:'auto', background:'transparent', color:'#888', border:'none', cursor:'pointer' }}>×</button>
       </div>

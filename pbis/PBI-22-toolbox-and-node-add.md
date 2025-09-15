@@ -2,11 +2,15 @@
 
 Goal
 ----
-Allow users to browse available node types (schemas) and add nodes to the canvas via drag or click.
+Allow users to browse available node types (schemas) and add nodes to the canvas via drag or click. Toolbox must be movable (drag reposition), collapsible, and remember its last position + collapsed state between sessions (local persistence acceptable).
 
 Description
 -----------
-Toolbox panel lists node types from `/api/schemas/nodes` (or existing endpoint). Each item shows title + short description (schema `description` if present). Clicking adds node at center of viewport; dragging adds at drop coordinates.
+Toolbox panel lists node types from `/api/schemas/nodes` (or existing endpoint). Each item shows title + short description (schema `description` if present). Clicking adds node at center of viewport; dragging adds at drop coordinates (future). The toolbox itself:
+* Draggable: user can grab header and move anywhere within viewport bounds.
+* Collapsible: clicking a chevron/minimize control collapses content to a compact header bar (width ~ header intrinsic size).
+* Persistence: position (x,y) and collapsed state stored (in-memory + localStorage) and restored on reload.
+* Z-index above canvas but below modal dialogs; does not capture Delete key when an input inside it is focused (keyboard guard synergy).
 
 Status (2025-09-14)
 -------------------
@@ -28,11 +32,19 @@ Acceptance Criteria
 - Adding node persists (subsequent reload shows node via API).
 - Duplicate adds allowed; each gets unique id.
 - Errors surfaced if backend validation fails (toast or inline error list).
+- Toolbox can be dragged to at least four distinct quadrants; position persists after page reload.
+- Collapsing toolbox hides list items, leaving header bar with title + (expand) icon; expanding restores list.
+- Toolbox drag constrained so it cannot be moved fully off-screen (at least 24px of header remains visible on each axis).
+- Toolbox collapsed state persists across reload.
+- Dragging toolbox does not cause unintentional text selection (use `user-select: none` while dragging).
 
 Tests
 -----
 - Playwright: click-add Plan node → appears.
 - Negative: simulate backend 400 → error toast visible.
+- Playwright: drag toolbox to bottom-right, reload → remains bottom-right (within ~10px tolerance).
+- Playwright: collapse toolbox, reload → remains collapsed.
+- Playwright: ensure at least part of header visible after multiple drags near edges.
 
 Dependencies
 ------------

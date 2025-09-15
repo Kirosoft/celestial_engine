@@ -61,3 +61,56 @@ export async function clickWithRetries(locator: any, attempts = 8){
   }
   throw new Error('Failed to click element after retries');
 }
+
+// Wait for at least one React Flow node to appear, optionally creating one via toolbox if none.
+export async function ensureNodePresent(page: any){
+  const nodeSelector = '.react-flow__node';
+  const deadline = Date.now() + 25000; // 25s max
+  let attemptedApi = false;
+  while(Date.now() < deadline){
+    // 1. Check DOM directly
+    const domCount = await page.$$eval(nodeSelector, (els: any[]) => els.length).catch(()=>0);
+    if(domCount > 0) return;
+
+    // 2. Poll API for existing nodes
+    let apiNodes: any[] = [];
+    try {
+      const apiRes = await page.request.get('/api/nodes');
+      if(apiRes.ok()){
+        const json = await apiRes.json();
+        apiNodes = json.nodes || [];
+      }
+    } catch{ /* ignore */ }
+    if(apiNodes.length > 0){
+      // Force a refresh event to nudge canvas hook
+      await page.evaluate(()=>{ window.dispatchEvent(new Event('graph:refresh-request')); });
+      await page.waitForTimeout(400);
+      const afterNudge = await page.$$eval(nodeSelector, (els: any[]) => els.length).catch(()=>0);
+      if(afterNudge > 0) return;
+    }
+
+    // 3. If no nodes anywhere, attempt UI creation first
+    const opener = page.getByTestId('open-toolbox');
+    if(await opener.count()) await opener.click();
+    const firstBtn = page.locator('[data-testid="toolbox"] button').first();
+    if(await firstBtn.count()){
+      try { await firstBtn.click(); } catch { /* ignore */ }
+    } else if(!attemptedApi) {
+      // 4. Fallback create via API once
+      attemptedApi = true;
+      try {
+        const createRes = await page.request.post('/api/nodes', { data: { type: 'Task', name: 'Task', props: { title: 'Temp' } } });
+        if(createRes.ok()){
+          await page.evaluate(()=>{ window.dispatchEvent(new Event('graph:refresh-request')); });
+        }
+      } catch { /* ignore */ }
+    }
+
+    // 5. Wait for canvas readiness (window.__selectNode as signal) before looping again
+    try {
+      await page.waitForFunction(() => typeof (window as any).__selectNode === 'function', { timeout: 3000 });
+    } catch { /* ignore readiness timeout */ }
+    await page.waitForTimeout(350);
+  }
+  throw new Error('No node became available');
+}
