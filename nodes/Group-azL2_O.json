@@ -1,0 +1,22 @@
+{
+  "id": "Group-azL2_O",
+  "type": "Group",
+  "name": "GroupA",
+  "props": {},
+  "position": {
+    "x": 3.7498055090134557,
+    "y": -19.131667662555273
+  },
+  "edges": {
+    "out": []
+  },
+  "ports": {
+    "inputs": [
+      "in"
+    ],
+    "outputs": [
+      "out"
+    ]
+  },
+  "subgraphRef": "groups/Group-azL2_O"
+}

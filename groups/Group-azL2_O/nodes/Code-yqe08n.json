@@ -1,0 +1,16 @@
+{
+  "id": "Code-yqe08n",
+  "type": "Code",
+  "name": "CodeA",
+  "props": {
+    "language": "typescript1",
+    "source": "// TODO: implement1"
+  },
+  "position": {
+    "x": 215,
+    "y": 94.5
+  },
+  "edges": {
+    "out": []
+  }
+}

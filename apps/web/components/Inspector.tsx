@@ -104,13 +104,9 @@ export function Inspector(){
     e.preventDefault(); if(!node) return;
     setSaving(true); setFieldErrors({}); setError(undefined);
     try {
-      if(currentGroupId){
-        // Editing inside group not yet implemented (no group-scoped PUT). Provide early feedback.
-        setError('Editing nodes inside groups is not yet supported. Exit the group to edit.');
-        setSaving(false); return;
-      }
       const patch = { name: draftName, props: draftProps };
-      const updated = await fetchJson<{ node: NodeData }>(`/api/nodes/${node.id}`, { method:'PUT', body: JSON.stringify(patch) });
+      const url = currentGroupId ? `/api/groups/${currentGroupId}/nodes/${node.id}` : `/api/nodes/${node.id}`;
+      const updated = await fetchJson<{ node: NodeData }>(url, { method:'PUT', body: JSON.stringify(patch) });
       setNode(updated.node); setDirty(false);
       // Dispatch label update for canvas re-render
       try {
@@ -147,19 +143,26 @@ export function Inspector(){
 
   const onDeleteNode = useCallback(async ()=>{
     if(!node) return;
-    if(currentGroupId){
-      setError('Deleting nodes inside groups not yet supported.');
+    const isProxy = node.type === 'GroupInputProxy' || node.type === 'GroupOutputProxy' || node.id.startsWith('__input_') || node.id.startsWith('__output_');
+    if(isProxy){
+      setError('Proxy nodes are managed via group ports and cannot be deleted directly.');
       return;
     }
     if(!confirm(`Delete node ${node.name || node.id}? This cannot be undone.`)) return;
     try {
-      const res = await fetch(`/api/nodes/${node.id}`, { method:'DELETE' });
+      let res: Response;
+      if(currentGroupId){
+        res = await fetch(`/api/groups/${currentGroupId}/nodes/${node.id}`, { method:'DELETE' });
+      } else {
+        res = await fetch(`/api/nodes/${node.id}`, { method:'DELETE' });
+      }
       if(res.ok){
         setNode(undefined);
         setSelectedNodeIds([]);
         window.dispatchEvent(new Event('graph:refresh-request'));
       } else {
-        setError('Failed to delete node');
+        const body = await res.json().catch(()=>undefined);
+        setError(body?.error?.message || 'Failed to delete node');
       }
     } catch(e:any){ setError(e.message||'Delete failed'); }
   }, [node, setSelectedNodeIds, currentGroupId]);
@@ -236,11 +239,16 @@ export function Inspector(){
                 {renderPropsForm(schema, draftProps, onPropChange, fieldErrors)}
               </fieldset>
               <div style={{ display:'flex', gap:8, alignItems:'center', flexWrap:'wrap' }}>
-                <button type="submit" disabled={saving || !dirty} style={{ padding:'6px 12px' }}>{saving? 'Saving…': currentGroupId? 'Save (disabled in group)':'Save'}</button>
+                <button type="submit" disabled={saving || !dirty} style={{ padding:'6px 12px' }}>{saving? 'Saving…': 'Save'}</button>
                 <button type="button" disabled={!dirty || saving} onClick={resetDraft} style={{ padding:'6px 10px' }}>Reset</button>
-                <button type="button" onClick={onDeleteNode} style={{ marginLeft:'auto', padding:'6px 10px', background:'#612', color:'#fff', border:'1px solid #a44' }}>Delete</button>
+                <button
+                  type="button"
+                  onClick={onDeleteNode}
+                  disabled={node && (node.type === 'GroupInputProxy' || node.type === 'GroupOutputProxy' || node.id.startsWith('__input_') || node.id.startsWith('__output_'))}
+                  style={{ marginLeft:'auto', padding:'6px 10px', background:'#612', opacity: (node && (node.type === 'GroupInputProxy' || node.type === 'GroupOutputProxy' || node.id.startsWith('__input_') || node.id.startsWith('__output_')))?0.4:1, color:'#fff', border:'1px solid #a44' }}
+                >Delete</button>
                 {dirty && <span style={{ color:'#fb0' }}>Unsaved changes</span>}
-                {currentGroupId && <span style={{ fontSize:10, color:'#aaa' }}>Editing inside group read-only for now</span>}
+                {currentGroupId && <span style={{ fontSize:10, color:'#aaa' }}>Group context edit (ports & subgraph settings immutable)</span>}
               </div>
             </div>
           )}

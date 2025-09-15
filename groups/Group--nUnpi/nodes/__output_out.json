@@ -1,0 +1,17 @@
+{
+  "id": "__output_out",
+  "type": "GroupOutputProxy",
+  "name": "out",
+  "position": {
+    "x": 400,
+    "y": 60
+  },
+  "props": {
+    "port": "out",
+    "groupId": "Group--nUnpi",
+    "kind": "output"
+  },
+  "edges": {
+    "out": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "__input_in",
+  "type": "GroupInputProxy",
+  "name": "in",
+  "position": {
+    "x": 102.5,
+    "y": -40
+  },
+  "props": {
+    "port": "in",
+    "groupId": "Group-azL2_O",
+    "kind": "input"
+  },
+  "edges": {
+    "out": []
+  }
+}

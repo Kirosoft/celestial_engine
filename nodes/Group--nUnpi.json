@@ -1,0 +1,22 @@
+{
+  "id": "Group--nUnpi",
+  "type": "Group",
+  "name": "GroupB",
+  "props": {},
+  "position": {
+    "x": 325,
+    "y": 48
+  },
+  "edges": {
+    "out": []
+  },
+  "ports": {
+    "inputs": [
+      "in"
+    ],
+    "outputs": [
+      "out"
+    ]
+  },
+  "subgraphRef": "groups/Group--nUnpi"
+}

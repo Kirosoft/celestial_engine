@@ -1,0 +1,16 @@
+{
+  "id": "Code-G3SKnq",
+  "type": "Code",
+  "name": "CodeB",
+  "props": {
+    "language": "typescript",
+    "source": "// TODO: implement"
+  },
+  "position": {
+    "x": 180,
+    "y": 138.5
+  },
+  "edges": {
+    "out": []
+  }
+}
