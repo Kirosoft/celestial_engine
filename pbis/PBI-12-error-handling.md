@@ -42,3 +42,20 @@ Predictable client behavior and simpler telemetry.
 
 ## Risks / Notes
 Future enrichment with correlation IDs. Current error handling exercised in integration & e2e tests (see `TESTING.md`). Remaining work: unify success response shape.
+
+## Implementation Status
+Error classes and HTTP mapping implemented (`apiErrors.ts`). All failing scenarios observed in tests return `{ error: { code, message }, errors?[] }`. Success responses remain heterogeneous (not yet wrapped in a standard envelope), matching deferred checklist items.
+
+### Verified By
+- Integration tests hitting validation, not found, conflict, cycle scenarios
+- Playwright tests capturing validation and cycle errors
+
+### Current Gaps / Tech Debt
+- Standard success envelope not adopted
+- No correlation / request ID injection
+- No structured logging integration (console only)
+
+## Outstanding / Deferred
+- Adopt success envelope `{ ok:true, ... }` (evaluate impact on existing clients)
+- Introduce correlation ID middleware & include in error payloads
+- Add error metrics (counts by code) for observability

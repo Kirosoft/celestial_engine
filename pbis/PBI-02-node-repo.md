@@ -48,3 +48,21 @@ Enables graph authoring at file level.
 
 ## Risks / Notes
 Edge propagation originally deferred; now implemented via rename logic that updates inbound edges (see Playwright rename propagation test). Testing layers: unit + integration + e2e (`TESTING.md`).
+
+## Implementation Status
+NodeRepo feature set delivered: create/read/update/rename/delete all operational and validated. Rename now updates inbound edges (implemented earlier than originally scoped). Validation integrated via AJV service. All API endpoints (PBI-09) rely on NodeRepo and are passing integration & Playwright tests.
+
+### Verified By
+- Unit/integration tests for CRUD & rename
+- Playwright: node CRUD flow, rename propagation, validation errors
+- Edge lifecycle tests indirectly confirm rename updates inbound references
+
+### Current Gaps / Tech Debt
+- Inbound edge cleanup on node delete implemented at API layer? (Double‑check broader deletion propagation; full cascading verification test could be strengthened.)
+- No bulk operations (batch create/update) yet
+- Props update granularity is whole-object merge (no diff-based conflict detection)
+
+## Outstanding / Deferred
+- Add explicit test ensuring inbound edge cleanup after delete (hard assertion on all referencing nodes)
+- Consider exposing batch APIs for performance when adding many nodes
+- Potential optimistic concurrency control (version precondition) to prevent lost updates

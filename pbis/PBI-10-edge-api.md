@@ -43,3 +43,19 @@ Full client-side graph editing capability.
 
 ## Risks / Notes
 Edge kind modifications minimal; extended metadata later. Covered via API & e2e edge lifecycle tests (see `TESTING.md`).
+
+## Implementation Status
+Edge add/update/delete endpoints fully functional with cycle/self-loop prevention surfaced as proper HTTP codes. Optimistic edge creation via canvas uses POST endpoint and is validated by UI drag test (with fallback) and API tests.
+
+### Verified By
+- Integration tests: edge add/remove/update & cycle rejection
+- Playwright: edge creation & lifecycle specs (drag + integrity scenarios)
+
+### Current Gaps / Tech Debt
+- No bulk edge operations (batch add/remove)
+- Metadata extension (weights, labels) not yet implemented
+- Error payloads could include more diagnostic context (e.g., cycle path) (enhancement)
+
+## Outstanding / Deferred
+- Add richer error detail for cycle detection (list of involved node IDs)
+- Consider batch mutation support once dispatcher (PBI-16) lands

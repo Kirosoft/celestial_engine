@@ -3278,3 +3278,362 @@
 [FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/ToolCall-eyZtJr.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\ToolCall-eyZtJr.json
 [FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/ToolCall.schema.json"]
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Code.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Code.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Eval.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Eval.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubInput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubInput.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubOutput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubOutput.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Merge.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Merge.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Router.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Router.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/ToolCall.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\ToolCall.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/ToolCall.schema.json"]
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Code.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Code.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Eval.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Eval.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubInput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubInput.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubOutput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubOutput.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Merge.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Merge.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Router.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Router.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/ToolCall.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\ToolCall.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/ToolCall.schema.json"]
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Code.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Code.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Eval.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Eval.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubInput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubInput.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubOutput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubOutput.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Merge.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Merge.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Router.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Router.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/ToolCall.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\ToolCall.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Code-0JXlkz.json","nodes/Code-B7Sxcs.json","nodes/Eval-0f2myO.json","nodes/GitHubOutput-G66WnH.json","nodes/ToolCall-eyZtJr.json"]
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-B7Sxcs.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-B7Sxcs.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Eval-0f2myO.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Eval-0f2myO.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/GitHubOutput-G66WnH.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\GitHubOutput-G66WnH.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/ToolCall-eyZtJr.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\ToolCall-eyZtJr.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Code-0JXlkz.json","nodes/Code-B7Sxcs.json","nodes/Eval-0f2myO.json","nodes/GitHubOutput-G66WnH.json","nodes/ToolCall-eyZtJr.json"]
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-B7Sxcs.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-B7Sxcs.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Eval-0f2myO.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Eval-0f2myO.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/GitHubOutput-G66WnH.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\GitHubOutput-G66WnH.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/ToolCall-eyZtJr.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\ToolCall-eyZtJr.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web glob: nodes/*.json
+[FileRepo] list() result: ["nodes/Code-0JXlkz.json","nodes/Code-B7Sxcs.json","nodes/Eval-0f2myO.json","nodes/GitHubOutput-G66WnH.json","nodes/ToolCall-eyZtJr.json"]
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-B7Sxcs.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-B7Sxcs.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Eval-0f2myO.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Eval-0f2myO.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/GitHubOutput-G66WnH.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\GitHubOutput-G66WnH.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/ToolCall-eyZtJr.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\ToolCall-eyZtJr.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web glob: nodes/*.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] list() result: ["nodes/Code-0JXlkz.json","nodes/Code-B7Sxcs.json","nodes/Eval-0f2myO.json","nodes/GitHubOutput-G66WnH.json","nodes/ToolCall-eyZtJr.json"]
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-B7Sxcs.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-B7Sxcs.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Eval-0f2myO.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Eval-0f2myO.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/GitHubOutput-G66WnH.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\GitHubOutput-G66WnH.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/ToolCall-eyZtJr.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\ToolCall-eyZtJr.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/ToolCall.schema.json"]
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Code.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Code.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Eval.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Eval.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubInput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubInput.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubOutput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubOutput.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Merge.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Merge.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Router.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Router.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/ToolCall.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\ToolCall.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Eval-0f2myO.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Eval-0f2myO.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Eval-0f2myO.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Eval-0f2myO.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/ToolCall.schema.json"]
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Code.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Code.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Eval.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Eval.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubInput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubInput.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubOutput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubOutput.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Merge.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Merge.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Router.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Router.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/ToolCall.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\ToolCall.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Eval-0f2myO.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Eval-0f2myO.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Eval-0f2myO.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Eval-0f2myO.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Eval-0f2myO.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Eval-0f2myO.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/GitHubOutput-G66WnH.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\GitHubOutput-G66WnH.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/GitHubOutput-G66WnH.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\GitHubOutput-G66WnH.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web glob: nodes/*.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] list() result: ["nodes/Code-0JXlkz.json","nodes/Code-B7Sxcs.json","nodes/Eval-0f2myO.json","nodes/GitHubOutput-G66WnH.json","nodes/ToolCall-eyZtJr.json"]
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-B7Sxcs.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-B7Sxcs.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Eval-0f2myO.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Eval-0f2myO.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/GitHubOutput-G66WnH.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\GitHubOutput-G66WnH.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/ToolCall-eyZtJr.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\ToolCall-eyZtJr.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web glob: schemas/nodes/*.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] list() result: ["schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/ToolCall.schema.json"]
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Code.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Code.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Eval.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Eval.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubInput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubInput.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/GitHubOutput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubOutput.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Merge.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Merge.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/Router.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Router.schema.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: schemas/nodes/ToolCall.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\ToolCall.schema.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: nodes/Code-0JXlkz.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\nodes\Code-0JXlkz.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] WARNING: REPO_ROOT not set – using process.cwd() fallback.
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.awb\index.json
+[FileRepo] repoRoot() env:  resolved: C:\Users\mark\source\repos\celestial_engine\apps\web

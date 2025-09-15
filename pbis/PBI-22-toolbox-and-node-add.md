@@ -41,3 +41,20 @@ Dependencies
 Out of Scope
 ------------
 - Node category grouping (future enhancement).
+
+## Implementation Status
+Toolbox component implemented with list + click-to-create node. Node types fetched from `/api/node-types`. Default props populated. Drag-to-add not implemented. Basic error display present; no toast/in-app notifications for failures beyond console warning.
+
+### Verified By
+- Manual: creating nodes refreshes canvas
+- Playwright: node creation via toolbox click (implicit through CRUD tests) (add explicit test later)
+
+### Current Gaps / Tech Debt
+- Missing drag-and-drop placement (always spawns at default/center logic)
+- No inline description rendering (title only)
+- No visual feedback on creation failure aside from console
+
+## Outstanding / Deferred
+- Implement drag-to-add coordinate placement
+- Display schema descriptions & required prop hints
+- Add user-visible error toast on creation failure

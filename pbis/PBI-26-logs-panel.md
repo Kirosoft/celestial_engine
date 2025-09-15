@@ -26,3 +26,11 @@ Dependencies
 Out of Scope
 ------------
 - Live streaming (SSE/websocket) (future).
+
+## Implementation Status
+Not started. Event log infrastructure absent (depends on PBI-17), so panel not begun.
+
+## Outstanding / Deferred
+- Implement `/api/events` tail endpoint
+- Build polling panel with filter UI
+- Add event type color coding for readability

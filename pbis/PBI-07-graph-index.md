@@ -43,3 +43,21 @@ Accelerates listings and forms basis for caching & invalidation.
 
 ## Risks / Notes
 Large graphs later may need lazy rebuild; MVP is synchronous. Current functionality covered by integration & e2e tests (CRUD and rename). Corruption detection test pending (see `TESTING.md` future work).
+
+## Implementation Status
+Index builds on startup (or first access) and updates incrementally on node CRUD & rename. Props hash computation present and used. Basic happy-path tests and e2e flows exercising rename & CRUD rely on index output. Corruption detection & automatic rebuild logic not yet implemented (currently assumes index is either present & trusted or rebuilt only if missing).
+
+### Verified By
+- Integration/e2e: CRUD, rename propagation relying on index lookups
+- Unit/integration tests for incremental updates (where present)
+
+### Current Gaps / Tech Debt
+- Missing corruption detection (e.g., checksum mismatch / invalid JSON recovery)
+- No explicit test injecting a corrupted index file
+- No performance metrics for rebuild with larger node counts
+
+## Outstanding / Deferred
+- Implement corruption detection & auto rebuild (acceptance criterion gap)
+- Add test: write malformed JSON to index then trigger rebuild path
+- Capture rebuild timing metrics for scale planning
+- Consider incremental hashing strategy to avoid full props re-hash on bulk operations

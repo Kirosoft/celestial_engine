@@ -27,3 +27,20 @@ Dependencies
 Out of Scope
 ------------
 - Advanced conditional UI widgets.
+
+## Implementation Status
+Inspector component implemented: loads selected node + schema list, renders editable name & props form with basic field types (string/number/boolean/enum). Dirty state indicator and save button included. Validation error mapping to specific fields not yet implemented (generic error message only). Position displayed read-only.
+
+### Verified By
+- Manual: select node, edit name/props, save, observe canvas refresh (label update)
+- Underlying API tests ensure update persistence
+
+### Current Gaps / Tech Debt
+- Field-level validation error mapping (backend errors[]) not parsed to per-field messages
+- No optimistic UI update while saving (waits for response)
+- No unsaved change navigation guard
+
+## Outstanding / Deferred
+- Parse structured validation errors and surface per-field
+- Add loading / disabled states to individual fields during save
+- Implement simple form autosave or reminder

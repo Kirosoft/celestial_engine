@@ -43,3 +43,21 @@ Guarantees structural integrity and consistent failure messaging.
 
 ## Risks / Notes
 Command validation added in later phase. Validator exercised in unit, integration, and e2e tests (see `TESTING.md`).
+
+## Implementation Status
+AJV service compiles all node schemas once; validateNode integrated into NodeRepo create/update and API routes. Error normalization returns path + message arrays matching acceptance criteria. Performance acceptable for current scale (no measured regression observed).
+
+### Verified By
+- Unit tests: valid/invalid samples
+- Playwright: validation error scenarios (missing required field) returning structured errors
+- Integration tests referencing apiErrors mapping
+
+### Current Gaps / Tech Debt
+- Performance benchmark script (deferred) not yet implemented
+- No caching of compiled validators across potential worker processes (single-process only)
+- Lacks schema version mismatch diagnostics (future command schema phase)
+
+## Outstanding / Deferred
+- Implement benchmark script capturing validate throughput (baseline for future optimization)
+- Add instrumentation (avg validation ms, error rates)
+- Extend to command/action schemas in Phase 2

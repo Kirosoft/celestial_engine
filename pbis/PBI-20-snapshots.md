@@ -37,3 +37,11 @@ Risks / Mitigations
 -------------------
 - Large copy cost: consider streaming + concurrency; future dedupe.
 - Corruption mid-copy: use temp dir then atomic rename to final name.
+
+## Implementation Status
+Not started. No snapshot directories or endpoints implemented.
+
+## Outstanding / Deferred
+- Implement snapshot create/list endpoints & directory layout
+- Add performance measurement test harness
+- Provide dry-run restore verification tool

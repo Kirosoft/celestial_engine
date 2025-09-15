@@ -33,3 +33,20 @@ Out of Scope
 Risks / Mitigations
 -------------------
 - Performance with large graphs: lazy mount & simple memoization.
+
+## Implementation Status
+Canvas implemented using React Flow. Nodes/edges load from API, positions persist on drag stop. Selection highlights and selection badge implemented. Basic error/loading overlays present. Edge handles & creation integrated (part of PBI-23 scope delivered early).
+
+### Verified By
+- Playwright: canvas interaction tests (edge creation, node drag with fallback)
+- Manual inspection: nodes render with labels & positions
+
+### Current Gaps / Tech Debt
+- No distinct edge styling differences by kind yet (single style)
+- Pan/zoom supported by React Flow defaults (no custom constraints)
+- No empty-state call-to-action (just static message)
+
+## Outstanding / Deferred
+- Add edge styling variants by `kind`
+- Improve empty state with create node quick action
+- Performance test with >200 nodes (baseline FPS / interaction latency)

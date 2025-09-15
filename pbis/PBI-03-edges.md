@@ -46,3 +46,21 @@ Enables meaningful graph structure for execution/design.
 
 ## Risks / Notes
 Cycle detection naive is fine at MVP scale (<1k edges). Covered by unit tests and e2e cycle rejection scenario (see `TESTING.md`).
+
+## Implementation Status
+Edge add/update/remove fully operational with cycle & self-loop prevention. Edge IDs stable. Integrated into API (PBI-10) and exercised via Playwright tests including cycle rejection. Rename propagation of target node IDs handled via NodeRepo rename logic.
+
+### Verified By
+- Unit tests: cycle detection, self-loop, CRUD
+- Playwright: edge add/update/delete, cycle 409 scenario
+- Integrity guard test (dangling edge repair) indirectly validates edge storage layout
+
+### Current Gaps / Tech Debt
+- Performance of cycle detection is O(N+E) DFS per add; acceptable now, may need incremental cycle check optimization later
+- No direct test of large chain cycle performance threshold
+- Inbound edge cleanup on node delete relies on higher-level logic; dedicated validation test could be added
+
+## Outstanding / Deferred
+- Optimize cycle detection (cache ancestors or maintain topological order) for larger graphs
+- Add load/performance test for 1k edges operations
+- Extend edge model to support multi-port / typed sockets (future PBI scope)

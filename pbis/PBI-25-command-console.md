@@ -26,3 +26,11 @@ Dependencies
 Out of Scope
 ------------
 - Multi-tab consoles, diff viewers.
+
+## Implementation Status
+Not started. No command console UI; dispatcher endpoint also not implemented (blocked by PBIs 15–18).
+
+## Outstanding / Deferred
+- Build console panel with JSON editor (monospaced textarea first pass)
+- Wire submit to `/api/commands` once dispatcher exists
+- Implement history list & re-run action

@@ -44,3 +44,21 @@ Enables UI integration & external automation.
 
 ## Risks / Notes
 Security/auth postponed until later. Behavior verified by API integration & Playwright tests (see `TESTING.md`).
+
+## Implementation Status
+All listed node endpoints implemented and validated through integration and Playwright tests (CRUD, rename, position, validation error scenarios). Error responses standardized via `apiErrors.ts`. Position endpoint integrates with canvas drag stop logic.
+
+### Verified By
+- Playwright: node CRUD lifecycle + rename propagation
+- Integration tests for node API (see `api.nodes.test.ts`)
+- E2E validation error test returning structured error payload
+
+### Current Gaps / Tech Debt
+- OpenAPI / schema documentation stub not authored (optional item left unchecked)
+- No pagination or filtering (fine for current scale)
+- Authentication/authorization entirely absent (not in scope yet)
+
+## Outstanding / Deferred
+- [Deferred] OpenAPI spec stub generation
+- Add rate limiting / request body size guard (future security hardening)
+- Document endpoint examples in developer docs (PBI-13)

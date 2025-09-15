@@ -39,3 +39,11 @@ Risks / Mitigations
 -------------------
 - Risk: Schema `$id` collisions → enforce naming linter.
 - Risk: Over-fitting early commands → keep minimal required fields, allow extensible `meta` object.
+
+## Implementation Status
+Not started. No command schema directory or files present yet. Current system validates only node schemas (Phase 1). This PBI will bootstrap Phase 2 command infrastructure.
+
+## Outstanding / Deferred
+- Implement schema files & manifest loader
+- Add AJV compilation tests & negative validation cases
+- Provide README/docs section enumerating command/action schemas

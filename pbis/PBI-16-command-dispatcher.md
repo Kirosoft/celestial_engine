@@ -41,3 +41,12 @@ Risks / Mitigations
 -------------------
 - Race conditions: Use file lock or version re-read just before commit.
 - Idempotency store growth: ring buffer + periodic compaction.
+
+## Implementation Status
+Not started. Dispatcher endpoint `/api/commands` absent; current mutations performed through individual REST endpoints. Idempotency, batch handling, version preconditions, and action reducers pending.
+
+## Outstanding / Deferred
+- Design reducer action set & file mutation plan format
+- Implement idempotency ring persistence structure
+- Add version conflict handling tests
+- Integrate with forthcoming transaction executor (PBI-18)

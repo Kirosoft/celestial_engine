@@ -44,3 +44,21 @@ Onboarding efficiency and consistent contributor guidance.
 
 ## Risks / Notes
 May evolve into a docs site later. Testing documentation underway (see `TESTING.md`).
+
+## Implementation Status
+Initial testing guide present. Core architectural documentation pending (sections for repos, schemas, error handling not yet drafted). PBIs now annotated with Implementation Status & Outstanding sections to feed into architecture doc content.
+
+### Verified By
+- Presence of `TESTING.md`
+- Updated PBIs 01–12 with status annotations (serves as source material)
+
+### Current Gaps / Tech Debt
+- Missing architecture overview & diagrams
+- No schema catalog with examples
+- No cross-linking from README to deeper docs
+
+## Outstanding / Deferred
+- Draft `docs/architecture/phase1.md` including repository diagram
+- Add schema reference table (type → description → file path)
+- Incorporate error model section referencing PBI-12
+- Update README with quick links to architecture & testing docs

@@ -34,3 +34,11 @@ Risks / Mitigations
 -------------------
 - File corruption: use atomic append (fs.open + appendFile) and optional checksum field per line.
 - Large log size: rotation + future compaction (snapshot). 
+
+## Implementation Status
+Not started. No events log file or generation logic present. Current system performs direct CRUD without event derivation.
+
+## Outstanding / Deferred
+- Define event mapping per action (aligned with dispatcher reducers)
+- Implement append-only writer with rotation threshold config
+- Add replay tool + verification test (reconstruct graph)

@@ -39,3 +39,11 @@ Risks / Mitigations
 -------------------
 - Crash mid-rename: atomic rename semantics keep either old or new fully.
 - Temp file leakage: cleanup pass on startup.
+
+## Implementation Status
+Not started. Current REST endpoints perform direct writes via repos (implicitly atomic per file) but lack multi-operation transactional batching and rollback semantics.
+
+## Outstanding / Deferred
+- Implement staging + commit executor accepting reducer plans
+- Add rollback test injecting failure mid-commit
+- Integrate version increment & index update atomicity

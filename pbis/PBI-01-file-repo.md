@@ -51,3 +51,20 @@ Prevents data corruption and security issues; foundational for all subsequent fe
 None blocking. Simplicity favored; no watch feature yet.
 
 Testing: Covered by unit tests (see `TESTING.md`). Extended crash simulation deferred.
+
+## Implementation Status
+FileRepo is fully implemented and adopted by all higher-level repositories (NodeRepo, Edge management, Index, Validation service). Atomic write (temp + rename) behavior verified in unit tests and exercised indirectly by integration & e2e suites. Path sanitization (`safeJoin`) prevents traversal and has dedicated tests.
+
+### Verified By
+- Unit tests: path traversal rejection, atomic overwrite
+- Indirect coverage: node CRUD, edge add/remove, index updates (all depend exclusively on FileRepo)
+
+### Current Gaps / Tech Debt
+- Extended durability simulation (crash mid-write) not implemented (deferred)
+- No fuzz test harness for concurrent rapid writes
+- No centralized metrics (write latency, failure counts)
+
+## Outstanding / Deferred
+- [Deferred] Extended durability simulation test harness to emulate crash between temp write and rename
+- Optional future: periodic integrity scan to detect orphan temp files and clean on startup (currently none generated under normal flow)
+- Optional future: instrumentation hooks for benchmarking large graph workloads

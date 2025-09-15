@@ -50,3 +50,20 @@ Unlocks creation of typed nodes and ensures future runtime compatibility.
 
 ## Risks / Notes
 ToolCall schema generation may move to dynamic later; start static skeleton. Schema validation covered by unit tests (see `TESTING.md`).
+
+## Implementation Status
+All listed seed schemas authored and validated. They enable node creation across all types exercised via tests. Consistent `$id` namespace pattern established.
+
+### Verified By
+- Unit tests: schema compilation & sample instance validation
+- Playwright: node creation flows referencing multiple types
+
+### Current Gaps / Tech Debt
+- No explicit version metadata beyond `$id`; future evolution path unspecified
+- ToolCall dynamic generation concept unimplemented
+- Documentation does not yet include per-schema examples (pending Docs PBI)
+
+## Outstanding / Deferred
+- Define versioning convention (semver or date-based) for schema evolution
+- Add docs section enumerating each schema with example JSON
+- Prototype dynamic ToolCall schema generation if requirements clarify

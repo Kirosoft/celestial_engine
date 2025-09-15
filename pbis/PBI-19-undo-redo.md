@@ -34,3 +34,11 @@ Out of Scope
 Risks / Mitigations
 -------------------
 - Drift if reducers become side-effectful → enforce purity & state snapshotting for inverse computation.
+
+## Implementation Status
+Not started. No undo/redo endpoints or ring buffer structures implemented.
+
+## Outstanding / Deferred
+- Define inverse action generation rules
+- Implement history ring + capacity eviction tests
+- Add endpoints /api/undo, /api/redo, /api/history

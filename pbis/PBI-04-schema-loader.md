@@ -43,3 +43,20 @@ Enables schema-driven props validation in API/UI.
 
 ## Risks / Notes
 Generated tool schemas may grow; indexing added later. Loader behavior validated by schema unit tests (see `TESTING.md`).
+
+## Implementation Status
+Schema loader loads all node schemas at startup and exposes retrieval + reload. AJV compilation occurs in validation service; loader correctness proven by successful validation of seed schemas and API request schema checks.
+
+### Verified By
+- Unit tests: valid/invalid schema load, reload scenario
+- Indirect: Node create/update API validations succeed/fail appropriately
+
+### Current Gaps / Tech Debt
+- No watch mode for live schema editing in dev
+- No caching metrics or load timing instrumentation
+- Error messages could include file path context for faster debugging
+
+## Outstanding / Deferred
+- Implement optional filesystem watch to trigger automatic reload
+- Add logging/telemetry around schema load durations & failures
+- Provide CLI command to list schemas & validation status
