@@ -7,29 +7,38 @@ interface NodeTypeSchema { title?: string; properties?: Record<string, SchemaPro
 
 async function fetchJson<T>(url: string, opts?: RequestInit): Promise<T>{
   const res = await fetch(url, { headers: { 'Content-Type': 'application/json' }, ...opts });
+  let body: any;
+  try { body = await res.json(); } catch { /* ignore parse error */ }
   if(!res.ok){
-    let body: any = undefined;
-    try { body = await res.json(); } catch{}
-    throw new Error(body?.error?.message || res.statusText);
+    const err: any = new Error(body?.error?.message || res.statusText);
+    if(body?.error?.fields){
+      err.fields = body.error.fields; // expecting array of { path, message }
+    }
+    throw err;
   }
-  return res.json();
+  return body as T;
 }
 
+interface EdgeView { id: string; sourceId: string; targetId: string; kind: string }
+
 export function Inspector(){
-  const { selectedNodeId, selectionAction, showInspector, toggleInspector } = useUIState();
+  const { selectedNodeId, selectedEdgeId, selectionAction, showInspector, toggleInspector, setSelectedNodeIds, setSelectedEdge } = useUIState() as any;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string|undefined>();
   const [node, setNode] = useState<NodeData|undefined>();
+  const [edge, setEdge] = useState<EdgeView|undefined>();
   const [schema, setSchema] = useState<NodeTypeSchema|undefined>();
   const [draftName, setDraftName] = useState('');
   const [draftProps, setDraftProps] = useState<Record<string, any>>({});
   const [dirty, setDirty] = useState(false);
   const [saving, setSaving] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<Record<string,string>>({});
+  const [original, setOriginal] = useState<{ name: string; props: Record<string,any> }>({ name:'', props:{} });
 
   // Load node + schema on selection change
   useEffect(()=>{
-    if(!selectedNodeId){ setNode(undefined); setSchema(undefined); return; }
+    if(!selectedNodeId){ setNode(undefined); setSchema(undefined); setDirty(false); }
+    if(!selectedNodeId) return;
     let cancelled = false;
     (async ()=>{
       setLoading(true); setError(undefined); setFieldErrors({}); setDirty(false);
@@ -39,16 +48,45 @@ export function Inspector(){
         setNode(nodeResp.node);
         setDraftName(nodeResp.node.name);
         setDraftProps({ ...(nodeResp.node.props||{}) });
-        // Opportunistically fetch all schemas list then pick by type (reuse existing endpoint /api/node-types)
-        const meta = await fetchJson<{ nodeTypes: { type: string; schema: NodeTypeSchema }[] }>(`/api/node-types`);
-        if(cancelled) return;
-        const match = meta.nodeTypes.find(nt=> nt.type === nodeResp.node.type);
-        setSchema(match?.schema || { properties: {} });
+        setOriginal({ name: nodeResp.node.name, props: { ...(nodeResp.node.props||{}) } });
+        // Fetch single schema for this node type
+        try {
+          const schemaResp = await fetchJson<{ schema: NodeTypeSchema }>(`/api/schemas/${encodeURIComponent(nodeResp.node.type)}`);
+          if(cancelled) return;
+          setSchema(schemaResp.schema || { properties: {} });
+        } catch(e){
+          // Fallback: leave schema empty (renders "No props")
+          if(!cancelled) setSchema({ properties: {} });
+        }
       } catch(e:any){ if(!cancelled) setError(e.message||String(e)); }
       finally { if(!cancelled) setLoading(false); }
     })();
     return ()=>{ cancelled = true; };
   }, [selectedNodeId, selectionAction]);
+
+  // Edge load: derive minimal edge info from id pattern (source:edgeId), fetch source node to extract edge metadata
+  useEffect(()=>{
+    if(!selectedEdgeId){ setEdge(undefined); return; }
+    const parts = selectedEdgeId.split(':');
+    if(parts.length !== 2){ setEdge(undefined); return; }
+    const [sourceId, edgeId] = parts;
+    let cancelled = false;
+    (async ()=>{
+      setLoading(true); setError(undefined);
+      try {
+        const sourceResp = await fetchJson<{ node: NodeData }>(`/api/nodes/${sourceId}`);
+        if(cancelled) return;
+        const edgeObj = (sourceResp.node as any)?.edges?.out?.find((e: any)=> e.id === edgeId);
+        if(edgeObj){
+          setEdge({ id: edgeObj.id, sourceId, targetId: edgeObj.targetId, kind: edgeObj.kind || 'flow' });
+        } else {
+          setEdge(undefined);
+        }
+      } catch(e:any){ if(!cancelled) setError(e.message||String(e)); }
+      finally { if(!cancelled) setLoading(false); }
+    })();
+    return ()=>{ cancelled = true; };
+  }, [selectedEdgeId]);
 
   const onPropChange = useCallback((key: string, value: any)=>{
     setDraftProps(p=>({ ...p, [key]: value }));
@@ -64,11 +102,68 @@ export function Inspector(){
       const patch = { name: draftName, props: draftProps };
       const updated = await fetchJson<{ node: NodeData }>(`/api/nodes/${node.id}`, { method:'PUT', body: JSON.stringify(patch) });
       setNode(updated.node); setDirty(false);
+      // Dispatch label update for canvas re-render
+      try {
+        window.dispatchEvent(new CustomEvent('graph:update-node-label', { detail: { id: updated.node.id, name: updated.node.name } }));
+      } catch { /* ignore */ }
     } catch(e:any){
-      // TODO: Map backend validation error structure to fieldErrors; placeholder simple message
-      setError(e.message||'Save failed');
+      if(e.fields && Array.isArray(e.fields)){
+        const fe: Record<string,string> = {};
+        for(const f of e.fields){
+          // path like props.maxTasks or name
+            const path: string = f.path || '';
+            if(path.startsWith('props.')){
+              const key = path.substring('props.'.length);
+              fe[key] = f.message || 'Invalid value';
+            } else if(path === 'name'){
+              fe['__name'] = f.message || 'Invalid name';
+            }
+        }
+        setFieldErrors(fe);
+        if(!Object.keys(fe).length){ setError(e.message||'Save failed'); }
+      } else {
+        setError(e.message||'Save failed');
+      }
     } finally { setSaving(false); }
   }, [node, draftName, draftProps]);
+
+  const resetDraft = useCallback(()=>{
+    setDraftName(original.name);
+    setDraftProps({ ...original.props });
+    setDirty(false);
+    setFieldErrors({});
+    setError(undefined);
+  }, [original]);
+
+  const onDeleteNode = useCallback(async ()=>{
+    if(!node) return;
+    if(!confirm(`Delete node ${node.name || node.id}? This cannot be undone.`)) return;
+    try {
+      const res = await fetch(`/api/nodes/${node.id}`, { method:'DELETE' });
+      if(res.ok){
+        setNode(undefined);
+        setSelectedNodeIds([]);
+        window.dispatchEvent(new Event('graph:refresh-request'));
+      } else {
+        setError('Failed to delete node');
+      }
+    } catch(e:any){ setError(e.message||'Delete failed'); }
+  }, [node, setSelectedNodeIds]);
+
+  const onDeleteEdge = useCallback(async ()=>{
+    if(!edge) return;
+    if(!confirm(`Delete edge ${edge.id}?`)) return;
+    try {
+      const res = await fetch(`/api/edges/${edge.sourceId}/${edge.id}`, { method:'DELETE' });
+      if(res.ok){
+        setEdge(undefined);
+        setSelectedEdge(undefined);
+        window.dispatchEvent(new Event('graph:refresh-request'));
+      } else {
+        setError('Failed to delete edge');
+      }
+    } catch(e:any){ setError(e.message||'Delete edge failed'); }
+  }, [edge, setSelectedEdge]);
 
   if(!showInspector) return null;
   return (
@@ -77,7 +172,7 @@ export function Inspector(){
         <strong style={{ fontSize:13 }}>Inspector</strong>
         <button onClick={()=>toggleInspector(false)} style={{ marginLeft:'auto', background:'transparent', color:'#888', border:'none', cursor:'pointer' }}>×</button>
       </div>
-      {!selectedNodeId && <div style={{ padding:12 }}>No node selected.</div>}
+      {!selectedNodeId && !selectedEdgeId && <div style={{ padding:12 }}>No selection.</div>}
       {selectedNodeId && (
         <form onSubmit={onSubmit} style={{ overflowY:'auto', flex:1, display:'flex', flexDirection:'column' }}>
           {loading && <div style={{ padding:12 }}>Loading…</div>}
@@ -87,6 +182,7 @@ export function Inspector(){
               <div>
                 <label style={{ display:'block', fontWeight:600, marginBottom:4 }}>Name</label>
                 <input value={draftName} onChange={e=>onNameChange(e.target.value)} style={{ width:'100%' }} />
+                {fieldErrors['__name'] && <div style={{ fontSize:10, color:'#f55' }}>{fieldErrors['__name']}</div>}
               </div>
               <div style={{ fontSize:11, opacity:0.7 }}>ID: {node.id}</div>
               <div style={{ fontSize:11, opacity:0.7 }}>Type: {node.type}</div>
@@ -95,21 +191,55 @@ export function Inspector(){
                 <legend style={{ padding:'0 4px' }}>Props</legend>
                 {renderPropsForm(schema, draftProps, onPropChange, fieldErrors)}
               </fieldset>
-              <div style={{ display:'flex', gap:8, alignItems:'center' }}>
+              <div style={{ display:'flex', gap:8, alignItems:'center', flexWrap:'wrap' }}>
                 <button type="submit" disabled={saving || !dirty} style={{ padding:'6px 12px' }}>{saving? 'Saving…':'Save'}</button>
+                <button type="button" disabled={!dirty || saving} onClick={resetDraft} style={{ padding:'6px 10px' }}>Reset</button>
+                <button type="button" onClick={onDeleteNode} style={{ marginLeft:'auto', padding:'6px 10px', background:'#612', color:'#fff', border:'1px solid #a44' }}>Delete</button>
                 {dirty && <span style={{ color:'#fb0' }}>Unsaved changes</span>}
               </div>
             </div>
           )}
         </form>
       )}
+      {selectedEdgeId && !selectedNodeId && (
+        <div style={{ overflowY:'auto', flex:1, display:'flex', flexDirection:'column' }}>
+          {loading && <div style={{ padding:12 }}>Loading…</div>}
+          {error && <div style={{ padding:12, color:'#f66' }}>{error}</div>}
+          {edge && !loading && (
+            <div style={{ padding:12, display:'flex', flexDirection:'column', gap:12 }}>
+              <div style={{ fontSize:13, fontWeight:600 }}>Edge</div>
+              <div style={{ fontSize:11, opacity:0.7 }}>ID: {edge.id}</div>
+              <div style={{ fontSize:11 }}>Kind: {edge.kind}</div>
+              <div style={{ fontSize:11 }}>Source: <a href="#" onClick={(e)=>{ e.preventDefault(); setSelectedEdge(undefined); setSelectedNodeIds([edge.sourceId]); }}>{edge.sourceId}</a></div>
+              <div style={{ fontSize:11 }}>Target: <a href="#" onClick={(e)=>{ e.preventDefault(); setSelectedEdge(undefined); setSelectedNodeIds([edge.targetId]); }}>{edge.targetId}</a></div>
+              <div style={{ fontSize:11, opacity:0.6, fontStyle:'italic' }}>No editable edge properties.</div>
+              <div style={{ display:'flex', gap:8, alignItems:'center' }}>
+                <button type="button" onClick={onDeleteEdge} style={{ padding:'6px 10px', background:'#612', color:'#fff', border:'1px solid #a44', marginLeft:'auto' }}>Delete Edge</button>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
 
 function renderPropsForm(schema: NodeTypeSchema | undefined, draft: Record<string, any>, onChange: (k:string,v:any)=>void, errors: Record<string,string>){
-  if(!schema?.properties) return <div style={{ fontStyle:'italic', opacity:0.6 }}>No props</div>;
-  const entries = Object.entries(schema.properties);
+  // Support node schemas where props are nested under properties.props.properties
+  const propsDef: any = schema?.properties?.props;
+  const propsProperties: Record<string, SchemaProperty> | undefined = propsDef?.properties || schema?.properties || undefined;
+  // If we detected nested form (props key present), only use its children, not top-level structural keys
+  const usingNested = !!propsDef?.properties;
+  if(!propsProperties) return <div style={{ fontStyle:'italic', opacity:0.6 }}>No props</div>;
+  let entries = Object.entries(propsProperties);
+  if(usingNested){
+    // Filter out structural keys if accidentally mixed
+    entries = entries.filter(([k])=> true);
+  } else {
+    // If not nested, attempt to remove known structural keys
+    const structural = new Set(['id','type','name','position','edges','props']);
+    entries = entries.filter(([k])=> !structural.has(k));
+  }
   if(!entries.length) return <div style={{ fontStyle:'italic', opacity:0.6 }}>No props</div>;
   return (
     <div style={{ display:'flex', flexDirection:'column', gap:10 }}>

@@ -14,9 +14,9 @@ function SelectButton({ id }: { id: string }){
 // Mock fetch implementation
 const fetchMock = vi.fn();
 
-// Basic sample node + schema data
+// Basic sample node + schema data (schema mimics /api/schemas/Task shape with nested props)
 const sampleNode = { id: 'n1', type: 'Task', name: 'My Task', props: { prompt: 'Hello' }, position: { x:10, y:20 } };
-const sampleSchemas = [{ type: 'Task', schema: { properties: { prompt: { type: 'string', title: 'Prompt' } } } }];
+const taskSchema = { properties: { props: { properties: { prompt: { type: 'string', title: 'Prompt' } } } } };
 
 describe('Inspector', () => {
   beforeEach(()=>{
@@ -25,11 +25,11 @@ describe('Inspector', () => {
   });
 
   function queueFetchSequence(){
-    // First call: /api/nodes/n1
+    // 1: GET /api/nodes/n1
     fetchMock.mockResolvedValueOnce(new Response(JSON.stringify({ node: sampleNode }), { status:200 }));
-    // Second call: /api/node-types
-    fetchMock.mockResolvedValueOnce(new Response(JSON.stringify({ nodeTypes: sampleSchemas }), { status:200 }));
-    // Third call: save PUT
+    // 2: GET /api/schemas/Task
+    fetchMock.mockResolvedValueOnce(new Response(JSON.stringify({ schema: taskSchema }), { status:200 }));
+    // 3: PUT /api/nodes/n1
     fetchMock.mockResolvedValueOnce(new Response(JSON.stringify({ node: { ...sampleNode, name: 'Updated', props: { prompt: 'World' } } }), { status:200 }));
   }
 

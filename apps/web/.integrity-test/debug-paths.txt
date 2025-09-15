@@ -1,40 +1,40 @@
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test glob: schemas/nodes/*.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.integrity-test glob: schemas/nodes/*.schema.json
 [FileRepo] list() result: ["schemas/nodes/Task.schema.json"]
-[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test glob: ../schemas/nodes/*.schema.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.integrity-test glob: ../schemas/nodes/*.schema.json
 [FileRepo] list() result: ["../schemas/nodes/Code.schema.json","../schemas/nodes/Eval.schema.json","../schemas/nodes/GitHubInput.schema.json","../schemas/nodes/GitHubOutput.schema.json","../schemas/nodes/Merge.schema.json","../schemas/nodes/Router.schema.json","../schemas/nodes/ToolCall.schema.json"]
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test glob: ../schemas/nodes/*.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.integrity-test glob: ../schemas/nodes/*.schema.json
 [FileRepo] list() result: ["../schemas/nodes/Code.schema.json","../schemas/nodes/Eval.schema.json","../schemas/nodes/GitHubInput.schema.json","../schemas/nodes/GitHubOutput.schema.json","../schemas/nodes/Merge.schema.json","../schemas/nodes/Router.schema.json","../schemas/nodes/ToolCall.schema.json"]
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test\schemas\nodes\Task.schema.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test\schemas\nodes\Task.schema.json
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: ../schemas/nodes/Code.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Code.schema.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: ../schemas/nodes/Eval.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Eval.schema.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: ../schemas/nodes/GitHubInput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubInput.schema.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: ../schemas/nodes/GitHubOutput.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\GitHubOutput.schema.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: ../schemas/nodes/Merge.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Merge.schema.json
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: ../schemas/nodes/Router.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\Router.schema.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: ../schemas/nodes/ToolCall.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\schemas\nodes\ToolCall.schema.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: nodes/Task-2YyAev.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test\nodes\Task-2YyAev.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test\.awb\index.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test\.awb\index.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test\.awb\index.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test glob: nodes/*.json
-[FileRepo] list() result: ["nodes/Task-2YyAev.json"]
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test p: nodes/Task-2YyAev.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.integrity-test\nodes\Task-2YyAev.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/schemas/nodes/Task.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/schemas/nodes/Task.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: ../schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/schemas/nodes/Code.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: ../schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/schemas/nodes/Eval.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: ../schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/schemas/nodes/GitHubInput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: ../schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/schemas/nodes/GitHubOutput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: ../schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/schemas/nodes/Merge.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: ../schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: ../schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: nodes/Task-4DCcS-.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/nodes/Task-4DCcS-.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/.awb/index.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/.awb/index.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/.awb/index.json
+[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.integrity-test glob: nodes/*.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] list() result: ["nodes/Task-4DCcS-.json"]
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.integrity-test resolved: /home/ubuntu/celestial_engine/apps/web/.integrity-test
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.integrity-test p: nodes/Task-4DCcS-.json target: /home/ubuntu/celestial_engine/apps/web/.integrity-test/nodes/Task-4DCcS-.json

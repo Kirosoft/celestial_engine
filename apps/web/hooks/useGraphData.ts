@@ -42,6 +42,16 @@ export function useGraphData(){
     window.addEventListener('graph:refresh-request', h);
     return () => window.removeEventListener('graph:refresh-request', h);
   }, [load]);
+  // Listen for node label updates (rename) to update UI instantly without full reload
+  useEffect(()=>{
+    function onLabelUpdate(e: any){
+      const detail = e.detail as { id: string; name: string } | undefined;
+      if(!detail) return;
+      setNodes(nds => nds.map(n => n.id === detail.id ? { ...n, data: { ...n.data, label: detail.name } } : n));
+    }
+    window.addEventListener('graph:update-node-label', onLabelUpdate as any);
+    return () => window.removeEventListener('graph:update-node-label', onLabelUpdate as any);
+  }, []);
 
   const onNodesChange = useCallback((changes: NodeChange[]) => {
     setNodes(nds => applyNodeChanges(changes, nds));

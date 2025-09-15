@@ -1,0 +1,16 @@
+{
+  "id": "Code-1RZ_FM",
+  "type": "Code",
+  "name": "Code2",
+  "props": {
+    "language": "typescript3",
+    "source": "// TODO: implement"
+  },
+  "position": {
+    "x": 44.5,
+    "y": -201
+  },
+  "edges": {
+    "out": []
+  }
+}

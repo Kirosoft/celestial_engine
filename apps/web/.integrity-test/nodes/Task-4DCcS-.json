@@ -1,10 +1,8 @@
 {
-  "id": "Task-P5kK8o",
+  "id": "Task-4DCcS-",
   "type": "Task",
-  "name": "Task",
-  "props": {
-    "title": "Task Title"
-  },
+  "name": "Solo",
+  "props": {},
   "position": {
     "x": 120,
     "y": 120

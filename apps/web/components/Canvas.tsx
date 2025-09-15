@@ -1,12 +1,12 @@
-import React, { useCallback, useState } from 'react';
-import ReactFlow, { Background, Controls, MiniMap, Node, NodeDragHandler, OnSelectionChangeParams, Connection, Handle, Position } from 'reactflow';
+import React, { useCallback, useState, useEffect } from 'react';
+import ReactFlow, { Background, Controls, MiniMap, Node, NodeDragHandler, OnSelectionChangeParams, Connection, Handle, Position, Edge as RFEdge } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { useGraphData } from '../hooks/useGraphData';
 import { useUIState } from '../state/uiState';
 
 export function Canvas(){
   const { nodes, edges, refresh, loading, error, onNodesChange, persistPosition, addEdgeLocal } = useGraphData();
-  const { setSelectedNodeIds } = useUIState();
+  const { setSelectedNodeIds, setSelectedEdge, selectedNodeIds, selectedEdgeId } = useUIState() as any;
   const [edgeError, setEdgeError] = useState<string|undefined>();
   const onPaneClick = useCallback(()=>{/* selection clear placeholder */}, []);
   const onNodeDragStop: NodeDragHandler = useCallback((_e, node: Node)=>{
@@ -17,8 +17,13 @@ export function Canvas(){
   }, [persistPosition]);
   const onSelectionChange = useCallback((params: OnSelectionChangeParams)=>{
     const ids = params.nodes.map(n=>n.id);
-    setSelectedNodeIds(ids);
+    if(ids.length){
+      setSelectedNodeIds(ids);
+    }
   }, [setSelectedNodeIds]);
+  const onEdgeClick = useCallback((_e: any, edge: RFEdge)=>{
+    setSelectedEdge(edge.id);
+  }, [setSelectedEdge]);
   const onConnect = useCallback((connection: Connection)=>{
     if(!connection.source || !connection.target) return;
     (async()=>{
@@ -29,6 +34,52 @@ export function Canvas(){
       }
     })();
   }, [addEdgeLocal]);
+
+  // Delete key handling
+  useEffect(()=>{
+    function onKey(e: KeyboardEvent){
+      const target = e.target as HTMLElement | null;
+      if(target){
+        const tag = target.tagName;
+        const editable = target.getAttribute('contenteditable');
+        if(editable === 'true' || ['INPUT','TEXTAREA','SELECT'].includes(tag)){
+          return; // Don't treat Delete/Backspace inside editable fields as graph deletion
+        }
+      }
+      if(e.key === 'Delete' || e.key === 'Backspace'){
+        if(selectedNodeIds && selectedNodeIds.length === 1){
+          const id = selectedNodeIds[0];
+          (async()=>{
+            try {
+              const res = await fetch(`/api/nodes/${id}`, { method: 'DELETE' });
+              if(res.ok){
+                refresh();
+                setSelectedNodeIds([]);
+              }
+            } catch(err){ console.warn('[delete node] error', err); }
+          })();
+        } else if(selectedEdgeId){
+          // edge id pattern: sourceId:edgeId
+            const parts = selectedEdgeId.split(':');
+            if(parts.length === 2){
+              const sourceId = parts[0];
+              const edgeId = parts[1];
+              (async()=>{
+                try {
+                  const res = await fetch(`/api/edges/${sourceId}/${edgeId}`, { method: 'DELETE' });
+                  if(res.ok){
+                    refresh();
+                    setSelectedEdge(undefined);
+                  }
+                } catch(err){ console.warn('[delete edge] error', err); }
+              })();
+            }
+        }
+      }
+    }
+    window.addEventListener('keydown', onKey);
+    return ()=> window.removeEventListener('keydown', onKey);
+  }, [selectedNodeIds, selectedEdgeId, refresh, setSelectedNodeIds, setSelectedEdge]);
   return (
     <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }}>
       {loading && <div style={{ position:'absolute', top:8, left:8, background:'#222', color:'#fff', padding:'4px 8px', borderRadius:4 }}>Loading…</div>}
@@ -40,13 +91,14 @@ export function Canvas(){
         </div>
       )}
       <ReactFlow 
-  nodes={nodes}
+        nodes={nodes}
         edges={edges}
-        nodeTypes={{ basicNode: BasicNode }}
+        nodeTypes={nodeTypes}
         onPaneClick={onPaneClick}
         onNodesChange={onNodesChange}
         onNodeDragStop={onNodeDragStop}
         onSelectionChange={onSelectionChange}
+        onEdgeClick={onEdgeClick}
         onConnect={onConnect}
         fitView>
         <Background />
@@ -80,3 +132,6 @@ const BasicNode: React.FC<any> = ({ data }) => {
     </div>
   );
 };
+
+// Stable nodeTypes object to avoid React Flow warning #002 about recreating node/edge type maps every render.
+const nodeTypes = { basicNode: BasicNode } as const;
