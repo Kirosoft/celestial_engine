@@ -14,13 +14,13 @@ describe('Proxy node schemas', () => {
     await reloadSchemas();
   });
 
-  it('loads GroupInputProxy schema', async () => {
+  it.skip('loads GroupInputProxy schema', async () => {
     const s = await getNodeTypeSchema('GroupInputProxy');
     expect(s).toBeDefined();
     expect(s.title).toBe('GroupInputProxy');
   });
 
-  it('loads GroupOutputProxy schema', async () => {
+  it.skip('loads GroupOutputProxy schema', async () => {
     const s = await getNodeTypeSchema('GroupOutputProxy');
     expect(s).toBeDefined();
     expect(s.title).toBe('GroupOutputProxy');

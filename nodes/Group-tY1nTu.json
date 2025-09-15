@@ -1,0 +1,22 @@
+{
+  "id": "Group-tY1nTu",
+  "type": "Group",
+  "name": "Group",
+  "props": {},
+  "position": {
+    "x": 380.7553950079453,
+    "y": -92.37624939326365
+  },
+  "edges": {
+    "out": []
+  },
+  "ports": {
+    "inputs": [
+      "in"
+    ],
+    "outputs": [
+      "out"
+    ]
+  },
+  "subgraphRef": "groups/Group-tY1nTu"
+}

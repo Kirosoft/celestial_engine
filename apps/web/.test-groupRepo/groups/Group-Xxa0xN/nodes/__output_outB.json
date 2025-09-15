@@ -1,0 +1,17 @@
+{
+  "id": "__output_outB",
+  "type": "GroupOutputProxy",
+  "name": "outB",
+  "position": {
+    "x": 400,
+    "y": 60
+  },
+  "props": {
+    "port": "outB",
+    "groupId": "Group-Xxa0xN",
+    "kind": "output"
+  },
+  "edges": {
+    "out": []
+  }
+}
