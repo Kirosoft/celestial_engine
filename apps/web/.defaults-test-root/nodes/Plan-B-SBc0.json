@@ -1,9 +1,9 @@
 {
-  "id": "LLM-WNm1TW",
-  "type": "LLM",
-  "name": "LLM",
+  "id": "Plan-B-SBc0",
+  "type": "Plan",
+  "name": "Plan",
   "props": {
-    "model": "gpt-4"
+    "plannerModel": "gpt-4"
   },
   "position": {
     "x": 120,

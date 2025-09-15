@@ -3,12 +3,12 @@
   "type": "Code",
   "name": "Code",
   "props": {
-    "language": "typescript1",
+    "language": "typescript2",
     "source": "// TODO: implement"
   },
   "position": {
-    "x": -49.5,
-    "y": -331
+    "x": -155.5005186426308,
+    "y": -415.3819918141995
   },
   "edges": {
     "out": [

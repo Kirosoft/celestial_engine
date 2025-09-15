@@ -124,11 +124,20 @@ function SelectionBadge(){
 
 // Basic node renderer with source (bottom) and target (top) handles
 const BasicNode: React.FC<any> = ({ data }) => {
+  const label = data?.label || data?.type || 'node';
+  const handleSize = 10; // smaller connectors
+  const commonHandle: React.CSSProperties = {
+    width: handleSize,
+    height: handleSize,
+    borderRadius: handleSize/2,
+    border: '1px solid #3a3f45'
+  };
   return (
-    <div style={{ padding:6, border:'1px solid #555', borderRadius:4, background:'#222', color:'#eee', fontSize:12, minWidth:120, textAlign:'center' }}>
-  <Handle data-testid="handle-target" type="target" position={Position.Top} style={{ background:'#888', width:16, height:16, borderRadius:8, border:'2px solid #444' }} />
-      <div>{data?.label || data?.type || 'node'}</div>
-  <Handle data-testid="handle-source" type="source" position={Position.Bottom} style={{ background:'#4a8', width:16, height:16, borderRadius:8, border:'2px solid #2d5' }} />
+    <div style={{ padding:'8px 6px', paddingTop:12, border:'1px solid #4a5560', borderRadius:4, background:'#222', color:'#eee', fontSize:12, minWidth:120, textAlign:'center', lineHeight:1.2 }}>
+      {/* Target (incoming) handle - lifted slightly so it doesn't overlap text */}
+	<Handle data-testid="handle-target" type="target" position={Position.Top} style={{ ...commonHandle, background:'#888', transform:'translate(-50%, -55%)' }} />
+      <div style={{ pointerEvents:'none', fontWeight:500, padding:'0 2px' }}>{label}</div>
+	<Handle data-testid="handle-source" type="source" position={Position.Bottom} style={{ ...commonHandle, background:'#3d8', transform:'translate(-50%, 55%)' }} />
     </div>
   );
 };

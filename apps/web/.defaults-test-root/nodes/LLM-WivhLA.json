@@ -1,9 +1,9 @@
 {
-  "id": "Task-U0VvHV",
-  "type": "Task",
-  "name": "Task",
+  "id": "LLM-WivhLA",
+  "type": "LLM",
+  "name": "LLM",
   "props": {
-    "title": "Task Title"
+    "model": "gpt-4"
   },
   "position": {
     "x": 120,
