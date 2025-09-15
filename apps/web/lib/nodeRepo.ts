@@ -6,7 +6,7 @@ import { NotFoundError, ConflictError, CycleError } from './errors';
 
 export interface Position { x: number; y: number }
 export interface EdgeOut { id: string; targetId: string; kind: 'flow'|'data'; sourcePort?: string; targetPort?: string }
-export interface NodeFile { id: string; type: string; name: string; position?: Position; props?: any; edges?: { out: EdgeOut[] } }
+export interface NodeFile { id: string; type: string; name: string; position?: Position; props?: any; edges?: { out: EdgeOut[] }; ports?: { inputs: string[]; outputs: string[] }; subgraphRef?: string }
 
 const nodesDir = 'nodes';
 

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
+  "dev": "cross-env REPO_ROOT=../.. next dev",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",

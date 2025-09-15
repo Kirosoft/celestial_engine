@@ -1,0 +1,16 @@
+{
+  "id": "Code-apNIUF",
+  "type": "Code",
+  "name": "Code",
+  "props": {
+    "language": "typescript1",
+    "source": "// TODO: implement"
+  },
+  "position": {
+    "x": 587.403412424115,
+    "y": -613.2814405059484
+  },
+  "edges": {
+    "out": []
+  }
+}

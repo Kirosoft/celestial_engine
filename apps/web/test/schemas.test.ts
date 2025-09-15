@@ -4,7 +4,8 @@ import { resolve } from 'path';
 import { validateNode } from '../lib/validator';
 import { reloadSchemas } from '../lib/schemaLoader';
 
-const tmpRoot = resolve(process.cwd(), '.schema-test-all');
+// Use actual repo root for consolidated schemas
+const repoRoot = resolve(process.cwd(), '..', '..');
 
 const types = [ 'ToolCall','Router','Merge','Code','GitHubInput','GitHubOutput','Eval' ];
 
@@ -24,18 +25,7 @@ function sampleNode(type: string){
 
 describe('Seed Schemas', () => {
   beforeAll(async () => {
-    process.env.REPO_ROOT = tmpRoot;
-    await fs.rm(tmpRoot, { recursive: true, force: true });
-    await fs.mkdir(tmpRoot, { recursive: true });
-    // Copy existing schema directory contents into tmp root
-    const schemaSrc = resolve(process.cwd(), 'schemas/nodes');
-    const schemaDest = resolve(tmpRoot, 'schemas/nodes');
-    await fs.mkdir(schemaDest, { recursive: true });
-    for(const f of await fs.readdir(schemaSrc)){
-      if(f.endsWith('.schema.json')){
-        await fs.copyFile(resolve(schemaSrc, f), resolve(schemaDest, f));
-      }
-    }
+    process.env.REPO_ROOT = repoRoot;
     await reloadSchemas();
   });
 

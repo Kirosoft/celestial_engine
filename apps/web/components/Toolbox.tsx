@@ -5,7 +5,10 @@ import { buildDefaultProps } from '../lib/defaultProps';
 interface NodeTypeMeta { id: string; title: string; description?: string; schemaId: string; requiredPropKeys: string[] }
 
 export function Toolbox({ onCreate }: { onCreate?: (nodeId: string)=>void }){
-  const { showToolbox, toggleToolbox, toolboxX, toolboxY, setToolboxPosition, toolboxCollapsed, setToolboxCollapsed } = useUIState() as any;
+  const { showToolbox, toggleToolbox, toolboxX, toolboxY, setToolboxPosition, toolboxCollapsed, setToolboxCollapsed, currentGroupId, hydrated } = useUIState() as any;
+  // Keep a ref of currentGroupId to avoid needing it as a dependency for createNode and to prevent stale capture
+  const groupRef = useRef<string|undefined>(currentGroupId);
+  useEffect(()=>{ groupRef.current = currentGroupId; }, [currentGroupId]);
   const [types, setTypes] = useState<NodeTypeMeta[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string|undefined>();
@@ -29,6 +32,39 @@ export function Toolbox({ onCreate }: { onCreate?: (nodeId: string)=>void }){
   const createNode = useCallback(async (typeId: string) => {
     setCreating(typeId);
     try {
+      if(typeId === 'Group'){
+        const activeGroup = groupRef.current;
+        if(activeGroup){
+          // Nested group: create inside subgraph via groups/:id/nodes
+          const res = await fetch(`/api/groups/${activeGroup}/nodes`, { method: 'POST', headers: { 'Content-Type':'application/json' }, body: JSON.stringify({ type: 'Group', name: 'Group', inputs: [], outputs: [] }) });
+          if(!res.ok) throw new Error('Failed to create nested group');
+          const json = await res.json();
+          onCreate?.(json.node.id);
+          window.dispatchEvent(new CustomEvent('graph:refresh-request'));
+          return;
+        } else {
+          // Root-level group
+          const res = await fetch('/api/groups', { method: 'POST', headers: { 'Content-Type':'application/json' }, body: JSON.stringify({ name: 'Group', inputs: [], outputs: [] }) });
+          if(!res.ok) throw new Error('Failed to create group');
+          const json = await res.json();
+          onCreate?.(json.group.id);
+          window.dispatchEvent(new CustomEvent('graph:refresh-request'));
+          return;
+        }
+      }
+      // If inside a group, create node within subgraph instead of root
+      const activeGroup = groupRef.current;
+      if(activeGroup){
+        const meta = types.find(t=> t.id === typeId);
+        const props: Record<string, any> = meta ? buildDefaultProps(typeId, meta.requiredPropKeys) : {};
+        const body = { type: typeId, name: typeId, props };
+        const res = await fetch(`/api/groups/${activeGroup}/nodes`, { method: 'POST', headers: { 'Content-Type':'application/json' }, body: JSON.stringify(body) });
+        if(!res.ok) throw new Error('Failed to create node in group');
+        const json = await res.json();
+        onCreate?.(json.node.id);
+        window.dispatchEvent(new CustomEvent('graph:refresh-request'));
+        return;
+      }
       const meta = types.find(t=> t.id === typeId);
       const props: Record<string, any> = meta ? buildDefaultProps(typeId, meta.requiredPropKeys) : {};
       const body = { type: typeId, name: typeId, props };
@@ -36,7 +72,7 @@ export function Toolbox({ onCreate }: { onCreate?: (nodeId: string)=>void }){
       if(!res.ok) throw new Error('Failed to create node');
       const json = await res.json();
       onCreate?.(json.node.id);
-      window.dispatchEvent(new CustomEvent('graph:refresh-request')); // let graph hook know
+      window.dispatchEvent(new CustomEvent('graph:refresh-request'));
     } catch(e){ console.warn('[Toolbox] create failed', e); }
     finally { setCreating(undefined); }
   }, [onCreate, types]);
@@ -81,6 +117,7 @@ export function Toolbox({ onCreate }: { onCreate?: (nodeId: string)=>void }){
     <div
       data-testid="toolbox"
       ref={dragRef}
+  data-hydrated={hydrated ? '1' : '0'}
       style={{
         ...containerStyle,
         top: toolboxY,
@@ -111,11 +148,17 @@ export function Toolbox({ onCreate }: { onCreate?: (nodeId: string)=>void }){
           {error && <div style={{ color:'#f66', fontSize:12 }}>{error}</div>}
           {!loading && !error && types.length === 0 && <div style={dimText}>No types found</div>}
           <div style={{ display:'flex', flexDirection:'column', gap:4 }}>
+            {currentGroupId && <div style={{ fontSize:11, color:'#9cf', marginBottom:4 }}>In Group: <code>{currentGroupId}</code></div>}
             {types.map(t => (
               <button key={t.id} style={btnStyle} disabled={!!creating} onClick={()=>createNode(t.id)}>
                 {creating === t.id ? 'Creating…' : t.title}
               </button>
             ))}
+            {!types.find(t=>t.id==='Group') && (
+              <button style={btnStyle} disabled={!!creating} onClick={()=>createNode('Group')}>
+                {creating === 'Group' ? 'Creating…' : 'Group'}
+              </button>
+            )}
           </div>
         </>
       )}

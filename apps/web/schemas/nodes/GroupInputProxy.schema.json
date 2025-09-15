@@ -1,0 +1,29 @@
+{
+  "$id": "GroupInputProxy",
+  "title": "GroupInputProxy",
+  "type": "object",
+  "description": "Minimal schema for group input proxy nodes (virtual entry port).",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "GroupInputProxy" },
+    "name": { "type": "string" },
+    "props": {
+      "type": "object",
+      "properties": {
+        "port": { "type": "string", "description": "Port name inside group" },
+        "groupId": { "type": "string" },
+        "kind": { "const": "input" }
+      },
+      "required": ["port", "groupId", "kind"],
+      "additionalProperties": true
+    },
+    "position": {
+      "type": "object",
+      "properties": { "x": { "type": "number" }, "y": { "type": "number" } },
+      "required": ["x", "y"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["id", "type", "name", "props"],
+  "additionalProperties": true
+}

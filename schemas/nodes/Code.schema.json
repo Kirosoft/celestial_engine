@@ -1,0 +1,22 @@
+{
+  "$id": "nodes/Code.schema.json",
+  "title": "Code",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "Code" },
+    "name": { "type": "string" },
+    "position": { "type": "object", "properties": {"x":{"type":"number"},"y":{"type":"number"}}, "required": ["x","y"] },
+    "props": {
+      "type": "object",
+      "properties": {
+        "language": { "type": "string" },
+        "source": { "type": "string" }
+      },
+      "required": ["language", "source"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["id", "type", "name", "props"],
+  "additionalProperties": true
+}

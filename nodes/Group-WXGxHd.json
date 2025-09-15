@@ -1,0 +1,28 @@
+{
+  "id": "Group-WXGxHd",
+  "type": "Group",
+  "name": "GroupB",
+  "props": {},
+  "position": {
+    "x": -95.61474227590321,
+    "y": -121.75898918051162
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_q5JhVW",
+        "targetId": "Group-nxxHBP",
+        "kind": "flow"
+      }
+    ]
+  },
+  "ports": {
+    "inputs": [
+      "in"
+    ],
+    "outputs": [
+      "out"
+    ]
+  },
+  "subgraphRef": "groups/Group-WXGxHd"
+}

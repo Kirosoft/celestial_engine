@@ -1,0 +1,22 @@
+{
+  "id": "Plan-Z2UNQ0",
+  "type": "Plan",
+  "name": "Plan",
+  "props": {
+    "plannerModel": "gpt-4",
+    "placementStrategy": "cluster"
+  },
+  "position": {
+    "x": 364.5276658188302,
+    "y": -775.2212952270372
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_3vZdK3",
+        "targetId": "Code-apNIUF",
+        "kind": "flow"
+      }
+    ]
+  }
+}

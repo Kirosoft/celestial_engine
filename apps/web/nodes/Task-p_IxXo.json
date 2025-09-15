@@ -1,0 +1,15 @@
+{
+  "id": "Task-p_IxXo",
+  "type": "Task",
+  "name": "Task",
+  "props": {
+    "title": "Task Title"
+  },
+  "position": {
+    "x": 239.9875094819565,
+    "y": -290.6788984330882
+  },
+  "edges": {
+    "out": []
+  }
+}

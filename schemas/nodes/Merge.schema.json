@@ -1,0 +1,21 @@
+{
+  "$id": "nodes/Merge.schema.json",
+  "title": "Merge",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "Merge" },
+    "name": { "type": "string" },
+    "position": { "type": "object", "properties": {"x":{"type":"number"},"y":{"type":"number"}}, "required": ["x","y"] },
+    "props": {
+      "type": "object",
+      "properties": {
+        "mode": { "type": "string", "enum": ["concat", "latest", "accumulate"] }
+      },
+      "required": ["mode"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["id", "type", "name", "props"],
+  "additionalProperties": true
+}

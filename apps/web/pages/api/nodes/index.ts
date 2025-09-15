@@ -13,6 +13,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if(req.method === 'POST'){
       const { type, name, props } = req.body || {};
       if(!type) return res.status(400).json({ error: { code: 'missing_type', message: 'type is required' } });
+      if(type === 'Group'){
+        return res.status(400).json({ error: { code: 'use_group_endpoint', message: 'Create Group nodes via POST /api/groups' } });
+      }
       try {
         const node = await createNode(type, name, props||{});
         return res.status(201).json({ node });

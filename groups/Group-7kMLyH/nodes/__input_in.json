@@ -1,0 +1,17 @@
+{
+  "id": "__input_in",
+  "type": "GroupInputProxy",
+  "name": "in",
+  "position": {
+    "x": 40,
+    "y": 60
+  },
+  "props": {
+    "port": "in",
+    "groupId": "Group-7kMLyH",
+    "kind": "input"
+  },
+  "edges": {
+    "out": []
+  }
+}

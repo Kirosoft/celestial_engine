@@ -1,0 +1,22 @@
+{
+  "$id": "nodes/ToolCall.schema.json",
+  "title": "ToolCall",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "ToolCall" },
+    "name": { "type": "string" },
+    "position": { "type": "object", "properties": {"x":{"type":"number"},"y":{"type":"number"}}, "required": ["x","y"] },
+    "props": {
+      "type": "object",
+      "properties": {
+        "toolName": { "type": "string" },
+        "arguments": { "type": "object", "additionalProperties": true }
+      },
+      "required": ["toolName"],
+      "additionalProperties": true
+    }
+  },
+  "required": ["id", "type", "name", "props"],
+  "additionalProperties": true
+}

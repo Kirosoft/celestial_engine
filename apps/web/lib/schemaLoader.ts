@@ -11,19 +11,13 @@ let loaded = false;
 async function loadAll(){
   // Allow override/extension via SCHEMA_PATHS (comma-separated globs). Falls back to defaults.
   const env = (process.env.SCHEMA_PATHS || '').trim();
-  const patterns = env ? env.split(',').map(s=>s.trim()).filter(Boolean) : [ 'schemas/nodes/*.schema.json', '../schemas/nodes/*.schema.json' ];
+  const patterns = env ? env.split(',').map(s=>s.trim()).filter(Boolean) : [ 'schemas/nodes/*.schema.json' ];
   const seen = new Set<string>();
   const files: string[] = [];
   for(const p of patterns){
     // Avoid attempting parent traversal if it would escape repo root (FileRepo.safeJoin will throw)
-    if(p.startsWith('..')){
-      try {
-        // probe one file to see if parent exists; if throws PathEscapeError skip silently
-        await FileRepo.list(p.split('*')[0] + '*.schema.json');
-      } catch(err){
-        continue; // skip pattern
-      }
-    }
+    // Disallow parent traversal for consolidated single schema source
+    if(p.startsWith('..')) continue;
     try {
       const list = await FileRepo.list(p);
       for(const f of list){ if(!seen.has(f)){ seen.add(f); files.push(f); } }

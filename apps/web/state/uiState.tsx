@@ -11,6 +11,8 @@ export interface UIStateSnapshot {
   toolboxY: number;
   toolboxCollapsed: boolean;
   inspectorWidth: number; // px
+  currentGroupId?: string; // when set, viewing subgraph for this group
+  hydrated: boolean; // client layout values loaded from localStorage
 }
 
 interface UIStateContextValue extends UIStateSnapshot {
@@ -22,6 +24,8 @@ interface UIStateContextValue extends UIStateSnapshot {
   setToolboxCollapsed(force?: boolean): void;
   setInspectorWidth(w: number): void;
   clearSelection(): void;
+  enterGroup(id: string): void;
+  exitGroup(): void;
 }
 
 const UIStateContext = createContext<UIStateContextValue | undefined>(undefined);
@@ -37,6 +41,7 @@ export function UIStateProvider({ children }: { children: ReactNode }) {
   const [toolboxY, setToolboxY] = useState<number>(60);
   const [toolboxCollapsed, _setToolboxCollapsedState] = useState<boolean>(false);
   const [inspectorWidth, setInspectorWidthState] = useState<number>(320);
+  const [currentGroupId, setCurrentGroupId] = useState<string|undefined>(undefined);
   const [hydrated, setHydrated] = useState(false);
 
   const setSelected = useCallback((ids: string[]) => {
@@ -104,6 +109,37 @@ export function UIStateProvider({ children }: { children: ReactNode }) {
 
   const clearSelection = useCallback(() => setSelected([]), [setSelected]);
 
+  const enterGroup = useCallback((id: string) => {
+    // Clear prior selection to avoid stale inspector fetches inside new context
+    setSelectedNodeIds([]);
+    setSelectedEdgeId(undefined);
+    setCurrentGroupId(id);
+    if(typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('graph:group-enter', { detail: { id } }));
+      // Some race conditions observed where subgraph proxies not yet visible immediately after switching context.
+      // Queue a delayed refresh to ensure repositories finish writing proxy nodes before the hook loads.
+      setTimeout(()=> {
+        window.dispatchEvent(new Event('graph:refresh-request'));
+      }, 40); // 40ms chosen as minimal delay beyond typical event loop + file write
+    }
+  }, []);
+  const exitGroup = useCallback(() => {
+    const prev = currentGroupId;
+    if(prev){
+      // Clear any selection to avoid inspector fetching stale (now invalid) proxy ids at root level
+      setSelectedNodeIds([]);
+      setSelectedEdgeId(undefined);
+    }
+    setCurrentGroupId(undefined);
+    if(prev && typeof window !== 'undefined'){
+      window.dispatchEvent(new CustomEvent('graph:group-exit', { detail: { id: prev } }));
+      // Schedule a refresh after state updates so hook reloads root graph
+      setTimeout(()=> {
+        window.dispatchEvent(new Event('graph:refresh-request'));
+      }, 0);
+    }
+  }, [currentGroupId]);
+
   const value: UIStateContextValue = {
     selectedNodeIds,
     selectedNodeId: selectedNodeIds[0],
@@ -115,6 +151,8 @@ export function UIStateProvider({ children }: { children: ReactNode }) {
     toolboxY,
     toolboxCollapsed,
     inspectorWidth,
+    currentGroupId,
+  hydrated,
     setSelectedNodeIds: setSelected,
     setSelectedEdge,
     toggleInspector,
@@ -122,7 +160,9 @@ export function UIStateProvider({ children }: { children: ReactNode }) {
     setToolboxPosition,
     setToolboxCollapsed,
     setInspectorWidth,
-    clearSelection
+    clearSelection,
+    enterGroup,
+    exitGroup
   };
   if(typeof window !== 'undefined'){
     (window as any).__selectNode = (id: string) => setSelected([id]);

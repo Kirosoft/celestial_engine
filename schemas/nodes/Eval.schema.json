@@ -1,0 +1,22 @@
+{
+  "$id": "nodes/Eval.schema.json",
+  "title": "Eval",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "Eval" },
+    "name": { "type": "string" },
+    "position": { "type": "object", "properties": {"x":{"type":"number"},"y":{"type":"number"}}, "required": ["x","y"] },
+    "props": {
+      "type": "object",
+      "properties": {
+        "metric": { "type": "string" },
+        "threshold": { "type": "number" }
+      },
+      "required": ["metric"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["id", "type", "name", "props"],
+  "additionalProperties": true
+}

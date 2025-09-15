@@ -23,9 +23,26 @@ coverage
 playwright-report
 playwright/.cache
 trace.zip
+test-results
+*.trace.zip
+*.playwright-debug
+
+# Playwright blob storage (if enabled)
+blob-report
 
 # Vitest cache
 .vitest
+**/.vitest-cache
+
+# Jest (if ever introduced)
+jest-cache/
+jest-html-reporters-*/
+jest-results.json
+
+# Temporary screenshots / videos from tests
+**/screenshots/
+**/videos/
+**/artifacts/
 
 # E2E ephemeral repo root & test fixtures
 apps/web/.e2e-root
@@ -34,6 +51,22 @@ apps/web/.api-test-edges
 apps/web/.test-nodes
 apps/web/.schema-test-all
 apps/web/.test-validate
+apps/web/.api-test-groups
+apps/web/.api-test-groups-subgraph
+apps/web/.api-test-groups-ports
+apps/web/.api-test-groups-internal
+apps/web/.defaults-test-root
+apps/web/test-results
+apps/web/playwright-report
+apps/web/blob-report
+apps/web/tmp
+
+# Local debug scratch files
+*.local.json
+*.sandbox.*
+scratch/**
+tmp/**
+*.iml
 
 # Local environment overrides
 .env.local

@@ -1,0 +1,22 @@
+{
+  "id": "Group-2GZP1O",
+  "type": "Group",
+  "name": "GroupC",
+  "props": {},
+  "position": {
+    "x": 169,
+    "y": -55.558329159321
+  },
+  "edges": {
+    "out": []
+  },
+  "ports": {
+    "inputs": [
+      "in"
+    ],
+    "outputs": [
+      "out"
+    ]
+  },
+  "subgraphRef": "groups/Group-2GZP1O"
+}

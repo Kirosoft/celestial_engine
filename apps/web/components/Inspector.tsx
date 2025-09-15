@@ -22,7 +22,7 @@ async function fetchJson<T>(url: string, opts?: RequestInit): Promise<T>{
 interface EdgeView { id: string; sourceId: string; targetId: string; kind: string }
 
 export function Inspector(){
-  const { selectedNodeId, selectedEdgeId, selectionAction, showInspector, toggleInspector, setSelectedNodeIds, setSelectedEdge, inspectorWidth, setInspectorWidth } = useUIState() as any;
+  const { selectedNodeId, selectedEdgeId, selectionAction, showInspector, toggleInspector, setSelectedNodeIds, setSelectedEdge, inspectorWidth, setInspectorWidth, currentGroupId } = useUIState() as any;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string|undefined>();
   const [node, setNode] = useState<NodeData|undefined>();
@@ -39,11 +39,16 @@ export function Inspector(){
   useEffect(()=>{
     if(!selectedNodeId){ setNode(undefined); setSchema(undefined); setDirty(false); }
     if(!selectedNodeId) return;
+    if(currentGroupId && selectedNodeId === currentGroupId){
+      // Group root selected while inside group context: treat as non-inspectable placeholder
+      setNode(undefined); setSchema(undefined); setDirty(false); return;
+    }
     let cancelled = false;
     (async ()=>{
       setLoading(true); setError(undefined); setFieldErrors({}); setDirty(false);
       try {
-        const nodeResp = await fetchJson<{ node: NodeData }>(`/api/nodes/${selectedNodeId}`);
+        const base = currentGroupId ? `/api/groups/${currentGroupId}/nodes/${selectedNodeId}` : `/api/nodes/${selectedNodeId}`;
+        const nodeResp = await fetchJson<{ node: NodeData }>(base);
         if(cancelled) return;
         setNode(nodeResp.node);
         setDraftName(nodeResp.node.name);
@@ -62,7 +67,7 @@ export function Inspector(){
       finally { if(!cancelled) setLoading(false); }
     })();
     return ()=>{ cancelled = true; };
-  }, [selectedNodeId, selectionAction]);
+  }, [selectedNodeId, selectionAction, currentGroupId]);
 
   // Edge load: derive minimal edge info from id pattern (source:edgeId), fetch source node to extract edge metadata
   useEffect(()=>{
@@ -99,6 +104,11 @@ export function Inspector(){
     e.preventDefault(); if(!node) return;
     setSaving(true); setFieldErrors({}); setError(undefined);
     try {
+      if(currentGroupId){
+        // Editing inside group not yet implemented (no group-scoped PUT). Provide early feedback.
+        setError('Editing nodes inside groups is not yet supported. Exit the group to edit.');
+        setSaving(false); return;
+      }
       const patch = { name: draftName, props: draftProps };
       const updated = await fetchJson<{ node: NodeData }>(`/api/nodes/${node.id}`, { method:'PUT', body: JSON.stringify(patch) });
       setNode(updated.node); setDirty(false);
@@ -125,7 +135,7 @@ export function Inspector(){
         setError(e.message||'Save failed');
       }
     } finally { setSaving(false); }
-  }, [node, draftName, draftProps]);
+  }, [node, draftName, draftProps, currentGroupId]);
 
   const resetDraft = useCallback(()=>{
     setDraftName(original.name);
@@ -137,6 +147,10 @@ export function Inspector(){
 
   const onDeleteNode = useCallback(async ()=>{
     if(!node) return;
+    if(currentGroupId){
+      setError('Deleting nodes inside groups not yet supported.');
+      return;
+    }
     if(!confirm(`Delete node ${node.name || node.id}? This cannot be undone.`)) return;
     try {
       const res = await fetch(`/api/nodes/${node.id}`, { method:'DELETE' });
@@ -148,7 +162,7 @@ export function Inspector(){
         setError('Failed to delete node');
       }
     } catch(e:any){ setError(e.message||'Delete failed'); }
-  }, [node, setSelectedNodeIds]);
+  }, [node, setSelectedNodeIds, currentGroupId]);
 
   const onDeleteEdge = useCallback(async ()=>{
     if(!edge) return;
@@ -222,10 +236,11 @@ export function Inspector(){
                 {renderPropsForm(schema, draftProps, onPropChange, fieldErrors)}
               </fieldset>
               <div style={{ display:'flex', gap:8, alignItems:'center', flexWrap:'wrap' }}>
-                <button type="submit" disabled={saving || !dirty} style={{ padding:'6px 12px' }}>{saving? 'Saving…':'Save'}</button>
+                <button type="submit" disabled={saving || !dirty} style={{ padding:'6px 12px' }}>{saving? 'Saving…': currentGroupId? 'Save (disabled in group)':'Save'}</button>
                 <button type="button" disabled={!dirty || saving} onClick={resetDraft} style={{ padding:'6px 10px' }}>Reset</button>
                 <button type="button" onClick={onDeleteNode} style={{ marginLeft:'auto', padding:'6px 10px', background:'#612', color:'#fff', border:'1px solid #a44' }}>Delete</button>
                 {dirty && <span style={{ color:'#fb0' }}>Unsaved changes</span>}
+                {currentGroupId && <span style={{ fontSize:10, color:'#aaa' }}>Editing inside group read-only for now</span>}
               </div>
             </div>
           )}
