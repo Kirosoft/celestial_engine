@@ -24,8 +24,10 @@ test('Delete key in prop input does not delete node', async ({ page, request }) 
     await nodeEl.click();
   }
   // Wait for prop input
-  const titleInput = page.locator('input[value="Guarded Title"]').first();
-  await expect(titleInput).toBeVisible();
+  const titleWrapper = page.getByTestId('prop-title');
+  await expect(titleWrapper).toBeVisible();
+  const titleInput = page.getByTestId('prop-title-field');
+  await expect(titleInput).toHaveValue('Guarded Title');
   // Focus and press Delete
   await titleInput.click();
   await page.keyboard.press('Delete');
@@ -34,5 +36,5 @@ test('Delete key in prop input does not delete node', async ({ page, request }) 
   await expect(canvasNode).toBeVisible();
   // Change value to ensure input still interactive
   await titleInput.fill('Guarded Title X');
-  await expect(page.locator('input[value="Guarded Title X"]').first()).toBeVisible();
+  await expect(titleInput).toHaveValue('Guarded Title X');
 });

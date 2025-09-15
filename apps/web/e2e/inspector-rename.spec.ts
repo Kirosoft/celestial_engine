@@ -17,7 +17,8 @@ test('renaming node updates canvas label without refresh', async ({ page, reques
   // Programmatically select our node
   await page.evaluate((id)=> (window as any).__selectNode(id), node.id);
   // Ensure inspector shows original name
-  const nameInput = page.locator('input[value="OrigName"]').first();
+  const nameInput = page.getByTestId('inspector-name');
+  await expect(nameInput).toHaveValue('OrigName');
   await expect(nameInput).toBeVisible();
   // Change name
   await nameInput.fill('NewName');

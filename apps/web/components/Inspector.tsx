@@ -268,7 +268,13 @@ export function Inspector(){
             <div style={{ padding:12, display:'flex', flexDirection:'column', gap:12 }}>
               <div>
                 <label style={{ display:'block', fontWeight:600, marginBottom:4 }}>Name</label>
-                <input value={draftName} onChange={e=>onNameChange(e.target.value)} style={{ width:'100%' }} />
+                <textarea
+                  data-testid="inspector-name"
+                  value={draftName}
+                  onChange={e=>onNameChange(e.target.value)}
+                  rows={3}
+                  style={{ width:'100%', fontFamily:'inherit', fontSize:'inherit', resize:'vertical', lineHeight:1.3, padding:4 }}
+                />
                 {fieldErrors['__name'] && <div style={{ fontSize:10, color:'#f55' }}>{fieldErrors['__name']}</div>}
               </div>
               <div style={{ fontSize:11, opacity:0.7 }}>ID: {node.id}</div>
@@ -351,9 +357,9 @@ function renderPropsForm(schema: NodeTypeSchema | undefined, draft: Record<strin
         const label = def.title || key;
         const err = errors[key];
         return (
-          <div key={key} style={{ display:'flex', flexDirection:'column', gap:4 }}>
+          <div key={key} data-testid={`prop-${key}`} style={{ display:'flex', flexDirection:'column', gap:4 }}>
             <label style={{ fontWeight:500 }}>{label}</label>
-            {renderField(type, value, v=> onChange(key, v), def)}
+            {renderField(type, value, v=> onChange(key, v), def, key)}
             {def.description && <div style={{ fontSize:10, opacity:0.6 }}>{def.description}</div>}
             {err && <div style={{ fontSize:10, color:'#f55' }}>{err}</div>}
           </div>
@@ -363,7 +369,7 @@ function renderPropsForm(schema: NodeTypeSchema | undefined, draft: Record<strin
   );
 }
 
-function renderField(type: string|undefined, value: any, onChange:(v:any)=>void, def: SchemaProperty){
+function renderField(type: string|undefined, value: any, onChange:(v:any)=>void, def: SchemaProperty, key?: string){
   if(def.enum){
     return (
       <select value={value} onChange={e=>onChange(e.target.value)}>
@@ -380,8 +386,20 @@ function renderField(type: string|undefined, value: any, onChange:(v:any)=>void,
       </select>
     );
     case 'string':
-    default:
-      return <input value={value} onChange={e=>onChange(e.target.value)} />;
+    default: {
+      const str = value ?? '';
+      // Heuristic rows: at least 2, up to 8 based on line count
+      const rows = Math.min(8, Math.max(2, String(str).split('\n').length));
+      return (
+        <textarea
+          data-testid={key ? `prop-${key}-field` : undefined}
+          value={str}
+          onChange={e=>onChange(e.target.value)}
+          rows={rows}
+          style={{ width:'100%', fontFamily:'inherit', fontSize:'inherit', resize:'vertical', lineHeight:1.3, padding:4 }}
+        />
+      );
+    }
   }
 }
 

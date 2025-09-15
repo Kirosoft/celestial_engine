@@ -20,12 +20,15 @@ test.describe('Inspector props', () => {
     await expect(nodeEl).toBeVisible();
       // Use injected test hook to select node programmatically (avoids flaky DOM clicks)
       await page.evaluate((id) => (window as any).__selectNode(id), node.id);
-      const nameInput = page.locator('input').filter({ has: page.locator('[value="TaskA"]') }).first();
-      await expect(page.locator('input[value="TaskA"]').first()).toBeVisible();
-    // Expect a prop label from schema such as title
-    await expect(page.getByText('title', { exact: false })).toBeVisible();
-  const titleInput = page.locator('input[value="TaskA Title"]');
-  await expect(titleInput.first()).toBeVisible();
+  const nameInput = page.getByTestId('inspector-name');
+  await expect(nameInput).toHaveValue('TaskA');
+  // Expect a prop label from schema such as title (use role=generic label locator)
+  const titleLabel = page.getByTestId('prop-title').locator('label');
+  await expect(titleLabel.first()).toHaveText(/title/i);
+  const titleWrapper = page.getByTestId('prop-title');
+  await expect(titleWrapper).toBeVisible();
+  const titleInput = page.getByTestId('prop-title-field');
+  await expect(titleInput).toHaveValue('TaskA Title');
     // Edit title prop
     await titleInput.fill('TaskA Title Updated');
     // Save

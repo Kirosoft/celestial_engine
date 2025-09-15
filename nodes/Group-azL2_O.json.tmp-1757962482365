@@ -1,0 +1,28 @@
+{
+  "id": "Group-azL2_O",
+  "type": "Group",
+  "name": "GroupA",
+  "props": {},
+  "position": {
+    "x": 21.249805509013456,
+    "y": -159.1316676625553
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_Wk9PHa",
+        "targetId": "Group--nUnpi",
+        "kind": "flow"
+      }
+    ]
+  },
+  "ports": {
+    "inputs": [
+      "in"
+    ],
+    "outputs": [
+      "out"
+    ]
+  },
+  "subgraphRef": "groups/Group-azL2_O"
+}
