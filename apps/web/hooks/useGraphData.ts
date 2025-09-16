@@ -26,6 +26,9 @@ export function useGraphData(){
     if(n.type === 'LogNode'){
       return { id: n.id, type: 'logNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, history: (n as any).props?.history || [], maxEntries: (n as any).props?.maxEntries, filterIncludes: (n as any).props?.filterIncludes || [], rawProps: (n as any).props } } as RFNode; 
     }
+    if(n.type === 'FileReaderNode'){
+      return { id: n.id, type: 'fileReaderNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, rawProps: (n as any).props } } as RFNode;
+    }
     return { id: n.id, type: 'basicNode', position: n.position || { x: 0, y: 0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id } } as RFNode;
   });
   if(process.env.NODE_ENV !== 'production'){
@@ -170,6 +173,12 @@ export function useGraphData(){
       const url = useGroupScoped ? `/api/groups/${currentGroupId}/nodes/${id}/position` : `/api/nodes/${id}/position`;
       const res = await fetch(url, { method: 'POST', headers: { 'Content-Type':'application/json' }, body: JSON.stringify({ x, y }) });
       if(!res.ok){
+        if(res.status === 404){
+          // Node deleted or not found; suppress noisy error and trigger a refresh to trim stale node from UI.
+          console.debug('[persistPosition] node not found, ignoring', { id, status: res.status });
+          window.dispatchEvent(new Event('graph:refresh-request'));
+          return;
+        }
         console.warn('[persistPosition] failed', id, x, y, res.status);
       }
     } catch(e){

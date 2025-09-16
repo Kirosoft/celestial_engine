@@ -5,51 +5,43 @@
   "props": {
     "history": [
       {
-        "id": "BWErQJVr",
-        "ts": 1758049135357,
+        "id": "LSAibcqV",
+        "ts": 1758058716764,
         "sourceId": "LLM-5V3DK5",
         "port": "output",
         "kind": "text",
-        "preview": "Assistant: test8"
+        "preview": "Assistant(testmodel1): 123"
       },
       {
-        "id": "VshtpDWG",
-        "ts": 1758049973155,
-        "sourceId": "LLM-5V3DK5",
-        "port": "output",
+        "id": "UWL46NF9",
+        "ts": 1758058723469,
+        "sourceId": "ChatNode-Hy5dGa",
+        "port": "message",
         "kind": "text",
-        "preview": "Assistant: abc"
+        "preview": "abc"
       },
       {
-        "id": "YhDQ7OKJ",
-        "ts": 1758050269306,
-        "sourceId": "LLM-5V3DK5",
-        "port": "output",
-        "kind": "text",
-        "preview": "Assistant: def"
+        "id": "SHHC0jUJ",
+        "ts": 1758059272191,
+        "sourceId": "FileReaderNode-w-zcKf",
+        "port": "file",
+        "kind": "json",
+        "preview": "{\"path\":\"specification/execution specification.md\",\"size\":14017,\"modifiedMs\":1757969845022.7505,\"contentEncoding\":\"utf-…"
       },
       {
-        "id": "nnFDwwSZ",
-        "ts": 1758050890834,
-        "sourceId": "LLM-5V3DK5",
-        "port": "output",
-        "kind": "text",
-        "preview": "Assistant: exe"
-      },
-      {
-        "id": "z2yWODsD",
-        "ts": 1758051796621,
-        "sourceId": "LLM-5V3DK5",
-        "port": "output",
-        "kind": "text",
-        "preview": "Assistant: ok"
+        "id": "60YatuMY",
+        "ts": 1758059456440,
+        "sourceId": "FileReaderNode-w-zcKf",
+        "port": "file",
+        "kind": "json",
+        "preview": "{\"path\":\"specification/execution specification.md\",\"size\":14017,\"modifiedMs\":1757969845022.7505,\"contentEncoding\":\"utf-…"
       }
     ],
     "maxEntries": 5
   },
   "position": {
-    "x": 802.4026566653278,
-    "y": 432.5186182742895
+    "x": 813.4026566653278,
+    "y": 460.5186182742895
   },
   "edges": {
     "out": []

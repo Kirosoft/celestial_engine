@@ -1,0 +1,22 @@
+{
+  "id": "LLM-DwdWjp",
+  "type": "LLM",
+  "name": "LLM-DwdWjp",
+  "props": {
+    "model": "gpt-3.5-turbo",
+    "promptTemplate": "{message}"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_NCqmaM",
+        "targetId": "LogNode-YLZtcA",
+        "kind": "flow"
+      }
+    ]
+  }
+}

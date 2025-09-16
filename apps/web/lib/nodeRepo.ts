@@ -14,6 +14,20 @@ function nodePath(id: string){ return `${nodesDir}/${id}.json`; }
 
 export async function createNode(type: string, name?: string, props: any = {}): Promise<NodeFile>{
   const id = `${type}-${nanoid(6)}`;
+  // Inject default mode for FileReaderNode if not provided to satisfy schema requirement
+  if(type === 'FileReaderNode'){
+    const mode = props.mode;
+    if(mode !== 'single' && mode !== 'directory'){
+      props = { ...props, mode: 'single' };
+    } else {
+      props = { mode, ...props };
+    }
+    // Whitelist allowed props to avoid additionalProperties validation errors
+    const allowed = new Set(['mode','filePath','dirPath','includePatterns','emitContent','maxFileSizeBytes','encodedAs','scannedFiles','cursorIndex','lastError','action']);
+    const cleaned: any = {};
+    for(const [k,v] of Object.entries(props)) if(allowed.has(k)) cleaned[k] = v;
+    props = cleaned;
+  }
   const node: NodeFile = { id, type, name: name || id, props, position: { x: 120, y: 120 }, edges: { out: [] } };
   await assertValidNode(node);
   await FileRepo.writeJson(nodePath(id), node);
@@ -41,6 +55,16 @@ export async function listNodes(): Promise<NodeFile[]>{
 export async function updateNode(id: string, patch: Partial<NodeFile>): Promise<NodeFile>{
   const node = await getNode(id);
   Object.assign(node, patch, { id: node.id, type: node.type });
+  if(node.type === 'FileReaderNode'){
+    const m = node.props?.mode;
+    if(m !== 'single' && m !== 'directory'){
+      node.props = { ...node.props, mode: 'single' };
+    }
+    const allowed = new Set(['mode','filePath','dirPath','includePatterns','emitContent','maxFileSizeBytes','encodedAs','scannedFiles','cursorIndex','lastError','action']);
+    const cleaned: any = {};
+    for(const [k,v] of Object.entries(node.props || {})) if(allowed.has(k)) cleaned[k] = v;
+    node.props = cleaned;
+  }
   await assertValidNode(node);
   await FileRepo.writeJson(nodePath(node.id), node);
   await IndexRepo.addOrUpdateNodeIndex(node as any);

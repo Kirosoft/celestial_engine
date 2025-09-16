@@ -1,0 +1,24 @@
+{
+  "id": "LogNode-YLZtcA",
+  "type": "LogNode",
+  "name": "LogNode-YLZtcA",
+  "props": {
+    "history": [
+      {
+        "id": "3fNMNN5l",
+        "ts": 1758056610688,
+        "sourceId": "LLM-DwdWjp",
+        "port": "output",
+        "kind": "text",
+        "preview": "Assistant(gpt-3.5-turbo): Hello"
+      }
+    ]
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

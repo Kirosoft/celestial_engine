@@ -78,6 +78,14 @@ export async function runNode(nodeId: string, options: { mode?: 'runtime'|'desig
     return { runId, error: e?.message || 'execute_error', diagnostics:[{ level:'error', message:'Executor threw', data: { stack: e?.stack } }] };
   }
   const durationMs = Date.now() - started;
+  // Persist patchProps if provided
+  if(result && result.patchProps){
+    const cleaned: Record<string, any> = { ...props, ...result.patchProps };
+    for(const k of Object.keys(cleaned)) if(cleaned[k] === undefined) delete cleaned[k];
+    try { await updateNode(nodeId, { props: cleaned }); } catch(err:any){
+      console.error('[exec] failed to persist patchProps', { nodeId, error: err?.message });
+    }
+  }
   // Merge emissions and result.outputs
   if(result.outputs){
     for(const [port, value] of Object.entries(result.outputs)){
@@ -92,6 +100,7 @@ export function getInputBuffers(){ return inputBuffers; }
 // Emission helper: propagate value to targets via edges
 import { listNodes, updateNode } from './nodeRepo';
 import { appendLogEntry } from './logHistory';
+import { scanDirectory, readFileSafe, parsePatternList } from './fileScanner';
 
 export async function emitFrom(nodeId: string, port: string, value: any){
   console.debug('[exec] emitFrom start', { nodeId, port, valuePreview: typeof value === 'string' ? value.slice(0,60) : value });
@@ -170,4 +179,150 @@ registerExecutor('LLM', async (ctx) => {
   const assistant = `Assistant(${effectiveModel}${streaming ? ',stream' : ''}): ${rendered}`;
   console.debug('[exec] LLM executor emitting', { nodeId: ctx.nodeId, model: effectiveModel, streaming, timeoutMs, assistantPreview: assistant.slice(0,60) });
   return { outputs: { output: assistant } };
+});
+
+// FileReaderNode executor
+registerExecutor('FileReaderNode', async (ctx) => {
+  const repoRoot = process.env.REPO_ROOT || process.cwd();
+  const action: string | undefined = ctx.props.action; // transient trigger, cleared after handling
+  const mode: 'single'|'directory' = ctx.props.mode || 'single';
+  const emitContent: boolean = !!ctx.props.emitContent;
+  const maxFileSize: number = typeof ctx.props.maxFileSizeBytes === 'number' ? ctx.props.maxFileSizeBytes : 512000;
+  const encodedAs: 'text'|'base64'|'none' = ctx.props.encodedAs || 'text';
+  let patch: Record<string, any> = {}; // accumulate prop mutations
+  const diagnostics: any[] = [];
+
+  function clearAction(){ if(action) patch.action = undefined; }
+
+  if(!action){
+    return { diagnostics: [{ level:'info', message:'no_action' }] };
+  }
+
+  try {
+    if((action === 'read' || action === 'sendNext') && mode === 'single'){
+      const fp = ctx.props.filePath;
+      if(!fp){
+        diagnostics.push({ level:'error', message:'filePath_missing' });
+      } else {
+        const r = await readFileSafe(repoRoot, fp);
+        if(!r.ok){
+          diagnostics.push({ level:'error', message:'read_failed', data: r.error });
+          patch.lastError = r.error;
+        } else {
+          patch.lastError = null;
+          const size = r.stat?.size || r.content?.length || 0;
+            let contentStr: string | undefined;
+            let contentEncoding: 'utf-8' | 'base64' | undefined;
+            if(emitContent && r.content){
+              if(size <= maxFileSize){
+                if(encodedAs === 'text'){
+                  contentStr = r.content.toString('utf-8');
+                  contentEncoding = 'utf-8';
+                } else if(encodedAs === 'base64'){
+                  contentStr = r.content.toString('base64');
+                  contentEncoding = 'base64';
+                }
+              }
+            }
+          const payload = {
+            path: fp,
+            size,
+            modifiedMs: r.stat?.mtimeMs,
+            contentEncoding,
+            content: contentStr
+          };
+          return { outputs: { file: payload }, patchProps: { ...patch } };
+        }
+      }
+    }
+    else if(action === 'scan' && mode === 'directory'){
+      const dp = ctx.props.dirPath;
+      if(!dp){ diagnostics.push({ level:'error', message:'dirPath_missing' }); }
+      else {
+        const patternsRaw = ctx.props.includePatterns || '*';
+        const { files, error } = await scanDirectory({ dirPath: dp, includePatterns: patternsRaw, repoRoot });
+        if(error){
+          diagnostics.push({ level:'error', message:'scan_failed', data: error });
+          patch.lastError = error;
+        } else {
+          patch.scannedFiles = files.map(f=> f.relativePath);
+          patch.cursorIndex = -1;
+          patch.lastError = null;
+        }
+      }
+    }
+    else if((action === 'next' || action === 'sendNext') && mode === 'directory'){
+      const scanned: string[] = ctx.props.scannedFiles || [];
+      let cursor: number = typeof ctx.props.cursorIndex === 'number' ? ctx.props.cursorIndex : -1;
+      if(!scanned.length){
+        diagnostics.push({ level:'warn', message:'empty_scanned_files' });
+      } else if(cursor + 1 >= scanned.length){
+        // wrap-around for sendNext; plain next will just report end
+        if(action === 'sendNext'){
+          cursor = 0;
+          patch.cursorIndex = cursor;
+          const rel = scanned[cursor];
+          const full = ctx.props.dirPath ? `${ctx.props.dirPath}/${rel}`.replace(/\\/g,'/') : rel;
+          const r = await readFileSafe(repoRoot, full);
+          if(!r.ok){
+            diagnostics.push({ level:'error', message:'read_failed', data: r.error });
+            patch.lastError = r.error;
+          } else {
+            patch.lastError = null;
+            const size = r.stat?.size || r.content?.length || 0;
+            let contentStr: string | undefined; let contentEncoding: 'utf-8' | 'base64' | undefined;
+            if(emitContent && r.content && size <= maxFileSize){
+              if(encodedAs === 'text'){ contentStr = r.content.toString('utf-8'); contentEncoding = 'utf-8'; }
+              else if(encodedAs === 'base64'){ contentStr = r.content.toString('base64'); contentEncoding = 'base64'; }
+            }
+            const payload = { path: full, size, modifiedMs: r.stat?.mtimeMs, index: cursor, total: scanned.length, contentEncoding, content: contentStr, wrapped: true };
+            clearAction();
+            return { outputs: { file: payload }, patchProps: { ...patch } };
+          }
+        } else {
+          diagnostics.push({ level:'info', message:'end_of_list' });
+        }
+      } else {
+        cursor += 1;
+        patch.cursorIndex = cursor;
+        const rel = scanned[cursor];
+        const full = ctx.props.dirPath ? `${ctx.props.dirPath}/${rel}`.replace(/\\/g,'/') : rel;
+        const r = await readFileSafe(repoRoot, full);
+        if(!r.ok){
+          diagnostics.push({ level:'error', message:'read_failed', data: r.error });
+          patch.lastError = r.error;
+        } else {
+          patch.lastError = null;
+          const size = r.stat?.size || r.content?.length || 0;
+          let contentStr: string | undefined; let contentEncoding: 'utf-8' | 'base64' | undefined;
+          if(emitContent && r.content && size <= maxFileSize){
+            if(encodedAs === 'text'){ contentStr = r.content.toString('utf-8'); contentEncoding = 'utf-8'; }
+            else if(encodedAs === 'base64'){ contentStr = r.content.toString('base64'); contentEncoding = 'base64'; }
+          }
+          const payload = {
+            path: full,
+            size,
+            modifiedMs: r.stat?.mtimeMs,
+            index: cursor,
+            total: scanned.length,
+            contentEncoding,
+            content: contentStr
+          };
+          clearAction();
+          return { outputs: { file: payload }, patchProps: { ...patch } };
+        }
+      }
+    }
+    else if(action === 'reset' && mode === 'directory'){
+      patch.scannedFiles = [];
+      patch.cursorIndex = -1;
+      patch.lastError = null;
+    }
+    else {
+      diagnostics.push({ level:'warn', message:'unsupported_action_or_mode', data: { action, mode } });
+    }
+  } finally {
+    clearAction();
+  }
+  return { diagnostics, patchProps: { ...patch } };
 });

@@ -1,0 +1,27 @@
+{
+  "version": 5,
+  "generatedAt": "2025-09-16T21:03:29.462Z",
+  "nodes": [
+    {
+      "id": "FileReaderNode-vRje20",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-vRje20",
+      "propsHash": "4febc7b00bb1357d362f3d30e63f2192ac633fd6",
+      "mtime": "2025-09-16T21:03:29.388Z"
+    },
+    {
+      "id": "FileReaderNode-WDduNQ",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-WDduNQ",
+      "propsHash": "ee32a9ce2c4810dc97c1bb95900b09ec6ca0cca0",
+      "mtime": "2025-09-16T21:03:29.447Z"
+    },
+    {
+      "id": "FileReaderNode-LqoFNt",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-LqoFNt",
+      "propsHash": "53bd279261f651ab9f4cdd479add80e94e7da920",
+      "mtime": "2025-09-16T21:03:29.462Z"
+    }
+  ]
+}

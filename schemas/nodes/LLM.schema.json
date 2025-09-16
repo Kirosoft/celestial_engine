@@ -1,69 +1,34 @@
 {
+  "$id": "nodes/LLM.schema.json",
   "title": "LLM",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string"
-    },
-    "type": {
-      "const": "LLM"
-    },
-    "name": {
-      "type": "string"
+    "id": { "type": "string" },
+    "type": { "const": "LLM" },
+    "name": { "type": "string" },
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" }
+      },
+      "required": ["x", "y"],
+      "additionalProperties": false
     },
     "props": {
       "type": "object",
       "properties": {
-        "model": {
-          "type": "string"
-        },
-        "system": {
-          "type": "string"
-        },
-        "promptTemplate": {
-          "type": "string"
-        },
-        "temperature": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 2,
-          "default": 0.7
-        },
-        "maxOutputTokens": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 8192,
-          "default": 1024
-        }
+        "model": { "type": "string" },
+        "system": { "type": "string" },
+        "promptTemplate": { "type": "string" },
+        "temperature": { "type": "number", "minimum": 0, "maximum": 2, "default": 0.7 },
+        "maxOutputTokens": { "type": "integer", "minimum": 1, "maximum": 8192, "default": 1024 }
       },
-      "required": [
-        "model"
-      ],
+      "required": ["model"],
       "additionalProperties": false
     },
-    "position": {
-      "type": "object",
-      "properties": {
-        "x": {
-          "type": "number"
-        },
-        "y": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "x",
-        "y"
-      ]
-    },
-    "edges": {
-      "type": "object"
-    }
+    "edges": { "type": "object" }
   },
-  "required": [
-    "id",
-    "type",
-    "name",
-    "props"
-  ]
+  "required": ["id", "type", "name", "props"],
+  "additionalProperties": true
 }

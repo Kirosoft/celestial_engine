@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback, FormEvent, useRef } from 'react';
+import { FileReaderNodeInspector } from './nodes/FileReaderNodeInspector';
 import { useUIState } from '../state/uiState';
 
 interface NodeData { id: string; type: string; name: string; position?: { x:number; y:number }; props?: any }
@@ -264,7 +265,49 @@ export function Inspector(){
         <form onSubmit={onSubmit} style={{ overflowY:'auto', flex:1, display:'flex', flexDirection:'column' }}>
           {loading && <div style={{ padding:12 }}>Loading…</div>}
           {error && <div style={{ padding:12, color:'#f66' }}>{error}</div>}
-          {node && !loading && (
+          {node && !loading && node.type === 'FileReaderNode' && (
+            <div style={{ padding:12, display:'flex', flexDirection:'column', gap:12 }}>
+              <div>
+                <label style={{ display:'block', fontWeight:600, marginBottom:4 }}>Name</label>
+                <textarea
+                  data-testid="inspector-name"
+                  value={draftName}
+                  onChange={e=>onNameChange(e.target.value)}
+                  rows={3}
+                  style={{ width:'100%', fontFamily:'inherit', fontSize:'inherit', resize:'vertical', lineHeight:1.3, padding:4 }}
+                />
+                {fieldErrors['__name'] && <div style={{ fontSize:10, color:'#f55' }}>{fieldErrors['__name']}</div>}
+              </div>
+              <div style={{ fontSize:11, opacity:0.7 }}>ID: {node.id}</div>
+              <div style={{ fontSize:11, opacity:0.7 }}>Type: {node.type}</div>
+              {node.position && <div style={{ fontSize:11, opacity:0.7 }}>Position: {Math.round(node.position.x)}, {Math.round(node.position.y)}</div>}
+              {/* Custom inspector mounts here */}
+              <div style={{ border:'1px solid #233', padding:8 }}>
+                <FileReaderNodeInspector
+                  node={{ ...node, props: draftProps }}
+                  onChange={(nextProps)=>{ setDraftProps(nextProps); setDirty(true); }}
+                />
+              </div>
+              {(() => {
+                const deleteDisabled = node.id.startsWith('__input_') || node.id.startsWith('__output_');
+                return (
+                  <div style={{ display:'flex', gap:8, alignItems:'center', flexWrap:'wrap' }}>
+                    <button type="submit" disabled={saving || !dirty} style={{ padding:'6px 12px' }}>{saving? 'Saving…': 'Save'}</button>
+                    <button type="button" disabled={!dirty || saving} onClick={resetDraft} style={{ padding:'6px 10px' }}>Reset</button>
+                    <button
+                      type="button"
+                      onClick={onDeleteNode}
+                      disabled={deleteDisabled}
+                      style={{ marginLeft:'auto', padding:'6px 10px', background:'#612', opacity: deleteDisabled?0.4:1, color:'#fff', border:'1px solid #a44' }}
+                    >Delete</button>
+                    {dirty && <span style={{ color:'#fb0' }}>Unsaved changes</span>}
+                    {currentGroupId && <span style={{ fontSize:10, color:'#aaa' }}>Group context edit (ports & subgraph settings immutable)</span>}
+                  </div>
+                );
+              })()}
+            </div>
+          )}
+          {node && !loading && node.type !== 'FileReaderNode' && (
             <div style={{ padding:12, display:'flex', flexDirection:'column', gap:12 }}>
               <div>
                 <label style={{ display:'block', fontWeight:600, marginBottom:4 }}>Name</label>

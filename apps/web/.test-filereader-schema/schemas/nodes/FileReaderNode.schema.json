@@ -1,0 +1,52 @@
+{
+  "$id": "nodes/FileReaderNode.schema.json",
+  "title": "FileReaderNode",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "FileReaderNode" },
+    "name": { "type": "string" },
+    "position": {
+      "type": "object",
+      "properties": { "x": { "type": "number" }, "y": { "type": "number" } },
+      "required": ["x","y"],
+      "additionalProperties": false
+    },
+    "props": {
+      "type": "object",
+      "properties": {
+        "mode": { "type": "string", "enum": ["single","directory"], "default": "single" },
+        "filePath": { "type": "string" },
+        "dirPath": { "type": "string" },
+        "includePatterns": { "type": "string", "default": "*" },
+        "emitContent": { "type": "boolean", "default": false },
+        "maxFileSizeBytes": { "type": "integer", "minimum": 1, "maximum": 104857600, "default": 512000 },
+        "encodedAs": { "type": "string", "enum": ["text","base64","none"], "default": "text" },
+        "scannedFiles": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "cursorIndex": { "type": "integer", "minimum": -1, "default": -1 },
+        "lastError": { "type": ["string","null"], "default": null },
+        "action": { "type": "string", "enum": ["read","scan","next","reset" ] }
+      },
+      "required": ["mode"],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": { "mode": { "const": "directory" } },
+            "required": ["mode"]
+          },
+          "then": { "required": ["dirPath"] }
+        }
+      ]
+    },
+    "edges": { "type": "object" }
+  },
+  "required": ["id","type","name","props"],
+  "additionalProperties": true,
+  "x-actions": [
+    { "name": "read", "description": "Reads and emits the single file (single mode)." },
+    { "name": "scan", "description": "Enumerates directory + filters and stores list (directory mode)." },
+    { "name": "next", "description": "Emits the next file from scannedFiles (directory mode)." },
+    { "name": "reset", "description": "Clears scannedFiles and cursorIndex." }
+  ]
+}

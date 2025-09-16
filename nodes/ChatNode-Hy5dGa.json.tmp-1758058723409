@@ -1,0 +1,34 @@
+{
+  "id": "ChatNode-Hy5dGa",
+  "type": "ChatNode",
+  "name": "ChatNode",
+  "props": {
+    "history": [
+      {
+        "id": "wqkgSENm",
+        "ts": 1758048494924,
+        "role": "user",
+        "content": "test1"
+      },
+      {
+        "id": "imP8T9yz",
+        "ts": 1758049129645,
+        "role": "user",
+        "content": "testa"
+      }
+    ]
+  },
+  "position": {
+    "x": 1229.8460636199213,
+    "y": -34.41253316427301
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_q415wk",
+        "targetId": "LogNode-aR35zo",
+        "kind": "flow"
+      }
+    ]
+  }
+}

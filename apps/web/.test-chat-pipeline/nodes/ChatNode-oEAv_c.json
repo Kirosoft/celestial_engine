@@ -1,0 +1,19 @@
+{
+  "id": "ChatNode-oEAv_c",
+  "type": "ChatNode",
+  "name": "ChatNode-oEAv_c",
+  "props": {},
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_YpFUS2",
+        "targetId": "LLM-DwdWjp",
+        "kind": "flow"
+      }
+    ]
+  }
+}
