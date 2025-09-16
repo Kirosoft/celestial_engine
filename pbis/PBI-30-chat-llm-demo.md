@@ -12,9 +12,9 @@ ChatNode-Seed (ChatNode) --(message)-> LLM-Demo (LLM) --(output)-> ChatNode-Seed
 ## Execution Flow
 1. User enters a message in ChatNode and clicks `Send` (schema action `send`).
 2. ChatNode appends message to `history` and emits payload on port `message`.
-3. LLM node receives payload (as latest input) and on manual or auto run executes with prompt referencing `latest.message`.
+3. LLM node auto-runs immediately on new input executing a prompt referencing `latest.message`.
 4. LLM emits response on port `output`.
-5. ChatNode receives response; interceptor (future) or normal handling appends it as `assistant` entry in `history`.
+5. ChatNode receives response and automatically appends an `assistant` entry in `history`.
 
 ## Assumptions
 - LLM node already supports `prompt` templating with `latest` view.
@@ -29,12 +29,11 @@ ChatNode-Seed (ChatNode) --(message)-> LLM-Demo (LLM) --(output)-> ChatNode-Seed
 5. No unhandled exceptions in console during send/response cycle.
 
 ## Future Enhancements
-- Auto-run LLM immediately when a new chat message arrives.
 - Intercept function on ChatNode to recognize graph-building instructions.
 - Token streaming and partial updates.
-- Safety: Guard against infinite rapid loops (limit recursion count per run chain).
+- Safety telemetry & improved loop diagnostics.
 
-Status: Draft
+Status: Completed (Auto-run + assistant loop); Docs & some automated tests Deferred
 Created: 2025-09-15
 
 ## Implemented MVP Actions & Run Flow (Update)
@@ -71,8 +70,8 @@ Created: 2025-09-15
 
 ### Known Limitations
 - Input buffers not persisted; reload loses transient messages not in ChatNode history.
-- No auto-run of LLM on new message (deferred enhancement).
-- No cycle edges allowed yet; demo requires manual run and two separate edges only if cycle policy adjusted.
+- No streaming tokens yet.
+- Recursion guard coarse (depth + repetition only).
 
 ### Follow-Up Tasks (Outside MVP Scope)
 - Persist input buffers or derive them from emission log.
@@ -86,53 +85,53 @@ Created: 2025-09-15
 Legend: [ ] = not started, [~] in progress, [x] complete
 
 ### Prerequisites
-- [ ] PBI-29 ChatNode implemented (schema + UI + send action).
-- [ ] LLM node supports prompt templating referencing `latest.message` (verify existing executor).
-- [ ] Emission path from ChatNode "send" to output port `message` (or add if missing).
+- [x] PBI-29 ChatNode implemented (schema + UI + send action).
+- [x] LLM node supports prompt templating referencing `latest.message`.
+- [x] Emission path from ChatNode "send" to output port `message`.
 
 ### Slice 1: Demo Graph Asset
-- [ ] Create `nodes/ChatLLMDemo.json` containing two nodes: ChatNode-Seed, LLM-Demo with basic props.
-- [ ] Create edges: ChatNode-Seed:message -> LLM-Demo:input (port names per LLM schema) and LLM-Demo:output -> ChatNode-Seed:message (or chosen inbound port).
-- [ ] Validate file passes schema loading on app startup.
+- [x] Created `nodes/ChatLLMDemo.json` with ChatNode-Seed & LLM-Demo.
+- [x] Added edges forming message/output loop.
+- [x] Validated loads without schema errors.
 
 ### Slice 2: ChatNode Outbound Emission
-- [ ] Ensure send action optionally emits `{ role:'user', content, ts }` payload on `message` port.
-- [ ] Add guard to avoid emitting empty messages.
+- [x] Send action emits user content on `message` port.
+- [x] Empty input guard (disabled button) prevents emission.
 
 ### Slice 3: LLM Execution Flow
-- [ ] Confirm LLM executor reads `latest.message` from inputs to build prompt.
-- [ ] If not present, adjust prompt templating or add small wrapper around inputs object.
-- [ ] Manual run button triggers execution producing response on `output` port.
+- [x] Executor reads `latest.message` for prompt.
+- [x] Templating already functional.
+- [x] Auto-run triggers on new inbound message (manual still works).
 
 ### Slice 4: Assistant Response Append
-- [ ] On ChatNode inbound payload from LLM node (identify via source node type `LLM`), append role `assistant` entry.
-- [ ] Fallback: if inbound payload already has role `assistant`, preserve.
+- [x] Assistant reply appended when source type = LLM.
+- [x] Role inference (payload simple string); will preserve if structured payload later.
 
 ### Slice 5: Loop Safety
-- [ ] Add simple recursion guard (e.g., track run chain depth or ignore auto re-emission of assistant messages) to prevent tight infinite loops if auto-run is later enabled.
-- [ ] Document guard in PBI file (optional if not implemented yet).
+- [x] Depth + repetition guard implemented (halts >5 chain length or >2 repeats).
+- [x] Documented in Execution Internals.
 
 ### Slice 6: Verification & QA
-- [ ] Integration test: load demo graph, assert nodes + edges present.
-- [ ] Simulate send: append user entry; ensure emission triggers LLM input buffer update.
-- [ ] Trigger LLM run: assistant entry appears in ChatNode history.
-- [ ] Reload app: history unchanged (no duplication).
-- [ ] Capture console logs to assert no errors.
+- [x] Smoke/integration test covers send→auto-run→assistant reply.
+- [x] Manual graph load shows nodes & edges without errors.
+- [x] History stable across reload (manual verification).
+- [ ] Automated console error capture (Deferred).
 
 ### Slice 7: Documentation & Example
-- [ ] Add README section "Chat + LLM Demo" with quick start (open graph, send message, run LLM).
-- [ ] Provide sample transcript snippet (user -> assistant) for reference.
-- [ ] Mention limitations (manual LLM run for now, no streaming, potential future auto-run).
+- [ ] README section (Deferred; will describe auto-run now present).
+- [ ] Sample transcript snippet (Deferred).
+- [ ] Limitations section update (Deferred) — streaming & persistence still pending.
 
 ### Acceptance Criteria Mapping
-- [ ] AC1 graph loads -> integration test.
-- [ ] AC2 send adds user history entry -> reused ChatNode tests + demo test.
-- [ ] AC3 LLM run adds assistant entry -> integration test.
-- [ ] AC4 no duplicate on reload -> integration test (persist then reload).
-- [ ] AC5 no console errors -> test harness captures.
+- [x] AC1 graph loads (manual + smoke path).
+- [x] AC2 send adds user history entry.
+- [x] AC3 assistant entry appended (auto-run path).
+- [x] AC4 no duplicate on reload (manual verification).
+- [ ] AC5 no console errors (Deferred automated capture; manual review clean).
 
 ### Deferred / Future (See Future Enhancements)
-- [ ] Auto-run LLM on new chat message.
 - [ ] Intercept-based instruction parsing.
-- [ ] Token streaming.
-- [ ] Advanced loop protection (rate limiting, chain depth metrics).
+- [ ] Token streaming & partial update UI.
+- [ ] Enhanced loop telemetry / metrics.
+- [ ] README + transcript docs.
+- [ ] Automated console error capture.

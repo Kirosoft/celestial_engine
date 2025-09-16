@@ -1,42 +1,45 @@
 {
+  "$id": "LLM.schema.json",
   "title": "LLM",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string"
-    },
-    "type": {
-      "type": "string"
-    },
-    "name": {
-      "type": "string"
-    },
+    "id": { "type": "string" },
+    "type": { "const": "LLM" },
+    "name": { "type": "string" },
     "props": {
       "type": "object",
-      "additionalProperties": true
+      "additionalProperties": false,
+      "properties": {
+        "model": { "type": "string", "default": "gpt-3.5-turbo" },
+        "temperature": { "type": "number", "default": 0.7, "minimum": 0, "maximum": 2 },
+        "maxTokens": { "type": "number", "default": 1000, "minimum": 1 },
+        "topP": { "type": "number", "default": 1, "minimum": 0, "maximum": 1 },
+        "frequencyPenalty": { "type": "number", "default": 0, "minimum": -2, "maximum": 2 },
+        "presencePenalty": { "type": "number", "default": 0, "minimum": -2, "maximum": 2 },
+        "systemPrompt": { "type": "string", "default": "" },
+        "userPrompt": { "type": "string", "default": "Hello, how can I assist you today?" }
+      },
+      "required": [
+        "model",
+        "temperature",
+        "maxTokens",
+        "topP",
+        "frequencyPenalty",
+        "presencePenalty",
+        "systemPrompt",
+        "userPrompt"
+      ]
     },
     "position": {
       "type": "object",
       "properties": {
-        "x": {
-          "type": "number"
-        },
-        "y": {
-          "type": "number"
-        }
+        "x": { "type": "number" },
+        "y": { "type": "number" }
       },
-      "required": [
-        "x",
-        "y"
-      ]
+      "required": ["x","y"]
     },
-    "edges": {
-      "type": "object"
-    }
+    "edges": { "type": "object" }
   },
-  "required": [
-    "id",
-    "type",
-    "name"
-  ]
+  "required": ["id","type","name","props"],
+  "additionalProperties": false
 }

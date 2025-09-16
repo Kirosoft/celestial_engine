@@ -1,0 +1,19 @@
+{
+  "id": "ChatNode-bnC2Un",
+  "type": "ChatNode",
+  "name": "ChatNode-bnC2Un",
+  "props": {},
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_vZcQpc",
+        "targetId": "LLM-mehaM1",
+        "kind": "flow"
+      }
+    ]
+  }
+}

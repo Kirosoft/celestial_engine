@@ -1,0 +1,24 @@
+{
+  "id": "LogNode-Ty645l",
+  "type": "LogNode",
+  "name": "LogNode-Ty645l",
+  "props": {
+    "history": [
+      {
+        "id": "vcTwq9Fi",
+        "ts": 1758051646614,
+        "sourceId": "LLM-mehaM1",
+        "port": "output",
+        "kind": "text",
+        "preview": "Assistant: Hello"
+      }
+    ]
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

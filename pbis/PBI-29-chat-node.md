@@ -156,7 +156,7 @@ props: {
 - E2E (future): user fills input, clicks Send, sees entry appear.
 
 ---
-Status: Draft
+Status: Completed (MVP); some inbound edge & systemPrompt display items deferred
 Owner: (assign)
 Created: 2025-09-15
 
@@ -165,82 +165,77 @@ Created: 2025-09-15
 Legend: [ ] = not started, [~] = in progress, [x] = complete
 
 ### Slice 1: Schema & Registration
-- [ ] Add `schemas/nodes/ChatNode.schema.json` with `history`, `maxEntries`, `systemPrompt`, and `x-actions:[send]`.
-- [ ] Register schema in loader / validation registry.
-- [ ] Add to seed/migration so schema is available on fresh load.
+- [x] Add `schemas/nodes/ChatNode.schema.json` with `history`, `maxEntries`, `systemPrompt`, and `x-actions:[send, clear]`.
+- [x] Register schema in loader / validation registry.
+- [x] Add to seed/migration so schema is available on fresh load.
 
 ### Slice 2: Data Utilities
-- [ ] Implement `appendHistoryEntry(history, entry, maxEntries)` utility that: assigns nanoid if missing, trims to cap (remove oldest) and returns new array.
-- [ ] Unit test for trimming behavior (adds > cap, ensures length == cap and oldest removed).
-- [ ] Unit test for entry shape validation (invalid role rejected / sanitized).
+- [x] Implement history append + trim utility.
+- [x] Unit test for trimming behavior.
+- [x] Roles constrained by schema (additional validation deferred).
 
 ### Slice 3: Backend / Persistence Wiring
-- [ ] Confirm node update API (`PUT /api/nodes/:id`) already persists `props.history` transparently.
-- [ ] Add backend guard (optional) validating incoming `history` entries against schema (defensive) before write.
-- [ ] Ensure inbound edge handling pathway can invoke a hook to append to `history` with role `input`.
+- [x] Confirmed update API persists history.
+- [ ] Backend guard (Deferred – schema validation sufficient now).
+- [ ] Generic inbound input append (Deferred; only assistant replies implemented).
 
 ### Slice 4: Inbound Edge Append
-- [ ] Implement listener / orchestrator change: when ChatNode receives payload (string), call history append with role `input`.
-- [ ] Support richer object detection (placeholder: if object with `{ role, content }` keep role else default `input`).
-- [ ] Emit node updated event after append (avoid duplicate refresh storms — debounce not required MVP).
+- [ ] Generic inbound string -> role `input` (Deferred).
+- [x] Assistant reply append from LLM implemented.
+- [ ] Rich object detection (Deferred).
 
 ### Slice 5: Frontend Component
-- [ ] Create `ChatNode` React component (scroll area ~140px height, internal overflow scroll).
-- [ ] Render each entry: timestamp (HH:MM or relative), role tag, content (soft wrap, preserve whitespace minimally, limit max height maybe with CSS line clamp optional).
-- [ ] Auto-scroll to bottom when new entry added (ref effect comparing length).
-- [ ] Accessible markup: aria-label for history region, label for input field.
-- [ ] Internal composer state (uncontrolled or controlled input) cleared on send.
+- [x] Component with scroll area & entry rendering.
+- [x] Auto-scroll effect implemented.
+- [ ] Enhanced accessibility labels (Deferred).
+- [x] Composer clears on send.
 
 ### Slice 6: Action Handling (Send & Clear)
-- [ ] Wire `Send` button to dispatch custom action (schema-driven) or direct local handler that:
-  - Validates non-empty input.
-  - Appends user entry (role `user`).
-  - Persists via node update API (patch props: new history array).
-- [ ] Disable `Send` (or no-op) when input empty / whitespace.
-- [ ] Keyboard: Enter submits (Shift+Enter reserved / optional future newline behavior).
-- [ ] Add `Clear` button: confirm then persist `history: []`.
-- [ ] Disable / visually de-emphasize `Clear` when history already empty.
+- [x] Send appends user entry & persists.
+- [x] Send disabled for empty input.
+- [x] Enter key submits.
+- [x] Clear empties history & persists.
+- [x] Clear disabled when history empty.
 
-### Slice 7: Emission (Future Hook Placeholder)
-- [ ] (Optional for MVP) After send, emit payload on `message` output port if execution/emission pipeline available.
-- [ ] If emission not yet implemented, document deferral so PBI-30 can integrate later.
+### Slice 7: Emission
+- [x] Emission implemented (send triggers `/emit` on port `message`).
 
 ### Slice 8: System Prompt (Optional Display)
-- [ ] If `systemPrompt` present, show faint italic block above history (outside scroll) — optional; can defer.
+- [ ] Deferred (schema supports property; UI not rendered).
 
 ### Slice 9: Testing
-- [ ] Unit: schema validation (sample history set passes, malformed fails).
-- [ ] Unit: history append + trim utility (already above).
-- [ ] Integration: create ChatNode via API, append entries, reload, ensure persistence.
-- [ ] Integration: simulate inbound edge append (mock dispatch) resulting in role `input` entry.
-- [ ] E2E (Playwright/Vitest): user types message and clicks Send -> entry appears & input cleared & auto-scroll.
+- [x] Unit: schema validation.
+- [x] Unit: history append + trim.
+- [x] Integration / smoke: send & assistant reply chain validated.
+- [ ] Generic inbound `input` role (Deferred).
+- [ ] Full E2E UI interaction (Deferred; manual verified).
 
 ### Slice 10: Performance & Accessibility
-- [ ] Confirm O(1) append (avoid re-sorting; maintain chronological order by push).
-- [ ] Verify no unnecessary re-renders (React dev tools highlight updates limited to ChatNode component).
-- [ ] Keyboard navigation: Tab into input, Enter to send, arrow keys scroll history when focused.
+- [x] O(1) append (push only).
+- [ ] Render profiling (Deferred).
+- [x] Keyboard interactions (Enter send).
+- [ ] Additional accessibility improvements (Deferred).
 
 ### Slice 11: Documentation & Cleanup
-- [ ] Update top-level README (node types table) to list ChatNode and brief description.
-- [ ] Add short developer doc snippet describing history structure & append rules.
-- [ ] Mark acceptance criteria items off within this PBI file (optional progress annotation).
-- [ ] Record any deferred tasks (emission, systemPrompt styling) under a "Deferred" subsection.
+- [ ] README / dev doc updates (Deferred).
+- [x] Deferred tasks captured below.
 
 ### Acceptance Criteria Mapping
-- [ ] AC1 empty history on create -> integration test.
-- [ ] AC2 send appends user entry + clears input -> unit/E2E.
-- [ ] AC3 inbound edge appends input entry -> integration test.
-- [ ] AC4 auto-scroll behavior -> E2E.
-- [ ] AC5 trimming logic -> unit test.
-- [ ] AC6 clear action empties history -> integration test.
-- [ ] AC7 schema validation -> unit test.
-- [ ] AC8 send & clear actions present -> schema review.
-- [ ] AC9 persistence across reload (history maintained) -> integration.
-- [ ] AC10 no console errors -> E2E capture.
+- [x] AC1 empty history on create.
+- [x] AC2 send appends user entry & clears input.
+- [ ] AC3 generic inbound input role (Deferred).
+- [x] AC4 auto-scroll behavior (manual confirm).
+- [x] AC5 trimming logic unit tested.
+- [x] AC6 clear action empties history.
+- [x] AC7 schema validation test passes.
+- [x] AC8 send & clear actions present.
+- [x] AC9 persistence across reload (manual verification).
+- [ ] AC10 no console errors (Deferred automated capture; manual clean aside from debug logs).
 
 ### Deferred / Nice-to-Have (Not Blocking MVP)
-- [ ] Outbound emission on send (ties into execution framework).
-- [ ] Distinguish inbound sourceId in history entries.
-- [ ] Enhanced clear history UX (multi-step confirmation / undo).
-- [ ] Rich markdown / formatting.
+- [ ] Generic inbound input append path.
+- [ ] System prompt UI rendering.
+- [ ] Accessibility label enhancements.
+- [ ] Rich formatting / markdown.
+- [ ] Enhanced clear UX / undo.
 - [ ] History export.
