@@ -1,0 +1,16 @@
+{
+  "id": "FileReaderNode-ApT4D5",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-ApT4D5",
+  "props": {
+    "mode": "directory",
+    "dirPath": "."
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

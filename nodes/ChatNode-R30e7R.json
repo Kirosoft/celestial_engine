@@ -1,0 +1,15 @@
+{
+  "id": "ChatNode-R30e7R",
+  "type": "ChatNode",
+  "name": "Chat-Clear",
+  "props": {
+    "history": []
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

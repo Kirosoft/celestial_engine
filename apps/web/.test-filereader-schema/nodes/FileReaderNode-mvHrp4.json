@@ -1,0 +1,15 @@
+{
+  "id": "FileReaderNode-mvHrp4",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-mvHrp4",
+  "props": {
+    "mode": "single"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

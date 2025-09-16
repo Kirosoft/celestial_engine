@@ -1,0 +1,22 @@
+{
+  "id": "LLM-Y8Al2m",
+  "type": "LLM",
+  "name": "LLM-Y8Al2m",
+  "props": {
+    "model": "gpt-3.5-turbo",
+    "promptTemplate": "{message}"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_IJImJe",
+        "targetId": "LogNode-wQmJOY",
+        "kind": "flow"
+      }
+    ]
+  }
+}

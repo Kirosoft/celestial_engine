@@ -1,0 +1,19 @@
+{
+  "id": "ChatNode-eJ92wh",
+  "type": "ChatNode",
+  "name": "ChatNode-eJ92wh",
+  "props": {},
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_PVkWcu",
+        "targetId": "LLM-Y8Al2m",
+        "kind": "flow"
+      }
+    ]
+  }
+}

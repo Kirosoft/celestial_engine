@@ -25,7 +25,7 @@
         "scannedFiles": { "type": "array", "items": { "type": "string" }, "default": [] },
         "cursorIndex": { "type": "integer", "minimum": -1, "default": -1 },
         "lastError": { "type": ["string","null"], "default": null },
-        "action": { "type": "string", "enum": ["read","scan","next","reset" ] }
+  "action": { "type": "string", "enum": ["read","scan","next","reset","sendNext" ] }
       },
       "required": ["mode"],
       "additionalProperties": false,
@@ -47,6 +47,7 @@
     { "name": "read", "description": "Reads and emits the single file (single mode)." },
     { "name": "scan", "description": "Enumerates directory + filters and stores list (directory mode)." },
     { "name": "next", "description": "Emits the next file from scannedFiles (directory mode)." },
-    { "name": "reset", "description": "Clears scannedFiles and cursorIndex." }
+    { "name": "reset", "description": "Clears scannedFiles and cursorIndex." },
+    { "name": "sendNext", "description": "Unified send: single emits selected file; directory emits next (wraps)." }
   ]
 }
