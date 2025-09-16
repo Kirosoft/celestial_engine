@@ -23,3 +23,8 @@ export async function seedBaseSchemasIfNeeded(){
   await fs.writeFile(marker, '');
   await reloadSchemas();
 }
+
+// NOTE: The seeding helper intentionally applies a strict override for LLM in ensureTempSchema.
+// Without that, previously the generic permissive shape would silently differ from the committed
+// monorepo root schema, causing regressions (lost const type, required props, numeric bounds).
+// Guard test: llmSchema.guard.test.ts will fail if the committed schema diverges from expectations.

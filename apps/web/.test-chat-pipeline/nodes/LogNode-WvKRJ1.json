@@ -1,0 +1,24 @@
+{
+  "id": "LogNode-WvKRJ1",
+  "type": "LogNode",
+  "name": "LogNode-WvKRJ1",
+  "props": {
+    "history": [
+      {
+        "id": "CYbVmUco",
+        "ts": 1758053992576,
+        "sourceId": "LLM-PapteO",
+        "port": "output",
+        "kind": "text",
+        "preview": "Assistant(gpt-3.5-turbo): Hello"
+      }
+    ]
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

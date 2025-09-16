@@ -1,5 +1,6 @@
 import { nanoid } from 'nanoid';
 import { getNode } from './nodeRepo';
+import { readSettings } from './systemSettingsRepo';
 
 // Minimal shape reference (expand if needed)
 interface NodeFile { id: string; type: string; props?: Record<string, any>; }
@@ -156,12 +157,17 @@ export async function emitFrom(nodeId: string, port: string, value: any){
 // Register LLM executor stub
 registerExecutor('LLM', async (ctx) => {
   console.debug('[exec] LLM executor start', { nodeId: ctx.nodeId, latestKeys: Object.keys(ctx.latest), inputs: Object.keys(ctx.inputs) });
+  // Load global system settings (masked apiKey not needed here)
+  let settings;
+  try { settings = await readSettings({ reveal: true }); } catch { settings = null; }
+  const globalModel = settings?.llm?.defaultModel || 'gpt-3.5-turbo';
+  const streaming = settings?.llm?.useStreaming || false;
+  const timeoutMs = settings?.llm?.timeoutMs || 60000;
+  const effectiveModel = ctx.props.model || globalModel;
   const tmpl: string = ctx.props.promptTemplate || '{message}';
   const message = (ctx.latest && (ctx.latest as any).message) || '';
   const rendered = tmpl.replace('{message}', String(message));
-  // Fake assistant output (echo)
-  const assistant = `Assistant: ${rendered}`;
-  console.debug('[exec] LLM executor emitting', { nodeId: ctx.nodeId, assistantPreview: assistant.slice(0,60) });
-  // Return outputs only (no direct ctx.emit) to avoid double propagation
+  const assistant = `Assistant(${effectiveModel}${streaming ? ',stream' : ''}): ${rendered}`;
+  console.debug('[exec] LLM executor emitting', { nodeId: ctx.nodeId, model: effectiveModel, streaming, timeoutMs, assistantPreview: assistant.slice(0,60) });
   return { outputs: { output: assistant } };
 });

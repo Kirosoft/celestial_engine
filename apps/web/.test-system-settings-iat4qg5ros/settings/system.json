@@ -1,0 +1,15 @@
+{
+  "llm": {
+    "baseUrl": "https://example.test",
+    "apiKey": "SECRET123",
+    "defaultModel": "gpt-3.5-turbo",
+    "timeoutMs": 60000,
+    "useStreaming": false
+  },
+  "logging": {
+    "level": "info"
+  },
+  "features": {
+    "enableExperimental": false
+  }
+}

@@ -19,7 +19,7 @@ describe('Chat -> LLM -> Log pipeline smoke', () => {
 
   it('propagates a user message to LLM and logs assistant output', async () => {
     const chat = await createNode('ChatNode');
-    const llm = await createNode('LLM', undefined, { promptTemplate: '{message}' });
+  const llm = await createNode('LLM', undefined, { model: 'gpt-3.5-turbo', promptTemplate: '{message}' });
     const log = await createNode('LogNode');
     await addEdge(chat.id, llm.id, 'flow');
     await addEdge(llm.id, log.id, 'flow');
@@ -34,8 +34,11 @@ describe('Chat -> LLM -> Log pipeline smoke', () => {
     // LogNode should now have assistant output in its props.history
     const updatedLog = await getNode(log.id) as any;
     const hist = updatedLog.props?.history || [];
-    // Expect exactly one Assistant echo entry
-  const assistantEntry = hist.find((h: any) => typeof h.preview === 'string' && h.preview.includes('Assistant: Hello'));
+    // Expect exactly one Assistant echo entry (model or streaming flags may appear, e.g. Assistant(gpt-3.5-turbo): Hello)
+    const assistantEntry = hist.find((h: any) => {
+      if(typeof h.preview !== 'string') return false;
+      return /Assistant(\([^)]*\))?: Hello/.test(h.preview);
+    });
     expect(assistantEntry, 'Assistant echo should be logged').toBeTruthy();
   });
 });

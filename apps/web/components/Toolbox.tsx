@@ -109,8 +109,12 @@ export function Toolbox({ onCreate }: { onCreate?: (nodeId: string)=>void }){
     window.removeEventListener('mouseup', onMouseUp);
   }, [onMouseMove, onMouseUp]);
 
+  const { toggleSettings } = useUIState() as any;
   if(!showToolbox) return (
-    <button data-testid="open-toolbox" onClick={()=>toggleToolbox(true)} style={btnStyle}>Open Toolbox</button>
+    <div style={{ position:'absolute', top:10, left:10, display:'flex', gap:8 }}>
+      <button data-testid="open-toolbox" onClick={()=>toggleToolbox(true)} style={btnStyle}>Open Toolbox</button>
+      <button data-testid="open-settings" onClick={()=>toggleSettings(true)} style={btnStyle}>Settings</button>
+    </div>
   );
 
   return (
@@ -139,6 +143,7 @@ export function Toolbox({ onCreate }: { onCreate?: (nodeId: string)=>void }){
             onClick={()=>setToolboxCollapsed()}
             style={miniBtn}
           >{toolboxCollapsed ? '+' : '−'}</button>
+          <button data-testid="open-settings" onClick={()=>toggleSettings(true)} style={miniBtn} title="Open Settings">⚙</button>
           <button onClick={()=>toggleToolbox(false)} style={miniBtn} title="Close">×</button>
         </div>
       </div>

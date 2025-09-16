@@ -45,6 +45,7 @@ The UI (Next.js + React Flow) provides a canvas to position nodes, inspect/edit 
 | `.awb/index.json` | Index of nodes (positions, hashes) |
 | `schemas/nodes/*.schema.json` | Node type schemas |
 | (Consolidated) | All node type schemas now live ONLY at repo root `schemas/nodes/` (removed duplicate app copy) |
+| LLM Schema Guard | `test/llmSchema.guard.test.ts` ensures root & app copies (when present) match and enforces strict LLM constraints (required `model`, bounds on `temperature` & `maxOutputTokens`). If adding new LLM props, update both copies & adjust guard expectations. |
 
 ### 3.3 Events
 | Event | Producer | Consumer | Effect |

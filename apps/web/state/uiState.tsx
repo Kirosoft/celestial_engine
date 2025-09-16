@@ -13,6 +13,7 @@ export interface UIStateSnapshot {
   inspectorWidth: number; // px
   currentGroupId?: string; // when set, viewing subgraph for this group
   hydrated: boolean; // client layout values loaded from localStorage
+  showSettings?: boolean;
 }
 
 interface UIStateContextValue extends UIStateSnapshot {
@@ -26,6 +27,7 @@ interface UIStateContextValue extends UIStateSnapshot {
   clearSelection(): void;
   enterGroup(id: string): void;
   exitGroup(): void;
+  toggleSettings(force?: boolean): void;
 }
 
 const UIStateContext = createContext<UIStateContextValue | undefined>(undefined);
@@ -43,6 +45,7 @@ export function UIStateProvider({ children }: { children: ReactNode }) {
   const [inspectorWidth, setInspectorWidthState] = useState<number>(320);
   const [currentGroupId, setCurrentGroupId] = useState<string|undefined>(undefined);
   const [hydrated, setHydrated] = useState(false);
+  const [showSettings, setShowSettings] = useState<boolean>(false);
 
   const setSelected = useCallback((ids: string[]) => {
     setSelectedNodeIds(ids);
@@ -69,6 +72,10 @@ export function UIStateProvider({ children }: { children: ReactNode }) {
 
   const toggleToolbox = useCallback((force?: boolean) => {
     setShowToolbox(v => (typeof force === 'boolean' ? force : !v));
+  }, []);
+
+  const toggleSettings = useCallback((force?: boolean) => {
+    setShowSettings(v => (typeof force === 'boolean' ? force : !v));
   }, []);
 
   const setToolboxPosition = useCallback((x: number, y: number) => {
@@ -153,6 +160,7 @@ export function UIStateProvider({ children }: { children: ReactNode }) {
     inspectorWidth,
     currentGroupId,
   hydrated,
+    showSettings,
     setSelectedNodeIds: setSelected,
     setSelectedEdge,
     toggleInspector,
@@ -163,6 +171,7 @@ export function UIStateProvider({ children }: { children: ReactNode }) {
     clearSelection,
     enterGroup,
     exitGroup
+    ,toggleSettings
   };
   if(typeof window !== 'undefined'){
     (window as any).__selectNode = (id: string) => setSelected([id]);

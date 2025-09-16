@@ -6,14 +6,40 @@
       "type": "string"
     },
     "type": {
-      "type": "string"
+      "const": "LLM"
     },
     "name": {
       "type": "string"
     },
     "props": {
       "type": "object",
-      "additionalProperties": true
+      "properties": {
+        "model": {
+          "type": "string"
+        },
+        "system": {
+          "type": "string"
+        },
+        "promptTemplate": {
+          "type": "string"
+        },
+        "temperature": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2,
+          "default": 0.7
+        },
+        "maxOutputTokens": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8192,
+          "default": 1024
+        }
+      },
+      "required": [
+        "model"
+      ],
+      "additionalProperties": false
     },
     "position": {
       "type": "object",
@@ -37,6 +63,7 @@
   "required": [
     "id",
     "type",
-    "name"
+    "name",
+    "props"
   ]
 }

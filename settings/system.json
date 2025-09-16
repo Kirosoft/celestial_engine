@@ -1,0 +1,15 @@
+{
+  "llm": {
+    "baseUrl": "localhost:3000",
+    "apiKey": "***",
+    "defaultModel": "llama4",
+    "timeoutMs": 60000,
+    "useStreaming": false
+  },
+  "logging": {
+    "level": "debug"
+  },
+  "features": {
+    "enableExperimental": false
+  }
+}

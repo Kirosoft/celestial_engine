@@ -1,0 +1,37 @@
+{
+  "$id": "SystemSettings.schema.json",
+  "title": "SystemSettings",
+  "type": "object",
+  "properties": {
+    "llm": {
+      "type": "object",
+      "properties": {
+        "baseUrl": { "type": "string", "default": "" },
+        "apiKey": { "type": "string", "default": "" },
+        "defaultModel": { "type": "string", "default": "gpt-3.5-turbo" },
+        "timeoutMs": { "type": "number", "default": 60000, "minimum": 1000 },
+        "useStreaming": { "type": "boolean", "default": false }
+      },
+      "required": ["baseUrl","apiKey"],
+      "additionalProperties": false
+    },
+    "logging": {
+      "type": "object",
+      "properties": {
+        "level": { "type": "string", "enum": ["debug","info","warn","error"], "default": "info" }
+      },
+      "required": ["level"],
+      "additionalProperties": false
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "enableExperimental": { "type": "boolean", "default": false }
+      },
+      "required": ["enableExperimental"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["llm","logging","features"],
+  "additionalProperties": false
+}

@@ -31,6 +31,24 @@ export async function ensureTempSchema(opts: TempSchemaOptions = {}){
     required: ['id','type','name', ...(opts.requiredProps || [])],
     ...opts.extraProps
   };
+
+  // Strict LLM schema override to mirror committed schema contract and avoid regressions
+  if(typeName === 'LLM'){
+    schema.properties.type = { const: 'LLM' } as any;
+    schema.properties.props = {
+      type: 'object',
+      properties: {
+        model: { type: 'string' },
+        system: { type: 'string' },
+        promptTemplate: { type: 'string' },
+        temperature: { type: 'number', minimum: 0, maximum: 2, default: 0.7 },
+        maxOutputTokens: { type: 'integer', minimum: 1, maximum: 8192, default: 1024 }
+      },
+      required: ['model'],
+      additionalProperties: false
+    } as any;
+    if(!schema.required.includes('props')) schema.required.push('props');
+  }
   const file = resolve(schemaDir, `${typeName}.schema.json`);
   await fs.writeFile(file, JSON.stringify(schema, null, 2));
   await reloadSchemas();

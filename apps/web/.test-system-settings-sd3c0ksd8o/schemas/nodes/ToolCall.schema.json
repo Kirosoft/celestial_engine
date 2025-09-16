@@ -1,0 +1,42 @@
+{
+  "title": "ToolCall",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "props": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "edges": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name"
+  ]
+}

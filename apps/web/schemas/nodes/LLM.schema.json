@@ -1,49 +1,34 @@
 {
+  "$id": "nodes/LLM.schema.json",
   "title": "LLM",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string"
-    },
-    "type": {
-      "type": "string"
-    },
-    "name": {
-      "type": "string"
-    },
-    "props": {
-      "type": "object",
-      "additionalProperties": true,
-      "properties": {
-        "model": {"type":"string"},
-        "system": {"type":"string"},
-        "promptTemplate": {"type":"string"},
-        "temperature": {"type":"number","minimum":0,"maximum":2},
-        "maxOutputTokens": {"type":"number","minimum":1}
-      }
-    },
+    "id": { "type": "string" },
+    "type": { "const": "LLM" },
+    "name": { "type": "string" },
     "position": {
       "type": "object",
       "properties": {
-        "x": {
-          "type": "number"
-        },
-        "y": {
-          "type": "number"
-        }
+        "x": { "type": "number" },
+        "y": { "type": "number" }
       },
-      "required": [
-        "x",
-        "y"
-      ]
+      "required": ["x", "y"],
+      "additionalProperties": false
     },
-    "edges": {
-      "type": "object"
-    }
+    "props": {
+      "type": "object",
+      "properties": {
+        "model": { "type": "string" },
+        "system": { "type": "string" },
+        "promptTemplate": { "type": "string" },
+        "temperature": { "type": "number", "minimum": 0, "maximum": 2, "default": 0.7 },
+        "maxOutputTokens": { "type": "integer", "minimum": 1, "maximum": 8192, "default": 1024 }
+      },
+      "required": ["model"],
+      "additionalProperties": false
+    },
+    "edges": { "type": "object" }
   },
-  "required": [
-    "id",
-    "type",
-    "name"
-  ]
+  "required": ["id", "type", "name", "props"],
+  "additionalProperties": true
 }
