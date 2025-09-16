@@ -1,0 +1,52 @@
+{
+  "$id": "LogNode.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LogNode",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "LogNode" },
+    "name": { "type": "string" },
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" }
+      },
+      "required": ["x","y"],
+      "additionalProperties": false
+    },
+    "props": {
+      "type": "object",
+      "properties": {
+        "history": {
+          "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id","ts","preview"],
+              "properties": {
+                "id": { "type": "string" },
+                "ts": { "type": "number" },
+                "sourceId": { "type": "string" },
+                "port": { "type": "string" },
+                "kind": { "type": "string" },
+                "preview": { "type": "string" },
+                "raw": {}
+              },
+              "additionalProperties": false
+            },
+            "default": []
+        },
+        "maxEntries": { "type": "number", "minimum": 1, "default": 300 },
+        "filterIncludes": { "type": "array", "items": { "type": "string" }, "default": [] }
+      },
+      "required": ["history"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["id","type","name","props"],
+  "additionalProperties": true,
+  "x-actions": [
+    { "name": "clear", "description": "Clear all log entries (cannot be undone)" }
+  ]
+}

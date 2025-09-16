@@ -23,6 +23,9 @@ export function useGraphData(){
     if(n.type === 'ChatNode'){
       return { id: n.id, type: 'chatNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, history: (n as any).props?.history || [], maxEntries: (n as any).props?.maxEntries, rawProps: (n as any).props } } as RFNode;
     }
+    if(n.type === 'LogNode'){
+      return { id: n.id, type: 'logNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, history: (n as any).props?.history || [], maxEntries: (n as any).props?.maxEntries, filterIncludes: (n as any).props?.filterIncludes || [], rawProps: (n as any).props } } as RFNode; 
+    }
     return { id: n.id, type: 'basicNode', position: n.position || { x: 0, y: 0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id } } as RFNode;
   });
   if(process.env.NODE_ENV !== 'production'){
@@ -47,12 +50,29 @@ export function useGraphData(){
     seen.add(n.id);
     rfNodes.push(n);
   }
-    const rfEdges: RFEdge[] = [];
+    const rfEdgesRaw: RFEdge[] = [];
     for(const n of api.nodes){
       if(n.edges?.out){
         for(const e of n.edges.out){
-          rfEdges.push({ id: `${n.id}:${e.id}`, source: n.id, target: e.targetId, data: { kind: e.kind }, type: 'default' });
+          rfEdgesRaw.push({ id: `${n.id}:${e.id}`, source: n.id, target: e.targetId, data: { kind: e.kind }, type: 'default' });
         }
+      }
+    }
+    // Edge dedupe (duplicate edge ids can trigger React key warnings, e.g. when duplicate node files exist or tmp shadow copies present)
+    const edgeSeen = new Set<string>();
+    const rfEdges: RFEdge[] = [];
+    for(const e of rfEdgesRaw){
+      if(edgeSeen.has(e.id)){
+        console.warn('[useGraphData] duplicate edge id encountered, dropping duplicate', e.id);
+        continue;
+      }
+      edgeSeen.add(e.id);
+      rfEdges.push(e);
+    }
+    if(process.env.NODE_ENV !== 'production'){
+      if(rfEdgesRaw.length !== rfEdges.length){
+        const dropped = rfEdgesRaw.length - rfEdges.length;
+        console.warn('[useGraphData][transform] dropped duplicate edges:', dropped);
       }
     }
     setNodes(rfNodes);
@@ -72,6 +92,9 @@ export function useGraphData(){
         const rfNodesRaw: RFNode[] = sg.nodes.map(n=>{
           if(n.type === 'ChatNode'){
             return { id: n.id, type: 'chatNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, history: (n as any).props?.history || [], maxEntries: (n as any).props?.maxEntries, rawProps: (n as any).props } } as RFNode;
+          }
+          if(n.type === 'LogNode'){
+            return { id: n.id, type: 'logNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, history: (n as any).props?.history || [], maxEntries: (n as any).props?.maxEntries, filterIncludes: (n as any).props?.filterIncludes || [], rawProps: (n as any).props } } as RFNode;
           }
           return { id: n.id, type: 'basicNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, __proxy: n.type?.startsWith('GroupInputProxy') || n.type?.startsWith('GroupOutputProxy') } } as RFNode;
         });

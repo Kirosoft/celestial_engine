@@ -2,20 +2,41 @@
   "title": "Code",
   "type": "object",
   "properties": {
-    "id": { "type": "string" },
-    "type": { "const": "Code" },
-    "name": { "type": "string" },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
     "props": {
       "type": "object",
-      "properties": {
-        "language": { "type": "string" },
-        "source": { "type": "string" }
-      },
-      "required": ["language", "source"],
-      "additionalProperties": false
+      "additionalProperties": true
     },
-    "position": { "type": "object" },
-    "edges": { "type": "object" }
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "edges": {
+      "type": "object"
+    }
   },
-  "required": ["id", "type", "name", "props"]
+  "required": [
+    "id",
+    "type",
+    "name"
+  ]
 }

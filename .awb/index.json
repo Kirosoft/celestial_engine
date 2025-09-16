@@ -1,6 +1,6 @@
 {
-  "version": 611,
-  "generatedAt": "2025-09-16T07:36:12.952Z",
+  "version": 981,
+  "generatedAt": "2025-09-16T12:52:54.665Z",
   "nodes": [
     {
       "id": "Task-EDq7hE",
@@ -486,39 +486,25 @@
       "mtime": "2025-09-15T15:49:18.359Z"
     },
     {
-      "id": "LLM-4GSUSN",
-      "type": "LLM",
-      "name": "LLM",
-      "propsHash": "17f6428536a49edf7df83c427d5caa040d10d73e",
-      "mtime": "2025-09-15T19:29:44.008Z"
-    },
-    {
-      "id": "Task-gq0CBJ",
-      "type": "Task",
-      "name": "Task",
-      "propsHash": "e59f655c6df02290d41dc45d1efdf766699cb1ce",
-      "mtime": "2025-09-16T07:36:03.997Z"
-    },
-    {
-      "id": "Group-jjEyTc",
-      "type": "Group",
-      "name": "GroupA",
-      "propsHash": "2091f6740fad5c7682cc32c6004cbc235a0b058e",
-      "mtime": "2025-09-15T20:32:57.277Z"
-    },
-    {
-      "id": "Group-_uhTpE",
-      "type": "Group",
-      "name": "GroupB",
-      "propsHash": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
-      "mtime": "2025-09-15T20:32:59.918Z"
-    },
-    {
       "id": "ChatNode-oahYox",
       "type": "ChatNode",
       "name": "ChatNode",
-      "propsHash": "1a636b42bdd119663b3ca45187cc06e1357950e5",
-      "mtime": "2025-09-16T07:36:12.952Z"
+      "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
+      "mtime": "2025-09-16T12:52:54.665Z"
+    },
+    {
+      "id": "LLM-5V3DK5",
+      "type": "LLM",
+      "name": "LLM",
+      "propsHash": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
+      "mtime": "2025-09-16T12:48:26.193Z"
+    },
+    {
+      "id": "LogNode-aR35zo",
+      "type": "LogNode",
+      "name": "Log-Demo",
+      "propsHash": "428a478bde544c60bb455cc8b15a4f8d7c16ddc6",
+      "mtime": "2025-09-16T12:52:44.864Z"
     }
   ]
 }

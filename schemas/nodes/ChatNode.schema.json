@@ -39,6 +39,12 @@
       "label": "Send",
       "kind": "runtime",
       "description": "Appends a new user message and emits it on port 'message'"
+    },
+    {
+      "name": "clear",
+      "label": "Clear",
+      "kind": "runtime",
+      "description": "Clears all history entries immediately"
     }
   ],
   "x-intercept": true,

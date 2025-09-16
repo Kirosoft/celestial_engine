@@ -1,24 +1,42 @@
 {
-  "$id": "nodes/LLM.schema.json",
   "title": "LLM",
   "type": "object",
   "properties": {
-    "id": {"type":"string"},
-    "type": {"const":"LLM"},
-    "name": {"type":"string"},
-    "position": {"type":"object","properties":{"x":{"type":"number"},"y":{"type":"number"}},"required":["x","y"]},
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
     "props": {
-      "type":"object",
+      "type": "object",
+      "additionalProperties": true
+    },
+    "position": {
+      "type": "object",
       "properties": {
-        "model": {"type":"string"},
-        "system": {"type":"string"},
-        "promptTemplate": {"type":"string"},
-        "temperature": {"type":"number","minimum":0,"maximum":2},
-        "maxOutputTokens": {"type":"number","minimum":1}
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
       },
-      "required": ["model"]
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "edges": {
+      "type": "object"
     }
   },
-  "required": ["id","type","name","props"],
-  "additionalProperties": true
+  "required": [
+    "id",
+    "type",
+    "name"
+  ]
 }

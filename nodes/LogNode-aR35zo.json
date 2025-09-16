@@ -1,0 +1,16 @@
+{
+  "id": "LogNode-aR35zo",
+  "type": "LogNode",
+  "name": "Log-Demo",
+  "props": {
+    "history": [],
+    "maxEntries": 5
+  },
+  "position": {
+    "x": 1079.623559965745,
+    "y": 389.95872986450513
+  },
+  "edges": {
+    "out": []
+  }
+}

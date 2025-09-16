@@ -11,6 +11,7 @@ export const ChatNode: React.FC<any> = ({ data }) => {
   const [localHistory, setLocalHistory] = useState<ChatEntry[]>(history);
   const scrollRef = useRef<HTMLDivElement|null>(null);
   const [saving, setSaving] = useState(false);
+  const [clearing, setClearing] = useState(false);
 
   useEffect(()=>{
     const el = scrollRef.current; if(!el) return;
@@ -35,6 +36,9 @@ export const ChatNode: React.FC<any> = ({ data }) => {
       if(!res.ok){
         console.warn('[ChatNode] persist failed', res.status);
       } else {
+        // Emit user message on logical 'message' port (MVP: port name reused by consumers)
+  // Call server API to emit so we don't bundle fs-dependent server code client-side
+  await fetch(`/api/nodes/${nodeId}/emit`, { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify({ port:'message', value: composer.trim() }) });
         window.dispatchEvent(new Event('graph:refresh-request'));
       }
     } catch(e){ console.warn('[ChatNode] error', e); }
@@ -47,6 +51,22 @@ export const ChatNode: React.FC<any> = ({ data }) => {
       onSend();
     }
   }, [onSend]);
+
+  const onClear = useCallback(async ()=>{
+    if(clearing || saving || localHistory.length === 0) return;
+    setClearing(true);
+    try {
+      const patch = { props: { ...rawProps, history: [] } };
+      const res = await fetch(`/api/nodes/${nodeId}`, { method:'PUT', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(patch) });
+      if(!res.ok){
+        console.warn('[ChatNode] clear failed', res.status);
+      } else {
+        setLocalHistory([]);
+        window.dispatchEvent(new Event('graph:refresh-request'));
+      }
+    } catch(e){ console.warn('[ChatNode] clear error', e); }
+    finally { setClearing(false); }
+  }, [clearing, saving, localHistory.length, rawProps, nodeId]);
 
   const handleSize = 10;
   const commonHandle: React.CSSProperties = {
@@ -82,13 +102,22 @@ export const ChatNode: React.FC<any> = ({ data }) => {
           placeholder="Type a message"
           style={{ width:'100%', fontFamily:'inherit', fontSize:'inherit', resize:'none', background:'#151c22', color:'#eee', border:'1px solid #2c3740', padding:4, borderRadius:3 }}
         />
-        <button
-          data-testid={`chat-send-${nodeId}`}
-          onClick={onSend}
-          disabled={!composer.trim() || saving}
-          style={{ background:'#2f3d4a', color:'#fff', border:'1px solid #3d4d5c', padding:'4px 6px', cursor:(!composer.trim()||saving)?'default':'pointer', borderRadius:3, fontSize:11 }}>
-          {saving? 'Saving…' : 'Send'}
-        </button>
+        <div style={{ display:'flex', gap:6 }}>
+          <button
+            data-testid={`chat-send-${nodeId}`}
+            onClick={onSend}
+            disabled={!composer.trim() || saving}
+            style={{ flex:1, background:'#2f3d4a', color:'#fff', border:'1px solid #3d4d5c', padding:'4px 6px', cursor:(!composer.trim()||saving)?'default':'pointer', borderRadius:3, fontSize:11 }}>
+            {saving? 'Saving…' : 'Send'}
+          </button>
+          <button
+            data-testid={`chat-clear-${nodeId}`}
+            onClick={onClear}
+            disabled={clearing || saving || localHistory.length === 0}
+            style={{ width:60, background:'#3a2f2f', color:'#fff', border:'1px solid #513b3b', padding:'4px 6px', cursor:(clearing||saving||localHistory.length===0)?'default':'pointer', borderRadius:3, fontSize:11, opacity: localHistory.length===0?0.5:1 }}>
+            {clearing? '...' : 'Clear'}
+          </button>
+        </div>
       </div>
       {/* Source (outgoing) handle */}
       <Handle data-testid={`chat-handle-source-${nodeId}`} type="source" position={Position.Bottom} style={{ ...commonHandle, background:'#3d8', transform:'translate(-50%, 55%)' }} />

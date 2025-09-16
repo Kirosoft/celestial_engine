@@ -1,45 +1,42 @@
 {
-  "$id": "nodes/ChatNode.schema.json",
   "title": "ChatNode",
   "type": "object",
   "properties": {
-    "id": { "type": "string" },
-    "type": { "const": "ChatNode" },
-    "name": { "type": "string" },
-    "position": {
-      "type": "object",
-      "properties": { "x": { "type": "number" }, "y": { "type": "number" } },
-      "required": ["x","y"]
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
     },
     "props": {
       "type": "object",
-      "properties": {
-        "history": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": ["id","role","content","ts"],
-            "properties": {
-              "id": { "type": "string" },
-              "role": { "type": "string", "enum": ["user","input","assistant","system"] },
-              "content": { "type": "string" },
-              "ts": { "type": "number" }
-            },
-            "additionalProperties": false
-          },
-          "default": []
-        },
-        "maxEntries": { "type": "number", "minimum": 1, "default": 200 },
-        "systemPrompt": { "type": "string" }
-      },
-      "required": ["history"],
-      "additionalProperties": false
+      "additionalProperties": true
     },
-    "edges": { "type": "object" }
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "edges": {
+      "type": "object"
+    }
   },
-  "required": ["id","type","name","props"],
-  "additionalProperties": true,
-  "x-actions": [
-    { "name": "send", "description": "Appends a new user message (from transient input) to history and persists the node" }
+  "required": [
+    "id",
+    "type",
+    "name"
   ]
 }

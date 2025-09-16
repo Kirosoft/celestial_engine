@@ -112,6 +112,9 @@ export async function addEdge(sourceId: string, targetId: string, kind: 'flow'|'
   if(sourceId === targetId) throw new CycleError('Self-loop not allowed');
   const source = await getNode(sourceId);
   const target = await getNode(targetId); // ensure exists
+  if(source.type === 'LogNode') {
+    throw new ConflictError('LogNode cannot be source of an edge');
+  }
   const all = await listNodes();
   if(detectCycle(source, targetId, all)) throw new CycleError('Edge would create a cycle');
   source.edges = source.edges || { out: [] };

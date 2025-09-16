@@ -4,6 +4,7 @@ import 'reactflow/dist/style.css';
 import { useGraphData } from '../hooks/useGraphData';
 import { useUIState } from '../state/uiState';
 import { ChatNode } from './ChatNode';
+import { LogNode } from './LogNode';
 
 export function Canvas(){
   // Avoid rendering ReactFlow server-side or during the very first hydration tick to reduce spurious dev warnings
@@ -177,7 +178,7 @@ const BasicNode: React.FC<NodeProps<any>> = ({ id, data }) => {
 };
 
 // Stable nodeTypes object to avoid React Flow warning #002 about recreating node/edge type maps every render.
-const nodeTypes = { basicNode: BasicNode, chatNode: ChatNode } as const;
+const nodeTypes = { basicNode: BasicNode, chatNode: ChatNode, logNode: LogNode } as const;
 
 function ErrorBanner({ hasGroup }: { hasGroup: boolean }){
   const top = hasGroup ? 40 : 8; // leave room for Back button row

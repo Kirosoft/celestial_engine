@@ -19619,3 +19619,19 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web p: schemas/nodes/GroupInputProxy.schema.json target: /home/ubuntu/celestial_engine/apps/web/schemas/nodes/GroupInputProxy.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web resolved: /home/ubuntu/celestial_engine/apps/web
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web p: schemas/nodes/GroupOutputProxy.schema.json target: /home/ubuntu/celestial_engine/apps/web/schemas/nodes/GroupOutputProxy.schema.json
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.
+[FileRepo] ERROR: REPO_ROOT not set during E2E/test execution. Refusing to fall back to project root.

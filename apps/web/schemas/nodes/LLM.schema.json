@@ -13,7 +13,14 @@
     },
     "props": {
       "type": "object",
-      "additionalProperties": true
+      "additionalProperties": true,
+      "properties": {
+        "model": {"type":"string"},
+        "system": {"type":"string"},
+        "promptTemplate": {"type":"string"},
+        "temperature": {"type":"number","minimum":0,"maximum":2},
+        "maxOutputTokens": {"type":"number","minimum":1}
+      }
     },
     "position": {
       "type": "object",

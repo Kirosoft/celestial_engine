@@ -2,20 +2,41 @@
   "title": "Eval",
   "type": "object",
   "properties": {
-    "id": { "type": "string" },
-    "type": { "const": "Eval" },
-    "name": { "type": "string" },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
     "props": {
       "type": "object",
-      "properties": {
-        "metric": { "type": "string" },
-        "threshold": { "type": "number" }
-      },
-      "required": ["metric"],
-      "additionalProperties": false
+      "additionalProperties": true
     },
-    "position": { "type": "object" },
-    "edges": { "type": "object" }
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "edges": {
+      "type": "object"
+    }
   },
-  "required": ["id", "type", "name", "props"]
+  "required": [
+    "id",
+    "type",
+    "name"
+  ]
 }
