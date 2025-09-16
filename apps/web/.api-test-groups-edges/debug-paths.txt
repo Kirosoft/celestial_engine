@@ -61,14 +61,14 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Task.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Task.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
@@ -81,13 +81,13 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
@@ -104,17 +104,17 @@
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges glob: schemas/nodes/*.schema.json
 [FileRepo] list() result: ["schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
@@ -140,9 +140,9 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
@@ -150,10 +150,10 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
@@ -162,8 +162,8 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Task.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
@@ -179,12 +179,12 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
@@ -193,10 +193,10 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
@@ -210,12 +210,12 @@
 [FileRepo] list() result: ["schemas/nodes/Code.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Code.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubOutput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
@@ -251,18 +251,18 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges glob: schemas/nodes/*.schema.json
 [FileRepo] list() result: ["schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Eval.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Eval.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubOutput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
@@ -279,9 +279,9 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Router.schema.json
@@ -294,6 +294,57 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/ChatNode.schema.json","schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ChatNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ChatNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Code.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Code.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Eval.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Eval.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubOutput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubOutput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Task.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Task.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges glob: schemas/nodes/*.schema.json
@@ -312,9 +363,9 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Eval.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubOutput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubOutput.schema.json
@@ -322,60 +373,9 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Plan.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Router.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Router.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Task.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Task.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
-[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges glob: schemas/nodes/*.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] list() result: ["schemas/nodes/ChatNode.schema.json","schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ChatNode.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ChatNode.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Code.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Code.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Eval.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Eval.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubInput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubOutput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/GitHubOutput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Group.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Merge.schema.json
@@ -391,14 +391,14 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Task.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-7nQzJc.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-7nQzJc.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-wzPtKQ.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-wzPtKQ.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
@@ -406,46 +406,46 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/.awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/.awb/index.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/.awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/.awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/.awb/index.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/nodes/__input_in.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/nodes/__input_in.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/.awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/nodes/__output_out.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/nodes/__output_out.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/nodes/__input_in.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/nodes/__input_in.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/nodes/__output_out.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/nodes/__output_out.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-wzPtKQ.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-wzPtKQ.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/nodes/Task-wDaHNh.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/nodes/Task-wDaHNh.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-wzPtKQ.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-wzPtKQ.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/nodes/Task-fq-QAV.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/nodes/Task-fq-QAV.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-wzPtKQ.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-wzPtKQ.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-7nQzJc.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-7nQzJc.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/nodes/Task-ZrEWWb.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/nodes/Task-ZrEWWb.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/nodes/Task-Dc4Nas.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/nodes/Task-Dc4Nas.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-wzPtKQ.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-wzPtKQ.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-7nQzJc.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-7nQzJc.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/nodes/Task-wDaHNh.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/nodes/Task-wDaHNh.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/nodes/Task-y-lShe.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/nodes/Task-y-lShe.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/nodes/Task-fq-QAV.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/nodes/Task-fq-QAV.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-7nQzJc.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-7nQzJc.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/nodes/Task-IaGaPb.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/nodes/Task-IaGaPb.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-wzPtKQ.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-wzPtKQ.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-7nQzJc.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-7nQzJc.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/nodes/Task-fq-QAV.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/nodes/Task-fq-QAV.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/nodes/Task-Dc4Nas.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/nodes/Task-Dc4Nas.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/nodes/Task-ZrEWWb.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/nodes/Task-ZrEWWb.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/nodes/Task-y-lShe.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/nodes/Task-y-lShe.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-wzPtKQ.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-wzPtKQ.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-7nQzJc.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-7nQzJc.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/nodes/Task-ZrEWWb.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/nodes/Task-ZrEWWb.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/nodes/Task-y-lShe.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/nodes/Task-y-lShe.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ/nodes/Task-wDaHNh.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ/nodes/Task-wDaHNh.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/nodes/Task-IaGaPb.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/nodes/Task-IaGaPb.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: nodes/Group-7nQzJc.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/nodes/Group-7nQzJc.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/nodes/Task-IaGaPb.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/nodes/Task-IaGaPb.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc/nodes/Task-Dc4Nas.json target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc/nodes/Task-Dc4Nas.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges resolved: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-7nQzJc target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-7nQzJc
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges p: groups/Group-wzPtKQ target: /home/ubuntu/celestial_engine/apps/web/.api-test-groups-edges/groups/Group-wzPtKQ

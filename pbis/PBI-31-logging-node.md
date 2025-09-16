@@ -14,7 +14,7 @@ During graph development and troubleshooting it's valuable to observe the raw pa
 2. Display log entries newest last in a vertically scrollable area (fixed-height inside the node component).
 3. Each entry stores: `id`, `ts` (epoch ms), `sourceId` (node id of sender if available), `port` (source port), `kind` (string describing payload classification), `preview` (string), and optional `raw` (full value) if small.
 4. Provide an optional `maxEntries` cap (default 300); trimming oldest entries when exceeded.
-5. Provide a `clear` action (schema `x-actions`) that empties the log history after confirmation (client-side only, persisted).
+5. Provide a `clear` action (schema `x-actions`) that immediately empties the log history (client-side only, persisted, no confirmation).
 6. Support string payloads and structured objects. If object, attempt to pretty-print or derive a one-line preview (first 120 chars JSON).
 7. Persist history in node file (`props.history`).
 8. No outbound emission (enforce: attempts to connect from LogNode as source are rejected or visually disabled later).
@@ -84,7 +84,7 @@ props: {
   "required": ["id","type","name","props"],
   "additionalProperties": false,
   "x-actions": [
-    { "name": "clear", "description": "Clear all log entries (cannot be undone)" }
+  { "name": "clear", "description": "Clears all log entries immediately (cannot be undone)" }
   ]
 }
 ```
@@ -106,7 +106,7 @@ props: {
 3. Inbound emission with object payload stores `kind='json'` and a JSON-stringified preview (<=120 chars) and, if serialized length < 2000, copies object to `raw`.
 4. When `history.length` exceeds `maxEntries`, oldest entries are removed so final length == `maxEntries`.
 5. `filterIncludes` (non-empty) causes entries whose lower-cased preview matches none of the tokens to be skipped.
-6. Clicking `clear` empties history and persists node; subsequent emissions repopulate from empty.
+6. Clicking `clear` empties history immediately and persists node; subsequent emissions repopulate from empty.
 7. Reloading app preserves existing history entries.
 8. No outbound edges can be created from a LogNode (attempt returns 400/409 or is blocked client-side).
 9. No console errors during rapid (>=20) sequential inbound messages test.
@@ -175,7 +175,7 @@ Legend: [ ] not started, [~] in progress, [x] complete
 
 ### Slice 6: Action Handling (Clear)
 - [ ] Schema `x-actions` exposes `clear`.
-- [ ] Implement handler (button) confirming then persisting empty history.
+- [ ] Implement handler (button) that immediately persists empty history (no confirmation).
 - [ ] Unit / integration test for clear.
 
 ### Slice 7: Edge / Performance Validation

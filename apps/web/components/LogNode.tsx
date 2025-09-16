@@ -18,7 +18,6 @@ export const LogNode: React.FC<any> = ({ data }) => {
 
   const onClear = useCallback(async ()=>{
     if(clearing) return;
-    if(!confirm('Clear all log entries?')) return;
     setClearing(true);
     try {
       const patch = { props: { ...rawProps, history: [] } };

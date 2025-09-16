@@ -1,19 +1,19 @@
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-XoT-5J/.awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-XoT-5J/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo resolved: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-7NkATz/.awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-7NkATz/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo resolved: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-7NkATz/.awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-7NkATz/.awb/index.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-XoT-5J/.awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-XoT-5J/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo resolved: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-7NkATz/nodes/__input_inA.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-7NkATz/nodes/__input_inA.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-XoT-5J/nodes/__input_inA.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-XoT-5J/nodes/__input_inA.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo resolved: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-7NkATz/nodes/__output_outB.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-7NkATz/nodes/__output_outB.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-XoT-5J/nodes/__output_outB.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-XoT-5J/nodes/__output_outB.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo resolved: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-7NkATz/nodes/__output_outC.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-7NkATz/nodes/__output_outC.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-XoT-5J/nodes/__output_outC.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-XoT-5J/nodes/__output_outC.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo resolved: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo
-[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo glob: groups/Group-7NkATz/nodes/*.json
-[FileRepo] list() result: ["groups/Group-7NkATz/nodes/__input_inA.json","groups/Group-7NkATz/nodes/__output_outB.json","groups/Group-7NkATz/nodes/__output_outC.json"]
+[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo glob: groups/Group-XoT-5J/nodes/*.json
+[FileRepo] list() result: ["groups/Group-XoT-5J/nodes/__input_inA.json","groups/Group-XoT-5J/nodes/__output_outB.json","groups/Group-XoT-5J/nodes/__output_outC.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo resolved: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-7NkATz/nodes/__input_inA.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-7NkATz/nodes/__input_inA.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-XoT-5J/nodes/__input_inA.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-XoT-5J/nodes/__input_inA.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo resolved: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-7NkATz/nodes/__output_outB.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-7NkATz/nodes/__output_outB.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-XoT-5J/nodes/__output_outB.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-XoT-5J/nodes/__output_outB.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo resolved: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-7NkATz/nodes/__output_outC.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-7NkATz/nodes/__output_outC.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo p: groups/Group-XoT-5J/nodes/__output_outC.json target: /home/ubuntu/celestial_engine/apps/web/.test-groupRepo/groups/Group-XoT-5J/nodes/__output_outC.json

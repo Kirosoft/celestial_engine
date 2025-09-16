@@ -11,7 +11,7 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root/schemas/nodes/ChatNode.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root p: nodes/ChatNode-r8QkEj.json target: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root/nodes/ChatNode-r8QkEj.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root p: nodes/ChatNode-O8-HIz.json target: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root/nodes/ChatNode-O8-HIz.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root
@@ -19,6 +19,6 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root p: nodes/ChatNode-r8QkEj.json target: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root/nodes/ChatNode-r8QkEj.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root p: nodes/ChatNode-O8-HIz.json target: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root/nodes/ChatNode-O8-HIz.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root p: nodes/ChatNode-r8QkEj.json target: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root/nodes/ChatNode-r8QkEj.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root p: nodes/ChatNode-O8-HIz.json target: /home/ubuntu/celestial_engine/apps/web/.chatnode-test-root/nodes/ChatNode-O8-HIz.json

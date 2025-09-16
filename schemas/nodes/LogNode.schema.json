@@ -47,6 +47,6 @@
   "required": ["id","type","name","props"],
   "additionalProperties": true,
   "x-actions": [
-    { "name": "clear", "description": "Clear all log entries (cannot be undone)" }
+    { "name": "clear", "description": "Clears all log entries immediately (cannot be undone)" }
   ]
 }

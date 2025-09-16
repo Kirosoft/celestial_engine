@@ -23,7 +23,7 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: nodes/Task-0v06sk.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/nodes/Task-0v06sk.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: nodes/Task-3qKR8g.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/nodes/Task-3qKR8g.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
@@ -40,7 +40,7 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: nodes/Plan-5TksWb.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/nodes/Plan-5TksWb.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: nodes/Plan-8jCC2n.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/nodes/Plan-8jCC2n.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
@@ -57,7 +57,7 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: nodes/LLM-j5gseq.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/nodes/LLM-j5gseq.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: nodes/LLM-j46rra.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/nodes/LLM-j46rra.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root resolved: /home/ubuntu/celestial_engine/apps/web/.defaults-test-root
