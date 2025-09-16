@@ -1,0 +1,21 @@
+{
+  "id": "LLM-o9zfGN",
+  "type": "LLM",
+  "name": "LLM-o9zfGN",
+  "props": {
+    "promptTemplate": "{message}"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_ZBj-0-",
+        "targetId": "LogNode-YbrucX",
+        "kind": "flow"
+      }
+    ]
+  }
+}

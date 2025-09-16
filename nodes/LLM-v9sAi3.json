@@ -1,0 +1,16 @@
+{
+  "id": "LLM-v9sAi3",
+  "type": "LLM",
+  "name": "LLM-Demo",
+  "props": {
+    "model": "stub",
+    "promptTemplate": "Echo: {message}"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}
