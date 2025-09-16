@@ -1,0 +1,28 @@
+{
+  "id": "ChatNode-oahYox",
+  "type": "ChatNode",
+  "name": "ChatNode",
+  "props": {
+    "history": [
+      {
+        "id": "Q_CqOEzP",
+        "ts": 1758008028763,
+        "role": "user",
+        "content": "sdfsdf"
+      }
+    ]
+  },
+  "position": {
+    "x": -336.4394970667108,
+    "y": -375.0560374547908
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_uyj434",
+        "targetId": "LLM-4GSUSN",
+        "kind": "flow"
+      }
+    ]
+  }
+}

@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "generatedAt": "2025-09-15T19:17:27.737Z",
+  "generatedAt": "2025-09-15T21:05:01.415Z",
   "nodes": [
     {
       "id": "n1",
       "type": "Task",
       "name": "n1",
-      "propsHash": "c2e3f679c1e79ca59bd87182c364fe3eb65eebc5",
-      "mtime": "2025-09-15T19:17:27.737Z"
+      "propsHash": "216213b33a27b975953113dd6dc424c6428f3c73",
+      "mtime": "2025-09-15T21:05:01.415Z"
     },
     {
       "id": "n2",
       "type": "Task",
       "name": "n2",
-      "propsHash": "1e35d8471aa6efe9e3d659aad3ee9fda030c0820",
-      "mtime": "2025-09-15T19:17:27.737Z"
+      "propsHash": "0a53e391e5b1b39057c2064f8c87fff2f528cd65",
+      "mtime": "2025-09-15T21:05:01.415Z"
     }
   ]
 }

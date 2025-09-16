@@ -1,0 +1,47 @@
+{
+  "$id": "ChatNode.schema.json",
+  "title": "ChatNode",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "ChatNode" },
+    "name": { "type": "string" },
+    "props": {
+      "type": "object",
+      "properties": {
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "role", "content", "ts"],
+            "properties": {
+              "id": { "type": "string" },
+              "role": { "type": "string", "enum": ["user", "input", "assistant", "system"] },
+              "content": { "type": "string" },
+              "ts": { "type": "number" }
+            },
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "maxEntries": { "type": "number", "minimum": 1, "default": 200 },
+        "systemPrompt": { "type": "string" }
+      },
+      "required": ["history"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["id", "type", "name", "props"],
+  "additionalProperties": true,
+  "x-actions": [
+    {
+      "name": "send",
+      "label": "Send",
+      "kind": "runtime",
+      "description": "Appends a new user message and emits it on port 'message'"
+    }
+  ],
+  "x-intercept": true,
+  "x-defaultOutput": "message",
+  "x-execPolicy": { "autoRunOnInput": false }
+}

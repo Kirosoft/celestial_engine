@@ -1,0 +1,71 @@
+{
+  "$id": "nodes/ChatNode.schema.json",
+  "title": "ChatNode",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "ChatNode"
+    },
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "props": {
+      "type": "object",
+      "properties": {
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "ts": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "id",
+              "role",
+              "content",
+              "ts"
+            ]
+          }
+        }
+      },
+      "required": [
+        "history"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "props"
+  ]
+}

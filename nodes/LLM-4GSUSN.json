@@ -1,0 +1,15 @@
+{
+  "id": "LLM-4GSUSN",
+  "type": "LLM",
+  "name": "LLM",
+  "props": {
+    "model": "gpt-4"
+  },
+  "position": {
+    "x": 199.88462496976376,
+    "y": -183.43272871579623
+  },
+  "edges": {
+    "out": []
+  }
+}

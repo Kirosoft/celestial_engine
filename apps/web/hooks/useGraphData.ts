@@ -19,7 +19,34 @@ export function useGraphData(){
   } catch {/* ignore if context absent */}
 
   const transform = useCallback((api: ApiNodeList)=>{
-  const rfNodes: RFNode[] = api.nodes.map(n=>({ id: n.id, type: 'basicNode', position: n.position || { x: 0, y: 0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id } }));
+  const rfNodesRaw: RFNode[] = api.nodes.map(n=>{
+    if(n.type === 'ChatNode'){
+      return { id: n.id, type: 'chatNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, history: (n as any).props?.history || [], maxEntries: (n as any).props?.maxEntries, rawProps: (n as any).props } } as RFNode;
+    }
+    return { id: n.id, type: 'basicNode', position: n.position || { x: 0, y: 0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id } } as RFNode;
+  });
+  if(process.env.NODE_ENV !== 'production'){
+    const ids = rfNodesRaw.map(n=>n.id);
+    const dupeMap = new Map<string, number>();
+    ids.forEach(i=> dupeMap.set(i, (dupeMap.get(i)||0)+1));
+    const dupes = [...dupeMap.entries()].filter(([,c])=>c>1).map(([i,c])=>`${i}(${c})`);
+    if(dupes.length){
+      console.warn('[useGraphData][transform] duplicate ids before dedupe:', dupes.join(', '));
+    } else {
+      console.debug('[useGraphData][transform] node ids:', ids.join(', '));
+    }
+  }
+  // Dedupe by id, keep first occurrence; log warning for duplicates
+  const seen = new Set<string>();
+  const rfNodes: RFNode[] = [];
+  for(const n of rfNodesRaw){
+    if(seen.has(n.id)){
+      console.warn('[useGraphData] duplicate node id encountered, dropping duplicate', n.id);
+      continue;
+    }
+    seen.add(n.id);
+    rfNodes.push(n);
+  }
     const rfEdges: RFEdge[] = [];
     for(const n of api.nodes){
       if(n.edges?.out){
@@ -42,7 +69,32 @@ export function useGraphData(){
       if(currentGroupId){
         const sg = json as { nodes: any[]; edges: any[] };
         // Map proxy node types differently for style hints via data.type
-        const rfNodes: RFNode[] = sg.nodes.map(n=>({ id: n.id, type: 'basicNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, __proxy: n.type?.startsWith('GroupInputProxy') || n.type?.startsWith('GroupOutputProxy') } }));
+        const rfNodesRaw: RFNode[] = sg.nodes.map(n=>{
+          if(n.type === 'ChatNode'){
+            return { id: n.id, type: 'chatNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, history: (n as any).props?.history || [], maxEntries: (n as any).props?.maxEntries, rawProps: (n as any).props } } as RFNode;
+          }
+          return { id: n.id, type: 'basicNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, __proxy: n.type?.startsWith('GroupInputProxy') || n.type?.startsWith('GroupOutputProxy') } } as RFNode;
+        });
+        if(process.env.NODE_ENV !== 'production'){
+          const ids = rfNodesRaw.map(n=>n.id);
+          const dupeMap = new Map<string, number>();
+          ids.forEach(i=> dupeMap.set(i, (dupeMap.get(i)||0)+1));
+          const dupes = [...dupeMap.entries()].filter(([,c])=>c>1).map(([i,c])=>`${i}(${c})`);
+          if(dupes.length){
+            console.warn('[useGraphData][subgraph] duplicate ids before dedupe:', dupes.join(', '));
+          } else {
+            console.debug('[useGraphData][subgraph] node ids:', ids.join(', '));
+          }
+        }
+        const seen = new Set<string>();
+        const rfNodes: RFNode[] = [];
+        for(const n of rfNodesRaw){
+          if(seen.has(n.id)){
+            console.warn('[useGraphData] duplicate node id in subgraph, dropping duplicate', n.id);
+            continue;
+          }
+          seen.add(n.id); rfNodes.push(n);
+        }
         const rfEdges: RFEdge[] = (sg.edges||[]).map(e=>({ id: `${e.sourceId}:${e.id}`, source: e.sourceId, target: e.targetId, data:{ kind: e.kind }, type:'default' }));
         setNodes(rfNodes); setEdges(rfEdges);
       } else {

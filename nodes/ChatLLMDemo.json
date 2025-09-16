@@ -1,0 +1,46 @@
+{
+  "nodes": [
+    {
+      "id": "ChatNode-Seed",
+      "type": "ChatNode",
+      "name": "Chat",
+      "props": {
+        "history": [
+          { "id": "m1", "role": "system", "content": "You are a concise assistant.", "ts": 1 }
+        ],
+        "maxEntries": 200
+      },
+      "edges": []
+    },
+    {
+      "id": "LLM-Demo",
+      "type": "LLM",
+      "name": "LLM",
+      "props": {
+        "provider": "demo",
+        "model": "stub-1",
+        "prompt": "{{latest.message}}",
+        "temperature": 0.2
+      },
+      "edges": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-chat-to-llm",
+      "sourceId": "ChatNode-Seed",
+      "targetId": "LLM-Demo",
+      "sourcePort": "message",
+      "targetPort": "input",
+      "kind": "data"
+    },
+    {
+      "id": "e-llm-to-chat",
+      "sourceId": "LLM-Demo",
+      "targetId": "ChatNode-Seed",
+      "sourcePort": "output",
+      "targetPort": "message",
+      "kind": "data"
+    }
+  ]
+}

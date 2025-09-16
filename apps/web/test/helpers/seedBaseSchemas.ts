@@ -17,7 +17,7 @@ export async function seedBaseSchemasIfNeeded(){
   // Task + Group (Group gets ports structure added)
   await ensureTempSchema({ typeName: 'Task' });
   await ensureTempSchema({ typeName: 'Group', extraProps: { properties: { ports: { type: 'object', properties: { inputs: { type:'array', items:{ type:'string'} }, outputs: { type:'array', items:{ type:'string'} } }, required:['inputs','outputs'] } }, required: ['id','type','name','ports'] } });
-  for(const t of ['Plan','LLM','ToolCall','Router','Merge','Code','GitHubInput','GitHubOutput','Eval']){
+  for(const t of ['Plan','LLM','ToolCall','Router','Merge','Code','GitHubInput','GitHubOutput','Eval','ChatNode']){
     await ensureTempSchema({ typeName: t });
   }
   await fs.writeFile(marker, '');

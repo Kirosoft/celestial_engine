@@ -1,10 +1,14 @@
 import React, { useCallback, useState, useEffect } from 'react';
-import ReactFlow, { Background, Controls, MiniMap, Node, NodeDragHandler, OnSelectionChangeParams, Connection, Handle, Position, Edge as RFEdge } from 'reactflow';
+import ReactFlow, { Background, Controls, MiniMap, Node, NodeDragHandler, OnSelectionChangeParams, Connection, Handle, Position, Edge as RFEdge, type NodeProps } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { useGraphData } from '../hooks/useGraphData';
 import { useUIState } from '../state/uiState';
+import { ChatNode } from './ChatNode';
 
 export function Canvas(){
+  // Avoid rendering ReactFlow server-side or during the very first hydration tick to reduce spurious dev warnings
+  const [mounted, setMounted] = useState(false);
+  useEffect(()=>{ setMounted(true); }, []);
   const { nodes, edges, refresh, loading, error, onNodesChange, persistPosition, addEdgeLocal } = useGraphData();
   const { setSelectedNodeIds, setSelectedEdge, selectedNodeIds, selectedEdgeId, currentGroupId, exitGroup } = useUIState() as any;
   const [edgeError, setEdgeError] = useState<string|undefined>();
@@ -105,21 +109,23 @@ export function Canvas(){
           <div style={{ fontSize:12, color:'#ccc' }}>Inside Group: <code>{currentGroupId}</code> <span style={{ color:'#888' }}>— edges & editing limited</span></div>
         </div>
       )}
-      <ReactFlow 
-        nodes={nodes}
-        edges={edges}
-        nodeTypes={nodeTypes}
-        onPaneClick={onPaneClick}
-        onNodesChange={onNodesChange}
-        onNodeDragStop={onNodeDragStop}
-        onSelectionChange={onSelectionChange}
-        onEdgeClick={onEdgeClick}
-        onConnect={onConnect}
-        fitView>
-        <Background />
-        <MiniMap />
-        <Controls />
-      </ReactFlow>
+      {mounted && (
+        <ReactFlow
+          nodes={nodes}
+          edges={edges}
+          nodeTypes={nodeTypes}
+          onPaneClick={onPaneClick}
+          onNodesChange={onNodesChange}
+          onNodeDragStop={onNodeDragStop}
+          onSelectionChange={onSelectionChange}
+          onEdgeClick={onEdgeClick}
+          onConnect={onConnect}
+          fitView>
+          <Background />
+          <MiniMap />
+          <Controls />
+        </ReactFlow>
+      )}
       <SelectionBadge />
       {edgeError && <div style={{ position:'absolute', bottom:50, right:10, background:'#b33', color:'#fff', padding:'6px 10px', borderRadius:4, fontSize:12 }}>{edgeError}</div>}
       <button style={{ position:'absolute', bottom:10, right:10 }} onClick={refresh}>Reload</button>
@@ -138,9 +144,10 @@ function SelectionBadge(){
 }
 
 // Basic node renderer with source (bottom) and target (top) handles
-const BasicNode: React.FC<any> = ({ data }) => {
-  const label = data?.label || data?.type || 'node';
-  const nodeId = data?.nodeId || data?.id || label; // ensure we have canonical id
+const BasicNode: React.FC<NodeProps<any>> = ({ id, data }) => {
+  // React Flow guarantees id, but add defensive fallback
+  const nodeId = id || data?.nodeId || data?.id || data?.label;
+  const label = data?.label || data?.type || nodeId || 'node';
   const handleSize = 10; // smaller connectors
   const commonHandle: React.CSSProperties = {
     width: handleSize,
@@ -151,12 +158,17 @@ const BasicNode: React.FC<any> = ({ data }) => {
   const isGroup = data?.type === 'Group';
   const isProxy = data?.__proxy;
   const { enterGroup } = useUIState() as any;
+  // If for any reason we do not have an id context yet, render a lightweight placeholder (prevents Handle error #010)
+  if(!nodeId){
+    return <div style={{ padding:4, fontSize:11, background:'#332', border:'1px solid #553', borderRadius:4 }}>Loading…</div>;
+  }
   return (
     <div style={{ padding:'8px 6px', paddingTop:12, border:'1px solid '+(isGroup?'#5c7fff': isProxy? '#888':'#4a5560'), borderRadius:4, background: isGroup ? '#1e2b40' : isProxy ? '#262626' : '#222', color:'#eee', fontSize:12, minWidth: isProxy?80:120, textAlign:'center', lineHeight:1.2, position:'relative' }}>
-	<Handle data-testid="handle-target" type="target" position={Position.Top} style={{ ...commonHandle, background:'#888', transform:'translate(-50%, -55%)' }} />
+  {/* Only render handles if we have a valid node id (defensive) */}
+	{nodeId && <Handle data-testid="handle-target" type="target" position={Position.Top} style={{ ...commonHandle, background:'#888', transform:'translate(-50%, -55%)' }} />}
       <div style={{ pointerEvents:'none', fontWeight:500, padding:'0 2px' }}>{label}</div>
-	{!isProxy && <Handle data-testid="handle-source" type="source" position={Position.Bottom} style={{ ...commonHandle, background:'#3d8', transform:'translate(-50%, 55%)' }} />}
-    {isProxy && <Handle data-testid="handle-source" type="source" position={Position.Bottom} style={{ ...commonHandle, background: data?.type?.includes('Input') ? '#3d8' : '#d83', transform:'translate(-50%, 55%)' }} />}
+	{!isProxy && nodeId && <Handle data-testid="handle-source" type="source" position={Position.Bottom} style={{ ...commonHandle, background:'#3d8', transform:'translate(-50%, 55%)' }} />}
+    {isProxy && nodeId && <Handle data-testid="handle-source" type="source" position={Position.Bottom} style={{ ...commonHandle, background: data?.type?.includes('Input') ? '#3d8' : '#d83', transform:'translate(-50%, 55%)' }} />}
     {isGroup && (
   <button onClick={()=>enterGroup(nodeId)} style={{ position:'absolute', top:-10, right:-10, background:'#2f3d4a', border:'1px solid #3d4d5c', color:'#fff', fontSize:10, padding:'2px 4px', borderRadius:4, cursor:'pointer' }}>Expand</button>
     )}
@@ -165,7 +177,7 @@ const BasicNode: React.FC<any> = ({ data }) => {
 };
 
 // Stable nodeTypes object to avoid React Flow warning #002 about recreating node/edge type maps every render.
-const nodeTypes = { basicNode: BasicNode } as const;
+const nodeTypes = { basicNode: BasicNode, chatNode: ChatNode } as const;
 
 function ErrorBanner({ hasGroup }: { hasGroup: boolean }){
   const top = hasGroup ? 40 : 8; // leave room for Back button row
