@@ -14,31 +14,38 @@ export const ChatNode: React.FC<any> = ({ data }) => {
   const [clearing, setClearing] = useState(false);
 
   useEffect(()=>{
+    console.debug('[ChatNode] mount', { nodeId, initialHistory: history.length });
     const el = scrollRef.current; if(!el) return;
     el.scrollTop = el.scrollHeight;
   }, [localHistory.length]);
 
   useEffect(()=>{
     if(history.length !== localHistory.length){
+      console.debug('[ChatNode] external history change detected', { nodeId, old: localHistory.length, next: history.length });
       setLocalHistory(history);
     }
   }, [history, localHistory.length]);
 
   const onSend = useCallback(async ()=>{
     if(!composer.trim() || saving) return;
+    console.debug('[ChatNode] onSend start', { nodeId, composerPreview: composer.slice(0,40), historySize: localHistory.length });
     const next = appendEntry(localHistory, { role: 'user', content: composer.trim() }, maxEntries || rawProps.maxEntries || 200);
+    console.debug('[ChatNode] appendEntry', { nodeId, newSize: next.length });
     setLocalHistory(next);
     setComposer('');
     setSaving(true);
     try {
       const patch = { props: { ...rawProps, history: next } };
+      console.debug('[ChatNode] persisting history', { nodeId, historySize: next.length });
       const res = await fetch(`/api/nodes/${nodeId}`, { method:'PUT', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(patch) });
       if(!res.ok){
         console.warn('[ChatNode] persist failed', res.status);
       } else {
         // Emit user message on logical 'message' port (MVP: port name reused by consumers)
   // Call server API to emit so we don't bundle fs-dependent server code client-side
+  console.debug('[ChatNode] emitting message', { nodeId, contentLength: composer.trim().length });
   await fetch(`/api/nodes/${nodeId}/emit`, { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify({ port:'message', value: composer.trim() }) });
+        console.debug('[ChatNode] emit request sent', { nodeId });
         window.dispatchEvent(new Event('graph:refresh-request'));
       }
     } catch(e){ console.warn('[ChatNode] error', e); }
@@ -54,6 +61,7 @@ export const ChatNode: React.FC<any> = ({ data }) => {
 
   const onClear = useCallback(async ()=>{
     if(clearing || saving || localHistory.length === 0) return;
+    console.debug('[ChatNode] onClear start', { nodeId, currentSize: localHistory.length });
     setClearing(true);
     try {
       const patch = { props: { ...rawProps, history: [] } };
@@ -61,6 +69,7 @@ export const ChatNode: React.FC<any> = ({ data }) => {
       if(!res.ok){
         console.warn('[ChatNode] clear failed', res.status);
       } else {
+        console.debug('[ChatNode] clear ok', { nodeId });
         setLocalHistory([]);
         window.dispatchEvent(new Event('graph:refresh-request'));
       }

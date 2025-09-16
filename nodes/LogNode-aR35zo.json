@@ -3,12 +3,45 @@
   "type": "LogNode",
   "name": "Log-Demo",
   "props": {
-    "history": [],
+    "history": [
+      {
+        "id": "vT6Ob0C2",
+        "ts": 1758049115141,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Assistant: test6"
+      },
+      {
+        "id": "FkeLjSoJ",
+        "ts": 1758049120070,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Assistant: test7"
+      },
+      {
+        "id": "1fxxUW2n",
+        "ts": 1758049129709,
+        "sourceId": "ChatNode-Hy5dGa",
+        "port": "message",
+        "kind": "text",
+        "preview": "testa"
+      },
+      {
+        "id": "BWErQJVr",
+        "ts": 1758049135357,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Assistant: test8"
+      }
+    ],
     "maxEntries": 5
   },
   "position": {
-    "x": 1076.5069016471032,
-    "y": 388.4004007051841
+    "x": 814.949833107452,
+    "y": 641.7678829339577
   },
   "edges": {
     "out": []

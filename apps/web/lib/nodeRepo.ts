@@ -49,9 +49,11 @@ export async function updateNode(id: string, patch: Partial<NodeFile>): Promise<
 
 export async function updateNodePosition(id: string, position: Position){
   const node = await getNode(id);
+  const prev = node.position;
   node.position = position;
   await FileRepo.writeJson(nodePath(node.id), node);
   await IndexRepo.addOrUpdateNodeIndex(node as any);
+  console.debug('[nodeRepo] position updated', { id: node.id, from: prev, to: position });
   return node;
 }
 

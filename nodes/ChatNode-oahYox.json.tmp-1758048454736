@@ -1,0 +1,34 @@
+{
+  "id": "ChatNode-oahYox",
+  "type": "ChatNode",
+  "name": "ChatNode",
+  "props": {
+    "history": [
+      {
+        "id": "9sTBk2R0",
+        "ts": 1758047914036,
+        "role": "user",
+        "content": "two"
+      },
+      {
+        "id": "G-Cre80H",
+        "ts": 1758048174299,
+        "role": "user",
+        "content": "ok"
+      }
+    ]
+  },
+  "position": {
+    "x": 166.91136640328597,
+    "y": 535.3355354607346
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_07U2zc",
+        "targetId": "LLM-5V3DK5",
+        "kind": "flow"
+      }
+    ]
+  }
+}

@@ -9,7 +9,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { x, y } = req.body || {};
   if(typeof x !== 'number' || typeof y !== 'number') return res.status(400).json({ error: { code: 'bad_position', message: 'x and y numbers required' } });
   try {
+    console.debug('[api position] request', { id, x, y });
     const node = await updateNodePosition(id, { x, y });
+    console.debug('[api position] updated', { id, pos: node.position });
     res.status(200).json({ node });
-  } catch(e){ sendError(res, e); }
+  } catch(e){
+    console.error('[api position] error', e);
+    sendError(res, e);
+  }
 }

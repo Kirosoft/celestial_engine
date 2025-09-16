@@ -7,6 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { port, value } = req.body || {};
   if(!port) return res.status(400).json({ error: { code:'missing_port' } });
   try {
+    console.debug('[api emit] request', { id, port, valuePreview: typeof value === 'string' ? value.slice(0,60) : value });
     await emitFrom(id, port, value);
     res.status(200).json({ ok: true });
   } catch(e: any){

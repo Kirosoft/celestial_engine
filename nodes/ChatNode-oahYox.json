@@ -3,11 +3,90 @@
   "type": "ChatNode",
   "name": "ChatNode",
   "props": {
-    "history": []
+    "history": [
+      {
+        "id": "9sTBk2R0",
+        "ts": 1758047914036,
+        "role": "user",
+        "content": "two"
+      },
+      {
+        "id": "G-Cre80H",
+        "ts": 1758048174299,
+        "role": "user",
+        "content": "ok"
+      },
+      {
+        "id": "-7ZMo0ND",
+        "ts": 1758048454719,
+        "role": "user",
+        "content": "three"
+      },
+      {
+        "id": "GheqoZdH",
+        "ts": 1758048501255,
+        "role": "user",
+        "content": "4"
+      },
+      {
+        "id": "ne3katPy",
+        "ts": 1758048550367,
+        "role": "user",
+        "content": "a"
+      },
+      {
+        "id": "K_1yCgIc",
+        "ts": 1758048558218,
+        "role": "user",
+        "content": "a"
+      },
+      {
+        "id": "KlUn9vBw",
+        "ts": 1758048685617,
+        "role": "user",
+        "content": "test2"
+      },
+      {
+        "id": "Hoe6oNAQ",
+        "ts": 1758048695159,
+        "role": "user",
+        "content": "test3"
+      },
+      {
+        "id": "lXbGN32s",
+        "ts": 1758048991911,
+        "role": "user",
+        "content": "test4"
+      },
+      {
+        "id": "oU__TWNs",
+        "ts": 1758049002139,
+        "role": "user",
+        "content": "test5"
+      },
+      {
+        "id": "D6G2Kjq_",
+        "ts": 1758049114865,
+        "role": "user",
+        "content": "test6"
+      },
+      {
+        "id": "73e13MTU",
+        "ts": 1758049119986,
+        "role": "user",
+        "content": "test7"
+      },
+      {
+        "id": "tYLVbglt",
+        "ts": 1758049135264,
+        "role": "user",
+        "content": "test8"
+      }
+    ]
   },
   "position": {
-    "x": 215.28909608167817,
-    "y": -34.28875716186502
+    "x": 160.4942542511824,
+    "y": 246.56548861607467
   },
   "edges": {
     "out": [
