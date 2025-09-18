@@ -8,7 +8,7 @@
     "provider": "ollama",
     "ollamaBaseUrl": "http://localhost:11434",
     "temperature": 0.7,
-    "maxOutputTokens": 512
+    "maxOutputTokens": 25000
   },
   "logging": {
     "level": "debug"

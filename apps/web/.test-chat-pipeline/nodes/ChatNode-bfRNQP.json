@@ -1,0 +1,19 @@
+{
+  "id": "ChatNode-bfRNQP",
+  "type": "ChatNode",
+  "name": "ChatNode-bfRNQP",
+  "props": {},
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_Ul94Od",
+        "targetId": "LLM-WO82ny",
+        "kind": "flow"
+      }
+    ]
+  }
+}

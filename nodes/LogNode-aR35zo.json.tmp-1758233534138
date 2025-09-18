@@ -1,0 +1,51 @@
+{
+  "id": "LogNode-aR35zo",
+  "type": "LogNode",
+  "name": "Log-Demo",
+  "props": {
+    "history": [
+      {
+        "id": "d5v3efry",
+        "ts": 1758233421583,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Hi there! 😊 How can I help you today?"
+      },
+      {
+        "id": "0dc3hf4F",
+        "ts": 1758233462455,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Why did the podiatrist break up with the shoe salesman? \n\nHe said their relationship just wasn't walking anywhere! 😂\n\n…"
+      },
+      {
+        "id": "LX9Bd0ws",
+        "ts": 1758233489089,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Hi there! 😊 How can I help you today?"
+      },
+      {
+        "id": "12B9z-iF",
+        "ts": 1758233513954,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Why did the scientist break up with the atom?\n\nBecause he said it had too many protons! 😂\n\n\n\nHope that made you smile!"
+      }
+    ],
+    "maxEntries": 5,
+    "width": 414,
+    "contentHeight": 193
+  },
+  "position": {
+    "x": 654.6074529839007,
+    "y": 429.27106535249334
+  },
+  "edges": {
+    "out": []
+  }
+}

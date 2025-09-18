@@ -1,4 +1,5 @@
 import { FileRepo } from './fileRepo';
+import { clearValidatorCache } from './validator';
 import { readJson } from './fileRepo';
 import { NotFoundError, PathEscapeError } from './errors';
 
@@ -76,4 +77,5 @@ export async function listNodeTypeSchemas(){
 
 export async function reloadSchemas(){
   loaded = false; cache = {}; await loadAll();
+  try { clearValidatorCache(); } catch { /* ignore */ }
 }

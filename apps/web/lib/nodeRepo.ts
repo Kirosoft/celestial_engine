@@ -5,7 +5,7 @@ import { assertValidNode } from './validator';
 import { NotFoundError, ConflictError, CycleError } from './errors';
 
 export interface Position { x: number; y: number }
-export interface EdgeOut { id: string; targetId: string; kind: 'flow'|'data'; sourcePort?: string; targetPort?: string }
+export interface EdgeOut { id: string; targetId: string; kind: 'flow'|'data'; sourcePort?: string; targetPort?: string; varName?: string }
 export interface NodeFile { id: string; type: string; name: string; position?: Position; props?: any; edges?: { out: EdgeOut[] }; ports?: { inputs: string[]; outputs: string[] }; subgraphRef?: string }
 
 const nodesDir = 'nodes';
@@ -134,7 +134,7 @@ function detectCycle(source: NodeFile, targetId: string, all: NodeFile[]): boole
   return false;
 }
 
-export async function addEdge(sourceId: string, targetId: string, kind: 'flow'|'data'='flow'){
+export async function addEdge(sourceId: string, targetId: string, kind: 'flow'|'data'='flow', options: { varName?: string } = {}){
   if(sourceId === targetId) throw new CycleError('Self-loop not allowed');
   const source = await getNode(sourceId);
   const target = await getNode(targetId); // ensure exists
@@ -144,7 +144,7 @@ export async function addEdge(sourceId: string, targetId: string, kind: 'flow'|'
   const all = await listNodes();
   if(detectCycle(source, targetId, all)) throw new CycleError('Edge would create a cycle');
   source.edges = source.edges || { out: [] };
-  const edge: EdgeOut = { id: 'e_'+nanoid(6), targetId, kind };
+  const edge: EdgeOut = { id: 'e_'+nanoid(6), targetId, kind, varName: options.varName };
   source.edges.out.push(edge);
   await FileRepo.writeJson(nodePath(source.id), source);
   await IndexRepo.addOrUpdateNodeIndex(source as any);

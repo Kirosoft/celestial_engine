@@ -3,22 +3,22 @@
 [FileRepo] list() result: ["schemas/nodes/ChatNode.schema.json"]
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: schemas/nodes/ChatNode.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\schemas\nodes\ChatNode.schema.json
-[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root glob: schemas/nodes/*.schema.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
+[FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root glob: schemas/nodes/*.schema.json
 [FileRepo] list() result: ["schemas/nodes/ChatNode.schema.json"]
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: schemas/nodes/ChatNode.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\schemas\nodes\ChatNode.schema.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: schemas/nodes/ChatNode.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\schemas\nodes\ChatNode.schema.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: nodes/ChatNode-fNYl9q.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\nodes\ChatNode-fNYl9q.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\.awb\index.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: nodes/ChatNode-EpqF_d.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\nodes\ChatNode-EpqF_d.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\.awb\index.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\.awb\index.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\.awb\index.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: nodes/ChatNode-fNYl9q.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\nodes\ChatNode-fNYl9q.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: nodes/ChatNode-fNYl9q.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\nodes\ChatNode-fNYl9q.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: nodes/ChatNode-EpqF_d.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\nodes\ChatNode-EpqF_d.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root p: nodes/ChatNode-EpqF_d.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.chatnode-test-root\nodes\ChatNode-EpqF_d.json

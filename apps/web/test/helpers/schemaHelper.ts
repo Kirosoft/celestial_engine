@@ -39,10 +39,14 @@ export async function ensureTempSchema(opts: TempSchemaOptions = {}){
       type: 'object',
       properties: {
         model: { type: 'string' },
+        provider: { type: 'string', enum: ['openai','ollama'], default: 'openai' },
         system: { type: 'string' },
+        autoDerivePromptFromFile: { type: 'boolean', default: true, description: 'If true, derive {prompt} from file when not explicitly provided.' },
         promptTemplate: { type: 'string' },
+        ollamaBaseUrl: { type: 'string', default: 'http://localhost:11434' },
         temperature: { type: 'number', minimum: 0, maximum: 2, default: 0.7 },
-        maxOutputTokens: { type: 'integer', minimum: 1, maximum: 8192, default: 1024 }
+        maxOutputTokens: { type: 'integer', minimum: 1, maximum: 32768, default: 4096 },
+        outputCharLimit: { type: 'integer', minimum: 512, maximum: 524288, default: 32768 }
       },
       required: ['model'],
       additionalProperties: false

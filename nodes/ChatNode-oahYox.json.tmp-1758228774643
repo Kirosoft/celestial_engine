@@ -1,0 +1,138 @@
+{
+  "id": "ChatNode-oahYox",
+  "type": "ChatNode",
+  "name": "ChatNode",
+  "props": {
+    "history": [
+      {
+        "id": "F-uW19Xp",
+        "ts": 1758225815978,
+        "role": "user",
+        "content": "hello"
+      },
+      {
+        "id": "siNCA2ex",
+        "ts": 1758225879258,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "c343WAxA",
+        "ts": 1758226435020,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "ZtbJLRDl",
+        "ts": 1758226556271,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "ZQ8f2y5l",
+        "ts": 1758226642066,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "v2zdPUEM",
+        "ts": 1758226961672,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "h_ZaWq7w",
+        "ts": 1758227465456,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "ir90KKL0",
+        "ts": 1758227581398,
+        "role": "user",
+        "content": "hello"
+      },
+      {
+        "id": "Cx912sJo",
+        "ts": 1758227629062,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "9VDMXpe1",
+        "ts": 1758227779504,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "pQGLOQ6s",
+        "ts": 1758227805701,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "lzrFSOGf",
+        "ts": 1758227957198,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "49D1tLMV",
+        "ts": 1758228014928,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "DAfUSc6D",
+        "ts": 1758228075239,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "0KrHaDSR",
+        "ts": 1758228176464,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "chPOJ1p_",
+        "ts": 1758228218130,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "SBAs-653",
+        "ts": 1758228448277,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "i5dnkfvG",
+        "ts": 1758228551752,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "nIC8KNNf",
+        "ts": 1758228603638,
+        "role": "user",
+        "content": "hi"
+      }
+    ],
+    "width": 317,
+    "contentHeight": 138
+  },
+  "position": {
+    "x": 223.13955278565686,
+    "y": -180.42299635303334
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_07U2zc",
+        "targetId": "LLM-5V3DK5",
+        "kind": "flow"
+      }
+    ]
+  }
+}

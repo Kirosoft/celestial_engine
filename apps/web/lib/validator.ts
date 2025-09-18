@@ -8,6 +8,10 @@ addFormats(ajv);
 
 const compiled: Record<string, any> = {};
 
+export function clearValidatorCache(){
+  for(const k of Object.keys(compiled)) delete compiled[k];
+}
+
 async function ensureCompiled(type: string){
   if(!compiled[type]){
     const schema = await getNodeTypeSchema(type);

@@ -1,0 +1,66 @@
+{
+  "id": "ChatNode-oahYox",
+  "type": "ChatNode",
+  "name": "ChatNode",
+  "props": {
+    "history": [
+      {
+        "id": "p2F06FLq",
+        "ts": 1758225015022,
+        "role": "user",
+        "content": "hello"
+      },
+      {
+        "id": "ZZDM5MAS",
+        "ts": 1758225186700,
+        "role": "user",
+        "content": "hello"
+      },
+      {
+        "id": "7Yd7R0jZ",
+        "ts": 1758225330257,
+        "role": "user",
+        "content": "hello"
+      },
+      {
+        "id": "9FOKAhEP",
+        "ts": 1758225370322,
+        "role": "user",
+        "content": "hello"
+      },
+      {
+        "id": "vb7_01tl",
+        "ts": 1758225422145,
+        "role": "user",
+        "content": "hello"
+      },
+      {
+        "id": "qj_FMKf1",
+        "ts": 1758225492908,
+        "role": "user",
+        "content": "hello"
+      },
+      {
+        "id": "2uE93A06",
+        "ts": 1758225620885,
+        "role": "user",
+        "content": "hello"
+      }
+    ],
+    "width": 317,
+    "contentHeight": 138
+  },
+  "position": {
+    "x": 223.13955278565686,
+    "y": -180.42299635303334
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_07U2zc",
+        "targetId": "LLM-5V3DK5",
+        "kind": "flow"
+      }
+    ]
+  }
+}

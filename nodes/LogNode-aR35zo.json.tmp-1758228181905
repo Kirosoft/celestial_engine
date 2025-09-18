@@ -1,0 +1,27 @@
+{
+  "id": "LogNode-aR35zo",
+  "type": "LogNode",
+  "name": "Log-Demo",
+  "props": {
+    "history": [
+      {
+        "id": "U7JVrv52",
+        "ts": 1758228091509,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Okay, I see the context is simply \"Task: hi\". \n\nThis is a very minimal prompt! It seems like you're just testing the sy…"
+      }
+    ],
+    "maxEntries": 5,
+    "width": 414,
+    "contentHeight": 193
+  },
+  "position": {
+    "x": 895.980134579876,
+    "y": 519.966992388375
+  },
+  "edges": {
+    "out": []
+  }
+}

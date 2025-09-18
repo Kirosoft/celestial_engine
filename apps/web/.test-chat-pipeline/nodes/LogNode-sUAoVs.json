@@ -1,0 +1,24 @@
+{
+  "id": "LogNode-sUAoVs",
+  "type": "LogNode",
+  "name": "LogNode-sUAoVs",
+  "props": {
+    "history": [
+      {
+        "id": "ZlvXfqxt",
+        "ts": 1758231628364,
+        "sourceId": "LLM-WO82ny",
+        "port": "output",
+        "kind": "text",
+        "preview": "Assistant(gpt-3.5-turbo): Hello"
+      }
+    ]
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

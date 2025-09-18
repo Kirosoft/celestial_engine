@@ -1,0 +1,24 @@
+{
+  "id": "LLM-5V3DK5",
+  "type": "LLM",
+  "name": "LLM",
+  "props": {
+    "model": "gemma3:12b",
+    "provider": "ollama",
+    "system": "abc",
+    "promptTemplate": "Use the following context:\\n\\n{fred}{fred2} \\n\\nTask: {prompt}"
+  },
+  "position": {
+    "x": 818.6591991540157,
+    "y": 341.5057098062021
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_z5cVp-",
+        "targetId": "LogNode-aR35zo",
+        "kind": "flow"
+      }
+    ]
+  }
+}

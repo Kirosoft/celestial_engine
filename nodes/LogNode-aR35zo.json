@@ -5,53 +5,21 @@
   "props": {
     "history": [
       {
-        "id": "Lf0SDQIG",
-        "ts": 1758221272791,
+        "id": "vxZgpcft",
+        "ts": 1758232540897,
         "sourceId": "LLM-5V3DK5",
         "port": "output",
         "kind": "text",
-        "preview": "Why don't scientists trust atoms?\n\nBecause they make up everything! 😂\n\n\n\nHope that made you smile! 😊"
-      },
-      {
-        "id": "AogPcRc-",
-        "ts": 1758221426045,
-        "sourceId": "LLM-5V3DK5",
-        "port": "output",
-        "kind": "text",
-        "preview": "2 + 2 = 4"
-      },
-      {
-        "id": "CD-rBnAy",
-        "ts": 1758221537661,
-        "sourceId": "LLM-5V3DK5",
-        "port": "output",
-        "kind": "text",
-        "preview": "Hello! #sneeze#"
-      },
-      {
-        "id": "2oqYaJxP",
-        "ts": 1758221978740,
-        "sourceId": "LLM-5V3DK5",
-        "port": "output",
-        "kind": "text",
-        "preview": "testing 1 2 3 #sneeze#"
-      },
-      {
-        "id": "BbL-UiNf",
-        "ts": 1758222009482,
-        "sourceId": "LLM-5V3DK5",
-        "port": "output",
-        "kind": "text",
-        "preview": "I'm Gemma, a large language model created by the Gemma team at Google DeepMind. I'm an open-weights model, meaning I'm …"
+        "preview": "Why did the podiatrist break up with the foot model? \n\nBecause he said she was always toeing the line! 😂\n\n\n\nHope that …"
       }
     ],
     "maxEntries": 5,
-    "width": 600,
-    "contentHeight": 360
+    "width": 414,
+    "contentHeight": 193
   },
   "position": {
-    "x": 893.5230628476089,
-    "y": 465.71294393099794
+    "x": 654.6074529839007,
+    "y": 429.27106535249334
   },
   "edges": {
     "out": []

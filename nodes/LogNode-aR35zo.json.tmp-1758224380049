@@ -1,0 +1,35 @@
+{
+  "id": "LogNode-aR35zo",
+  "type": "LogNode",
+  "name": "Log-Demo",
+  "props": {
+    "history": [
+      {
+        "id": "9bgTriGe",
+        "ts": 1758224299848,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Why don't scientists trust atoms?\n\nBecause they make up everything! 😂\n\n\n\nHope that gave you a chuckle! 😊"
+      },
+      {
+        "id": "hsgEsAV3",
+        "ts": 1758224365085,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Hello! 😊 \n\nIt's nice to hear from you. How are you doing today? \n\n\n\nWhat's on your mind?"
+      }
+    ],
+    "maxEntries": 5,
+    "width": 574,
+    "contentHeight": 327
+  },
+  "position": {
+    "x": 932.1475368442341,
+    "y": 410.60450053637044
+  },
+  "edges": {
+    "out": []
+  }
+}

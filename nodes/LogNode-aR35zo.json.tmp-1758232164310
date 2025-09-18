@@ -1,0 +1,35 @@
+{
+  "id": "LogNode-aR35zo",
+  "type": "LogNode",
+  "name": "Log-Demo",
+  "props": {
+    "history": [
+      {
+        "id": "4PsdjELF",
+        "ts": 1758232074120,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Why don't scientists trust atoms?\n\nBecause they make up everything! 😂\n\n\n\nHope that made you smile! 😊"
+      },
+      {
+        "id": "KtHEHFTp",
+        "ts": 1758232097578,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Why did the germ cross the microscope? \n\nTo get to the other slide! 😂\n\n\n\nHope that gave you a chuckle! 😊"
+      }
+    ],
+    "maxEntries": 5,
+    "width": 414,
+    "contentHeight": 193
+  },
+  "position": {
+    "x": 587.872404104319,
+    "y": 491.9859305646304
+  },
+  "edges": {
+    "out": []
+  }
+}

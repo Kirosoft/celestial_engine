@@ -1,0 +1,15 @@
+{
+  "id": "FileReaderNode-ksCIfF",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-ksCIfF",
+  "props": {
+    "mode": "single"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

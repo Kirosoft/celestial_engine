@@ -1,0 +1,35 @@
+{
+  "id": "LogNode-aR35zo",
+  "type": "LogNode",
+  "name": "Log-Demo",
+  "props": {
+    "history": [
+      {
+        "id": "PIdGF-1B",
+        "ts": 1758232331381,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Why did the podiatrist break up with the shoe salesman? \n\nBecause he said their relationship just wasn't *sole-mate* ma…"
+      },
+      {
+        "id": "k61WySbU",
+        "ts": 1758232490150,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Why did the podiatrist break up with the foot model? \n\nBecause he said she was always toeing the line! 😂\n\n\n\nHope that …"
+      }
+    ],
+    "maxEntries": 5,
+    "width": 414,
+    "contentHeight": 193
+  },
+  "position": {
+    "x": 587.872404104319,
+    "y": 491.9859305646304
+  },
+  "edges": {
+    "out": []
+  }
+}

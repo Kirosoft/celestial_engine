@@ -1,0 +1,17 @@
+{
+  "llm": {
+    "baseUrl": "",
+    "apiKey": "",
+    "defaultModel": "gpt-3.5-turbo",
+    "timeoutMs": 1500,
+    "useStreaming": false,
+    "maxOutputTokens": 4096,
+    "outputCharLimit": 32768
+  },
+  "logging": {
+    "level": "info"
+  },
+  "features": {
+    "enableExperimental": false
+  }
+}

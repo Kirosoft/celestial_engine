@@ -1,0 +1,13 @@
+{
+  "id": "Task-Vh3xNN",
+  "type": "Task",
+  "name": "Solo",
+  "props": {},
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

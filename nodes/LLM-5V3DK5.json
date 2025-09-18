@@ -3,13 +3,19 @@
   "type": "LLM",
   "name": "LLM",
   "props": {
-    "model": "gemma3:12b",
     "provider": "ollama",
-    "system": "always add #sneeze# on the end"
+    "autoDerivePromptFromFile": false,
+    "ollamaBaseUrl": "http://localhost:11434",
+    "temperature": 0.7,
+    "maxOutputTokens": 400,
+    "outputCharLimit": 2000,
+    "model": "gemma3:12b",
+    "system": "",
+    "promptTemplate": "{test1}{fred2} {fred1}"
   },
   "position": {
-    "x": 823.4277771804374,
-    "y": 313.340610172133
+    "x": 697.6591991540157,
+    "y": 272.5057098062021
   },
   "edges": {
     "out": [

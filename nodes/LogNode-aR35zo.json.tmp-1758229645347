@@ -1,0 +1,27 @@
+{
+  "id": "LogNode-aR35zo",
+  "type": "LogNode",
+  "name": "Log-Demo",
+  "props": {
+    "history": [
+      {
+        "id": "b2uljnbk",
+        "ts": 1758229551492,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Okay, here are jokes based on your context:\n\n**Podiatrist Joke:**\n\nWhy did the podiatrist break up with the foot model?…"
+      }
+    ],
+    "maxEntries": 5,
+    "width": 414,
+    "contentHeight": 193
+  },
+  "position": {
+    "x": 822.872404104319,
+    "y": 590.9859305646304
+  },
+  "edges": {
+    "out": []
+  }
+}

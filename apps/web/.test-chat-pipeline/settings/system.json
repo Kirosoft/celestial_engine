@@ -4,7 +4,9 @@
     "apiKey": "",
     "defaultModel": "gpt-3.5-turbo",
     "timeoutMs": 60000,
-    "useStreaming": false
+    "useStreaming": false,
+    "maxOutputTokens": 4096,
+    "outputCharLimit": 32768
   },
   "logging": {
     "level": "info"

@@ -1,0 +1,17 @@
+{
+  "id": "__input_inA",
+  "type": "GroupInputProxy",
+  "name": "inA",
+  "position": {
+    "x": 40,
+    "y": 60
+  },
+  "props": {
+    "port": "inA",
+    "groupId": "Group-HgESFg",
+    "kind": "input"
+  },
+  "edges": {
+    "out": []
+  }
+}

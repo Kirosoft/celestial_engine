@@ -10,8 +10,8 @@
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
 [FileRepo] list() cwd: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root glob: schemas/nodes/*.schema.json
 [FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\LLM.schema.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\LLM.schema.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\LLM.schema.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
@@ -23,7 +23,7 @@
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Task.schema.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: nodes/Task-Vide9W.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\nodes\Task-Vide9W.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: nodes/Task-RcHMk7.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\nodes\Task-RcHMk7.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
@@ -40,7 +40,7 @@
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Task.schema.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: nodes/Plan-Z_uoUX.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\nodes\Plan-Z_uoUX.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: nodes/Plan-744DGD.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\nodes\Plan-744DGD.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
@@ -52,12 +52,12 @@
 [FileRepo] list() result: ["schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/LLM.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\LLM.schema.json
-[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Plan.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Plan.schema.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Task.schema.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
-[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: nodes/LLM-maM0RS.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\nodes\LLM-maM0RS.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: schemas/nodes/Task.schema.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\schemas\nodes\Task.schema.json
+[FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: nodes/LLM-Y-q_c6.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\nodes\LLM-Y-q_c6.json
+[FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root
 [FileRepo] safeJoin() root: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root p: .awb/index.json target: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root\.awb\index.json
 [FileRepo] repoRoot() env: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root resolved: C:\Users\mark\source\repos\celestial_engine\apps\web\.defaults-test-root

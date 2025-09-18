@@ -1,0 +1,43 @@
+{
+  "id": "LogNode-aR35zo",
+  "type": "LogNode",
+  "name": "Log-Demo",
+  "props": {
+    "history": [
+      {
+        "id": "xJIxvwew",
+        "ts": 1758225479715,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Why did the physicist break up with the biologist?\n\nBecause they had no chemistry! 😂\n\n\n\nHope you chuckled!"
+      },
+      {
+        "id": "AY5vHiIn",
+        "ts": 1758225496612,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Hello there! 😊 How can I help you today?"
+      },
+      {
+        "id": "bKp5HByT",
+        "ts": 1758225628435,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Why did the physicist break up with the biologist?\n\nBecause they had no chemistry! 😂\n\n\n\nHope you chuckled!"
+      }
+    ],
+    "maxEntries": 5,
+    "width": 414,
+    "contentHeight": 193
+  },
+  "position": {
+    "x": 1004.2185172560037,
+    "y": 543.3668328738407
+  },
+  "edges": {
+    "out": []
+  }
+}

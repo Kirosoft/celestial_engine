@@ -5,175 +5,146 @@
   "props": {
     "history": [
       {
-        "id": "9sTBk2R0",
-        "ts": 1758047914036,
+        "id": "1Fj1CbnD",
+        "ts": 1758230650665,
         "role": "user",
-        "content": "two"
+        "content": "hi"
       },
       {
-        "id": "G-Cre80H",
-        "ts": 1758048174299,
+        "id": "EDJo_2hD",
+        "ts": 1758230818827,
         "role": "user",
-        "content": "ok"
+        "content": "hi"
       },
       {
-        "id": "-7ZMo0ND",
-        "ts": 1758048454719,
+        "id": "w2WLXv_a",
+        "ts": 1758231820181,
         "role": "user",
-        "content": "three"
+        "content": "hi"
       },
       {
-        "id": "GheqoZdH",
-        "ts": 1758048501255,
+        "id": "bZpc41MA",
+        "ts": 1758231854812,
         "role": "user",
-        "content": "4"
+        "content": "hi"
       },
       {
-        "id": "ne3katPy",
-        "ts": 1758048550367,
+        "id": "-VEfbNpi",
+        "ts": 1758231931258,
         "role": "user",
-        "content": "a"
+        "content": "hi"
       },
       {
-        "id": "K_1yCgIc",
-        "ts": 1758048558218,
+        "id": "j7KJL00y",
+        "ts": 1758231951419,
         "role": "user",
-        "content": "a"
+        "content": "hi"
       },
       {
-        "id": "KlUn9vBw",
-        "ts": 1758048685617,
+        "id": "AcJNVSjJ",
+        "ts": 1758231991299,
         "role": "user",
-        "content": "test2"
+        "content": "hi"
       },
       {
-        "id": "Hoe6oNAQ",
-        "ts": 1758048695159,
+        "id": "NrfnYBDJ",
+        "ts": 1758232066284,
         "role": "user",
-        "content": "test3"
+        "content": "tell a joke"
       },
       {
-        "id": "lXbGN32s",
-        "ts": 1758048991911,
+        "id": "OnodHyRv",
+        "ts": 1758232089365,
         "role": "user",
-        "content": "test4"
+        "content": "tell a medical joke"
       },
       {
-        "id": "oU__TWNs",
-        "ts": 1758049002139,
+        "id": "LQO6MJYN",
+        "ts": 1758232258170,
         "role": "user",
-        "content": "test5"
+        "content": "hi"
       },
       {
-        "id": "D6G2Kjq_",
-        "ts": 1758049114865,
+        "id": "XIaXN_tL",
+        "ts": 1758232319486,
         "role": "user",
-        "content": "test6"
+        "content": "hi"
       },
       {
-        "id": "73e13MTU",
-        "ts": 1758049119986,
+        "id": "rOtwdB70",
+        "ts": 1758232479552,
         "role": "user",
-        "content": "test7"
+        "content": "hi"
       },
       {
-        "id": "tYLVbglt",
-        "ts": 1758049135264,
+        "id": "kZXKzsXE",
+        "ts": 1758232530992,
         "role": "user",
-        "content": "test8"
+        "content": "hi"
       },
       {
-        "id": "s7qihXhA",
-        "ts": 1758049972912,
+        "id": "Z_a3gkZN",
+        "ts": 1758233250787,
         "role": "user",
-        "content": "abc"
+        "content": "hi"
       },
       {
-        "id": "dlm02lfF",
-        "ts": 1758050269220,
+        "id": "TzDdf3Fz",
+        "ts": 1758233417916,
         "role": "user",
-        "content": "def"
+        "content": "hi"
       },
       {
-        "id": "3aELrDO1",
-        "ts": 1758050890461,
+        "id": "eO3Yujvc",
+        "ts": 1758233451203,
         "role": "user",
-        "content": "exe"
+        "content": "hi"
       },
       {
-        "id": "9ClX3RaC",
-        "ts": 1758051796346,
+        "id": "VtgMQIfM",
+        "ts": 1758233485402,
         "role": "user",
-        "content": "ok"
+        "content": "hi"
       },
       {
-        "id": "agODMjkS",
-        "ts": 1758058716356,
+        "id": "aeGIOurN",
+        "ts": 1758233505105,
         "role": "user",
-        "content": "123"
+        "content": "hi"
       },
       {
-        "id": "FauHtY7E",
-        "ts": 1758220103682,
+        "id": "Zv4auODi",
+        "ts": 1758233530572,
         "role": "user",
-        "content": "tell me a joke about physicists"
+        "content": "hi"
       },
       {
-        "id": "3F1TvDAN",
-        "ts": 1758220335485,
+        "id": "VkG42gRv",
+        "ts": 1758233560157,
         "role": "user",
-        "content": "tell me a joke about physics"
+        "content": "hi"
       },
       {
-        "id": "Jh8kYBPF",
-        "ts": 1758220503746,
+        "id": "3p_u7xu6",
+        "ts": 1758233608377,
         "role": "user",
-        "content": "tell me a joke"
-      },
-      {
-        "id": "Qk71kNrl",
-        "ts": 1758220934355,
-        "role": "user",
-        "content": "tell me a joke"
-      },
-      {
-        "id": "U_4tmAJe",
-        "ts": 1758220977896,
-        "role": "user",
-        "content": "tell  me a joke"
-      },
-      {
-        "id": "ZBG9HEDu",
-        "ts": 1758221260879,
-        "role": "user",
-        "content": "tell me a joke"
-      },
-      {
-        "id": "fd2cjUgU",
-        "ts": 1758221422510,
-        "role": "user",
-        "content": "what is 2+2"
-      },
-      {
-        "id": "8IRIGHyb",
-        "ts": 1758221533848,
-        "role": "user",
-        "content": "hello"
+        "content": "hi"
       }
     ],
-    "width": 264,
-    "contentHeight": 273
+    "width": 317,
+    "contentHeight": 138
   },
   "position": {
-    "x": 243.5197223126902,
-    "y": -132.71186229480634
+    "x": 223.13955278565686,
+    "y": -236.42299635303334
   },
   "edges": {
     "out": [
       {
         "id": "e_07U2zc",
         "targetId": "LLM-5V3DK5",
-        "kind": "flow"
+        "kind": "flow",
+        "varName": "test1"
       }
     ]
   }

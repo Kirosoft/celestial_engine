@@ -1,0 +1,35 @@
+{
+  "id": "LogNode-aR35zo",
+  "type": "LogNode",
+  "name": "Log-Demo",
+  "props": {
+    "history": [
+      {
+        "id": "4taORAGy",
+        "ts": 1758227790135,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Okay, I understand. The task is simply \"hi\". \n\nMy response is: **Hi!** \n\nIs there anything else I can do for you?"
+      },
+      {
+        "id": "rNlOlC9D",
+        "ts": 1758227815946,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Why did the podiatrist break up with the foot? \n\nBecause he said she was always giving him a heel! 😂\n\n\n\nHi to you too!…"
+      }
+    ],
+    "maxEntries": 5,
+    "width": 414,
+    "contentHeight": 193
+  },
+  "position": {
+    "x": 1004.2185172560037,
+    "y": 543.3668328738407
+  },
+  "edges": {
+    "out": []
+  }
+}

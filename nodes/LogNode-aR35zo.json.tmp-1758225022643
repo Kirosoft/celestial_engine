@@ -1,0 +1,59 @@
+{
+  "id": "LogNode-aR35zo",
+  "type": "LogNode",
+  "name": "Log-Demo",
+  "props": {
+    "history": [
+      {
+        "id": "2g2uJHm-",
+        "ts": 1758224469539,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Hello! 😊 \n\nIt's nice to hear from you. How are you doing today? \n\n\n\nWhat can I do for you?"
+      },
+      {
+        "id": "irIIxuha",
+        "ts": 1758224672881,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Hello there! 😊 How can I help you today?"
+      },
+      {
+        "id": "ncPBjjgW",
+        "ts": 1758224848583,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Hello! 😊 \n\nIt's nice to hear from you. How are you doing today?"
+      },
+      {
+        "id": "lQJkjR3c",
+        "ts": 1758224910370,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Hello! 😊 How can I help you today?"
+      },
+      {
+        "id": "WUtuJ7Pf",
+        "ts": 1758225019273,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Hello there! 😊 \n\nHow can I help you today?"
+      }
+    ],
+    "maxEntries": 5,
+    "width": 574,
+    "contentHeight": 327
+  },
+  "position": {
+    "x": 932.1475368442341,
+    "y": 410.60450053637044
+  },
+  "edges": {
+    "out": []
+  }
+}

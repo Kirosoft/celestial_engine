@@ -176,16 +176,187 @@ registerExecutor('LLM', async (ctx) => {
   const provider: string = (ctx.props.provider || llmSettings.provider || 'openai');
   const effectiveModel: string = ctx.props.model || globalModel;
   const systemPrompt: string | undefined = ctx.props.system;
-  const tmpl: string = ctx.props.promptTemplate || '{message}';
-  const userMessage = (ctx.latest && (ctx.latest as any).message) || '';
-  const rendered = tmpl.replace('{message}', String(userMessage));
+  const tmpl: string = ctx.props.promptTemplate || '{prompt}\n\n{context}';
+  const autoDerive: boolean = ctx.props.autoDerivePromptFromFile !== undefined ? !!ctx.props.autoDerivePromptFromFile : true;
+  // Collect raw latest inputs for template substitution (declare early for edge scan)
+  const latestMap = ctx.latest || {};
+  const inputVars: Array<{ port: string; var: string; kind?: string }> = Array.isArray(ctx.props.inputVars) ? ctx.props.inputVars : [];
+  // Build additional var mappings from inbound data edges (edge varName -> payload) if not already covered
+  try {
+    const allNodes = await listNodes();
+    const latestKeys = new Set(Object.keys(latestMap));
+    const repoRoot = process.env.REPO_ROOT || process.cwd();
+    for(const n of allNodes){
+      const outs = (n as any).edges?.out || [];
+      for(const e of outs){
+        if(e.targetId !== ctx.nodeId || e.kind !== 'data') continue;
+        // Ensure a variable name
+        const varName = e.varName || e.sourcePort || 'data_'+e.id.slice(-4);
+        const sourceNode = allNodes.find(sn=> (sn as any).id === (n as any).id);
+        let payloadKey: string | undefined = varName;
+        let provided = false;
+        if(sourceNode){
+          const type = (sourceNode as any).type;
+          const sProps = (sourceNode as any).props || {};
+          try {
+            if(type === 'FileReaderNode'){
+              const fp = sProps.filePath;
+              const emitContent = !!sProps.emitContent;
+              if(fp){
+                const templateHasVar = tmpl.includes(`{${varName}}`);
+                if(!(autoDerive || templateHasVar)){
+                  diagnostics.push({ level:'info', message:'cold_pull_skipped_unreferenced_file', data: { var: varName, path: fp } });
+                } else {
+                  const r = await readFileSafe(repoRoot, fp);
+                  if(r.ok){
+                    const size = r.stat?.size || r.content?.length || 0;
+                    const content = emitContent && r.content ? r.content.toString('utf-8') : undefined;
+                    latestMap[varName] = { path: fp, size, content, cold: true };
+                    latestKeys.add(varName);
+                    provided = true;
+                    diagnostics.push({ level:'info', message:'cold_pull_file_success', data: { var: varName, path: fp, size, content: !!content, gated: !autoDerive && templateHasVar } });
+                  } else {
+                    diagnostics.push({ level:'warn', message:'cold_pull_file_failed', data: { var: varName, path: fp, error: r.error } });
+                  }
+                }
+              } else {
+                diagnostics.push({ level:'info', message:'cold_pull_no_file_path', data: { var: varName } });
+              }
+            } else if(type === 'ChatNode'){
+              const hist = Array.isArray(sProps.history) ? sProps.history : [];
+              const lastUser = [...hist].reverse().find(h=> h.role === 'user');
+              if(lastUser){
+                latestMap[varName] = { role: 'user', content: lastUser.content, cold: true };
+                latestKeys.add(varName);
+                provided = true;
+                diagnostics.push({ level:'info', message:'cold_pull_chat_success', data: { var: varName, chars: lastUser.content?.length } });
+              }
+            } else if(type === 'LogNode'){
+              const hist = Array.isArray(sProps.history) ? sProps.history : [];
+              if(hist.length){
+                const previews = hist.slice(-5).map((h: any)=> h.preview).join('\n');
+                latestMap[varName] = { previews, cold: true };
+                latestKeys.add(varName);
+                provided = true;
+                diagnostics.push({ level:'info', message:'cold_pull_log_success', data: { var: varName, entries: hist.length } });
+              }
+            } else {
+              // Generic fallback: shallow props summary
+              if(Object.keys(sProps).length){
+                const summary = JSON.stringify(sProps).slice(0,4000);
+                latestMap[varName] = { summary, cold: true };
+                latestKeys.add(varName);
+                provided = true;
+                diagnostics.push({ level:'info', message:'cold_pull_generic_props', data: { var: varName, size: summary.length } });
+              }
+            }
+          } catch(err:any){
+            diagnostics.push({ level:'warn', message:'cold_pull_exception', data: { var: varName, error: err?.message } });
+          }
+        }
+        // If nothing provided and we already had a buffered key under candidate names, fallback to that
+        if(!provided){
+          const fallbackKeys = [e.sourcePort, e.varName, varName, 'file', 'data', 'output'].filter(Boolean) as string[];
+          const existing = fallbackKeys.find(k=> latestKeys.has(k));
+          if(existing){ payloadKey = existing; provided = true; }
+        }
+        if(!provided) continue;
+        if(!payloadKey) payloadKey = varName; // fallback safety
+        const exists = inputVars.find(iv=> iv.var === varName);
+        if(!exists && payloadKey){
+          inputVars.push({ port: payloadKey, var: varName, kind: 'auto' });
+          diagnostics.push({ level:'info', message:'implicit_var_mapping_added', data: { var: varName, port: payloadKey, generalized: true } });
+        }
+      }
+    }
+  } catch(err:any){
+    diagnostics.push({ level:'warn', message:'inputVar_edge_scan_failed', data: { error: err?.message } });
+  }
+  // Build a base prompt (explicit message if any). Allow opt-out of implicit file->prompt derivation.
+  // autoDerive already computed above
+  let userMessage = (latestMap as any).message || '';
+  const tmplMentionsPrompt = /\{prompt\}/.test(tmpl);
+  if(!userMessage && autoDerive && tmplMentionsPrompt && ctx.latest && (ctx.latest as any).file){
+    const f = (ctx.latest as any).file;
+    if(f && typeof f === 'object'){
+      if(f.content && typeof f.content === 'string'){
+        userMessage = f.content.slice(0, 8000); // cap to avoid enormous prompts
+        diagnostics.push({ level:'info', message:'derived_message_from_file_content', data: { bytes: f.content.length } });
+      } else if(f.path){
+        userMessage = `File path: ${f.path}`;
+        diagnostics.push({ level:'info', message:'derived_message_from_file_path' });
+      }
+    }
+  }
+  if(!userMessage){
+    diagnostics.push({ level:'warn', message:'empty_message_input', data: { latestKeys: Object.keys(ctx.latest) } });
+  }
+  // Aggregate contextual content (file contents etc.)
+  const contextPieces: string[] = [];
+  const tmplMentionsContext = /\{context\}/.test(tmpl);
+  if(autoDerive && tmplMentionsContext && latestMap.file){
+    const f = (latestMap as any).file;
+    if(f && typeof f === 'object'){
+      if(f.content && typeof f.content === 'string') contextPieces.push(f.content.slice(0, 10000));
+      else if(f.path) contextPieces.push(`FILE:${f.path}`);
+    }
+  }
+  // Process custom inputVars mapping
+  const customValues: Record<string,string> = {};
+  for(const mapping of inputVars){
+    const { port, var: varName, kind = 'auto' } = mapping || {} as any;
+    if(!port || !varName) continue;
+    const val = (latestMap as any)[port];
+    if(val === undefined) continue;
+    let str = '';
+    if(kind === 'raw') str = typeof val === 'string' ? val : JSON.stringify(val).slice(0,8000);
+    else if(kind === 'fileContent' && val && typeof val === 'object' && val.content) str = String(val.content).slice(0,10000);
+    else if(kind === 'filePath' && val && typeof val === 'object' && val.path) str = String(val.path);
+    else if(kind === 'auto'){
+      if(val && typeof val === 'object'){
+        if('content' in val && typeof (val as any).content === 'string') str = (val as any).content.slice(0,8000);
+        else if('path' in val) str = String((val as any).path);
+        else str = JSON.stringify(val).slice(0,4000);
+      } else str = String(val);
+    }
+    if(str) customValues[varName] = str;
+  }
+  // Build context (excluding explicit user message if it's file-derived duplication)
+  const context = contextPieces.filter(Boolean).join('\n\n');
+  // Primary replacement variables
+  let rendered = tmpl;
+  // Support both {prompt} and arbitrary direct placeholders like {message}. If a placeholder named {message}
+  // exists and we have latestMap.message, treat it as prompt content for test determinism.
+  const inferredMessage = userMessage || (typeof (latestMap as any).message === 'string' ? (latestMap as any).message : '');
+  const replacements: Record<string,string> = { prompt: String(inferredMessage || ''), context: context };
+  for(const [k,v] of Object.entries(customValues)) replacements[k] = v;
+  // Add direct passthrough for simple scalar latestMap values (string/number/boolean) not already covered
+  for(const [k,v] of Object.entries(latestMap)){
+    if(!(k in replacements) && (typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean')){
+      replacements[k] = String(v);
+    }
+  }
+  rendered = rendered.replace(/\{([a-zA-Z0-9_]+)\}/g, (m, g1)=> (g1 in replacements ? replacements[g1] : ''));
   const temperature: number = typeof ctx.props.temperature === 'number' ? ctx.props.temperature : (typeof llmSettings.temperature === 'number' ? llmSettings.temperature : 0.7);
-  const maxOutputTokens: number | undefined = typeof ctx.props.maxOutputTokens === 'number' ? ctx.props.maxOutputTokens : (llmSettings.maxOutputTokens);
+  const maxOutputTokens: number | undefined = typeof ctx.props.maxOutputTokens === 'number'
+    ? ctx.props.maxOutputTokens
+    : (llmSettings.maxOutputTokens !== undefined ? llmSettings.maxOutputTokens : settings?.llm?.maxOutputTokens);
+  const outputCharLimit: number | undefined = typeof (ctx.props as any).outputCharLimit === 'number'
+    ? (ctx.props as any).outputCharLimit
+    : (settings?.llm as any)?.outputCharLimit;
 
   // Detect Ollama usage either by explicit provider or recognizable local model name pattern
   const looksLikeOllama = provider === 'ollama' || /:|^llama|^mistral|^gemma|^qwen/i.test(effectiveModel);
   console.debug('[exec] LLM provider decision', { nodeId: ctx.nodeId, provider, effectiveModel, looksLikeOllama });
   if(looksLikeOllama){
+  // Test environment short-circuit to avoid heavy model pulls
+  if(process.env.NODE_ENV === 'test' || process.env.CE_TEST_MODE === '1'){
+    // Deterministic synthetic output – keep only first line to avoid huge snapshot noise.
+    const firstLine = rendered.split(/\r?\n/)[0].slice(0,160);
+    const synthetic = `TEST_ASSISTANT(${effectiveModel}): ${firstLine}`;
+    diagnostics.push({ level:'info', message:'ollama_test_short_circuit', data: { chars: firstLine.length } });
+    return { outputs: { output: synthetic }, diagnostics };
+  }
   const baseUrl: string = ctx.props.ollamaBaseUrl || llmSettings.ollamaBaseUrl || process.env.OLLAMA_BASE_URL || 'http://localhost:11434';
     const url = `${baseUrl.replace(/\/$/, '')}/api/generate`;
     const body = {
@@ -223,9 +394,15 @@ registerExecutor('LLM', async (ctx) => {
       if(maxOutputTokens && maxOutputTokens > 0){
         const parts = text.split(/\s+/);
         if(parts.length > maxOutputTokens){
-          text = parts.slice(0, maxOutputTokens).join(' ') + ' …';
-          diagnostics.push({ level:'info', message:'truncated_output_tokens', data: { maxOutputTokens } });
+          const truncated = parts.slice(0, maxOutputTokens).join(' ');
+          diagnostics.push({ level:'info', message:'truncated_output_tokens', data: { maxOutputTokens, originalTokens: parts.length } });
+          text = truncated + ' …';
         }
+      }
+      if(outputCharLimit && outputCharLimit > 0 && text.length > outputCharLimit){
+        const originalLength = text.length;
+        text = text.slice(0, outputCharLimit) + ' …';
+        diagnostics.push({ level:'info', message:'truncated_output_chars', data: { outputCharLimit, originalChars: originalLength } });
       }
       return { outputs: { output: text }, diagnostics };
     } catch(err:any){
@@ -238,7 +415,7 @@ registerExecutor('LLM', async (ctx) => {
   }
 
   // Default fallback (OpenAI / stub) – currently stubbed without remote API key logic.
-  const assistant = `Assistant(${effectiveModel}${streaming ? ',stream' : ''}): ${rendered}`;
+  const assistant = `Assistant(${effectiveModel}${streaming ? ',stream' : ''}): ${rendered.split(/\r?\n/)[0].slice(0,160)}`;
   console.debug('[exec] LLM executor emitting (stub path)', { nodeId: ctx.nodeId, model: effectiveModel, provider, reason: 'not_ollama_pattern' });
   return { outputs: { output: assistant }, diagnostics };
 });

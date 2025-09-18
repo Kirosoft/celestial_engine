@@ -21,6 +21,8 @@ export interface SystemSettings {
     defaultModel: string;
     timeoutMs: number;
     useStreaming: boolean;
+    maxOutputTokens?: number;
+    outputCharLimit?: number;
   };
   logging: { level: 'debug'|'info'|'warn'|'error' };
   features: { enableExperimental: boolean };
@@ -33,6 +35,8 @@ const defaultSettings: SystemSettings = {
     defaultModel: 'gpt-3.5-turbo',
     timeoutMs: 60000,
     useStreaming: false,
+    maxOutputTokens: 4096,
+    outputCharLimit: 32768,
   },
   logging: { level: 'info' },
   features: { enableExperimental: false },

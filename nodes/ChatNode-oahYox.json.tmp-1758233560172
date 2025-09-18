@@ -1,0 +1,139 @@
+{
+  "id": "ChatNode-oahYox",
+  "type": "ChatNode",
+  "name": "ChatNode",
+  "props": {
+    "history": [
+      {
+        "id": "1Fj1CbnD",
+        "ts": 1758230650665,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "EDJo_2hD",
+        "ts": 1758230818827,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "w2WLXv_a",
+        "ts": 1758231820181,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "bZpc41MA",
+        "ts": 1758231854812,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "-VEfbNpi",
+        "ts": 1758231931258,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "j7KJL00y",
+        "ts": 1758231951419,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "AcJNVSjJ",
+        "ts": 1758231991299,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "NrfnYBDJ",
+        "ts": 1758232066284,
+        "role": "user",
+        "content": "tell a joke"
+      },
+      {
+        "id": "OnodHyRv",
+        "ts": 1758232089365,
+        "role": "user",
+        "content": "tell a medical joke"
+      },
+      {
+        "id": "LQO6MJYN",
+        "ts": 1758232258170,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "XIaXN_tL",
+        "ts": 1758232319486,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "rOtwdB70",
+        "ts": 1758232479552,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "kZXKzsXE",
+        "ts": 1758232530992,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "Z_a3gkZN",
+        "ts": 1758233250787,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "TzDdf3Fz",
+        "ts": 1758233417916,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "eO3Yujvc",
+        "ts": 1758233451203,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "VtgMQIfM",
+        "ts": 1758233485402,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "aeGIOurN",
+        "ts": 1758233505105,
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "id": "Zv4auODi",
+        "ts": 1758233530572,
+        "role": "user",
+        "content": "hi"
+      }
+    ],
+    "width": 317,
+    "contentHeight": 138
+  },
+  "position": {
+    "x": 223.13955278565686,
+    "y": -236.42299635303334
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_07U2zc",
+        "targetId": "LLM-5V3DK5",
+        "kind": "flow",
+        "varName": "test1"
+      }
+    ]
+  }
+}
