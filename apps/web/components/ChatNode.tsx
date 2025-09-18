@@ -12,6 +12,11 @@ export const ChatNode: React.FC<any> = ({ data }) => {
   const scrollRef = useRef<HTMLDivElement|null>(null);
   const [saving, setSaving] = useState(false);
   const [clearing, setClearing] = useState(false);
+  const initialWidth = (rawProps && typeof rawProps.width === 'number') ? rawProps.width : 220;
+  const initialContentHeight = (rawProps && typeof rawProps.contentHeight === 'number') ? rawProps.contentHeight : 140;
+  const [width, setWidth] = useState<number>(initialWidth);
+  const [contentHeight, setContentHeight] = useState<number>(initialContentHeight);
+  const resizingRef = useRef<{ startX:number; startY:number; startW:number; startH:number }|null>(null);
 
   useEffect(()=>{
     console.debug('[ChatNode] mount', { nodeId, initialHistory: history.length });
@@ -84,12 +89,46 @@ export const ChatNode: React.FC<any> = ({ data }) => {
     borderRadius: handleSize/2,
     border: '1px solid #3a3f45'
   };
+  const persistSize = useCallback(async (w:number, h:number)=>{
+    try {
+      const patch = { props: { ...rawProps, width: w, contentHeight: h } };
+      await fetch(`/api/nodes/${nodeId}`, { method:'PUT', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(patch) });
+      window.dispatchEvent(new Event('graph:refresh-request'));
+    } catch(e){ console.warn('[ChatNode] persist size error', e); }
+  }, [nodeId, rawProps]);
+
+  const onResizeStart = useCallback((e: React.MouseEvent)=>{
+    e.preventDefault(); e.stopPropagation();
+    resizingRef.current = { startX: e.clientX, startY: e.clientY, startW: width, startH: contentHeight };
+    window.addEventListener('mousemove', onResizing as any);
+    window.addEventListener('mouseup', onResizeEnd as any, { once: true });
+  }, [width, contentHeight]);
+
+  const onResizing = useCallback((e: MouseEvent)=>{
+    if(!resizingRef.current) return;
+    const dx = e.clientX - resizingRef.current.startX;
+    const dy = e.clientY - resizingRef.current.startY;
+    let newW = Math.min(1200, Math.max(160, resizingRef.current.startW + dx));
+    let newH = Math.min(800, Math.max(100, resizingRef.current.startH + dy));
+    setWidth(newW); setContentHeight(newH);
+  }, []);
+
+  const onResizeEnd = useCallback(()=>{
+    if(resizingRef.current){
+      persistSize(width, contentHeight);
+    }
+    resizingRef.current = null;
+    window.removeEventListener('mousemove', onResizing as any);
+  }, [persistSize, width, contentHeight, onResizing]);
+
+  useEffect(()=>{ return ()=> window.removeEventListener('mousemove', onResizing as any); }, [onResizing]);
+
   return (
-    <div style={{ padding:'6px 6px 10px', border:'1px solid #4a5560', borderRadius:4, background:'#1f262d', color:'#eee', fontSize:11, minWidth:180, width:220, display:'flex', flexDirection:'column', position:'relative' }}>
+    <div style={{ padding:'6px 6px 10px', border:'1px solid #4a5560', borderRadius:4, background:'#1f262d', color:'#eee', fontSize:11, minWidth:180, width, display:'flex', flexDirection:'column', position:'relative' }}>
       {/* Target (incoming) handle */}
       <Handle data-testid={`chat-handle-target-${nodeId}`} type="target" position={Position.Top} style={{ ...commonHandle, background:'#888', transform:'translate(-50%, -55%)' }} />
       <div style={{ fontWeight:600, fontSize:12, marginBottom:4, textAlign:'center' }}>{data?.label || 'Chat'}</div>
-      <div ref={scrollRef} style={{ flex:'0 0 140px', overflowY:'auto', background:'#141a1f', border:'1px solid #2c3740', padding:4, borderRadius:3, display:'flex', flexDirection:'column', gap:4 }}>
+  <div ref={scrollRef} style={{ flex:`0 0 ${contentHeight}px`, height: contentHeight, overflowY:'auto', background:'#141a1f', border:'1px solid #2c3740', padding:4, borderRadius:3, display:'flex', flexDirection:'column', gap:4 }}>
         {localHistory.length === 0 && <div style={{ opacity:0.5, fontStyle:'italic' }}>No messages</div>}
         {localHistory.map(m => (
           <div key={m.id} style={{ background:'#222b33', padding:'4px 6px', borderRadius:3, lineHeight:1.25 }}>
@@ -130,6 +169,9 @@ export const ChatNode: React.FC<any> = ({ data }) => {
       </div>
       {/* Source (outgoing) handle */}
       <Handle data-testid={`chat-handle-source-${nodeId}`} type="source" position={Position.Bottom} style={{ ...commonHandle, background:'#3d8', transform:'translate(-50%, 55%)' }} />
+      <div onMouseDown={onResizeStart} className="nodrag" style={{ position:'absolute', width:14, height:14, right:2, bottom:2, cursor:'nwse-resize', display:'flex', alignItems:'flex-end', justifyContent:'flex-end', pointerEvents:'auto' }}>
+        <div style={{ width:10, height:10, borderRight:'2px solid #556', borderBottom:'2px solid #556', borderRadius:2, opacity:0.8 }} />
+      </div>
     </div>
   );
 };

@@ -5,43 +5,53 @@
   "props": {
     "history": [
       {
-        "id": "LSAibcqV",
-        "ts": 1758058716764,
+        "id": "Lf0SDQIG",
+        "ts": 1758221272791,
         "sourceId": "LLM-5V3DK5",
         "port": "output",
         "kind": "text",
-        "preview": "Assistant(testmodel1): 123"
+        "preview": "Why don't scientists trust atoms?\n\nBecause they make up everything! 😂\n\n\n\nHope that made you smile! 😊"
       },
       {
-        "id": "UWL46NF9",
-        "ts": 1758058723469,
-        "sourceId": "ChatNode-Hy5dGa",
-        "port": "message",
+        "id": "AogPcRc-",
+        "ts": 1758221426045,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
         "kind": "text",
-        "preview": "abc"
+        "preview": "2 + 2 = 4"
       },
       {
-        "id": "SHHC0jUJ",
-        "ts": 1758059272191,
-        "sourceId": "FileReaderNode-w-zcKf",
-        "port": "file",
-        "kind": "json",
-        "preview": "{\"path\":\"specification/execution specification.md\",\"size\":14017,\"modifiedMs\":1757969845022.7505,\"contentEncoding\":\"utf-…"
+        "id": "CD-rBnAy",
+        "ts": 1758221537661,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Hello! #sneeze#"
       },
       {
-        "id": "60YatuMY",
-        "ts": 1758059456440,
-        "sourceId": "FileReaderNode-w-zcKf",
-        "port": "file",
-        "kind": "json",
-        "preview": "{\"path\":\"specification/execution specification.md\",\"size\":14017,\"modifiedMs\":1757969845022.7505,\"contentEncoding\":\"utf-…"
+        "id": "2oqYaJxP",
+        "ts": 1758221978740,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "testing 1 2 3 #sneeze#"
+      },
+      {
+        "id": "BbL-UiNf",
+        "ts": 1758222009482,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "I'm Gemma, a large language model created by the Gemma team at Google DeepMind. I'm an open-weights model, meaning I'm …"
       }
     ],
-    "maxEntries": 5
+    "maxEntries": 5,
+    "width": 600,
+    "contentHeight": 360
   },
   "position": {
-    "x": 813.4026566653278,
-    "y": 460.5186182742895
+    "x": 893.5230628476089,
+    "y": 465.71294393099794
   },
   "edges": {
     "out": []

@@ -1,0 +1,166 @@
+{
+  "id": "ChatNode-oahYox",
+  "type": "ChatNode",
+  "name": "ChatNode",
+  "props": {
+    "history": [
+      {
+        "id": "9sTBk2R0",
+        "ts": 1758047914036,
+        "role": "user",
+        "content": "two"
+      },
+      {
+        "id": "G-Cre80H",
+        "ts": 1758048174299,
+        "role": "user",
+        "content": "ok"
+      },
+      {
+        "id": "-7ZMo0ND",
+        "ts": 1758048454719,
+        "role": "user",
+        "content": "three"
+      },
+      {
+        "id": "GheqoZdH",
+        "ts": 1758048501255,
+        "role": "user",
+        "content": "4"
+      },
+      {
+        "id": "ne3katPy",
+        "ts": 1758048550367,
+        "role": "user",
+        "content": "a"
+      },
+      {
+        "id": "K_1yCgIc",
+        "ts": 1758048558218,
+        "role": "user",
+        "content": "a"
+      },
+      {
+        "id": "KlUn9vBw",
+        "ts": 1758048685617,
+        "role": "user",
+        "content": "test2"
+      },
+      {
+        "id": "Hoe6oNAQ",
+        "ts": 1758048695159,
+        "role": "user",
+        "content": "test3"
+      },
+      {
+        "id": "lXbGN32s",
+        "ts": 1758048991911,
+        "role": "user",
+        "content": "test4"
+      },
+      {
+        "id": "oU__TWNs",
+        "ts": 1758049002139,
+        "role": "user",
+        "content": "test5"
+      },
+      {
+        "id": "D6G2Kjq_",
+        "ts": 1758049114865,
+        "role": "user",
+        "content": "test6"
+      },
+      {
+        "id": "73e13MTU",
+        "ts": 1758049119986,
+        "role": "user",
+        "content": "test7"
+      },
+      {
+        "id": "tYLVbglt",
+        "ts": 1758049135264,
+        "role": "user",
+        "content": "test8"
+      },
+      {
+        "id": "s7qihXhA",
+        "ts": 1758049972912,
+        "role": "user",
+        "content": "abc"
+      },
+      {
+        "id": "dlm02lfF",
+        "ts": 1758050269220,
+        "role": "user",
+        "content": "def"
+      },
+      {
+        "id": "3aELrDO1",
+        "ts": 1758050890461,
+        "role": "user",
+        "content": "exe"
+      },
+      {
+        "id": "9ClX3RaC",
+        "ts": 1758051796346,
+        "role": "user",
+        "content": "ok"
+      },
+      {
+        "id": "agODMjkS",
+        "ts": 1758058716356,
+        "role": "user",
+        "content": "123"
+      },
+      {
+        "id": "FauHtY7E",
+        "ts": 1758220103682,
+        "role": "user",
+        "content": "tell me a joke about physicists"
+      },
+      {
+        "id": "3F1TvDAN",
+        "ts": 1758220335485,
+        "role": "user",
+        "content": "tell me a joke about physics"
+      },
+      {
+        "id": "Jh8kYBPF",
+        "ts": 1758220503746,
+        "role": "user",
+        "content": "tell me a joke"
+      },
+      {
+        "id": "Qk71kNrl",
+        "ts": 1758220934355,
+        "role": "user",
+        "content": "tell me a joke"
+      },
+      {
+        "id": "U_4tmAJe",
+        "ts": 1758220977896,
+        "role": "user",
+        "content": "tell  me a joke"
+      },
+      {
+        "id": "ZBG9HEDu",
+        "ts": 1758221260879,
+        "role": "user",
+        "content": "tell me a joke"
+      }
+    ]
+  },
+  "position": {
+    "x": 414.62684867675125,
+    "y": -101.09424111883853
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_07U2zc",
+        "targetId": "LLM-5V3DK5",
+        "kind": "flow"
+      }
+    ]
+  }
+}

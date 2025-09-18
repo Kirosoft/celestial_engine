@@ -95,3 +95,5 @@ apps/web/.e2e-root/.awb
 # yarn.lock
 # pnpm-lock.yaml
 /apps/web/node_modules
+
+.venv

@@ -3,11 +3,13 @@
   "type": "LLM",
   "name": "LLM",
   "props": {
-    "model": "testmodel1"
+    "model": "gemma3:12b",
+    "provider": "ollama",
+    "system": "always add #sneeze# on the end"
   },
   "position": {
-    "x": 670.5767812094458,
-    "y": 278.06730340959643
+    "x": 823.4277771804374,
+    "y": 313.340610172133
   },
   "edges": {
     "out": [

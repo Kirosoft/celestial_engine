@@ -25,7 +25,9 @@
         "scannedFiles": { "type": "array", "items": { "type": "string" }, "default": [] },
         "cursorIndex": { "type": "integer", "minimum": -1, "default": -1 },
         "lastError": { "type": ["string","null"], "default": null },
-  "action": { "type": "string", "enum": ["read","scan","next","reset","sendNext" ] }
+  "action": { "type": "string", "enum": ["read","scan","next","reset","sendNext" ] },
+    "width": { "type": "number", "minimum": 160, "maximum": 1200, "default": 220 },
+    "contentHeight": { "type": "number", "minimum": 80, "maximum": 600, "default": 140 }
       },
       "required": ["mode"],
       "additionalProperties": false,

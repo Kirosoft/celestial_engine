@@ -17,11 +17,20 @@
         "model": {
           "type": "string"
         },
+        "provider": {
+          "type": "string",
+          "enum": ["openai", "ollama"],
+          "default": "openai"
+        },
         "system": {
           "type": "string"
         },
         "promptTemplate": {
           "type": "string"
+        },
+        "ollamaBaseUrl": {
+          "type": "string",
+          "default": "http://localhost:11434"
         },
         "temperature": {
           "type": "number",

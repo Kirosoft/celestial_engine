@@ -38,7 +38,9 @@
             "default": []
         },
         "maxEntries": { "type": "number", "minimum": 1, "default": 300 },
-        "filterIncludes": { "type": "array", "items": { "type": "string" }, "default": [] }
+        "filterIncludes": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "width": { "type": "number", "minimum": 140, "maximum": 1200, "default": 260 },
+        "contentHeight": { "type": "number", "minimum": 80, "maximum": 800, "default": 160 }
       },
       "required": ["history"],
       "additionalProperties": false

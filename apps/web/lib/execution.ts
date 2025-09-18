@@ -166,19 +166,81 @@ export async function emitFrom(nodeId: string, port: string, value: any){
 // Register LLM executor stub
 registerExecutor('LLM', async (ctx) => {
   console.debug('[exec] LLM executor start', { nodeId: ctx.nodeId, latestKeys: Object.keys(ctx.latest), inputs: Object.keys(ctx.inputs) });
-  // Load global system settings (masked apiKey not needed here)
-  let settings;
-  try { settings = await readSettings({ reveal: true }); } catch { settings = null; }
+  const diagnostics: any[] = [];
+  // Load optional system settings
+  let settings; try { settings = await readSettings({ reveal: true }); } catch { settings = null; }
   const globalModel = settings?.llm?.defaultModel || 'gpt-3.5-turbo';
-  const streaming = settings?.llm?.useStreaming || false;
   const timeoutMs = settings?.llm?.timeoutMs || 60000;
-  const effectiveModel = ctx.props.model || globalModel;
+  const streaming = ctx.props.streaming !== undefined ? !!ctx.props.streaming : (settings?.llm?.useStreaming || false);
+  const llmSettings: any = settings?.llm || {};
+  const provider: string = (ctx.props.provider || llmSettings.provider || 'openai');
+  const effectiveModel: string = ctx.props.model || globalModel;
+  const systemPrompt: string | undefined = ctx.props.system;
   const tmpl: string = ctx.props.promptTemplate || '{message}';
-  const message = (ctx.latest && (ctx.latest as any).message) || '';
-  const rendered = tmpl.replace('{message}', String(message));
+  const userMessage = (ctx.latest && (ctx.latest as any).message) || '';
+  const rendered = tmpl.replace('{message}', String(userMessage));
+  const temperature: number = typeof ctx.props.temperature === 'number' ? ctx.props.temperature : (typeof llmSettings.temperature === 'number' ? llmSettings.temperature : 0.7);
+  const maxOutputTokens: number | undefined = typeof ctx.props.maxOutputTokens === 'number' ? ctx.props.maxOutputTokens : (llmSettings.maxOutputTokens);
+
+  // Detect Ollama usage either by explicit provider or recognizable local model name pattern
+  const looksLikeOllama = provider === 'ollama' || /:|^llama|^mistral|^gemma|^qwen/i.test(effectiveModel);
+  console.debug('[exec] LLM provider decision', { nodeId: ctx.nodeId, provider, effectiveModel, looksLikeOllama });
+  if(looksLikeOllama){
+  const baseUrl: string = ctx.props.ollamaBaseUrl || llmSettings.ollamaBaseUrl || process.env.OLLAMA_BASE_URL || 'http://localhost:11434';
+    const url = `${baseUrl.replace(/\/$/, '')}/api/generate`;
+    const body = {
+      model: effectiveModel,
+      prompt: rendered,
+      stream: false,
+      options: { temperature }
+    } as any;
+    // Add a simple system prefix if provided
+    if(systemPrompt){
+      body.prompt = `System: ${systemPrompt}\nUser: ${rendered}`;
+    }
+    let controller: AbortController | undefined;
+    let timeoutHandle: any;
+    try {
+      if(typeof AbortController !== 'undefined'){
+        controller = new AbortController();
+        timeoutHandle = setTimeout(()=> controller?.abort(), timeoutMs);
+      }
+      console.debug('[exec] LLM->Ollama request', { nodeId: ctx.nodeId, url, model: effectiveModel });
+      const res = await fetch(url, { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(body), signal: controller?.signal });
+      if(!res.ok){
+        diagnostics.push({ level:'error', message:'ollama_request_failed', data: { status: res.status } });
+        const fallback = `Assistant(${effectiveModel}): ${rendered}`;
+        return { outputs: { output: fallback }, diagnostics };
+      }
+      const json: any = await res.json();
+      let text: string = json?.response || json?.output || '';
+      if(!text){
+        diagnostics.push({ level:'warn', message:'ollama_empty_response' });
+        text = '';
+      }
+      console.debug('[exec] LLM->Ollama response', { nodeId: ctx.nodeId, preview: text.slice(0,80) });
+      // Truncate tokens client-side simple heuristic (split by whitespace)
+      if(maxOutputTokens && maxOutputTokens > 0){
+        const parts = text.split(/\s+/);
+        if(parts.length > maxOutputTokens){
+          text = parts.slice(0, maxOutputTokens).join(' ') + ' …';
+          diagnostics.push({ level:'info', message:'truncated_output_tokens', data: { maxOutputTokens } });
+        }
+      }
+      return { outputs: { output: text }, diagnostics };
+    } catch(err:any){
+      diagnostics.push({ level:'error', message:'ollama_error', data: { error: err?.message } });
+      const assistant = `Assistant(${effectiveModel}): ${rendered}`;
+      return { outputs: { output: assistant }, diagnostics };
+    } finally {
+      if(timeoutHandle) clearTimeout(timeoutHandle);
+    }
+  }
+
+  // Default fallback (OpenAI / stub) – currently stubbed without remote API key logic.
   const assistant = `Assistant(${effectiveModel}${streaming ? ',stream' : ''}): ${rendered}`;
-  console.debug('[exec] LLM executor emitting', { nodeId: ctx.nodeId, model: effectiveModel, streaming, timeoutMs, assistantPreview: assistant.slice(0,60) });
-  return { outputs: { output: assistant } };
+  console.debug('[exec] LLM executor emitting (stub path)', { nodeId: ctx.nodeId, model: effectiveModel, provider, reason: 'not_ollama_pattern' });
+  return { outputs: { output: assistant }, diagnostics };
 });
 
 // FileReaderNode executor

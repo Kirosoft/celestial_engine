@@ -25,7 +25,9 @@
           "default": []
         },
         "maxEntries": { "type": "number", "minimum": 1, "default": 200 },
-        "systemPrompt": { "type": "string" }
+        "systemPrompt": { "type": "string" },
+        "width": { "type": "number", "minimum": 160, "maximum": 1200, "default": 220 },
+        "contentHeight": { "type": "number", "minimum": 100, "maximum": 800, "default": 140 }
       },
       "required": ["history"],
       "additionalProperties": false
