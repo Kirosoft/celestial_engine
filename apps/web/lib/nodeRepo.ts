@@ -44,10 +44,18 @@ export async function getNode(id: string): Promise<NodeFile>{
 }
 
 export async function listNodes(): Promise<NodeFile[]>{
-  const files = await FileRepo.list(`${nodesDir}/*.json`);
+  const files = (await FileRepo.list(`${nodesDir}/*.json`))
+    // Exclude temp write artifacts that may linger if process crashed mid-rename.
+    .filter(f => !/\.json\.tmp-\d+$/.test(f));
   const out: NodeFile[] = [];
   for(const f of files){
-    try { out.push(await FileRepo.readJson<NodeFile>(f)); } catch(e){ console.warn('[listNodes] failed', f, e); }
+    try {
+      out.push(await FileRepo.readJson<NodeFile>(f));
+    } catch(e:any){
+      // Already logged path & message in FileRepo.readJson error; continue gracefully.
+      console.warn('[listNodes] failed to parse – skipping', f, e?.message || e);
+      continue;
+    }
   }
   return out;
 }

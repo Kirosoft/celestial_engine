@@ -1,0 +1,22 @@
+{
+  "id": "LLM-fSpi_E",
+  "type": "LLM",
+  "name": "LLM-fSpi_E",
+  "props": {
+    "model": "gpt-3.5-turbo",
+    "promptTemplate": "{message}"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_-e_4fv",
+        "targetId": "LogNode-TCC0wg",
+        "kind": "flow"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "FileReaderNode-60M8wN",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode",
+  "props": {
+    "mode": "single",
+    "includePatterns": "*",
+    "emitContent": true,
+    "maxFileSizeBytes": 512000,
+    "encodedAs": "text",
+    "scannedFiles": [],
+    "cursorIndex": -1,
+    "lastError": null,
+    "filePath": "prompts/podiatrist_joke.md",
+    "action": "sendNext"
+  },
+  "position": {
+    "x": 31.175237918703033,
+    "y": 512.6989481488919
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_5_HZuD",
+        "targetId": "LLM-5V3DK5",
+        "kind": "data",
+        "varName": "pod_joke"
+      }
+    ]
+  }
+}

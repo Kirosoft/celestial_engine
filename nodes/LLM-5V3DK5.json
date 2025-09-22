@@ -11,17 +11,17 @@
     "outputCharLimit": 2000,
     "model": "gemma3:12b",
     "system": "",
-    "promptTemplate": "{test1}{fred2} {fred1}"
+    "promptTemplate": "{test1}{pod_joke} {science_joke}"
   },
   "position": {
-    "x": 697.6591991540157,
+    "x": 699.2175283133367,
     "y": 272.5057098062021
   },
   "edges": {
     "out": [
       {
-        "id": "e_z5cVp-",
-        "targetId": "LogNode-aR35zo",
+        "id": "e_xcjteT",
+        "targetId": "LogNode-ot-nJ8",
         "kind": "flow"
       }
     ]

@@ -1,6 +1,10 @@
 import { nanoid } from 'nanoid';
 import { getNode } from './nodeRepo';
 import { readSettings } from './systemSettingsRepo';
+// New execution v2 pieces
+import { capabilityRegistry } from './execution/capabilityRegistry';
+import { createEnvelope, enqueueEmission, drainQueue } from './execution/queue';
+import { InMemoryInputBufferStore } from './execution/bufferStore';
 
 // Minimal shape reference (expand if needed)
 interface NodeFile { id: string; type: string; props?: Record<string, any>; }
@@ -36,8 +40,10 @@ export function getExecutor(nodeType: string): ExecutorFn {
   return registry.get(nodeType) || (async () => ({ diagnostics: [{ level: 'warn', message: `No executor for ${nodeType}` }] }));
 }
 
-// In-memory input buffers (MVP). nodeId -> port -> payload list
+// Legacy in-memory input buffers (MVP). nodeId -> port -> payload list (kept for backward compatibility during refactor)
 const inputBuffers: Record<string, Record<string, EdgePayload[]>> = {};
+// New per-node buffer stores (EmissionEnvelope based)
+const nodeBufferStores: Record<string, InMemoryInputBufferStore> = {};
 export function appendInput(targetNodeId: string, port: string, payload: any, meta: { edgeId: string; sourceNodeId: string; ts?: number }){
   inputBuffers[targetNodeId] = inputBuffers[targetNodeId] || {};
   inputBuffers[targetNodeId][port] = inputBuffers[targetNodeId][port] || [];
@@ -99,68 +105,63 @@ export function getInputBuffers(){ return inputBuffers; }
 
 // Emission helper: propagate value to targets via edges
 import { listNodes, updateNode } from './nodeRepo';
-import { appendLogEntry } from './logHistory';
+import { appendLogEntry } from './logHistory'; // (legacy usage will be removed when LogNode fully migrates)
 import { scanDirectory, readFileSafe, parsePatternList } from './fileScanner';
+import { buildVarMappings } from './execution/varMapping';
 
+// New propagation leveraging emission queue + middlewares (replaces legacy branching logic)
 export async function emitFrom(nodeId: string, port: string, value: any){
-  console.debug('[exec] emitFrom start', { nodeId, port, valuePreview: typeof value === 'string' ? value.slice(0,60) : value });
+  console.debug('[exec-v2] emitFrom start', { nodeId, port, preview: typeof value === 'string' ? value.slice(0,60) : value });
   const all = await listNodes();
   const source = all.find(n=> (n as any).id === nodeId);
   if(!source) return;
+  const sourceType = (source as any).type;
+  const sourceCaps = capabilityRegistry.get(sourceType);
   const edges = (source as any).edges?.out || [];
   if(!edges.length){
-    console.debug('[exec] no outgoing edges', { nodeId });
+    console.debug('[exec-v2] no outgoing edges', { nodeId });
   }
   for(const e of edges){
-    console.debug('[exec] propagating', { from: nodeId, to: e.targetId, edgeId: e.id, port });
-    // For MVP we ignore port mapping complexity; assume single logical output port.
-    appendInput(e.targetId, port, value, { edgeId: e.id, sourceNodeId: nodeId });
-    // If target is ChatNode and source is LLM, append assistant history entry
     const target = all.find(n=> (n as any).id === e.targetId);
-    if(target && (target as any).type === 'ChatNode' && (source as any).type === 'LLM'){
-      console.debug('[exec] appending assistant history entry to ChatNode', { chatNodeId: e.targetId });
-      const props = (target as any).props || { history: [] };
-      const history = props.history || [];
-      history.push({ id: 'h_'+nanoid(6), role: 'assistant', content: String(value), ts: Date.now() });
-      (target as any).props = { ...props, history };
-      await updateNode((target as any).id, { props: (target as any).props });
-    }
-    // If target is LogNode append log entry respecting maxEntries & filters
-    if(target && (target as any).type === 'LogNode'){
-      console.debug('[exec] logging emission to LogNode', { logNodeId: e.targetId });
-      const t: any = target;
-      const props = t.props || { history: [] };
-      const maxEntries = props.maxEntries || 300;
-      const filters: string[] = props.filterIncludes || [];
-      const history = props.history || [];
-      const nextHistory = appendLogEntry(history, value, { sourceId: nodeId, port }, { maxEntries, filterIncludes: filters });
-      if(nextHistory !== history){
-        console.debug('[exec] updating LogNode history', { logNodeId: t.id, newSize: nextHistory.length });
-        t.props = { ...props, history: nextHistory };
-        await updateNode(t.id, { props: t.props });
+    if(!target) continue;
+    const targetType = (target as any).type;
+    // Maintain legacy buffer for backward compatibility during migration
+    appendInput(e.targetId, port, value, { edgeId: e.id, sourceNodeId: nodeId });
+    // New envelope
+    const env = createEnvelope({
+      fromNodeId: nodeId,
+      fromPort: port,
+      toNodeId: e.targetId,
+      toPort: port, // TODO: add port mapping when schema supports
+      value,
+      meta: sourceCaps?.assistantEmitter ? { role: 'assistant', edgeId: e.id } : { edgeId: e.id }
+    });
+    const store = nodeBufferStores[e.targetId] || (nodeBufferStores[e.targetId] = new InMemoryInputBufferStore({ maxPerPort: capabilityRegistry.get(targetType)?.maxInputBuffer }));
+    enqueueEmission(env, {
+      targetNodeId: e.targetId,
+      targetType,
+      bufferStore: store,
+      getTargetProps: async () => ((target as any).props || {}),
+      updateTargetProps: async (patch) => {
+        (target as any).props = { ...(target as any).props || {}, ...patch };
+        await updateNode((target as any).id, { props: (target as any).props });
       }
-    }
-    // Auto-execute target if it has an executor (and is not purely passive like LogNode or ChatNode receiving assistant entries)
-    if(target && !['LogNode'].includes((target as any).type)){
-      const targetType = (target as any).type;
-      const hasExecutor = registry.has(targetType);
-      if(hasExecutor){
-        console.debug('[exec] auto-run target executor', { targetId: (target as any).id, targetType });
-        try {
-          const run = await runNode((target as any).id, { runChain: [nodeId] });
-          if('emissions' in run && Array.isArray((run as any).emissions) && (run as any).emissions.length){
-            for(const em of (run as any).emissions){
-              console.debug('[exec] cascading emission', { from: (target as any).id, port: em.port, preview: typeof em.value === 'string' ? em.value.slice(0,60) : em.value });
-              // Recursive propagation (depth limited by runNode guard)
-              await emitFrom((target as any).id, em.port, em.value);
-            }
-          }
-        } catch(err:any){
-          console.error('[exec] auto-run error', { targetId: (target as any).id, error: err?.message });
+    });
+  }
+  // Drain queue (BFS style) and auto-run nodes as needed
+  await drainQueue(async (autoNodeId, triggerEnv) => {
+    // Pass runChain with source to maintain depth guard
+    try {
+      const run = await runNode(autoNodeId, { runChain: [nodeId] });
+      if('emissions' in run && Array.isArray((run as any).emissions)){
+        for(const em of (run as any).emissions){
+          await emitFrom(autoNodeId, em.port, em.value);
         }
       }
+    } catch(err:any){
+      console.error('[exec-v2] auto-run error', { nodeId: autoNodeId, error: err?.message });
     }
-  }
+  });
 }
 
 // Register LLM executor stub
@@ -181,97 +182,14 @@ registerExecutor('LLM', async (ctx) => {
   // Collect raw latest inputs for template substitution (declare early for edge scan)
   const latestMap = ctx.latest || {};
   const inputVars: Array<{ port: string; var: string; kind?: string }> = Array.isArray(ctx.props.inputVars) ? ctx.props.inputVars : [];
-  // Build additional var mappings from inbound data edges (edge varName -> payload) if not already covered
-  try {
-    const allNodes = await listNodes();
-    const latestKeys = new Set(Object.keys(latestMap));
-    const repoRoot = process.env.REPO_ROOT || process.cwd();
-    for(const n of allNodes){
-      const outs = (n as any).edges?.out || [];
-      for(const e of outs){
-        if(e.targetId !== ctx.nodeId || e.kind !== 'data') continue;
-        // Ensure a variable name
-        const varName = e.varName || e.sourcePort || 'data_'+e.id.slice(-4);
-        const sourceNode = allNodes.find(sn=> (sn as any).id === (n as any).id);
-        let payloadKey: string | undefined = varName;
-        let provided = false;
-        if(sourceNode){
-          const type = (sourceNode as any).type;
-          const sProps = (sourceNode as any).props || {};
-          try {
-            if(type === 'FileReaderNode'){
-              const fp = sProps.filePath;
-              const emitContent = !!sProps.emitContent;
-              if(fp){
-                const templateHasVar = tmpl.includes(`{${varName}}`);
-                if(!(autoDerive || templateHasVar)){
-                  diagnostics.push({ level:'info', message:'cold_pull_skipped_unreferenced_file', data: { var: varName, path: fp } });
-                } else {
-                  const r = await readFileSafe(repoRoot, fp);
-                  if(r.ok){
-                    const size = r.stat?.size || r.content?.length || 0;
-                    const content = emitContent && r.content ? r.content.toString('utf-8') : undefined;
-                    latestMap[varName] = { path: fp, size, content, cold: true };
-                    latestKeys.add(varName);
-                    provided = true;
-                    diagnostics.push({ level:'info', message:'cold_pull_file_success', data: { var: varName, path: fp, size, content: !!content, gated: !autoDerive && templateHasVar } });
-                  } else {
-                    diagnostics.push({ level:'warn', message:'cold_pull_file_failed', data: { var: varName, path: fp, error: r.error } });
-                  }
-                }
-              } else {
-                diagnostics.push({ level:'info', message:'cold_pull_no_file_path', data: { var: varName } });
-              }
-            } else if(type === 'ChatNode'){
-              const hist = Array.isArray(sProps.history) ? sProps.history : [];
-              const lastUser = [...hist].reverse().find(h=> h.role === 'user');
-              if(lastUser){
-                latestMap[varName] = { role: 'user', content: lastUser.content, cold: true };
-                latestKeys.add(varName);
-                provided = true;
-                diagnostics.push({ level:'info', message:'cold_pull_chat_success', data: { var: varName, chars: lastUser.content?.length } });
-              }
-            } else if(type === 'LogNode'){
-              const hist = Array.isArray(sProps.history) ? sProps.history : [];
-              if(hist.length){
-                const previews = hist.slice(-5).map((h: any)=> h.preview).join('\n');
-                latestMap[varName] = { previews, cold: true };
-                latestKeys.add(varName);
-                provided = true;
-                diagnostics.push({ level:'info', message:'cold_pull_log_success', data: { var: varName, entries: hist.length } });
-              }
-            } else {
-              // Generic fallback: shallow props summary
-              if(Object.keys(sProps).length){
-                const summary = JSON.stringify(sProps).slice(0,4000);
-                latestMap[varName] = { summary, cold: true };
-                latestKeys.add(varName);
-                provided = true;
-                diagnostics.push({ level:'info', message:'cold_pull_generic_props', data: { var: varName, size: summary.length } });
-              }
-            }
-          } catch(err:any){
-            diagnostics.push({ level:'warn', message:'cold_pull_exception', data: { var: varName, error: err?.message } });
-          }
-        }
-        // If nothing provided and we already had a buffered key under candidate names, fallback to that
-        if(!provided){
-          const fallbackKeys = [e.sourcePort, e.varName, varName, 'file', 'data', 'output'].filter(Boolean) as string[];
-          const existing = fallbackKeys.find(k=> latestKeys.has(k));
-          if(existing){ payloadKey = existing; provided = true; }
-        }
-        if(!provided) continue;
-        if(!payloadKey) payloadKey = varName; // fallback safety
-        const exists = inputVars.find(iv=> iv.var === varName);
-        if(!exists && payloadKey){
-          inputVars.push({ port: payloadKey, var: varName, kind: 'auto' });
-          diagnostics.push({ level:'info', message:'implicit_var_mapping_added', data: { var: varName, port: payloadKey, generalized: true } });
-        }
-      }
-    }
-  } catch(err:any){
-    diagnostics.push({ level:'warn', message:'inputVar_edge_scan_failed', data: { error: err?.message } });
-  }
+  const mappingRes = await buildVarMappings({
+    nodeId: ctx.nodeId,
+    template: tmpl,
+    latestMap,
+    inputVars,
+    autoDerive,
+  });
+  for(const d of mappingRes.diagnostics) diagnostics.push(d);
   // Build a base prompt (explicit message if any). Allow opt-out of implicit file->prompt derivation.
   // autoDerive already computed above
   let userMessage = (latestMap as any).message || '';

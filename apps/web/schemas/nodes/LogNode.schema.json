@@ -1,0 +1,26 @@
+{
+  "title": "LogNode",
+  "$id": "https://example.com/schemas/LogNode.schema.json",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "type": "string" },
+    "name": { "type": "string" },
+    "props": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "history": { "type": "array", "items": { "type": "object" } },
+        "maxEntries": { "type": "number" }
+      }
+    },
+    "position": {
+      "type": "object",
+      "properties": { "x": { "type": "number" }, "y": { "type": "number" } },
+      "required": ["x","y"]
+    },
+    "edges": { "type": "object" }
+  },
+  "required": ["id","type","name"],
+  "additionalProperties": true
+}

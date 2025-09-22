@@ -1,0 +1,16 @@
+{
+  "id": "FileReaderNode-VC6MJ0",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-VC6MJ0",
+  "props": {
+    "mode": "single",
+    "filePath": "sample.txt"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

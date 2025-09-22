@@ -21,20 +21,32 @@
         "ts": 1758058723392,
         "role": "user",
         "content": "abc"
+      },
+      {
+        "id": "DPqk3IaZ",
+        "ts": 1758550952882,
+        "role": "user",
+        "content": "hello"
+      },
+      {
+        "id": "QZ8q2aVc",
+        "ts": 1758553576929,
+        "role": "user",
+        "content": "hi"
       }
     ],
     "width": 220,
     "contentHeight": 140
   },
   "position": {
-    "x": 1227.2142480999123,
-    "y": -106.48071419956975
+    "x": 1073.5347664087712,
+    "y": -125.93381314781546
   },
   "edges": {
     "out": [
       {
-        "id": "e_q415wk",
-        "targetId": "LogNode-aR35zo",
+        "id": "e_AMIo5F",
+        "targetId": "LogNode-ot-nJ8",
         "kind": "flow"
       }
     ]

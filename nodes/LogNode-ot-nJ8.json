@@ -1,0 +1,26 @@
+{
+  "id": "LogNode-ot-nJ8",
+  "type": "LogNode",
+  "name": "LogNode",
+  "props": {
+    "history": [
+      {
+        "id": "jMKq3ini",
+        "ts": 1758554208213,
+        "sourceId": "LLM-5V3DK5",
+        "port": "output",
+        "kind": "text",
+        "preview": "Okay, here are a couple of jokes, one about a podiatrist and one about a scientist:\n\n**Podiatrist Joke:**\n\nWhy did the …"
+      }
+    ],
+    "width": 851,
+    "contentHeight": 277
+  },
+  "position": {
+    "x": 514.722390247324,
+    "y": 562.9517750943346
+  },
+  "edges": {
+    "out": []
+  }
+}

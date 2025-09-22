@@ -80,7 +80,14 @@ export async function list(glob: string){
 
 export async function readJson<T=any>(path: string): Promise<T>{
   const raw = await read(path);
-  return JSON.parse(raw) as T;
+  try {
+    return JSON.parse(raw) as T;
+  } catch(e: any){
+    // Enhance error with file path & raw length for diagnostics; rethrow so callers can decide.
+    const err = new Error(`[FileRepo.readJson] parse failed for ${path} len=${raw.length} msg=${e?.message}`);
+    (err as any).cause = e;
+    throw err;
+  }
 }
 
 export async function writeJson(path: string, obj: any){

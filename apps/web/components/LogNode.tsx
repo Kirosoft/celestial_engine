@@ -19,7 +19,22 @@ export const LogNode: React.FC<any> = ({ data }) => {
   const [contentHeight, setContentHeight] = useState<number>(initialContentHeight);
   const resizingRef = useRef<{ startX: number; startY: number; startW: number; startH: number }|null>(null);
 
-  useEffect(()=>{ setLocalHistory(history); }, [history]);
+  // Sync localHistory from props, but guard against replacing a richer in-memory view
+  // with a stale snapshot (can occur when a resize persisted width triggers a graph reload
+  // before recent log entries have been flushed to disk). If incoming history is shorter
+  // than what we already show, retain the current (richer) local history.
+  useEffect(()=>{
+    setLocalHistory(prev => {
+      if(!history) return prev;
+      if(history.length === 0) return [];
+      if(prev.length === 0) return history;
+      // If new history is shorter, assume stale fetch; keep existing.
+      if(history.length < prev.length) return prev;
+      // If lengths equal and last id matches, no change.
+      if(history.length === prev.length && history[history.length-1]?.id === prev[prev.length-1]?.id) return prev;
+      return history;
+    });
+  }, [history]);
   useEffect(()=>{ const el = scrollRef.current; if(el) el.scrollTop = el.scrollHeight; }, [localHistory.length]);
 
   const onClear = useCallback(async ()=>{
@@ -42,7 +57,8 @@ export const LogNode: React.FC<any> = ({ data }) => {
     try {
       const patch = { props: { ...rawProps, width: w, contentHeight: h } };
       await fetch(`/api/nodes/${nodeId}`, { method:'PUT', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(patch) });
-      window.dispatchEvent(new Event('graph:refresh-request'));
+      // Intentionally NOT dispatching a graph refresh here to avoid reloading a potentially stale
+      // on-disk history that would overwrite newer in-memory log entries visible to the user.
     } catch(e){ console.warn('[LogNode] persist size error', e); }
   }, [nodeId, rawProps]);
 
@@ -74,6 +90,13 @@ export const LogNode: React.FC<any> = ({ data }) => {
 
   const handleSize = 10;
   const commonHandle: React.CSSProperties = { width: handleSize, height: handleSize, borderRadius: handleSize/2, border:'1px solid #3a3f45' };
+
+  useEffect(()=>{
+    if(process.env.NODE_ENV !== 'production'){
+      console.debug('[LogNode] mount', nodeId);
+      return () => console.debug('[LogNode] unmount', nodeId);
+    }
+  }, [nodeId]);
 
   return (
     <div style={{ padding:'6px 6px 8px', border:'1px solid #4a5560', borderRadius:4, background:'#1d242b', color:'#eee', fontSize:11, minWidth:230, width, display:'flex', flexDirection:'column', position:'relative' }}>
