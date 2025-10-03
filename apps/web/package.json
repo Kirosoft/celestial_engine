@@ -1,7 +1,8 @@
 {
-  "name": "awb-web",
+  "name": "celestial-engine-web",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "description": "Graph-driven execution workspace with schema validation and file-backed persistence",
   "scripts": {
   "dev": "cross-env REPO_ROOT=../.. next dev",
     "build": "next build",

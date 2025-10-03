@@ -2,7 +2,11 @@
 
 # Celestial Engine
 
+**MVP 0.1 - Phase 1 Complete** ✅
+
 Graph + schema‑driven execution workspace with a file-backed repository, validation, and evolving UI for node & edge introspection.
+
+[📋 Phase 1 Complete](./PHASE-1-COMPLETE.md) | [🔮 Phase 2 Planning](./PHASE-2-PLANNING.md)
 
 </div>
 
@@ -244,15 +248,48 @@ SCHEMA_PATHS='schemas/nodes/*.schema.json,plugins/*/nodes/*.schema.json' DEBUG_S
 3. Keep new UI components minimal and testable (prefer pure functions for data transforms).
 4. Run full test suite before PR.
 
-## 14. Known Gaps / Future Enhancements
-* Canvas snapshot + multi-select operations.
-* Undo/redo transaction stack.
-* Node/edge command console (PBI-25).
-* Persistent dark/light theming toggle (PBI-27 scope).
-* Performance benchmarking script for large graphs.
-* Re-enable inspector resize spec with deterministic canvas readiness signal.
+## 14. Phase 1 Status & Roadmap
 
-## 15. Licensing
+**✅ Phase 1 Complete (MVP 0.1)** - October 2, 2025
+
+Core features delivered:
+- File-based node/edge persistence with atomic writes
+- Schema-driven validation (7 node types)
+- Execution engine with buffering & middleware
+- Canvas UI with drag/drop, Inspector, Toolbox
+- LLM integration (OpenAI, Ollama, Anthropic)
+- ChatNode → LLM → LogNode demo pipeline working
+- FileReaderNode for file I/O
+- Group nodes with subgraph navigation
+- 106 passing tests (unit + E2E)
+
+See [PHASE-1-COMPLETE.md](./PHASE-1-COMPLETE.md) for full achievement list and metrics.
+
+**🔮 Phase 2 Planning** - Starting October 2025
+
+Candidate features:
+- Undo/redo, keyboard shortcuts, bulk operations
+- Execution timeline, variable inspector, profiling
+- Real-time collaboration (websockets/CRDT)
+- Conditional routing, loops, error handling
+- Dark mode, better error toasts, visual execution feedback
+- Plugin system for custom node types
+
+See [PHASE-2-PLANNING.md](./PHASE-2-PLANNING.md) for detailed feature backlog and prioritization.
+
+## 15. Known Limitations (Deferred to Phase 2+)
+
+- No undo/redo yet (command pattern scaffolded but not wired)
+- LogNode/ChatNode history stored in node props (should be separate event log)
+- Temp file accumulation requires manual cleanup (`find nodes -name '*.json.tmp-*' -delete`)
+- No real-time updates (must refresh to see changes from other sessions)
+- Edge labels (varName) not shown on canvas
+- Limited keyboard shortcuts (only Delete/Backspace/Escape)
+- No dark mode toggle
+
+See full technical debt list in [PHASE-1-COMPLETE.md](./PHASE-1-COMPLETE.md#known-limitations-deferred-to-phase-2).
+
+## 16. Licensing
 TBD (add LICENSE file before external distribution).
 
 ---
