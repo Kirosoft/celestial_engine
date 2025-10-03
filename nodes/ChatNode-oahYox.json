@@ -5,186 +5,59 @@
   "props": {
     "history": [
       {
-        "id": "1Fj1CbnD",
-        "ts": 1758230650665,
+        "id": "u1yk0k_U",
+        "ts": 1759420144979,
         "role": "user",
-        "content": "hi"
+        "content": "test"
       },
       {
-        "id": "EDJo_2hD",
-        "ts": 1758230818827,
+        "id": "PI5Zy3AV",
+        "ts": 1759420239581,
         "role": "user",
-        "content": "hi"
+        "content": "test"
       },
       {
-        "id": "w2WLXv_a",
-        "ts": 1758231820181,
+        "id": "mMnE-IQU",
+        "ts": 1759420379859,
         "role": "user",
-        "content": "hi"
+        "content": "test"
       },
       {
-        "id": "bZpc41MA",
-        "ts": 1758231854812,
+        "id": "M8-vzqIV",
+        "ts": 1759420434858,
         "role": "user",
-        "content": "hi"
+        "content": "test"
       },
       {
-        "id": "-VEfbNpi",
-        "ts": 1758231931258,
+        "id": "Oc7PAp8h",
+        "ts": 1759420528986,
         "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "j7KJL00y",
-        "ts": 1758231951419,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "AcJNVSjJ",
-        "ts": 1758231991299,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "NrfnYBDJ",
-        "ts": 1758232066284,
-        "role": "user",
-        "content": "tell a joke"
-      },
-      {
-        "id": "OnodHyRv",
-        "ts": 1758232089365,
-        "role": "user",
-        "content": "tell a medical joke"
-      },
-      {
-        "id": "LQO6MJYN",
-        "ts": 1758232258170,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "XIaXN_tL",
-        "ts": 1758232319486,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "rOtwdB70",
-        "ts": 1758232479552,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "kZXKzsXE",
-        "ts": 1758232530992,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "Z_a3gkZN",
-        "ts": 1758233250787,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "TzDdf3Fz",
-        "ts": 1758233417916,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "eO3Yujvc",
-        "ts": 1758233451203,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "VtgMQIfM",
-        "ts": 1758233485402,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "aeGIOurN",
-        "ts": 1758233505105,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "Zv4auODi",
-        "ts": 1758233530572,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "VkG42gRv",
-        "ts": 1758233560157,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "3p_u7xu6",
-        "ts": 1758233608377,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "l0EFPfSj",
-        "ts": 1758268168852,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "TXPosoLj",
-        "ts": 1758533838164,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "EHk2aUNC",
-        "ts": 1758552548613,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "CG7cvpOG",
-        "ts": 1758553016106,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "1tEDL8I7",
-        "ts": 1758553583638,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "ZJ5St1AO",
-        "ts": 1758554040581,
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "id": "kOta4RS5",
-        "ts": 1758554205821,
-        "role": "user",
-        "content": "hi"
+        "content": "test"
       }
     ],
     "width": 317,
     "contentHeight": 138
   },
   "position": {
-    "x": 226.62175503884134,
-    "y": -243.64629973281006
+    "x": 153.38028455075437,
+    "y": -265.3846303354196
   },
   "edges": {
     "out": [
       {
         "id": "e_07U2zc",
         "targetId": "LLM-5V3DK5",
+        "kind": "flow",
+        "varName": "test1"
+      },
+      {
+        "id": "e_zI5lb5",
+        "targetId": "LogNode--9IzFJ",
+        "kind": "flow"
+      },
+      {
+        "id": "e_onye0m",
+        "targetId": "LLM-U8AB_T",
         "kind": "flow",
         "varName": "test1"
       }

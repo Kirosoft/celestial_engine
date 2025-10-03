@@ -1,0 +1,24 @@
+{
+  "id": "LogNode--9IzFJ",
+  "type": "LogNode",
+  "name": "LogNode",
+  "props": {
+    "history": [
+      {
+        "id": "mdrUjGjr",
+        "ts": 1759420554294,
+        "sourceId": "ChatNode-oahYox",
+        "port": "message",
+        "kind": "text",
+        "preview": "test"
+      }
+    ]
+  },
+  "position": {
+    "x": 767.2826262077937,
+    "y": -194.23300538009235
+  },
+  "edges": {
+    "out": []
+  }
+}

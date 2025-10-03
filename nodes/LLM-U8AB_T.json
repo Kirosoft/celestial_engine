@@ -1,0 +1,28 @@
+{
+  "id": "LLM-U8AB_T",
+  "type": "LLM",
+  "name": "LLM",
+  "props": {
+    "provider": "openai",
+    "autoDerivePromptFromFile": true,
+    "ollamaBaseUrl": "http://localhost:11434",
+    "temperature": 0.7,
+    "maxOutputTokens": 4096,
+    "outputCharLimit": 32768,
+    "model": "gemma3:12b",
+    "promptTemplate": "{test1}{science_joke}"
+  },
+  "position": {
+    "x": 1253.9266007428791,
+    "y": 357.10642327956884
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_ZkLa_W",
+        "targetId": "LogNode-l2Xlhc",
+        "kind": "flow"
+      }
+    ]
+  }
+}

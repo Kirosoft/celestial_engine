@@ -15,14 +15,20 @@
     "action": "sendNext"
   },
   "position": {
-    "x": 179.21650805419796,
-    "y": 238.43301610839595
+    "x": 139.83540493336716,
+    "y": 229.4827653991162
   },
   "edges": {
     "out": [
       {
         "id": "e_VJXvjy",
         "targetId": "LLM-5V3DK5",
+        "kind": "data",
+        "varName": "science_joke"
+      },
+      {
+        "id": "e_0O8Ssz",
+        "targetId": "LLM-U8AB_T",
         "kind": "data",
         "varName": "science_joke"
       }
