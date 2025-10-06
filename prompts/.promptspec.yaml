@@ -1,0 +1,104 @@
+version: "1.0"
+metadata:
+  name: "Celestial Engine Prompt Library"
+  description: "Curated templates for LLM nodes"
+  author: "Celestial Team"
+  license: "MIT"
+  created: "2025-10-06"
+  updated: "2025-10-06"
+
+templates:
+  - id: "summarization/article"
+    path: "library/summarization/article.md"
+    version: "1.0.0"
+    category: "summarization"
+    tags: ["text", "article", "summary"]
+    description: "Summarize articles into concise overviews"
+    variables:
+      - name: "content"
+        type: "string"
+        required: true
+        description: "Article text to summarize"
+      - name: "max_words"
+        type: "number"
+        default: 100
+        description: "Maximum summary length"
+        validation:
+          min: 50
+          max: 500
+
+  - id: "extraction/entities"
+    path: "library/extraction/entities.md"
+    version: "1.0.0"
+    category: "extraction"
+    tags: ["NER", "entities", "extraction"]
+    description: "Extract named entities from text"
+    variables:
+      - name: "text"
+        type: "string"
+        required: true
+        description: "Text to extract entities from"
+      - name: "entity_types"
+        type: "array"
+        default: ["PERSON", "ORG", "LOCATION", "DATE"]
+        description: "Types of entities to extract"
+
+  - id: "analysis/sentiment"
+    path: "library/analysis/sentiment.md"
+    version: "1.0.0"
+    category: "analysis"
+    tags: ["sentiment", "emotion", "analysis"]
+    description: "Analyze sentiment and emotional tone"
+    variables:
+      - name: "text"
+        type: "string"
+        required: true
+        description: "Text to analyze"
+      - name: "scale"
+        type: "string"
+        default: "5-point"
+        description: "Sentiment scale (5-point or 3-point)"
+        validation:
+          enum: ["5-point", "3-point"]
+
+  - id: "code-review/security"
+    path: "library/code-review/security.md"
+    version: "1.0.0"
+    category: "code-review"
+    tags: ["security", "code", "review", "vulnerabilities"]
+    description: "Review code for security vulnerabilities"
+    variables:
+      - name: "code"
+        type: "string"
+        required: true
+        description: "Code to review"
+      - name: "language"
+        type: "string"
+        required: true
+        description: "Programming language"
+      - name: "focus_areas"
+        type: "array"
+        default: ["injection", "authentication", "authorization", "data-exposure"]
+        description: "Security areas to focus on"
+
+  - id: "generation/documentation"
+    path: "library/generation/documentation.md"
+    version: "1.0.0"
+    category: "generation"
+    tags: ["documentation", "code", "generation"]
+    description: "Generate documentation from code"
+    variables:
+      - name: "code"
+        type: "string"
+        required: true
+        description: "Code to document"
+      - name: "style"
+        type: "string"
+        default: "JSDoc"
+        description: "Documentation style"
+        validation:
+          enum: ["JSDoc", "Markdown", "reStructuredText"]
+      - name: "include_examples"
+        type: "boolean"
+        default: true
+        description: "Include usage examples"
