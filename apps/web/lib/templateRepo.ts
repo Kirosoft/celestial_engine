@@ -48,6 +48,10 @@ let templateCache: Map<string, PromptTemplate> | null = null;
  * Get the root directory for the repository (workspace root)
  */
 function getRepoRoot(): string {
+  // Check for REPO_ROOT environment variable (used in tests)
+  if (process.env.REPO_ROOT) {
+    return process.env.REPO_ROOT;
+  }
   // Navigate up from apps/web to workspace root
   return join(process.cwd(), '..', '..');
 }

@@ -5,6 +5,8 @@ import { readSettings } from './systemSettingsRepo';
 import { capabilityRegistry } from './execution/capabilityRegistry';
 import { createEnvelope, enqueueEmission, drainQueue } from './execution/queue';
 import { InMemoryInputBufferStore } from './execution/bufferStore';
+import { getTemplate } from './templateRepo';
+import Handlebars from 'handlebars';
 
 // Minimal shape reference (expand if needed)
 interface NodeFile { id: string; type: string; props?: Record<string, any>; }
@@ -255,6 +257,47 @@ registerExecutor('LLM', async (ctx) => {
     }
   }
   rendered = rendered.replace(/\{([a-zA-Z0-9_]+)\}/g, (m, g1)=> (g1 in replacements ? replacements[g1] : ''));
+  
+  // === TEMPLATE INTEGRATION (PBI-37) ===
+  // If useTemplate is enabled, load and render the specified template
+  if (ctx.props.useTemplate && ctx.props.templateId) {
+    try {
+      const template = await getTemplate(ctx.props.templateId);
+      diagnostics.push({ level: 'info', message: 'using_prompt_template', data: { templateId: ctx.props.templateId, category: template.category } });
+      
+      // Merge template variables: explicit templateVariables + input data
+      const templateContext: Record<string, any> = {
+        ...replacements, // Include all existing replacements (prompt, context, message, etc.)
+        ...(ctx.props.templateVariables || {}), // Explicit template variables override
+      };
+      
+      // Validate required variables
+      const requiredVars = template.variables?.filter((v: any) => v.required).map((v: any) => v.name) || [];
+      const missingVars = requiredVars.filter((varName: string) => !(varName in templateContext) || templateContext[varName] === '');
+      if (missingVars.length > 0) {
+        diagnostics.push({ level: 'error', message: 'missing_required_template_variables', data: { missing: missingVars } });
+        return { 
+          runId: ctx.runId, 
+          error: `Missing required template variables: ${missingVars.join(', ')}`, 
+          diagnostics 
+        };
+      }
+      
+      // Compile and render template
+      const compiledTemplate = Handlebars.compile(template.content);
+      rendered = compiledTemplate(templateContext);
+      diagnostics.push({ level: 'info', message: 'template_rendered', data: { length: rendered.length, varsUsed: Object.keys(templateContext).length } });
+    } catch (err: any) {
+      diagnostics.push({ level: 'error', message: 'template_load_failed', data: { templateId: ctx.props.templateId, error: err?.message } });
+      return { 
+        runId: ctx.runId, 
+        error: `Failed to load template: ${err?.message || 'unknown error'}`, 
+        diagnostics 
+      };
+    }
+  }
+  // === END TEMPLATE INTEGRATION ===
+  
   const temperature: number = typeof ctx.props.temperature === 'number' ? ctx.props.temperature : (typeof llmSettings.temperature === 'number' ? llmSettings.temperature : 0.7);
   const maxOutputTokens: number | undefined = typeof ctx.props.maxOutputTokens === 'number'
     ? ctx.props.maxOutputTokens

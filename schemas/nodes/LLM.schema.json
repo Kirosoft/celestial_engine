@@ -36,6 +36,20 @@
         "promptTemplate": {
           "type": "string"
         },
+        "useTemplate": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether to use a prompt template from the library"
+        },
+        "templateId": {
+          "type": "string",
+          "description": "Template ID (e.g., 'summarization/article'). Required if useTemplate=true"
+        },
+        "templateVariables": {
+          "type": "object",
+          "description": "Key-value pairs for template variables",
+          "additionalProperties": true
+        },
         "ollamaBaseUrl": {
           "type": "string",
           "default": "http://localhost:11434"
