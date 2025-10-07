@@ -31,8 +31,8 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
-[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema glob: schemas/nodes/*.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema glob: schemas/nodes/*.schema.json
 [FileRepo] list() result: ["schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
@@ -43,8 +43,8 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
@@ -55,9 +55,9 @@
 [FileRepo] list() result: ["schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
@@ -73,8 +73,8 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema glob: schemas/nodes/*.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] list() result: ["schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
@@ -93,8 +93,8 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
@@ -111,17 +111,17 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
@@ -136,11 +136,11 @@
 [FileRepo] list() result: ["schemas/nodes/Code.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Code.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
@@ -154,17 +154,17 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema glob: schemas/nodes/*.schema.json
@@ -174,8 +174,8 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubInput.schema.json
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
@@ -245,8 +245,8 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema glob: schemas/nodes/*.schema.json
@@ -276,8 +276,8 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
@@ -327,17 +327,17 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
@@ -354,8 +354,8 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ChatNode.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Code.schema.json
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Eval.schema.json
@@ -379,8 +379,8 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LogNode.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LogNode.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LogNode.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
@@ -428,9 +428,68 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubOutput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubOutput.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LogNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LogNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
+[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema glob: schemas/nodes/*.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] list() result: ["schemas/nodes/ChatNode.schema.json","schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/FileReaderNode.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/LogNode.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ChatNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ChatNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Code.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Code.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Eval.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Eval.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/FileReaderNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/FileReaderNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/FileReaderNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/FileReaderNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubInput.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubInput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubOutput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubOutput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
@@ -444,8 +503,8 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
@@ -458,8 +517,8 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema glob: schemas/nodes/*.schema.json
 [FileRepo] list() result: ["schemas/nodes/ChatNode.schema.json","schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/FileReaderNode.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/LogNode.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
@@ -476,65 +535,6 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Eval.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/FileReaderNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/FileReaderNode.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/FileReaderNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/FileReaderNode.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubInput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubInput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubOutput.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/GitHubOutput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Group.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LogNode.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LogNode.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Task.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema glob: schemas/nodes/*.schema.json
-[FileRepo] list() result: ["schemas/nodes/ChatNode.schema.json","schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/FileReaderNode.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/LogNode.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ChatNode.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ChatNode.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Code.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Code.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Eval.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Eval.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/FileReaderNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/FileReaderNode.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/FileReaderNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/FileReaderNode.schema.json
@@ -556,16 +556,16 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LogNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/LogNode.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
@@ -579,7 +579,7 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-LTW0Ln.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-LTW0Ln.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-3agMIw.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-3agMIw.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
@@ -587,35 +587,11 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-LTW0Ln.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-LTW0Ln.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-3agMIw.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-3agMIw.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-LTW0Ln.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-LTW0Ln.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-3agMIw.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-3agMIw.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-LTW0Ln.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-LTW0Ln.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-j603Bl.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-j603Bl.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-j603Bl.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-j603Bl.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-j603Bl.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-j603Bl.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-j603Bl.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-j603Bl.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-j603Bl.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-j603Bl.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-j603Bl.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-j603Bl.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-3agMIw.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-3agMIw.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
@@ -623,7 +599,31 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-WWve1Z.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-WWve1Z.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-IHOPL-.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-IHOPL-.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-IHOPL-.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-IHOPL-.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-IHOPL-.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-IHOPL-.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-IHOPL-.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-IHOPL-.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-IHOPL-.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-IHOPL-.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-IHOPL-.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-IHOPL-.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: nodes/FileReaderNode-aZPHNE.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/nodes/FileReaderNode-aZPHNE.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema resolved: /home/ubuntu/celestial_engine/apps/web/.test-filereader-schema

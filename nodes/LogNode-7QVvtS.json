@@ -1,0 +1,57 @@
+{
+  "id": "LogNode-7QVvtS",
+  "type": "LogNode",
+  "name": "Log-Demo",
+  "props": {
+    "history": [
+      {
+        "id": "3MeorClO",
+        "ts": 1759850238479,
+        "sourceId": "ChatNode-cE4nWz",
+        "port": "message",
+        "kind": "text",
+        "preview": "M5"
+      },
+      {
+        "id": "Eh3obfTF",
+        "ts": 1759850238513,
+        "sourceId": "ChatNode-cE4nWz",
+        "port": "message",
+        "kind": "text",
+        "preview": "M6"
+      },
+      {
+        "id": "g48NwhqP",
+        "ts": 1759850238544,
+        "sourceId": "ChatNode-cE4nWz",
+        "port": "message",
+        "kind": "text",
+        "preview": "M7"
+      },
+      {
+        "id": "ZiG2kluN",
+        "ts": 1759850238580,
+        "sourceId": "ChatNode-cE4nWz",
+        "port": "message",
+        "kind": "text",
+        "preview": "M8"
+      },
+      {
+        "id": "i6grKioX",
+        "ts": 1759850238638,
+        "sourceId": "ChatNode-cE4nWz",
+        "port": "message",
+        "kind": "text",
+        "preview": "M9"
+      }
+    ],
+    "maxEntries": 5
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

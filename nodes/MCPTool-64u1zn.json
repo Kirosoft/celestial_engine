@@ -1,0 +1,24 @@
+{
+  "id": "MCPTool-64u1zn",
+  "type": "MCPTool",
+  "name": "MCPTool",
+  "props": {},
+  "position": {
+    "x": -19.554189911492983,
+    "y": -60.58567958763254
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_22TPX0",
+        "targetId": "LLM-5V3DK5",
+        "kind": "flow"
+      },
+      {
+        "id": "e_jTA_eK",
+        "targetId": "LLM-U8AB_T",
+        "kind": "flow"
+      }
+    ]
+  }
+}

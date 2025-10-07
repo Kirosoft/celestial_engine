@@ -170,6 +170,37 @@ export async function emitFrom(nodeId: string, port: string, value: any){
 registerExecutor('LLM', async (ctx) => {
   console.debug('[exec] LLM executor start', { nodeId: ctx.nodeId, latestKeys: Object.keys(ctx.latest), inputs: Object.keys(ctx.inputs) });
   const diagnostics: any[] = [];
+  
+  // === TOOL DISCOVERY FROM GRAPH (PBI-40) ===
+  // Discover MCPTool nodes that have edges pointing to this LLM
+  const allNodes = await listNodes();
+  const connectedTools = allNodes.filter((n: any) => {
+    if (n.type !== 'MCPTool') return false;
+    // Check if this tool has an outgoing edge to our LLM
+    const hasEdgeToLLM = n.edges?.out?.some((e: any) => e.targetId === ctx.nodeId);
+    return hasEdgeToLLM;
+  });
+  
+  const availableTools: Array<{ name: string; description: string; parameters: any; nodeId: string; serverId: string; toolName: string }> = [];
+  for (const toolNode of connectedTools) {
+    const props = (toolNode as any).props || {};
+    if (props.serverId && props.toolName) {
+      availableTools.push({
+        name: `${props.serverId}_${props.toolName}`,
+        description: `Execute ${props.toolName} on ${props.serverId} server`,
+        parameters: props.parameters || {},
+        nodeId: (toolNode as any).id,
+        serverId: props.serverId,
+        toolName: props.toolName
+      });
+    }
+  }
+  
+  if (availableTools.length > 0) {
+    diagnostics.push({ level: 'info', message: 'discovered_tools', data: { count: availableTools.length, tools: availableTools.map(t => t.name) } });
+  }
+  // === END TOOL DISCOVERY ===
+  
   // Load optional system settings
   let settings; try { settings = await readSettings({ reveal: true }); } catch { settings = null; }
   const globalModel = settings?.llm?.defaultModel || 'gpt-3.5-turbo';
@@ -327,8 +358,35 @@ registerExecutor('LLM', async (ctx) => {
       options: { temperature }
     } as any;
     // Add a simple system prefix if provided
-    if(systemPrompt){
-      body.prompt = `System: ${systemPrompt}\nUser: ${rendered}`;
+    let effectiveSystemPrompt = systemPrompt || '';
+    
+    // === INJECT TOOL INFORMATION (PBI-40) ===
+    if (availableTools.length > 0) {
+      const toolDescriptions = availableTools.map(t => 
+        `- ${t.name}: ${t.description}`
+      ).join('\n');
+      
+      const toolInstructions = `
+
+You have access to the following tools:
+${toolDescriptions}
+
+To use a tool, respond with JSON in this exact format:
+{"tool_call": {"tool": "tool_name", "parameters": {...}}}
+
+After receiving the tool result, you can either:
+1. Use another tool by responding with another tool_call JSON
+2. Provide your final answer as plain text
+
+Always respond with either a tool call JSON or your final answer, never both.`;
+      
+      effectiveSystemPrompt = effectiveSystemPrompt + toolInstructions;
+      diagnostics.push({ level: 'info', message: 'tool_instructions_injected', data: { toolCount: availableTools.length } });
+    }
+    // === END TOOL INJECTION ===
+    
+    if(effectiveSystemPrompt){
+      body.prompt = `System: ${effectiveSystemPrompt}\nUser: ${rendered}`;
     }
     let controller: AbortController | undefined;
     let timeoutHandle: any;
@@ -351,6 +409,79 @@ registerExecutor('LLM', async (ctx) => {
         text = '';
       }
       console.debug('[exec] LLM->Ollama response', { nodeId: ctx.nodeId, preview: text.slice(0,80) });
+      
+      // === TOOL CALL DETECTION AND EXECUTION (PBI-40) ===
+      if (availableTools.length > 0) {
+        const toolCallMatch = text.match(/\{"tool_call":\s*\{[^}]+\}\s*\}/);
+        if (toolCallMatch) {
+          try {
+            const toolCallData = JSON.parse(toolCallMatch[0]);
+            const { tool, parameters } = toolCallData.tool_call;
+            
+            diagnostics.push({ level: 'info', message: 'tool_call_detected', data: { tool, parameters } });
+            
+            // Find the matching tool
+            const matchedTool = availableTools.find(t => t.name === tool);
+            if (!matchedTool) {
+              diagnostics.push({ level: 'error', message: 'tool_not_found', data: { requestedTool: tool } });
+              text = `Error: Tool '${tool}' not found. Available tools: ${availableTools.map(t => t.name).join(', ')}`;
+            } else {
+              // Execute the tool by calling the MCPTool executor
+              const { mcpClient } = await import('./mcpClient');
+              const toolResult = await mcpClient.invokeTool({
+                serverId: matchedTool.serverId,
+                toolName: matchedTool.toolName,
+                parameters: { ...matchedTool.parameters, ...parameters }
+              });
+              
+              diagnostics.push({ 
+                level: 'info', 
+                message: 'tool_executed', 
+                data: { 
+                  tool: matchedTool.name, 
+                  success: toolResult.success, 
+                  duration: toolResult.duration 
+                } 
+              });
+              
+              if (toolResult.success) {
+                // Format tool result and feed back to LLM for final response
+                const toolResultText = typeof toolResult.result === 'string' 
+                  ? toolResult.result 
+                  : JSON.stringify(toolResult.result, null, 2);
+                
+                // Make second LLM call with tool result
+                const followUpPrompt = `Tool '${tool}' returned:\n\n${toolResultText}\n\nBased on this result, provide your final answer.`;
+                body.prompt = effectiveSystemPrompt 
+                  ? `System: ${effectiveSystemPrompt}\nUser: ${rendered}\nTool Result: ${toolResultText}\nProvide your final answer based on the tool result.`
+                  : followUpPrompt;
+                
+                const followUpRes = await fetch(url, { 
+                  method:'POST', 
+                  headers:{ 'Content-Type':'application/json' }, 
+                  body: JSON.stringify(body), 
+                  signal: controller?.signal 
+                });
+                
+                if (followUpRes.ok) {
+                  const followUpJson: any = await followUpRes.json();
+                  text = followUpJson?.response || followUpJson?.output || text;
+                  diagnostics.push({ level: 'info', message: 'tool_result_processed', data: { responseLength: text.length } });
+                } else {
+                  text = `Tool executed successfully. Result:\n${toolResultText}`;
+                }
+              } else {
+                text = `Tool execution failed: ${toolResult.error}`;
+                diagnostics.push({ level: 'error', message: 'tool_execution_failed', data: { error: toolResult.error } });
+              }
+            }
+          } catch (parseErr: any) {
+            diagnostics.push({ level: 'error', message: 'tool_call_parse_error', data: { error: parseErr?.message } });
+          }
+        }
+      }
+      // === END TOOL CALL HANDLING ===
+      
       // Truncate tokens client-side simple heuristic (split by whitespace)
       if(maxOutputTokens && maxOutputTokens > 0){
         const parts = text.split(/\s+/);

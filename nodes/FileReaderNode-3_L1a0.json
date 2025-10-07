@@ -1,0 +1,20 @@
+{
+  "id": "FileReaderNode-3_L1a0",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-3_L1a0",
+  "props": {
+    "mode": "single",
+    "filePath": "apps/web/.test-filereader-actions/b.log",
+    "emitContent": true,
+    "encodedAs": "text",
+    "action": "sendNext",
+    "lastError": null
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

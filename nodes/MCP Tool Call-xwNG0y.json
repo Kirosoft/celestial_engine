@@ -1,0 +1,13 @@
+{
+  "id": "MCP Tool Call-xwNG0y",
+  "type": "MCP Tool Call",
+  "name": "MCP Tool Call",
+  "props": {},
+  "position": {
+    "x": -249.5230336978085,
+    "y": 401.8276404373702
+  },
+  "edges": {
+    "out": []
+  }
+}

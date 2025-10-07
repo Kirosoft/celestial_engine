@@ -1,0 +1,15 @@
+{
+  "id": "FileReaderNode-aZPHNE",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-aZPHNE",
+  "props": {
+    "mode": "single"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

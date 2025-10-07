@@ -1,0 +1,19 @@
+{
+  "id": "ChatNode-HuBg4d",
+  "type": "ChatNode",
+  "name": "ChatNode-HuBg4d",
+  "props": {},
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": [
+      {
+        "id": "e_9MI9GI",
+        "targetId": "LLM-ncbUwf",
+        "kind": "flow"
+      }
+    ]
+  }
+}

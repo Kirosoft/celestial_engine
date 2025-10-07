@@ -1,0 +1,25 @@
+{
+  "id": "FileReaderNode-xOjfFQ",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-xOjfFQ",
+  "props": {
+    "mode": "directory",
+    "dirPath": "apps/web/.test-filereader-actions",
+    "includePatterns": "*.txt,*.log",
+    "scannedFiles": [
+      "a.txt",
+      "b.log"
+    ],
+    "cursorIndex": 0,
+    "lastError": null,
+    "emitContent": true,
+    "encodedAs": "text"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

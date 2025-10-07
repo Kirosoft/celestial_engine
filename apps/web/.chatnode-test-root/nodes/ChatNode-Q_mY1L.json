@@ -1,0 +1,15 @@
+{
+  "id": "ChatNode-Q_mY1L",
+  "type": "ChatNode",
+  "name": "ChatNode",
+  "props": {
+    "history": []
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

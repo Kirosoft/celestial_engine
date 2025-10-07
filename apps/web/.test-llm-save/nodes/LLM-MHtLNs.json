@@ -1,0 +1,21 @@
+{
+  "id": "LLM-MHtLNs",
+  "type": "LLM",
+  "name": "llm1",
+  "props": {
+    "model": "gpt-test",
+    "provider": "openai",
+    "temperature": 0.5,
+    "maxOutputTokens": 2048,
+    "outputCharLimit": 5000,
+    "autoDerivePromptFromFile": false,
+    "promptTemplate": "{prompt}"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

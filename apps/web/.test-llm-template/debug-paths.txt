@@ -12,10 +12,10 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-llm-template glob: schemas/nodes/*.schema.json
 [FileRepo] list() result: ["schemas/nodes/Group.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json"]
@@ -28,8 +28,8 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-llm-template glob: schemas/nodes/*.schema.json
@@ -53,10 +53,10 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-llm-template glob: schemas/nodes/*.schema.json
 [FileRepo] list() result: ["schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
@@ -69,19 +69,19 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-llm-template glob: schemas/nodes/*.schema.json
 [FileRepo] list() result: ["schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
@@ -139,11 +139,11 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
@@ -166,8 +166,8 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-llm-template glob: schemas/nodes/*.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] list() result: ["schemas/nodes/Code.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Code.schema.json
@@ -195,8 +195,8 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Router.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
@@ -246,16 +246,16 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-llm-template glob: schemas/nodes/*.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] list() result: ["schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Code.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Eval.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Eval.schema.json
@@ -267,10 +267,10 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
@@ -293,8 +293,8 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-llm-template glob: schemas/nodes/*.schema.json
 [FileRepo] list() result: ["schemas/nodes/ChatNode.schema.json","schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
@@ -303,23 +303,23 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ChatNode.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Code.schema.json
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Code.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Eval.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Eval.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
@@ -336,14 +336,14 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
@@ -366,17 +366,17 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LogNode.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
@@ -385,69 +385,10 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Merge.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Merge.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Router.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Router.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-llm-template glob: schemas/nodes/*.schema.json
-[FileRepo] list() result: ["schemas/nodes/ChatNode.schema.json","schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/FileReaderNode.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/LogNode.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ChatNode.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ChatNode.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Code.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Code.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Eval.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Eval.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/FileReaderNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/FileReaderNode.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/FileReaderNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/FileReaderNode.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubInput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubInput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LogNode.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LogNode.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Merge.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Merge.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Plan.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Plan.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Router.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
@@ -484,8 +425,67 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubInput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LLM.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LLM.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LogNode.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/LogNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/LogNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Merge.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Merge.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Merge.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Plan.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Plan.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Plan.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Router.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Router.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-llm-template glob: schemas/nodes/*.schema.json
+[FileRepo] list() result: ["schemas/nodes/ChatNode.schema.json","schemas/nodes/Code.schema.json","schemas/nodes/Eval.schema.json","schemas/nodes/FileReaderNode.schema.json","schemas/nodes/GitHubInput.schema.json","schemas/nodes/GitHubOutput.schema.json","schemas/nodes/Group.schema.json","schemas/nodes/LLM.schema.json","schemas/nodes/LogNode.schema.json","schemas/nodes/Merge.schema.json","schemas/nodes/Plan.schema.json","schemas/nodes/Router.schema.json","schemas/nodes/Task.schema.json","schemas/nodes/ToolCall.schema.json"]
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ChatNode.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ChatNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ChatNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Code.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Code.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Code.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Eval.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Eval.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Eval.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/FileReaderNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/FileReaderNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/FileReaderNode.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/FileReaderNode.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubInput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubInput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubInput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/GitHubOutput.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/GitHubOutput.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Group.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Group.schema.json
@@ -515,12 +515,12 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/Task.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/Task.schema.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: schemas/nodes/ToolCall.schema.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/schemas/nodes/ToolCall.schema.json
-[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: nodes/LLM-kK8zhR.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/nodes/LLM-kK8zhR.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: nodes/LLM-qzsUBP.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/nodes/LLM-qzsUBP.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
@@ -528,9 +528,14 @@
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: .awb/index.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/.awb/index.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: nodes/LLM-kK8zhR.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/nodes/LLM-kK8zhR.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: nodes/LLM-qzsUBP.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/nodes/LLM-qzsUBP.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: nodes/LLM-kK8zhR.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/nodes/LLM-kK8zhR.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: nodes/LLM-qzsUBP.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/nodes/LLM-qzsUBP.json
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-llm-template glob: nodes/*.json
+[FileRepo] list() result: ["nodes/LLM-qzsUBP.json"]
+[FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: nodes/LLM-qzsUBP.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/nodes/LLM-qzsUBP.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: settings/system.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/settings/system.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
@@ -539,6 +544,6 @@
 [FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: settings/system.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/settings/system.json
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
 [FileRepo] list() cwd: /home/ubuntu/celestial_engine/apps/web/.test-llm-template glob: nodes/*.json
-[FileRepo] list() result: ["nodes/LLM-kK8zhR.json"]
+[FileRepo] list() result: ["nodes/LLM-qzsUBP.json"]
 [FileRepo] repoRoot() env: /home/ubuntu/celestial_engine/apps/web/.test-llm-template resolved: /home/ubuntu/celestial_engine/apps/web/.test-llm-template
-[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: nodes/LLM-kK8zhR.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/nodes/LLM-kK8zhR.json
+[FileRepo] safeJoin() root: /home/ubuntu/celestial_engine/apps/web/.test-llm-template p: nodes/LLM-qzsUBP.json target: /home/ubuntu/celestial_engine/apps/web/.test-llm-template/nodes/LLM-qzsUBP.json

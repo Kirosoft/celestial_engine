@@ -1,0 +1,24 @@
+{
+  "id": "LogNode-bpn3un",
+  "type": "LogNode",
+  "name": "LogNode-bpn3un",
+  "props": {
+    "history": [
+      {
+        "id": "2AqDFgM4",
+        "ts": 1759850238482,
+        "sourceId": "LLM-ncbUwf",
+        "port": "output",
+        "kind": "text",
+        "preview": "Assistant(gpt-3.5-turbo): Hello"
+      }
+    ]
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

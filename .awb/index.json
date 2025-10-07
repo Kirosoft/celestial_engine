@@ -1,6 +1,6 @@
 {
-  "version": 3601,
-  "generatedAt": "2025-10-07T09:22:01.945Z",
+  "version": 3744,
+  "generatedAt": "2025-10-07T15:17:20.625Z",
   "nodes": [
     {
       "id": "Task-EDq7hE",
@@ -490,21 +490,21 @@
       "type": "ChatNode",
       "name": "ChatNode",
       "propsHash": "75e21e2e0166b2d547efc80e36d12a914607b3f8",
-      "mtime": "2025-10-02T16:09:41.600Z"
+      "mtime": "2025-10-07T12:26:22.622Z"
     },
     {
       "id": "LLM-5V3DK5",
       "type": "LLM",
       "name": "LLM",
       "propsHash": "20af5d663a152f5c9521feb4f6b82fc8df8a24b1",
-      "mtime": "2025-10-02T16:10:22.036Z"
+      "mtime": "2025-10-07T12:23:44.381Z"
     },
     {
       "id": "ChatNode-Hy5dGa",
       "type": "ChatNode",
       "name": "ChatNode",
       "propsHash": "d6d6a2ab8942a6d363fcf5410c0b94f1c76bd2fc",
-      "mtime": "2025-09-22T15:06:16.979Z"
+      "mtime": "2025-10-07T12:26:25.625Z"
     },
     {
       "id": "LogNode-ot-nJ8",
@@ -525,224 +525,105 @@
       "type": "FileReaderNode",
       "name": "FileReaderNode",
       "propsHash": "390fcc6c8151868fbfa17482d94c11b06220c5d4",
-      "mtime": "2025-10-02T15:53:44.703Z"
+      "mtime": "2025-10-07T12:26:05.518Z"
     },
     {
       "id": "LogNode--9IzFJ",
       "type": "LogNode",
       "name": "LogNode",
       "propsHash": "a2b5bb910f227ab1304760d1bbbd765cb51559e3",
-      "mtime": "2025-10-02T15:55:54.296Z"
+      "mtime": "2025-10-07T12:26:24.851Z"
     },
     {
       "id": "LogNode-l2Xlhc",
       "type": "LogNode",
       "name": "LogNode",
-      "propsHash": "5721d63cf715783254da16f6fcee734a48abc078",
-      "mtime": "2025-10-02T15:56:10.408Z"
+      "propsHash": "9c52ffcc9a1f7260de35553712a186cfe37594cd",
+      "mtime": "2025-10-07T12:26:29.812Z"
     },
     {
       "id": "LLM-U8AB_T",
       "type": "LLM",
       "name": "LLM",
       "propsHash": "dc6fa87e1e87777bd23fdb87d11dc56980a70d25",
-      "mtime": "2025-10-02T15:56:48.501Z"
+      "mtime": "2025-10-07T12:26:27.569Z"
     },
     {
-      "id": "LLM-pBufJu",
-      "type": "LLM",
-      "name": "LLM",
-      "propsHash": "17f6428536a49edf7df83c427d5caa040d10d73e",
-      "mtime": "2025-10-06T12:46:16.801Z"
+      "id": "MCP Tool Call-xwNG0y",
+      "type": "MCP Tool Call",
+      "name": "MCP Tool Call",
+      "propsHash": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
+      "mtime": "2025-10-07T12:10:03.162Z"
     },
     {
-      "id": "FileReaderNode-YS_I16",
+      "id": "MCPTool-64u1zn",
+      "type": "MCPTool",
+      "name": "MCPTool",
+      "propsHash": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
+      "mtime": "2025-10-07T15:03:53.168Z"
+    },
+    {
+      "id": "FileReaderNode-BynpAh",
       "type": "FileReaderNode",
-      "name": "FileReaderNode-YS_I16",
+      "name": "FileReaderNode-BynpAh",
       "propsHash": "e1d55a713ddd9dc0cdee00e1662af005ba2f9d2f",
-      "mtime": "2025-10-07T09:20:12.807Z"
+      "mtime": "2025-10-07T15:17:15.155Z"
     },
     {
-      "id": "FileReaderNode-FXVEAm",
+      "id": "FileReaderNode-xOjfFQ",
       "type": "FileReaderNode",
-      "name": "FileReaderNode-FXVEAm",
+      "name": "FileReaderNode-xOjfFQ",
       "propsHash": "254ceea0ba2dc5f0b574dc2a002dd11f3d7d437d",
-      "mtime": "2025-10-07T09:20:12.928Z"
+      "mtime": "2025-10-07T15:17:15.279Z"
     },
     {
-      "id": "FileReaderNode-21QaEu",
+      "id": "FileReaderNode-3_L1a0",
       "type": "FileReaderNode",
-      "name": "FileReaderNode-21QaEu",
+      "name": "FileReaderNode-3_L1a0",
       "propsHash": "178e670e22d09b2c035e7dc8e04501b5a430a003",
-      "mtime": "2025-10-07T09:20:12.962Z"
+      "mtime": "2025-10-07T15:17:15.321Z"
     },
     {
-      "id": "FileReaderNode-1KMSso",
+      "id": "FileReaderNode-C-H1Fa",
       "type": "FileReaderNode",
-      "name": "FileReaderNode-1KMSso",
+      "name": "FileReaderNode-C-H1Fa",
       "propsHash": "7dbb127ce721c0831b131f575f07da2e27e462ec",
-      "mtime": "2025-10-07T09:20:12.982Z"
+      "mtime": "2025-10-07T15:17:15.362Z"
     },
     {
-      "id": "FileReaderNode-8BEJni",
+      "id": "FileReaderNode-Om3lq0",
       "type": "FileReaderNode",
-      "name": "FileReaderNode-8BEJni",
+      "name": "FileReaderNode-Om3lq0",
       "propsHash": "a8211877aab87702a9de0c7cd43502abdf3f0fb4",
-      "mtime": "2025-10-07T09:20:13.012Z"
+      "mtime": "2025-10-07T15:17:15.388Z"
     },
     {
-      "id": "LogNode-C5qzLC",
+      "id": "LogNode-7QVvtS",
       "type": "LogNode",
       "name": "Log-Demo",
-      "propsHash": "65771366434da0c433e667e8b2e817606aabd832",
-      "mtime": "2025-10-07T09:20:15.976Z"
+      "propsHash": "f09daeadc5b9a947d288a6a0b6fece3a506ed8fb",
+      "mtime": "2025-10-07T15:17:18.654Z"
     },
     {
-      "id": "ChatNode-fonuo8",
+      "id": "ChatNode-cE4nWz",
       "type": "ChatNode",
       "name": "Chat-Demo",
       "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
-      "mtime": "2025-10-07T09:20:15.578Z"
+      "mtime": "2025-10-07T15:17:18.156Z"
     },
     {
-      "id": "ChatNode-DUD_ra",
+      "id": "ChatNode-c_eIc5",
       "type": "ChatNode",
       "name": "Chat-Clear",
       "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
-      "mtime": "2025-10-07T09:20:17.298Z"
+      "mtime": "2025-10-07T15:17:20.102Z"
     },
     {
-      "id": "LLM-sEGeAr",
+      "id": "LLM-tp2irs",
       "type": "LLM",
       "name": "LLM-Demo",
       "propsHash": "46c022b182ac99987f1f2eef7cc59e4a3a8e5afa",
-      "mtime": "2025-10-07T09:20:17.705Z"
-    },
-    {
-      "id": "FileReaderNode-UnbSyI",
-      "type": "FileReaderNode",
-      "name": "FileReaderNode-UnbSyI",
-      "propsHash": "e1d55a713ddd9dc0cdee00e1662af005ba2f9d2f",
-      "mtime": "2025-10-07T09:21:21.394Z"
-    },
-    {
-      "id": "FileReaderNode-V9Rbcd",
-      "type": "FileReaderNode",
-      "name": "FileReaderNode-V9Rbcd",
-      "propsHash": "254ceea0ba2dc5f0b574dc2a002dd11f3d7d437d",
-      "mtime": "2025-10-07T09:21:21.515Z"
-    },
-    {
-      "id": "FileReaderNode-iCv-Ck",
-      "type": "FileReaderNode",
-      "name": "FileReaderNode-iCv-Ck",
-      "propsHash": "178e670e22d09b2c035e7dc8e04501b5a430a003",
-      "mtime": "2025-10-07T09:21:21.540Z"
-    },
-    {
-      "id": "FileReaderNode-RbGy5_",
-      "type": "FileReaderNode",
-      "name": "FileReaderNode-RbGy5_",
-      "propsHash": "7dbb127ce721c0831b131f575f07da2e27e462ec",
-      "mtime": "2025-10-07T09:21:21.574Z"
-    },
-    {
-      "id": "FileReaderNode-TPv0cb",
-      "type": "FileReaderNode",
-      "name": "FileReaderNode-TPv0cb",
-      "propsHash": "a8211877aab87702a9de0c7cd43502abdf3f0fb4",
-      "mtime": "2025-10-07T09:21:21.602Z"
-    },
-    {
-      "id": "LogNode-6wCqhx",
-      "type": "LogNode",
-      "name": "Log-Demo",
-      "propsHash": "92eff7a8d720e14ebf23025a927284788d899139",
-      "mtime": "2025-10-07T09:21:24.788Z"
-    },
-    {
-      "id": "ChatNode-FihAzq",
-      "type": "ChatNode",
-      "name": "Chat-Demo",
-      "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
-      "mtime": "2025-10-07T09:21:24.239Z"
-    },
-    {
-      "id": "ChatNode-icIVBM",
-      "type": "ChatNode",
-      "name": "Chat-Clear",
-      "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
-      "mtime": "2025-10-07T09:21:25.917Z"
-    },
-    {
-      "id": "LLM-Kz_sPE",
-      "type": "LLM",
-      "name": "LLM-Demo",
-      "propsHash": "46c022b182ac99987f1f2eef7cc59e4a3a8e5afa",
-      "mtime": "2025-10-07T09:21:26.351Z"
-    },
-    {
-      "id": "FileReaderNode-aqGsdy",
-      "type": "FileReaderNode",
-      "name": "FileReaderNode-aqGsdy",
-      "propsHash": "e1d55a713ddd9dc0cdee00e1662af005ba2f9d2f",
-      "mtime": "2025-10-07T09:21:56.917Z"
-    },
-    {
-      "id": "FileReaderNode-JJWUji",
-      "type": "FileReaderNode",
-      "name": "FileReaderNode-JJWUji",
-      "propsHash": "254ceea0ba2dc5f0b574dc2a002dd11f3d7d437d",
-      "mtime": "2025-10-07T09:21:57.060Z"
-    },
-    {
-      "id": "FileReaderNode-zDVQet",
-      "type": "FileReaderNode",
-      "name": "FileReaderNode-zDVQet",
-      "propsHash": "178e670e22d09b2c035e7dc8e04501b5a430a003",
-      "mtime": "2025-10-07T09:21:57.093Z"
-    },
-    {
-      "id": "FileReaderNode-eLD1TF",
-      "type": "FileReaderNode",
-      "name": "FileReaderNode-eLD1TF",
-      "propsHash": "7dbb127ce721c0831b131f575f07da2e27e462ec",
-      "mtime": "2025-10-07T09:21:57.131Z"
-    },
-    {
-      "id": "FileReaderNode-KK695-",
-      "type": "FileReaderNode",
-      "name": "FileReaderNode-KK695-",
-      "propsHash": "a8211877aab87702a9de0c7cd43502abdf3f0fb4",
-      "mtime": "2025-10-07T09:21:57.164Z"
-    },
-    {
-      "id": "LogNode-lVblmm",
-      "type": "LogNode",
-      "name": "Log-Demo",
-      "propsHash": "4af8b97fcdf63e8149f3a6f4e72295adba9bcdbc",
-      "mtime": "2025-10-07T09:22:00.480Z"
-    },
-    {
-      "id": "ChatNode-mbmSjM",
-      "type": "ChatNode",
-      "name": "Chat-Demo",
-      "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
-      "mtime": "2025-10-07T09:21:59.772Z"
-    },
-    {
-      "id": "ChatNode-FjhhP2",
-      "type": "ChatNode",
-      "name": "Chat-Clear",
-      "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
-      "mtime": "2025-10-07T09:22:01.480Z"
-    },
-    {
-      "id": "LLM-GH5D19",
-      "type": "LLM",
-      "name": "LLM-Demo",
-      "propsHash": "46c022b182ac99987f1f2eef7cc59e4a3a8e5afa",
-      "mtime": "2025-10-07T09:22:01.945Z"
+      "mtime": "2025-10-07T15:17:20.625Z"
     }
   ]
 }

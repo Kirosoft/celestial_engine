@@ -1,0 +1,33 @@
+{
+  "title": "Group",
+  "type": "object",
+  "properties": {
+    "ports": {
+      "type": "object",
+      "properties": {
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "inputs",
+        "outputs"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "ports"
+  ]
+}

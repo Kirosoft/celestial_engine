@@ -1,0 +1,16 @@
+{
+  "id": "FileReaderNode-3agMIw",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-3agMIw",
+  "props": {
+    "mode": "single",
+    "filePath": "sample.txt"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

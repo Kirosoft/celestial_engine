@@ -1,0 +1,16 @@
+{
+  "id": "FileReaderNode-IHOPL-",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-IHOPL-",
+  "props": {
+    "mode": "directory",
+    "dirPath": "."
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}
