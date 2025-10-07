@@ -1,9 +1,21 @@
 {
-  "$id": "https://celestial-engine.dev/schemas/MCPTool.schema.json",
-  "title": "MCP Tool Call",
+  "$id": "nodes/MCPTool.schema.json",
+  "title": "MCPTool",
   "type": "object",
   "description": "Explicitly invoke an MCP tool from a connected server",
   "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "MCPTool" },
+    "name": { "type": "string" },
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" }
+      },
+      "required": ["x", "y"],
+      "additionalProperties": false
+    },
     "props": {
       "type": "object",
       "properties": {
@@ -36,8 +48,11 @@
           "maximum": 300000
         }
       },
-      "required": []
-    }
+      "required": [],
+      "additionalProperties": false
+    },
+    "edges": { "type": "object" }
   },
-  "required": ["props"]
+  "required": ["id", "type", "name", "props"],
+  "additionalProperties": true
 }
