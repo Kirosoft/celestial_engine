@@ -10,12 +10,12 @@
         "serverId": {
           "type": "string",
           "description": "MCP server ID (e.g., 'filesystem', 'git')",
-          "minLength": 1
+          "default": ""
         },
         "toolName": {
           "type": "string",
           "description": "Tool to invoke (e.g., 'read_file', 'list_directory')",
-          "minLength": 1
+          "default": ""
         },
         "parameters": {
           "type": "object",
@@ -36,7 +36,7 @@
           "maximum": 300000
         }
       },
-      "required": ["serverId", "toolName"]
+      "required": []
     }
   },
   "required": ["props"]
