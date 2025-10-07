@@ -1,0 +1,16 @@
+{
+  "id": "LLM-Kz_sPE",
+  "type": "LLM",
+  "name": "LLM-Demo",
+  "props": {
+    "model": "stub",
+    "promptTemplate": "Echo: {message}"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

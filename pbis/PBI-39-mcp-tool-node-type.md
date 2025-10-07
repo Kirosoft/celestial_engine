@@ -3,7 +3,7 @@
 **Phase:** 2.3 - Model Context Protocol Integration  
 **Priority:** High  
 **Estimate:** 3 days  
-**Status:** Not Started  
+**Status:** ✅ Complete  
 **Depends On:** PBI-38
 
 ---
@@ -541,5 +541,68 @@ test('MCPTool node workflow', async ({ page }) => {
 
 ---
 
+## Implementation Summary
+
+**Completed:** January 19, 2025
+
+### Files Created
+- `schemas/nodes/MCPTool.schema.json` - Schema defining MCPTool node structure
+- `components/MCPToolNode.tsx` - React component for MCPTool node visualization
+- `pages/api/mcp/servers/index.ts` - API endpoint for MCP server management
+- `pages/api/mcp/servers/[id]/tools.ts` - API endpoint for listing server tools
+- `test/mcpTool.execution.test.ts` - Unit tests for MCPTool executor (7 tests)
+- `e2e/mcp-tool-node.spec.ts` - E2E tests for MCPTool node UI (3 tests)
+
+### Files Modified
+- `lib/execution.ts` - Added MCPTool executor registration
+- `components/Canvas.tsx` - Added MCPToolNode to nodeTypes registry
+- `hooks/useGraphData.ts` - Added MCPTool type mapping for React Flow
+- `test/llmSchema.guard.test.ts` - Updated to include template fields from PBI-37
+
+### Test Results
+✅ **7/7 unit tests passing** for MCPTool executor:
+- Tool invocation with explicit parameters
+- Parameter merging (explicit + input edges)
+- Tool execution error handling
+- Connection error handling
+- Missing field validation
+- Default timeout handling
+- Complex result emission
+
+✅ **All 173 tests passing** across entire test suite (49 test files)
+
+### Key Features Implemented
+1. **MCPTool Schema**: JSON Schema with serverId, toolName, parameters, timeout fields
+2. **Executor Integration**: MCPTool executor registered in execution.ts
+   - Merges explicit parameters with input edge data
+   - Invokes tools via mcpClient.invokeTool()
+   - Emits diagnostics for start/success/error states
+   - Handles timeouts and connection errors
+3. **UI Component**: MCPToolNode displays server, tool, and parameter count
+4. **API Endpoints**: REST APIs for listing servers and tools
+5. **Type Mapping**: React Flow integration via useGraphData.ts
+6. **Schema Validation**: AJV validation passing ✅
+
+### Architecture Decisions
+- **Parameter Merging**: Input edge data overrides explicit parameters for dynamic workflows
+- **Diagnostic Emissions**: Three diagnostic types (mcp_tool_start, mcp_tool_success, mcp_tool_error) with timestamps and durations
+- **Error Handling**: Graceful degradation with error outputs and diagnostic logs
+- **UI Design**: Consistent with existing node types (ChatNode, FileReaderNode)
+- **API Structure**: RESTful endpoints under /api/mcp/* for server and tool discovery
+
+### Integration Points
+- MCPTool executor calls mcpClient.invokeTool() from PBI-38
+- Tool parameters can be set explicitly (props) or dynamically (input edges)
+- Tool results emitted on 'result' port, errors on 'error' port
+- Diagnostics capture duration, success/failure, and tool metadata
+
+### Deferred Features
+- Inspector fields for dynamic parameter forms (UI enhancement, non-blocking)
+- Tool result streaming for large outputs (future PBI)
+- Tool result caching (performance optimization, future PBI)
+- Agent mode with autonomous tool selection (PBI-40)
+
+---
+
 **Created:** 2025-10-03  
-**Updated:** 2025-10-03
+**Updated:** 2025-01-19

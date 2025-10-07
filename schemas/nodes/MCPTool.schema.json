@@ -1,0 +1,43 @@
+{
+  "$id": "https://celestial-engine.dev/schemas/MCPTool.schema.json",
+  "title": "MCP Tool Call",
+  "type": "object",
+  "description": "Explicitly invoke an MCP tool from a connected server",
+  "properties": {
+    "props": {
+      "type": "object",
+      "properties": {
+        "serverId": {
+          "type": "string",
+          "description": "MCP server ID (e.g., 'filesystem', 'git')",
+          "minLength": 1
+        },
+        "toolName": {
+          "type": "string",
+          "description": "Tool to invoke (e.g., 'read_file', 'list_directory')",
+          "minLength": 1
+        },
+        "parameters": {
+          "type": "object",
+          "description": "Tool parameters (key-value pairs)",
+          "additionalProperties": true,
+          "default": {}
+        },
+        "streaming": {
+          "type": "boolean",
+          "default": false,
+          "description": "Stream results incrementally (future feature)"
+        },
+        "timeout": {
+          "type": "number",
+          "default": 30000,
+          "description": "Timeout in milliseconds",
+          "minimum": 1000,
+          "maximum": 300000
+        }
+      },
+      "required": ["serverId", "toolName"]
+    }
+  },
+  "required": ["props"]
+}

@@ -44,7 +44,10 @@ describe('LLM schema regression guard', () => {
       'promptTemplate',
       'provider',
       'system',
-      'temperature'
+      'temperature',
+      'templateId',
+      'templateVariables',
+      'useTemplate'
     ].sort());
     expect(props.additionalProperties).toBe(false);
     const temperature = props.properties.temperature;

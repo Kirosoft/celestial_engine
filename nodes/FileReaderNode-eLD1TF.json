@@ -1,0 +1,20 @@
+{
+  "id": "FileReaderNode-eLD1TF",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-eLD1TF",
+  "props": {
+    "mode": "single",
+    "filePath": "apps/web/.test-filereader-actions/a.txt",
+    "emitContent": true,
+    "encodedAs": "text",
+    "action": "read",
+    "lastError": null
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

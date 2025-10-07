@@ -1,0 +1,16 @@
+{
+  "id": "FileReaderNode-LTW0Ln",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-LTW0Ln",
+  "props": {
+    "mode": "single",
+    "filePath": "sample.txt"
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

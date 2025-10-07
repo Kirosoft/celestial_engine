@@ -1,0 +1,20 @@
+{
+  "id": "FileReaderNode-21QaEu",
+  "type": "FileReaderNode",
+  "name": "FileReaderNode-21QaEu",
+  "props": {
+    "mode": "single",
+    "filePath": "apps/web/.test-filereader-actions/b.log",
+    "emitContent": true,
+    "encodedAs": "text",
+    "action": "sendNext",
+    "lastError": null
+  },
+  "position": {
+    "x": 120,
+    "y": 120
+  },
+  "edges": {
+    "out": []
+  }
+}

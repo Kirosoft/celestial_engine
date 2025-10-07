@@ -526,3 +526,106 @@ registerExecutor('FileReaderNode', async (ctx) => {
   }
   return { diagnostics, patchProps: { ...patch } };
 });
+
+// Register MCPTool executor
+registerExecutor('MCPTool', async (ctx) => {
+  const diagnostics: any[] = [];
+  const { serverId, toolName, parameters = {}, timeout = 30000 } = ctx.props;
+  
+  if (!serverId || !toolName) {
+    return {
+      error: 'Missing required fields: serverId and toolName are required',
+      diagnostics: [{ level: 'error', message: 'serverId and toolName must be specified' }]
+    };
+  }
+  
+  // Merge explicit parameters with input edge data (inputs override explicit params)
+  const finalParameters = {
+    ...parameters,
+    ...ctx.latest
+  };
+  
+  // Emit diagnostic: starting tool call
+  diagnostics.push({
+    level: 'info',
+    message: 'MCP tool call started',
+    data: {
+      type: 'mcp_tool_start',
+      serverId,
+      toolName,
+      parameters: finalParameters,
+      timestamp: Date.now()
+    }
+  });
+  
+  try {
+    // Import dynamically to avoid circular dependencies
+    const { mcpClient } = await import('./mcpClient');
+    
+    // Invoke tool via MCP client
+    const result = await mcpClient.invokeTool({
+      serverId,
+      toolName,
+      parameters: finalParameters
+    });
+    
+    if (result.success) {
+      // Emit successful result
+      diagnostics.push({
+        level: 'info',
+        message: 'MCP tool call succeeded',
+        data: {
+          type: 'mcp_tool_success',
+          serverId,
+          toolName,
+          duration: result.duration,
+          timestamp: Date.now()
+        }
+      });
+      
+      return {
+        outputs: { result: result.result },
+        diagnostics
+      };
+    } else {
+      // Handle tool execution error
+      diagnostics.push({
+        level: 'error',
+        message: 'MCP tool call failed',
+        data: {
+          type: 'mcp_tool_error',
+          serverId,
+          toolName,
+          error: result.error,
+          duration: result.duration,
+          timestamp: Date.now()
+        }
+      });
+      
+      return {
+        outputs: { error: result.error },
+        error: result.error,
+        diagnostics
+      };
+    }
+  } catch (error: any) {
+    // Handle connection or invocation errors
+    diagnostics.push({
+      level: 'error',
+      message: 'MCP tool invocation error',
+      data: {
+        type: 'mcp_tool_error',
+        serverId,
+        toolName,
+        error: error.message,
+        timestamp: Date.now()
+      }
+    });
+    
+    return {
+      outputs: { error: error.message },
+      error: error.message,
+      diagnostics
+    };
+  }
+});

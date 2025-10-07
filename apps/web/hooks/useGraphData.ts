@@ -29,6 +29,9 @@ export function useGraphData(){
     if(n.type === 'FileReaderNode'){
       return { id: n.id, type: 'fileReaderNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, rawProps: (n as any).props } } as RFNode;
     }
+    if(n.type === 'MCPTool'){
+      return { id: n.id, type: 'mcpToolNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, rawProps: (n as any).props } } as RFNode;
+    }
     return { id: n.id, type: 'basicNode', position: n.position || { x: 0, y: 0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id } } as RFNode;
   });
   if(process.env.NODE_ENV !== 'production'){
@@ -98,6 +101,9 @@ export function useGraphData(){
           }
           if(n.type === 'LogNode'){
             return { id: n.id, type: 'logNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, history: (n as any).props?.history || [], maxEntries: (n as any).props?.maxEntries, filterIncludes: (n as any).props?.filterIncludes || [], rawProps: (n as any).props } } as RFNode;
+          }
+          if(n.type === 'MCPTool'){
+            return { id: n.id, type: 'mcpToolNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, rawProps: (n as any).props } } as RFNode;
           }
           return { id: n.id, type: 'basicNode', position: n.position || { x:0, y:0 }, data: { label: n.name || n.id, type: n.type, nodeId: n.id, __proxy: n.type?.startsWith('GroupInputProxy') || n.type?.startsWith('GroupOutputProxy') } } as RFNode;
         });

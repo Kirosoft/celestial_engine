@@ -1,6 +1,6 @@
 {
-  "version": 3466,
-  "generatedAt": "2025-10-06T12:46:16.801Z",
+  "version": 3601,
+  "generatedAt": "2025-10-07T09:22:01.945Z",
   "nodes": [
     {
       "id": "Task-EDq7hE",
@@ -554,6 +554,195 @@
       "name": "LLM",
       "propsHash": "17f6428536a49edf7df83c427d5caa040d10d73e",
       "mtime": "2025-10-06T12:46:16.801Z"
+    },
+    {
+      "id": "FileReaderNode-YS_I16",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-YS_I16",
+      "propsHash": "e1d55a713ddd9dc0cdee00e1662af005ba2f9d2f",
+      "mtime": "2025-10-07T09:20:12.807Z"
+    },
+    {
+      "id": "FileReaderNode-FXVEAm",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-FXVEAm",
+      "propsHash": "254ceea0ba2dc5f0b574dc2a002dd11f3d7d437d",
+      "mtime": "2025-10-07T09:20:12.928Z"
+    },
+    {
+      "id": "FileReaderNode-21QaEu",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-21QaEu",
+      "propsHash": "178e670e22d09b2c035e7dc8e04501b5a430a003",
+      "mtime": "2025-10-07T09:20:12.962Z"
+    },
+    {
+      "id": "FileReaderNode-1KMSso",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-1KMSso",
+      "propsHash": "7dbb127ce721c0831b131f575f07da2e27e462ec",
+      "mtime": "2025-10-07T09:20:12.982Z"
+    },
+    {
+      "id": "FileReaderNode-8BEJni",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-8BEJni",
+      "propsHash": "a8211877aab87702a9de0c7cd43502abdf3f0fb4",
+      "mtime": "2025-10-07T09:20:13.012Z"
+    },
+    {
+      "id": "LogNode-C5qzLC",
+      "type": "LogNode",
+      "name": "Log-Demo",
+      "propsHash": "65771366434da0c433e667e8b2e817606aabd832",
+      "mtime": "2025-10-07T09:20:15.976Z"
+    },
+    {
+      "id": "ChatNode-fonuo8",
+      "type": "ChatNode",
+      "name": "Chat-Demo",
+      "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
+      "mtime": "2025-10-07T09:20:15.578Z"
+    },
+    {
+      "id": "ChatNode-DUD_ra",
+      "type": "ChatNode",
+      "name": "Chat-Clear",
+      "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
+      "mtime": "2025-10-07T09:20:17.298Z"
+    },
+    {
+      "id": "LLM-sEGeAr",
+      "type": "LLM",
+      "name": "LLM-Demo",
+      "propsHash": "46c022b182ac99987f1f2eef7cc59e4a3a8e5afa",
+      "mtime": "2025-10-07T09:20:17.705Z"
+    },
+    {
+      "id": "FileReaderNode-UnbSyI",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-UnbSyI",
+      "propsHash": "e1d55a713ddd9dc0cdee00e1662af005ba2f9d2f",
+      "mtime": "2025-10-07T09:21:21.394Z"
+    },
+    {
+      "id": "FileReaderNode-V9Rbcd",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-V9Rbcd",
+      "propsHash": "254ceea0ba2dc5f0b574dc2a002dd11f3d7d437d",
+      "mtime": "2025-10-07T09:21:21.515Z"
+    },
+    {
+      "id": "FileReaderNode-iCv-Ck",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-iCv-Ck",
+      "propsHash": "178e670e22d09b2c035e7dc8e04501b5a430a003",
+      "mtime": "2025-10-07T09:21:21.540Z"
+    },
+    {
+      "id": "FileReaderNode-RbGy5_",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-RbGy5_",
+      "propsHash": "7dbb127ce721c0831b131f575f07da2e27e462ec",
+      "mtime": "2025-10-07T09:21:21.574Z"
+    },
+    {
+      "id": "FileReaderNode-TPv0cb",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-TPv0cb",
+      "propsHash": "a8211877aab87702a9de0c7cd43502abdf3f0fb4",
+      "mtime": "2025-10-07T09:21:21.602Z"
+    },
+    {
+      "id": "LogNode-6wCqhx",
+      "type": "LogNode",
+      "name": "Log-Demo",
+      "propsHash": "92eff7a8d720e14ebf23025a927284788d899139",
+      "mtime": "2025-10-07T09:21:24.788Z"
+    },
+    {
+      "id": "ChatNode-FihAzq",
+      "type": "ChatNode",
+      "name": "Chat-Demo",
+      "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
+      "mtime": "2025-10-07T09:21:24.239Z"
+    },
+    {
+      "id": "ChatNode-icIVBM",
+      "type": "ChatNode",
+      "name": "Chat-Clear",
+      "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
+      "mtime": "2025-10-07T09:21:25.917Z"
+    },
+    {
+      "id": "LLM-Kz_sPE",
+      "type": "LLM",
+      "name": "LLM-Demo",
+      "propsHash": "46c022b182ac99987f1f2eef7cc59e4a3a8e5afa",
+      "mtime": "2025-10-07T09:21:26.351Z"
+    },
+    {
+      "id": "FileReaderNode-aqGsdy",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-aqGsdy",
+      "propsHash": "e1d55a713ddd9dc0cdee00e1662af005ba2f9d2f",
+      "mtime": "2025-10-07T09:21:56.917Z"
+    },
+    {
+      "id": "FileReaderNode-JJWUji",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-JJWUji",
+      "propsHash": "254ceea0ba2dc5f0b574dc2a002dd11f3d7d437d",
+      "mtime": "2025-10-07T09:21:57.060Z"
+    },
+    {
+      "id": "FileReaderNode-zDVQet",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-zDVQet",
+      "propsHash": "178e670e22d09b2c035e7dc8e04501b5a430a003",
+      "mtime": "2025-10-07T09:21:57.093Z"
+    },
+    {
+      "id": "FileReaderNode-eLD1TF",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-eLD1TF",
+      "propsHash": "7dbb127ce721c0831b131f575f07da2e27e462ec",
+      "mtime": "2025-10-07T09:21:57.131Z"
+    },
+    {
+      "id": "FileReaderNode-KK695-",
+      "type": "FileReaderNode",
+      "name": "FileReaderNode-KK695-",
+      "propsHash": "a8211877aab87702a9de0c7cd43502abdf3f0fb4",
+      "mtime": "2025-10-07T09:21:57.164Z"
+    },
+    {
+      "id": "LogNode-lVblmm",
+      "type": "LogNode",
+      "name": "Log-Demo",
+      "propsHash": "4af8b97fcdf63e8149f3a6f4e72295adba9bcdbc",
+      "mtime": "2025-10-07T09:22:00.480Z"
+    },
+    {
+      "id": "ChatNode-mbmSjM",
+      "type": "ChatNode",
+      "name": "Chat-Demo",
+      "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
+      "mtime": "2025-10-07T09:21:59.772Z"
+    },
+    {
+      "id": "ChatNode-FjhhP2",
+      "type": "ChatNode",
+      "name": "Chat-Clear",
+      "propsHash": "ee5e2cfcc4a77c14a19f221d80e321f70cc96a93",
+      "mtime": "2025-10-07T09:22:01.480Z"
+    },
+    {
+      "id": "LLM-GH5D19",
+      "type": "LLM",
+      "name": "LLM-Demo",
+      "propsHash": "46c022b182ac99987f1f2eef7cc59e4a3a8e5afa",
+      "mtime": "2025-10-07T09:22:01.945Z"
     }
   ]
 }
